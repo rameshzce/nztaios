@@ -17,6 +17,9 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -220,18 +223,43 @@
         <scene sceneID="lzG-nn-QBH">
             <objects>
                 <tableViewController id="3lA-b0-SRs" userLabel="Events View Controller" customClass="EventsViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hL6-y2-grQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" id="hL6-y2-grQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="YJ4-5T-yRq">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="95" id="YJ4-5T-yRq" customClass="EventsViewCell" customModule="nzta" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="320" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YJ4-5T-yRq" id="YGe-Ho-bWf">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25f-YN-Y4g">
+                                            <rect key="frame" x="8" y="8" width="304" height="21"/>
+                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-Uo-N5X">
+                                            <rect key="frame" x="8" y="63" width="304" height="21"/>
+                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcJ-5b-yHA">
+                                            <rect key="frame" x="8" y="34" width="304" height="21"/>
+                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="15"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="hcJ-5b-yHA" id="Uqe-0I-giN"/>
+                                    <outlet property="descriptionLabel" destination="nv3-Uo-N5X" id="Rez-EN-WuI"/>
+                                    <outlet property="nameLabel" destination="25f-YN-Y4g" id="YKY-16-y7m"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
