@@ -41,13 +41,16 @@ class ViewController: UIViewController
                 do {
                     let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                     let status = jsonDictionary["status"] as! String
-                    let phone = jsonDictionary["phone"] as! String
+                    self.showAlert("\(status)")
+                    
                     if status == "SUCCESS"{
+                        let phone = jsonDictionary["phone"] as! String
                         self.showAlert("\(phone)")
-                        //self.prefs.setValue(phone, forKey: "login")
+                        self.prefs.setValue(phone, forKey: "login")
                         //self.performSegueWithIdentifier("member", sender: self)
                     }else if status == "FAILURE"{
                         self.showAlert("\(status)")
+                        
                     }
                 } catch {
                     // Handle Error
