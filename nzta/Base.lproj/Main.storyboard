@@ -235,25 +235,37 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25f-YN-Y4g">
-                                            <rect key="frame" x="8" y="8" width="304" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25f-YN-Y4g">
+                                            <rect key="frame" x="15" y="8" width="304" height="30"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-Uo-N5X">
-                                            <rect key="frame" x="8" y="63" width="304" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-Uo-N5X">
+                                            <rect key="frame" x="15" y="63" width="304" height="21"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcJ-5b-yHA">
-                                            <rect key="frame" x="8" y="34" width="304" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcJ-5b-yHA">
+                                            <rect key="frame" x="15" y="34" width="304" height="21"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="15"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="25f-YN-Y4g" firstAttribute="leading" secondItem="YGe-Ho-bWf" secondAttribute="leadingMargin" constant="7" id="9zf-iC-YoN"/>
+                                        <constraint firstItem="25f-YN-Y4g" firstAttribute="trailing" secondItem="hcJ-5b-yHA" secondAttribute="trailing" id="Dq2-hV-eHT"/>
+                                        <constraint firstItem="hcJ-5b-yHA" firstAttribute="trailing" secondItem="nv3-Uo-N5X" secondAttribute="trailing" id="Dui-sO-dAd"/>
+                                        <constraint firstItem="nv3-Uo-N5X" firstAttribute="top" secondItem="hcJ-5b-yHA" secondAttribute="bottom" constant="8" id="E2b-aq-lR4"/>
+                                        <constraint firstItem="25f-YN-Y4g" firstAttribute="trailing" secondItem="YGe-Ho-bWf" secondAttribute="trailingMargin" constant="7" id="J1g-Rs-dq2"/>
+                                        <constraint firstItem="25f-YN-Y4g" firstAttribute="leading" secondItem="hcJ-5b-yHA" secondAttribute="leading" id="eI0-XQ-XN9"/>
+                                        <constraint firstItem="25f-YN-Y4g" firstAttribute="top" secondItem="YGe-Ho-bWf" secondAttribute="topMargin" id="gTA-pX-syY"/>
+                                        <constraint firstItem="hcJ-5b-yHA" firstAttribute="leading" secondItem="nv3-Uo-N5X" secondAttribute="leading" id="pZB-HH-aag"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="nv3-Uo-N5X" secondAttribute="bottom" constant="2" id="ugs-Dy-CLN"/>
+                                        <constraint firstItem="hcJ-5b-yHA" firstAttribute="top" secondItem="25f-YN-Y4g" secondAttribute="bottom" constant="-4" id="zIP-5c-RBC"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="hcJ-5b-yHA" id="Uqe-0I-giN"/>
