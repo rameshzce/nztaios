@@ -72,15 +72,15 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        /*self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBarHidden = false
          
          //if let login = prefs.stringForKey("login"){
          if prefs.stringForKey("login") != nil{
          //self.showAlert("You have already logged in as: \(login)")
-         self.performSegueWithIdentifier("member", sender: self)
+            self.performSegueWithIdentifier("member", sender: self)
          }else{
-         self.showAlert("Not logged in")
-         }*/
+            //self.showAlert("Not logged in")
+         }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
