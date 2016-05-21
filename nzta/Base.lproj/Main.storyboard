@@ -1,27 +1,168 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TCN-A7-5av">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="handlee-regular.ttf">
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Main View Controller" customClass="ViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="HNV-Qy-cf0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="WAM-f3-uDE">
+                                <rect key="frame" x="136" y="50" width="48" height="48"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Zealand Telugu Association" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ES-z6-KhE">
+                                <rect key="frame" x="29" y="118" width="262" height="27"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0d-dF-qv6">
+                                <rect key="frame" x="36" y="160" width="248" height="30"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pL0-9m-ks9">
+                                <rect key="frame" x="114" y="160" width="170" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="Q3A-zd-AhV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Wil-3Z-g3l"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mob" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AI-c3-5Ub">
+                                <rect key="frame" x="36" y="205" width="44" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="PAM-nt-W8L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vjr-Rd-xdY">
+                                <rect key="frame" x="114" y="204" width="170" height="30"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6Hs-VL-AaJ"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4i-8a-Max">
+                                <rect key="frame" x="36" y="247" width="56" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="GoH-q2-ya4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ya1-4e-wFZ">
+                                <rect key="frame" x="114" y="246" width="170" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fwm-Uf-Rrf"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZG9-ON-CWK">
+                                <rect key="frame" x="119" y="306" width="82" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="22t-o8-Ukg"/>
+                                    <constraint firstAttribute="width" constant="82" id="pSQ-tZ-qMU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Njz-sL-tao"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1333333333" green="0.57254901960000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4AI-c3-5Ub" firstAttribute="leading" secondItem="HNV-Qy-cf0" secondAttribute="leadingMargin" constant="20" id="3fE-2M-OKz"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="leading" secondItem="pL0-9m-ks9" secondAttribute="leading" id="3vH-UP-Des"/>
+                            <constraint firstItem="4AI-c3-5Ub" firstAttribute="top" secondItem="n0d-dF-qv6" secondAttribute="bottom" constant="15" id="7wt-DE-QEe"/>
+                            <constraint firstItem="n0d-dF-qv6" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="8Fj-GV-Y5P"/>
+                            <constraint firstItem="pL0-9m-ks9" firstAttribute="top" secondItem="6ES-z6-KhE" secondAttribute="bottom" constant="15" id="8KC-Vg-EVN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pL0-9m-ks9" secondAttribute="trailing" constant="20" id="CCR-On-y0P"/>
+                            <constraint firstItem="WAM-f3-uDE" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="DTr-bU-GnV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZG9-ON-CWK" secondAttribute="bottom" constant="232" id="EOO-MX-ifs"/>
+                            <constraint firstItem="6ES-z6-KhE" firstAttribute="top" secondItem="WAM-f3-uDE" secondAttribute="bottom" constant="20" id="GJx-or-zym"/>
+                            <constraint firstItem="6ES-z6-KhE" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="HmR-X4-nlj"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="centerY" secondItem="4AI-c3-5Ub" secondAttribute="centerY" id="ISe-Wg-knS"/>
+                            <constraint firstItem="R4i-8a-Max" firstAttribute="leading" secondItem="HNV-Qy-cf0" secondAttribute="leadingMargin" constant="20" id="J1s-qv-A8E"/>
+                            <constraint firstItem="Ya1-4e-wFZ" firstAttribute="leading" secondItem="Vjr-Rd-xdY" secondAttribute="leading" id="Xyj-PN-fdT"/>
+                            <constraint firstItem="ZG9-ON-CWK" firstAttribute="top" secondItem="Ya1-4e-wFZ" secondAttribute="bottom" constant="30" id="dfs-4k-GZQ"/>
+                            <constraint firstItem="Ya1-4e-wFZ" firstAttribute="trailing" secondItem="Vjr-Rd-xdY" secondAttribute="trailing" id="gVJ-3e-FLv"/>
+                            <constraint firstItem="pL0-9m-ks9" firstAttribute="centerY" secondItem="n0d-dF-qv6" secondAttribute="centerY" id="hKs-GE-Tet"/>
+                            <constraint firstItem="n0d-dF-qv6" firstAttribute="top" secondItem="6ES-z6-KhE" secondAttribute="bottom" constant="15" id="iD4-pQ-kfG"/>
+                            <constraint firstItem="ZG9-ON-CWK" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="kMo-JF-ZUs"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="trailing" secondItem="n0d-dF-qv6" secondAttribute="trailing" id="mex-Ad-ODP"/>
+                            <constraint firstItem="R4i-8a-Max" firstAttribute="top" secondItem="4AI-c3-5Ub" secondAttribute="bottom" constant="15" id="msT-Mm-CFH"/>
+                            <constraint firstItem="n0d-dF-qv6" firstAttribute="leading" secondItem="HNV-Qy-cf0" secondAttribute="leadingMargin" constant="20" id="vOT-6c-5gD"/>
+                            <constraint firstItem="Ya1-4e-wFZ" firstAttribute="centerY" secondItem="R4i-8a-Max" secondAttribute="centerY" id="xtQ-uI-2i3"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="NZTA" id="gxq-Za-oet"/>
+                    <connections>
+                        <outlet property="email" destination="Ya1-4e-wFZ" id="5Wl-D9-jdY"/>
+                        <outlet property="mob" destination="Vjr-Rd-xdY" id="qy9-Na-Q1Q"/>
+                        <outlet property="name" destination="pL0-9m-ks9" id="NyB-yA-5Vw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.66666666666666" y="298.67333333333335"/>
+            <point key="canvasLocation" x="662" y="298"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="sE5-Uf-Yag">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TCN-A7-5av" userLabel="Main Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5NW-6W-S50" userLabel="NZTA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="amt-NS-TY3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXb-nD-P4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="298"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="48" height="48"/>
+    </resources>
 </document>
