@@ -113,6 +113,29 @@ class MemberViewController: UITableViewController {
         return height
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch (indexPath.row) {
+            //case 0: [self performSegueWithIdentifier:@"Segue0" sender:self];
+            case 0:
+                self.performSegueWithIdentifier("events", sender: self)
+                break;
+            case 1:
+                self.performSegueWithIdentifier("events", sender: self)
+                break;
+            case 2:
+                self.performSegueWithIdentifier("events", sender: self)
+                break
+            case 3:
+                self.performSegueWithIdentifier("events", sender: self)
+                break
+            case 4:
+                self.performSegueWithIdentifier("events", sender: self)
+                break
+            default:
+                break
+        }
+    }
+    
     /*
      override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
      let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
