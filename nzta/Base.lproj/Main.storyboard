@@ -137,11 +137,41 @@
                         <outlet property="email" destination="Ya1-4e-wFZ" id="5Wl-D9-jdY"/>
                         <outlet property="mob" destination="Vjr-Rd-xdY" id="qy9-Na-Q1Q"/>
                         <outlet property="name" destination="pL0-9m-ks9" id="NyB-yA-5Vw"/>
+                        <segue destination="gbp-5x-xKh" kind="push" identifier="member" id="NNO-aJ-Gw6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="298"/>
+            <point key="canvasLocation" x="495" y="298"/>
+        </scene>
+        <!--NZTA-->
+        <scene sceneID="UlM-N0-aKa">
+            <objects>
+                <tableViewController id="gbp-5x-xKh" customClass="MemberViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="PNw-cO-a8j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TFf-4s-c4C">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TFf-4s-c4C" id="CgT-Sp-r9F">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gbp-5x-xKh" id="yQj-b9-pgE"/>
+                            <outlet property="delegate" destination="gbp-5x-xKh" id="RCa-Rp-296"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="NZTA" id="fsZ-L8-kaB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZj-Wm-ut4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863" y="298"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="sE5-Uf-Yag">
