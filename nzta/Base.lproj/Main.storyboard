@@ -15,6 +15,8 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -153,13 +155,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TFf-4s-c4C">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="Qvf-up-huO" customClass="MemberViewCell" customModule="nzta" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TFf-4s-c4C" id="CgT-Sp-r9F">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qvf-up-huO" id="TzM-5D-eaI">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2f-7k-lma">
+                                            <rect key="frame" x="99" y="43" width="135" height="33"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="33" id="Lft-hs-Z7D"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="35"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Events" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5J-od-1CN">
+                                            <rect key="frame" x="82" y="5" width="152" height="30"/>
+                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vjn-bG-q13">
+                                            <rect key="frame" x="90" y="47" width="50" height="29"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="oPW-iB-NjR"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Z2f-7k-lma" firstAttribute="bottom" secondItem="vjn-bG-q13" secondAttribute="bottom" id="8kC-6J-ZWQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Z2f-7k-lma" secondAttribute="trailing" constant="45" id="AYz-JW-GiS"/>
+                                        <constraint firstItem="Z2f-7k-lma" firstAttribute="top" secondItem="x5J-od-1CN" secondAttribute="bottom" constant="8" symbolic="YES" id="Mxf-gk-qjX"/>
+                                        <constraint firstItem="Z2f-7k-lma" firstAttribute="leading" secondItem="TzM-5D-eaI" secondAttribute="leadingMargin" constant="91" id="QLF-eI-GvX"/>
+                                        <constraint firstItem="vjn-bG-q13" firstAttribute="leading" secondItem="TzM-5D-eaI" secondAttribute="leadingMargin" constant="82" id="Wg9-Zm-GyN"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Z2f-7k-lma" secondAttribute="bottom" constant="15" id="vhO-ba-VEk"/>
+                                        <constraint firstItem="Z2f-7k-lma" firstAttribute="trailing" secondItem="x5J-od-1CN" secondAttribute="trailing" id="wtG-at-S4G"/>
+                                        <constraint firstItem="vjn-bG-q13" firstAttribute="top" secondItem="x5J-od-1CN" secondAttribute="bottom" constant="12" id="yHL-hJ-qW3"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="iconImageView" destination="vjn-bG-q13" id="Jtb-UP-VWn"/>
+                                    <outlet property="titleBigLabel" destination="Z2f-7k-lma" id="y8g-Iz-UfY"/>
+                                    <outlet property="titleLabel" destination="x5J-od-1CN" id="hWM-m4-ZRY"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

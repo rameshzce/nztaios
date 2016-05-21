@@ -14,6 +14,7 @@
 		75B622EE1CF04ABE00493F98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75B622EC1CF04ABE00493F98 /* LaunchScreen.storyboard */; };
 		75B622F71CF0554700493F98 /* handlee-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75B622F61CF054F700493F98 /* handlee-regular.ttf */; };
 		75B622F91CF05DE000493F98 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B622F81CF05DE000493F98 /* MemberViewController.swift */; };
+		75B622FB1CF0630100493F98 /* MemberViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B622FA1CF0630100493F98 /* MemberViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		75B622EF1CF04ABE00493F98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75B622F61CF054F700493F98 /* handlee-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "handlee-regular.ttf"; sourceTree = "<group>"; };
 		75B622F81CF05DE000493F98 /* MemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
+		75B622FA1CF0630100493F98 /* MemberViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				75B622EC1CF04ABE00493F98 /* LaunchScreen.storyboard */,
 				75B622EF1CF04ABE00493F98 /* Info.plist */,
 				75B622F81CF05DE000493F98 /* MemberViewController.swift */,
+				75B622FA1CF0630100493F98 /* MemberViewCell.swift */,
 			);
 			path = nzta;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			files = (
 				75B622F91CF05DE000493F98 /* MemberViewController.swift in Sources */,
 				75B622E61CF04ABD00493F98 /* ViewController.swift in Sources */,
+				75B622FB1CF0630100493F98 /* MemberViewCell.swift in Sources */,
 				75B622E41CF04ABD00493F98 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
