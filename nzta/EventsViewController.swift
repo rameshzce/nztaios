@@ -10,7 +10,7 @@ import UIKit
 
 class EventsViewController: UITableViewController {
     
-    private var hotels:[(name: String, address: String)] = [
+    private var events:[(name: String, address: String)] = [
         ("Sankranti", "Rangoli competition & kite festival on 17-1-2016"),
         ("Ugadi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
         ("Batukamma", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
@@ -26,8 +26,8 @@ class EventsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.estimatedRowHeight = 95.0
-        tableView.rowHeight = UITableViewAutomaticDimension
+        //tableView.estimatedRowHeight = 95.0
+        //tableView.rowHeight = UITableViewAutomaticDimension
         tableView.backgroundColor = hexStringToUIColor("#ff218e")
 
         // Uncomment the following line to preserve selection between presentations
@@ -51,24 +51,56 @@ class EventsViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return hotels.count
+        return events.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EventsViewCell
         
         // Configure the cell...
-        let hotel = hotels[indexPath.row]
-        cell.nameLabel.text = hotel.name
-        cell.addressLabel.text = hotel.address
-        //cell.descriptionLabel.text = hotel.description
+        let event = events[indexPath.row]
+        cell.nameLabel.text = event.name
+        cell.addressLabel.text = event.address
+        
+        cell.photoGalleryBtn.tag = indexPath.row
+        cell.photoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction), forControlEvents: .TouchUpInside)
         
         return cell
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = UIColor.clearColor()
-        cell.backgroundColor = hexStringToUIColor("#ff0000")
+        //cell.backgroundColor = hexStringToUIColor("#ff0000")
+    }
+    
+    @IBAction func logAction(sender: UIButton) {
+        let event = self.events[sender.tag]
+        
+        let eventName = "\(event.name)"
+        
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [eventName], applicationActivities: nil)
+        
+        self.presentViewController(activityViewController, animated: true, completion: nil)
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("photoGallery", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if (segue.identifier == "photoGallery")
+        {
+            let upcoming: PhotoGalleryViewController = segue.destinationViewController as! PhotoGalleryViewController
+            
+            let indexPath = tableView.indexPathForSelectedRow!
+            
+            //let eventName = self.objects.objectAtIndex(indexPath.row) as? String
+            let eventName = self.events[indexPath.row]
+            
+            upcoming.eventName = eventName.name
+            
+        }
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {

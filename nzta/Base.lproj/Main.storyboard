@@ -20,6 +20,7 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -235,46 +236,46 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25f-YN-Y4g">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25f-YN-Y4g">
                                             <rect key="frame" x="15" y="8" width="304" height="30"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-Uo-N5X">
-                                            <rect key="frame" x="15" y="63" width="304" height="21"/>
-                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="15"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcJ-5b-yHA">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcJ-5b-yHA">
                                             <rect key="frame" x="15" y="34" width="304" height="21"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="17"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wik-LI-cjL">
-                                            <rect key="frame" x="220" y="63" width="92" height="30"/>
-                                            <state key="normal" title="Video Gallery"/>
+                                            <rect key="frame" x="212" y="63" width="100" height="30"/>
+                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
+                                            <state key="normal" title="Video Gallery">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlb-XY-HGB">
+                                            <rect key="frame" x="51" y="64" width="113" height="30"/>
+                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
+                                            <state key="normal" title="Photo Gallery">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="logAction:" destination="3lA-b0-SRs" eventType="touchUpInside" id="9Pp-JP-rmO"/>
+                                            </connections>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="84h-8J-bme">
+                                            <rect key="frame" x="13" y="56" width="30" height="30"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="video" translatesAutoresizingMaskIntoConstraints="NO" id="0co-Ph-TcG">
+                                            <rect key="frame" x="182" y="63" width="30" height="30"/>
+                                        </imageView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="25f-YN-Y4g" firstAttribute="leading" secondItem="YGe-Ho-bWf" secondAttribute="leadingMargin" constant="7" id="9zf-iC-YoN"/>
-                                        <constraint firstItem="25f-YN-Y4g" firstAttribute="trailing" secondItem="hcJ-5b-yHA" secondAttribute="trailing" id="Dq2-hV-eHT"/>
-                                        <constraint firstItem="hcJ-5b-yHA" firstAttribute="trailing" secondItem="nv3-Uo-N5X" secondAttribute="trailing" id="Dui-sO-dAd"/>
-                                        <constraint firstItem="nv3-Uo-N5X" firstAttribute="top" secondItem="hcJ-5b-yHA" secondAttribute="bottom" constant="8" id="E2b-aq-lR4"/>
-                                        <constraint firstItem="25f-YN-Y4g" firstAttribute="trailing" secondItem="YGe-Ho-bWf" secondAttribute="trailingMargin" constant="7" id="J1g-Rs-dq2"/>
-                                        <constraint firstItem="25f-YN-Y4g" firstAttribute="leading" secondItem="hcJ-5b-yHA" secondAttribute="leading" id="eI0-XQ-XN9"/>
-                                        <constraint firstItem="25f-YN-Y4g" firstAttribute="top" secondItem="YGe-Ho-bWf" secondAttribute="topMargin" id="gTA-pX-syY"/>
-                                        <constraint firstItem="hcJ-5b-yHA" firstAttribute="leading" secondItem="nv3-Uo-N5X" secondAttribute="leading" id="pZB-HH-aag"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="nv3-Uo-N5X" secondAttribute="bottom" constant="2" id="ugs-Dy-CLN"/>
-                                        <constraint firstItem="hcJ-5b-yHA" firstAttribute="top" secondItem="25f-YN-Y4g" secondAttribute="bottom" constant="-4" id="zIP-5c-RBC"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="hcJ-5b-yHA" id="Uqe-0I-giN"/>
-                                    <outlet property="descriptionLabel" destination="nv3-Uo-N5X" id="Rez-EN-WuI"/>
                                     <outlet property="nameLabel" destination="25f-YN-Y4g" id="YKY-16-y7m"/>
+                                    <outlet property="photoGalleryBtn" destination="mlb-XY-HGB" id="P8N-tf-D5R"/>
+                                    <outlet property="videoGalleryBtn" destination="wik-LI-cjL" id="vAw-yz-nH4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -284,10 +285,62 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Events" id="ysV-yI-hKP"/>
+                    <connections>
+                        <segue destination="0PZ-IO-wjp" kind="push" identifier="photoGallery" id="8tl-7j-BWQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHU-sg-3VS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1235" y="298"/>
+        </scene>
+        <!--Photo Gallery View Controller-->
+        <scene sceneID="j4o-DE-Wqx">
+            <objects>
+                <collectionViewController id="0PZ-IO-wjp" userLabel="Photo Gallery View Controller" customClass="PhotoGalleryViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ewh-43-g43">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S0M-hc-oWJ">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="z60-Mw-O0s" customClass="PhotoGalleryViewCell" customModule="nzta" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gDB-lq-OQA">
+                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="gDB-lq-OQA" firstAttribute="top" secondItem="z60-Mw-O0s" secondAttribute="topMargin" id="L42-AF-PTY"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="gDB-lq-OQA" secondAttribute="bottom" id="a8E-pF-KFi"/>
+                                    <constraint firstItem="gDB-lq-OQA" firstAttribute="leading" secondItem="z60-Mw-O0s" secondAttribute="leadingMargin" id="idC-eV-t9o"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="gDB-lq-OQA" secondAttribute="trailing" id="mmj-dd-6ph"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="galleryImageView" destination="gDB-lq-OQA" id="xng-st-qF5"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="0PZ-IO-wjp" id="6Q8-X8-wLl"/>
+                            <outlet property="delegate" destination="0PZ-IO-wjp" id="UM5-7B-wYC"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Gallery" id="72b-yL-HGq"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzI-tA-ymg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="298"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="sE5-Uf-Yag">
@@ -307,8 +360,31 @@
             </objects>
             <point key="canvasLocation" x="130" y="298"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6rG-0B-C0g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R22-jk-sff" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xMF-U2-zax">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0PZ-IO-wjp" kind="relationship" relationship="rootViewController" id="iv5-p6-1JK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8oh-b1-T7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="930"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="camera" width="32" height="32"/>
         <image name="logo" width="48" height="48"/>
+        <image name="video" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8tl-7j-BWQ"/>
+    </inferredMetricsTieBreakers>
 </document>
