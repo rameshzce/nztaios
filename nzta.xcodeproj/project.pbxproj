@@ -19,6 +19,8 @@
 		75B622FB1CF0630100493F98 /* MemberViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B622FA1CF0630100493F98 /* MemberViewCell.swift */; };
 		75B622FD1CF076E400493F98 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B622FC1CF076E400493F98 /* EventsViewController.swift */; };
 		75B622FF1CF0773100493F98 /* EventsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B622FE1CF0773100493F98 /* EventsViewCell.swift */; };
+		75D0BDE61CF17AB8009E030F /* VideoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0BDE51CF17AB8009E030F /* VideoGalleryViewController.swift */; };
+		75D0BDE81CF17B1E009E030F /* VideoGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0BDE71CF17B1E009E030F /* VideoGalleryViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		75B622FA1CF0630100493F98 /* MemberViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewCell.swift; sourceTree = "<group>"; };
 		75B622FC1CF076E400493F98 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		75B622FE1CF0773100493F98 /* EventsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewCell.swift; sourceTree = "<group>"; };
+		75D0BDE51CF17AB8009E030F /* VideoGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGalleryViewController.swift; sourceTree = "<group>"; };
+		75D0BDE71CF17B1E009E030F /* VideoGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGalleryViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				75B622FC1CF076E400493F98 /* EventsViewController.swift */,
 				75B622FA1CF0630100493F98 /* MemberViewCell.swift */,
 				75B622FE1CF0773100493F98 /* EventsViewCell.swift */,
+				75D0BDE51CF17AB8009E030F /* VideoGalleryViewController.swift */,
+				75D0BDE71CF17B1E009E030F /* VideoGalleryViewCell.swift */,
 			);
 			path = nzta;
 			sourceTree = "<group>";
@@ -167,10 +173,12 @@
 			files = (
 				75A3F5421CF12D270033E70A /* PhotoGalleryViewController.swift in Sources */,
 				75A3F5401CF12CDE0033E70A /* PhotoGalleryViewCell.swift in Sources */,
+				75D0BDE61CF17AB8009E030F /* VideoGalleryViewController.swift in Sources */,
 				75B622F91CF05DE000493F98 /* MemberViewController.swift in Sources */,
 				75B622FF1CF0773100493F98 /* EventsViewCell.swift in Sources */,
 				75B622E61CF04ABD00493F98 /* ViewController.swift in Sources */,
 				75B622FB1CF0630100493F98 /* MemberViewCell.swift in Sources */,
+				75D0BDE81CF17B1E009E030F /* VideoGalleryViewCell.swift in Sources */,
 				75B622E41CF04ABD00493F98 /* AppDelegate.swift in Sources */,
 				75B622FD1CF076E400493F98 /* EventsViewController.swift in Sources */,
 			);

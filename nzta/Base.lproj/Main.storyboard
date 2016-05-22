@@ -252,6 +252,9 @@
                                             <state key="normal" title="Video Gallery">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <segue destination="e9h-2m-n2Z" kind="push" identifier="videoGalleryBtn" id="KSy-wJ-fAj"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlb-XY-HGB">
                                             <rect key="frame" x="51" y="64" width="113" height="30"/>
@@ -334,11 +337,51 @@
                             <outlet property="delegate" destination="0PZ-IO-wjp" id="UM5-7B-wYC"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Gallery" id="72b-yL-HGq"/>
+                    <navigationItem key="navigationItem" title="Photo Gallery" id="72b-yL-HGq"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzI-tA-ymg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1593" y="298"/>
+        </scene>
+        <!--Video Gallery View Controller-->
+        <scene sceneID="Cu1-1Q-yIX">
+            <objects>
+                <tableViewController id="e9h-2m-n2Z" userLabel="Video Gallery View Controller" customClass="VideoGalleryViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JKZ-nZ-LpA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="lpj-v0-YO8" customClass="VideoGalleryViewCell" customModule="nzta" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lpj-v0-YO8" id="eOx-uO-92Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jua-YI-geW">
+                                            <rect key="frame" x="129" y="14" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="eventName" destination="Jua-YI-geW" id="aE4-em-BZN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="e9h-2m-n2Z" id="OoM-x7-iBj"/>
+                            <outlet property="delegate" destination="e9h-2m-n2Z" id="e1R-Un-rZS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Video Gallery" id="HeI-cs-t5n"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gIZ-BN-9wr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="298"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="sE5-Uf-Yag">
