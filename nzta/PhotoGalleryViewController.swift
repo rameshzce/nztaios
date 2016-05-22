@@ -14,6 +14,8 @@ class PhotoGalleryViewController: UICollectionViewController {
     
     var eventName: String!
     
+    let prefs = NSUserDefaults.standardUserDefaults()
+    
     var galleryImages = ["angry_birds_cake", "creme_brelee", "egg_benedict",
                         "full_breakfast", "green_tea", "ham_and_cheese_panini", "ham_and_egg_sandwich",
                         "hamburger", "instant_noodle_with_egg.jpg", "japanese_noodle_with_pork",
@@ -30,6 +32,14 @@ class PhotoGalleryViewController: UICollectionViewController {
         //self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+        if prefs.stringForKey("photoGallery") != nil{
+            let alertController = UIAlertController(title: "NZTA",
+                                                    message: prefs.stringForKey("photoGallery"), preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style:
+                UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion:
+                nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

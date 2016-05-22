@@ -286,9 +286,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Events" id="ysV-yI-hKP"/>
-                    <connections>
-                        <segue destination="0PZ-IO-wjp" kind="push" identifier="photoGallery" id="8tl-7j-BWQ"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHU-sg-3VS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,8 @@ import UIKit
 
 class EventsViewController: UITableViewController {
     
+    let prefs = NSUserDefaults.standardUserDefaults()
+    
     private var events:[(name: String, address: String)] = [
         ("Sankranti", "Rangoli competition & kite festival on 17-1-2016"),
         ("Ugadi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
@@ -78,23 +80,25 @@ class EventsViewController: UITableViewController {
         
         let eventName = "\(event.name)"
         
-        let alertController = UIAlertController(title: "NZTA",
+        self.prefs.setValue(eventName, forKey: "photoGallery")
+        
+        /*let alertController = UIAlertController(title: "NZTA",
                                                 message: eventName, preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "OK", style:
             UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alertController, animated: true, completion:
-            nil)
+            nil)*/
         
         //let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [eventName], applicationActivities: nil)
         
         //self.presentViewController(activityViewController, animated: true, completion: nil)
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    /*override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("photoGallery", sender: self)
-    }
+    }*/
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if (segue.identifier == "photoGallery")
         {
@@ -108,7 +112,7 @@ class EventsViewController: UITableViewController {
             upcoming.eventName = eventName.name
             
         }
-    }
+    }*/
     
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
