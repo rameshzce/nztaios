@@ -261,6 +261,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="logAction:" destination="3lA-b0-SRs" eventType="touchUpInside" id="9Pp-JP-rmO"/>
+                                                <segue destination="0PZ-IO-wjp" kind="push" identifier="photoGalleryBtn" id="bsA-bs-udH"/>
                                             </connections>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="84h-8J-bme">
@@ -385,6 +386,6 @@
         <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8tl-7j-BWQ"/>
+        <segue reference="bsA-bs-udH"/>
     </inferredMetricsTieBreakers>
 </document>

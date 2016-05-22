@@ -78,9 +78,16 @@ class EventsViewController: UITableViewController {
         
         let eventName = "\(event.name)"
         
-        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [eventName], applicationActivities: nil)
+        let alertController = UIAlertController(title: "NZTA",
+                                                message: eventName, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "OK", style:
+            UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alertController, animated: true, completion:
+            nil)
         
-        self.presentViewController(activityViewController, animated: true, completion: nil)
+        //let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [eventName], applicationActivities: nil)
+        
+        //self.presentViewController(activityViewController, animated: true, completion: nil)
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
