@@ -157,6 +157,61 @@
             </objects>
             <point key="canvasLocation" x="495" y="298"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="tve-aZ-MQz">
+            <objects>
+                <tableViewController id="z8T-fQ-JhB" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7md-hJ-hVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="c5K-yG-fs3">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c5K-yG-fs3" id="7zF-oA-fYi">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="z8T-fQ-JhB" id="gxJ-Xs-oIU"/>
+                            <outlet property="delegate" destination="z8T-fQ-JhB" id="AOW-rL-QJU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Xk-ho-YkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-203" y="970"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="Tbm-jO-3OC">
+            <objects>
+                <viewController id="Lg2-yt-GHd" userLabel="Profile View Controller" customClass="ProfileViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6fk-Ca-M47"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Eb-rj-HKq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mDt-Bk-NBv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omp-sX-yuX">
+                                <rect key="frame" x="150" y="281" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cu7-bB-zaJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rot-05-tcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="970"/>
+        </scene>
         <!--Subscription View Controller-->
         <scene sceneID="yFO-YF-luo">
             <objects>
@@ -170,13 +225,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLs-2i-x62">
-                                <rect key="frame" x="117" y="70" width="86" height="23"/>
+                                <rect key="frame" x="117" y="114" width="86" height="23"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrR-zn-fKE">
-                                <rect key="frame" x="75" y="113" width="171" height="69"/>
+                                <rect key="frame" x="75" y="157" width="171" height="69"/>
                                 <string key="text">Your small donations
 can make nzta events big 
 and its our family fun</string>
@@ -185,7 +240,7 @@ and its our family fun</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0jk-SM-9fg">
-                                <rect key="frame" x="35" y="202" width="250" height="30"/>
+                                <rect key="frame" x="35" y="246" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="ljb-eB-8ka"/>
                                 </constraints>
@@ -193,7 +248,7 @@ and its our family fun</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rXw-jj-4Rd">
-                                <rect key="frame" x="35" y="252" width="250" height="30"/>
+                                <rect key="frame" x="35" y="296" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Xbh-Aa-9cK"/>
                                 </constraints>
@@ -201,7 +256,7 @@ and its our family fun</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Referred by" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nEm-7a-3PW">
-                                <rect key="frame" x="35" y="302" width="250" height="30"/>
+                                <rect key="frame" x="35" y="346" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="jEW-O7-OtH"/>
                                 </constraints>
@@ -209,7 +264,7 @@ and its our family fun</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSg-ea-BMy">
-                                <rect key="frame" x="131" y="429" width="60" height="33"/>
+                                <rect key="frame" x="131" y="473" width="60" height="33"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="15"/>
                                 <state key="normal" title="Subscribe">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -304,7 +359,7 @@ and its our family fun</string>
                         <barButtonItem key="rightBarButtonItem" image="menu" id="e6d-0z-ZnQ">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="lNR-a0-ePe" kind="modal" id="gEe-0R-6ka"/>
+                                <segue destination="ShK-K1-VUs" kind="modal" id="gEe-0R-6ka"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -326,13 +381,13 @@ and its our family fun</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="vLK-8t-Y0J">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="F7l-vg-CnD" customClass="MenuViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="66" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="130" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F7l-vg-CnD" id="sbp-fz-E7v">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
@@ -363,11 +418,16 @@ and its our family fun</string>
                             <outlet property="delegate" destination="lNR-a0-ePe" id="sIm-tZ-0fs"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="faJ-Ax-n4y"/>
+                    <connections>
+                        <segue destination="U53-VW-tQ4" kind="push" identifier="menuSubscription" id="YMc-TZ-PZh"/>
+                        <segue destination="Lg2-yt-GHd" kind="push" identifier="menuProfile" id="zv7-5d-ouw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cu-DX-CiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6qb-Nk-LZe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="863" y="970"/>
+            <point key="canvasLocation" x="899" y="970"/>
         </scene>
         <!--Events View Controller-->
         <scene sceneID="lzG-nn-QBH">
@@ -594,7 +654,25 @@ and its our family fun</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oh-b1-T7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="930"/>
+            <point key="canvasLocation" x="2125" y="930"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ih3-9V-6sv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ShK-K1-VUs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="88p-U3-10N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lNR-a0-ePe" kind="relationship" relationship="rootViewController" id="I2E-uW-yBb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zem-FO-KaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939" y="1810"/>
         </scene>
     </scenes>
     <resources>
@@ -604,6 +682,6 @@ and its our family fun</string>
         <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zik-Ut-SY0"/>
+        <segue reference="iv5-p6-1JK"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -51,14 +51,14 @@ class MenuViewController: UITableViewController {
         }
     }*/
     
-   // override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        /*switch (indexPath.row) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch (indexPath.row) {
         //case 0: [self performSegueWithIdentifier:@"Segue0" sender:self];
         case 0:
             self.performSegueWithIdentifier("menuSubscription", sender: self)
             break;
         case 1:
-            self.performSegueWithIdentifier("menuSubscription", sender: self)
+            self.performSegueWithIdentifier("menuProfile", sender: self)
             break;
         case 2:
             self.performSegueWithIdentifier("menuSubscription", sender: self)
@@ -71,9 +71,9 @@ class MenuViewController: UITableViewController {
             break
         default:
             break
-        }*/
+        }
         
      
-  //  }
+    }
     
 }

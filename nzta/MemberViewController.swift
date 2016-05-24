@@ -8,8 +8,8 @@
 
 import UIKit
 
-class MemberViewController: UITableViewController, MenuTransitionManagerDelegate {
-    let menuTransitionManager = MenuTransitionManager()
+class MemberViewController: UITableViewController{
+    
     
     var titles = ["Upcoming Events", "Existing Events", "Go Green / NZ Blood", "Invite a Friend", "Helping"]
     var titlesBig = ["2016", "2015", "Others", "Friend", "Hands!"]
@@ -144,10 +144,7 @@ class MemberViewController: UITableViewController, MenuTransitionManagerDelegate
         }
     }
     
-    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
-        let sourceController = segue.sourceViewController as! MenuViewController
-        self.title = sourceController.currentItem
-    }
+   
     
     
 
