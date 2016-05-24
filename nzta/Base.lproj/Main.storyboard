@@ -21,6 +21,7 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -251,8 +252,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpg-Y3-laH">
-                                            <rect key="frame" x="17" y="10" width="62" height="31"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                            <rect key="frame" x="17" y="10" width="52" height="30"/>
+                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -265,6 +266,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="titleLabel" destination="fpg-Y3-laH" id="FgM-77-N1y"/>
+                                    <segue destination="6qb-Nk-LZe" kind="unwind" unwindAction="unwindToHome:" id="5gi-Oq-WMC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -276,6 +278,7 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cu-DX-CiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6qb-Nk-LZe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="863" y="970"/>
         </scene>

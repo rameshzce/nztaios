@@ -9,7 +9,7 @@
 import UIKit
 
 class MenuViewController: UITableViewController {
-    var menuItems = ["Home", "Profie", "Subscribe", "Team NZTA", "Sponsores"]
+    var menuItems = ["Home", "News", "Tech", "Finance", "Reviews"]
     var currentItem = "Home"
     
     override func viewDidLoad() {
@@ -42,6 +42,13 @@ class MenuViewController: UITableViewController {
         cell.titleLabel.textColor = (menuItems[indexPath.row] == currentItem) ? UIColor.whiteColor() : UIColor.grayColor()
         
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let menuTableViewController = segue.sourceViewController as! MenuViewController
+        if let selectedIndexPath = menuTableViewController.tableView.indexPathForSelectedRow {
+            currentItem = menuItems[selectedIndexPath.row]
+        }
     }
     
 }

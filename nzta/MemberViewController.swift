@@ -8,7 +8,9 @@
 
 import UIKit
 
-class MemberViewController: UITableViewController {
+class MemberViewController: UITableViewController, MenuTransitionManagerDelegate {
+    let menuTransitionManager = MenuTransitionManager()
+    
     var titles = ["Upcoming Events", "Existing Events", "Go Green / NZ Blood", "Invite a Friend", "Helping"]
     var titlesBig = ["2016", "2015", "Others", "Friend", "Hands!"]
     var images = ["upcoming_events.png", "existing_events.png", "go_green.png", "invite_friend.png", "hands.png"]
@@ -35,10 +37,16 @@ class MemberViewController: UITableViewController {
         return UIApplication.sharedApplication().statusBarOrientation
     }
     
+    func dismiss() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "NZTA"
         //self.navigationController?.navigationBarHidden = false
         
         // Uncomment the following line to preserve selection between presentations
@@ -135,6 +143,19 @@ class MemberViewController: UITableViewController {
                 break
         }
     }
+    
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        let sourceController = segue.sourceViewController as! MenuViewController
+        self.title = sourceController.currentItem
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let menuTableViewController = segue.destinationViewController as! MenuViewController
+        menuTableViewController.currentItem = self.title!
+        menuTableViewController.transitioningDelegate = menuTransitionManager
+        menuTransitionManager.delegate = self
+    }
+
     
     /*
      override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

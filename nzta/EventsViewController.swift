@@ -8,9 +8,11 @@
 
 import UIKit
 
-class EventsViewController: UITableViewController {
+class EventsViewController: UITableViewController, MenuTransitionManagerDelegate {
     
     let prefs = NSUserDefaults.standardUserDefaults()
+    
+    let menuTransitionManager = MenuTransitionManager()
     
     private var events:[(name: String, address: String)] = [
         ("Sankranti", "Rangoli competition & kite festival on 17-1-2016"),
@@ -42,6 +44,10 @@ class EventsViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func dismiss() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     // MARK: - Table view data source
@@ -156,6 +162,18 @@ class EventsViewController: UITableViewController {
             blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
             alpha: CGFloat(1.0)
         )
+    }
+    
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        let sourceController = segue.sourceViewController as! MenuViewController
+        self.title = sourceController.currentItem
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let menuTableViewController = segue.destinationViewController as! MenuViewController
+        menuTableViewController.currentItem = self.title!
+        menuTableViewController.transitioningDelegate = menuTransitionManager
+        menuTransitionManager.delegate = self
     }
 
     /*
