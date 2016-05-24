@@ -149,12 +149,7 @@ class MemberViewController: UITableViewController, MenuTransitionManagerDelegate
         self.title = sourceController.currentItem
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let menuTableViewController = segue.destinationViewController as! MenuViewController
-        menuTableViewController.currentItem = self.title!
-        menuTableViewController.transitioningDelegate = menuTransitionManager
-        menuTransitionManager.delegate = self
-    }
+    
 
     
     /*

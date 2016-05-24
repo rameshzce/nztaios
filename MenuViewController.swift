@@ -44,11 +44,36 @@ class MenuViewController: UITableViewController {
         return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let menuTableViewController = segue.sourceViewController as! MenuViewController
         if let selectedIndexPath = menuTableViewController.tableView.indexPathForSelectedRow {
             currentItem = menuItems[selectedIndexPath.row]
         }
-    }
+    }*/
+    
+   // override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        /*switch (indexPath.row) {
+        //case 0: [self performSegueWithIdentifier:@"Segue0" sender:self];
+        case 0:
+            self.performSegueWithIdentifier("menuSubscription", sender: self)
+            break;
+        case 1:
+            self.performSegueWithIdentifier("menuSubscription", sender: self)
+            break;
+        case 2:
+            self.performSegueWithIdentifier("menuSubscription", sender: self)
+            break
+        case 3:
+            self.performSegueWithIdentifier("menuSubscription", sender: self)
+            break
+        case 4:
+            self.performSegueWithIdentifier("menuSubscription", sender: self)
+            break
+        default:
+            break
+        }*/
+        
+     
+  //  }
     
 }

@@ -164,17 +164,7 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
         )
     }
     
-    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
-        let sourceController = segue.sourceViewController as! MenuViewController
-        self.title = sourceController.currentItem
-    }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let menuTableViewController = segue.destinationViewController as! MenuViewController
-        menuTableViewController.currentItem = self.title!
-        menuTableViewController.transitioningDelegate = menuTransitionManager
-        menuTransitionManager.delegate = self
-    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
