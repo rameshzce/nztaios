@@ -252,10 +252,7 @@
                                             <rect key="frame" x="15" y="60" width="32" height="32"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt5-M0-AfX">
-                                            <rect key="frame" x="50" y="62" width="116" height="28"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="116" id="aye-5u-sey"/>
-                                            </constraints>
+                                            <rect key="frame" x="50" y="62" width="103" height="28"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                             <state key="normal" title="Photo Gallery">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -272,10 +269,7 @@
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cae-IS-oNi">
-                                            <rect key="frame" x="204" y="61" width="101" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="Lni-dT-FFj"/>
-                                            </constraints>
+                                            <rect key="frame" x="204" y="58" width="101" height="37"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                             <state key="normal" title="Video Gallery">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
