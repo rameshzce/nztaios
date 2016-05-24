@@ -28,8 +28,8 @@ class EventsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //tableView.estimatedRowHeight = 95.0
-        //tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 95.0
+        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.backgroundColor = hexStringToUIColor("#ff218e")
 
         // Uncomment the following line to preserve selection between presentations
@@ -64,12 +64,12 @@ class EventsViewController: UITableViewController {
         cell.nameLabel.text = event.name
         cell.addressLabel.text = event.address
         
-        cell.photoGalleryBtn.tag = indexPath.row
+        /*cell.photoGalleryBtn.tag = indexPath.row
         cell.photoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction), forControlEvents: .TouchUpInside)
         
         cell.videoGalleryBtn.tag = indexPath.row
         cell.videoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction2), forControlEvents: .TouchUpInside)
-        
+        */
         return cell
     }
     
