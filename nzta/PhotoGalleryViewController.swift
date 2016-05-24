@@ -33,12 +33,13 @@ class PhotoGalleryViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
         if prefs.stringForKey("photoGallery") != nil{
-            let alertController = UIAlertController(title: "NZTA",
+            self.title = prefs.stringForKey("photoGallery")
+            /*let alertController = UIAlertController(title: "NZTA",
                                                     message: prefs.stringForKey("photoGallery"), preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "OK", style:
                 UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alertController, animated: true, completion:
-                nil)
+                nil)*/
         }
     }
 

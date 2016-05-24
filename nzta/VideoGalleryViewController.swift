@@ -35,12 +35,13 @@ class VideoGalleryViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         if prefs.stringForKey("videoGallery") != nil{
-            let alertController = UIAlertController(title: "NZTA",
+            self.title = prefs.stringForKey("videoGallery")
+            /*let alertController = UIAlertController(title: "NZTA",
                                                     message: prefs.stringForKey("videoGallery"), preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "OK", style:
                 UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alertController, animated: true, completion:
-                nil)
+                nil)*/
         }
     }
 
