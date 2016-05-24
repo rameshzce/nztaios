@@ -259,6 +259,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="logAction:" destination="3lA-b0-SRs" eventType="touchUpInside" id="2HX-Gl-5E6"/>
+                                                <segue destination="0PZ-IO-wjp" kind="push" identifier="photoGallery" id="Zik-Ut-SY0"/>
                                             </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-gP-XMA">
@@ -276,6 +277,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="logAction2:" destination="3lA-b0-SRs" eventType="touchUpInside" id="n15-bi-VKt"/>
+                                                <segue destination="e9h-2m-n2Z" kind="push" identifier="videoGallery" id="URV-US-eQR"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -304,6 +306,8 @@
                                 <connections>
                                     <outlet property="addressLabel" destination="YGQ-rN-dYh" id="EJt-Aq-dl2"/>
                                     <outlet property="nameLabel" destination="2fh-4j-B2V" id="pFa-CG-fB8"/>
+                                    <outlet property="photoGalleryBtn" destination="Mt5-M0-AfX" id="xQz-jJ-bvr"/>
+                                    <outlet property="videoGalleryBtn" destination="cae-IS-oNi" id="qoP-Mp-Mb0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -377,7 +381,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="lpj-v0-YO8" customClass="VideoGalleryViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lpj-v0-YO8" id="eOx-uO-92Q">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -449,4 +453,7 @@
         <image name="logo" width="48" height="48"/>
         <image name="video" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zik-Ut-SY0"/>
+    </inferredMetricsTieBreakers>
 </document>
