@@ -211,7 +211,13 @@
                             <outlet property="delegate" destination="gbp-5x-xKh" id="RCa-Rp-296"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="NZTA" id="fsZ-L8-kaB"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="NZTA" id="fsZ-L8-kaB">
+                        <barButtonItem key="rightBarButtonItem" image="menu" id="e6d-0z-ZnQ">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="3lA-b0-SRs" kind="push" identifier="events" id="xPk-vA-a2a"/>
                     </connections>
@@ -451,6 +457,7 @@
     <resources>
         <image name="camera" width="32" height="32"/>
         <image name="logo" width="48" height="48"/>
+        <image name="menu" width="22" height="22"/>
         <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
