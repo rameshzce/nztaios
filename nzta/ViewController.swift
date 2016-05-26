@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class ViewController: UIViewController, GIDSignInUIDelegate
 {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var mob: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet var msg: UILabel!
+    
+    @IBOutlet weak var signInButton: GIDSignInButton!
     
     let prefs = NSUserDefaults.standardUserDefaults()
     
@@ -60,6 +62,11 @@ class ViewController: UIViewController
         }
     }
     
+    @IBAction func btnSignoutTapped(sender: AnyObject)
+    {
+        GIDSignIn.sharedInstance().signOut()
+    }
+    
     func showAlert(msg: String){
         let alertController = UIAlertController(title: "NZTA",
                                                 message: msg, preferredStyle: UIAlertControllerStyle.Alert)
@@ -73,6 +80,14 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        // Uncomment to automatically sign in the user.
+        //GIDSignIn.sharedInstance().signInSilently()
+        
+        // TODO(developer) Configure the sign-in button look/feel
+        // ...
+
          
          //if let login = prefs.stringForKey("login"){
          if prefs.stringForKey("login") != nil{
@@ -89,7 +104,30 @@ class ViewController: UIViewController
     }
     
     
+    // Implement these methods only if the GIDSignInUIDelegate is not a subclass of
+    // UIViewController.
     
+    // Stop the UIActivityIndicatorView animation that was started when the user
+    // pressed the Sign In button
+    func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
+        //myActivityIndicator.stopAnimating()
+    }
+    
+    // Present a view that prompts the user to sign in with Google
+    func signIn(signIn: GIDSignIn!,
+                presentViewController viewController: UIViewController!) {
+        self.presentViewController(viewController, animated: true, completion: nil)
+    }
+    
+    // Dismiss the "Sign in with Google" view
+    func signIn(signIn: GIDSignIn!,
+                dismissViewController viewController: UIViewController!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func didTapSignOut(sender: AnyObject) {
+        GIDSignIn.sharedInstance().signOut()
+    }
     
     
 }

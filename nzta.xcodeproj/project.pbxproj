@@ -15,6 +15,11 @@
 		751E412D1CF4488F001A8BD5 /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E412C1CF4488F001A8BD5 /* MenuTransitionManager.swift */; };
 		751E412F1CF451F2001A8BD5 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E412E1CF451F2001A8BD5 /* SubscriptionViewController.swift */; };
 		751E41311CF4620B001A8BD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E41301CF4620B001A8BD5 /* ProfileViewController.swift */; };
+		75446F521CF747A300C78F29 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75446F501CF747A300C78F29 /* GoogleSignIn.bundle */; };
+		75446F531CF747A300C78F29 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75446F511CF747A300C78F29 /* GoogleSignIn.framework */; };
+		75446F551CF7482400C78F29 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75446F541CF7482400C78F29 /* StoreKit.framework */; };
+		75446F571CF7483200C78F29 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75446F561CF7483200C78F29 /* AddressBook.framework */; };
+		75446F591CF7484100C78F29 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75446F581CF7484100C78F29 /* SystemConfiguration.framework */; };
 		7547F5A21CF4BF510088E209 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7547F5A11CF4BF510088E209 /* GoogleService-Info.plist */; };
 		75A3F5401CF12CDE0033E70A /* PhotoGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */; };
 		75A3F5421CF12D270033E70A /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3F5411CF12D270033E70A /* PhotoGalleryViewController.swift */; };
@@ -42,6 +47,11 @@
 		751E412C1CF4488F001A8BD5 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 		751E412E1CF451F2001A8BD5 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		751E41301CF4620B001A8BD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		75446F501CF747A300C78F29 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		75446F511CF747A300C78F29 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
+		75446F541CF7482400C78F29 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		75446F561CF7483200C78F29 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		75446F581CF7484100C78F29 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7547F5A11CF4BF510088E209 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		755E529D1CF6997500DBE1C4 /* nzta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nzta-Bridging-Header.h"; sourceTree = "<group>"; };
 		75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewCell.swift; sourceTree = "<group>"; };
@@ -68,9 +78,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75446F591CF7484100C78F29 /* SystemConfiguration.framework in Frameworks */,
+				75446F571CF7483200C78F29 /* AddressBook.framework in Frameworks */,
+				75446F551CF7482400C78F29 /* StoreKit.framework in Frameworks */,
 				64DCA4494B3ACF0E7B21C191 /* Pods_nzta.framework in Frameworks */,
 				751179A61CF693BF003A0314 /* FBSDKCoreKit.framework in Frameworks */,
 				751179A71CF693BF003A0314 /* FBSDKLoginKit.framework in Frameworks */,
+				75446F531CF747A300C78F29 /* GoogleSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +136,8 @@
 				75B622FC1CF076E400493F98 /* EventsViewController.swift */,
 				75B622FA1CF0630100493F98 /* MemberViewCell.swift */,
 				75B622FE1CF0773100493F98 /* EventsViewCell.swift */,
+				75446F501CF747A300C78F29 /* GoogleSignIn.bundle */,
+				75446F511CF747A300C78F29 /* GoogleSignIn.framework */,
 				75D0BDE51CF17AB8009E030F /* VideoGalleryViewController.swift */,
 				75D0BDE71CF17B1E009E030F /* VideoGalleryViewCell.swift */,
 				751E412A1CF422A5001A8BD5 /* MenuViewCell.swift */,
@@ -146,6 +162,9 @@
 		DB161817BD7CA58465924D53 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				75446F581CF7484100C78F29 /* SystemConfiguration.framework */,
+				75446F561CF7483200C78F29 /* AddressBook.framework */,
+				75446F541CF7482400C78F29 /* StoreKit.framework */,
 				E33452CB056B9F072D582CBB /* Pods_nzta.framework */,
 			);
 			name = Frameworks;
@@ -228,6 +247,7 @@
 				75B622EE1CF04ABE00493F98 /* LaunchScreen.storyboard in Resources */,
 				7547F5A21CF4BF510088E209 /* GoogleService-Info.plist in Resources */,
 				75B622EB1CF04ABD00493F98 /* Assets.xcassets in Resources */,
+				75446F521CF747A300C78F29 /* GoogleSignIn.bundle in Resources */,
 				75B622E91CF04ABD00493F98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
