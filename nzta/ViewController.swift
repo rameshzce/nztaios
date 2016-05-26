@@ -77,7 +77,7 @@ class ViewController: UIViewController
          //if let login = prefs.stringForKey("login"){
          if prefs.stringForKey("login") != nil{
          //self.showAlert("You have already logged in as: \(login)")
-            self.performSegueWithIdentifier("member", sender: self)
+            //self.performSegueWithIdentifier("member", sender: self)
          }else{
             //self.showAlert("Not logged in")
          }
