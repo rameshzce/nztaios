@@ -81,7 +81,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false
         
-        GIDSignIn.sharedInstance().uiDelegate = self
+        //GIDSignIn.sharedInstance().uiDelegate = self
         // Uncomment to automatically sign in the user.
         //GIDSignIn.sharedInstance().signInSilently()
         

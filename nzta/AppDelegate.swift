@@ -79,7 +79,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
     
-    /*func application(application: UIApplication, openURL url: NSURL, options: [String: AnyObject]) -> Bool
+    /*google signin
+    
+    func application(application: UIApplication, openURL url: NSURL, options: [String: AnyObject]) -> Bool
     {
         return GIDSignIn.sharedInstance().handleURL(url, sourceApplication: options[UIApplicationOpenURLOptionsSourceApplicationKey] as! String, annotation: options[UIApplicationOpenURLOptionsAnnotationKey])
     }*/

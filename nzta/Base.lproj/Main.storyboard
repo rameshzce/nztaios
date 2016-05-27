@@ -29,7 +29,6 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -130,27 +129,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yig-MJ-D8F" customClass="GIDSignInButton">
-                                <rect key="frame" x="36" y="444" width="248" height="66"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4x-OU-gzq">
-                                <rect key="frame" x="119" y="518" width="82" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="9HE-c6-7Py"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
-                                <state key="normal" title="Sign out">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapSignOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fV1-73-HwS"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1333333333" green="0.57254901960000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Yig-MJ-D8F" firstAttribute="trailing" secondItem="Ya1-4e-wFZ" secondAttribute="trailing" id="0GW-Z7-O6l"/>
                             <constraint firstItem="4AI-c3-5Ub" firstAttribute="leading" secondItem="HNV-Qy-cf0" secondAttribute="leadingMargin" constant="20" id="3fE-2M-OKz"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="leading" secondItem="pL0-9m-ks9" secondAttribute="leading" id="3vH-UP-Des"/>
                             <constraint firstItem="4AI-c3-5Ub" firstAttribute="top" secondItem="n0d-dF-qv6" secondAttribute="bottom" constant="15" id="7wt-DE-QEe"/>
@@ -164,21 +145,15 @@
                             <constraint firstItem="6ES-z6-KhE" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="HmR-X4-nlj"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="centerY" secondItem="4AI-c3-5Ub" secondAttribute="centerY" id="ISe-Wg-knS"/>
                             <constraint firstItem="R4i-8a-Max" firstAttribute="leading" secondItem="HNV-Qy-cf0" secondAttribute="leadingMargin" constant="20" id="J1s-qv-A8E"/>
-                            <constraint firstItem="Yig-MJ-D8F" firstAttribute="top" secondItem="Yz6-1a-SXc" secondAttribute="bottom" constant="48" id="Ktd-zg-4dG"/>
                             <constraint firstItem="Yz6-1a-SXc" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="QXa-IT-1nf"/>
-                            <constraint firstItem="Yig-MJ-D8F" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="SzF-7k-ykg"/>
                             <constraint firstItem="Ya1-4e-wFZ" firstAttribute="leading" secondItem="Vjr-Rd-xdY" secondAttribute="leading" id="Xyj-PN-fdT"/>
                             <constraint firstItem="ZG9-ON-CWK" firstAttribute="top" secondItem="Ya1-4e-wFZ" secondAttribute="bottom" constant="30" id="dfs-4k-GZQ"/>
-                            <constraint firstItem="m4x-OU-gzq" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="e0p-vB-u8G"/>
                             <constraint firstItem="Ya1-4e-wFZ" firstAttribute="trailing" secondItem="Vjr-Rd-xdY" secondAttribute="trailing" id="gVJ-3e-FLv"/>
-                            <constraint firstItem="m4x-OU-gzq" firstAttribute="trailing" secondItem="ZG9-ON-CWK" secondAttribute="trailing" id="hBN-aq-NtO"/>
                             <constraint firstItem="pL0-9m-ks9" firstAttribute="centerY" secondItem="n0d-dF-qv6" secondAttribute="centerY" id="hKs-GE-Tet"/>
                             <constraint firstItem="n0d-dF-qv6" firstAttribute="top" secondItem="6ES-z6-KhE" secondAttribute="bottom" constant="15" id="iD4-pQ-kfG"/>
                             <constraint firstItem="ZG9-ON-CWK" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="kMo-JF-ZUs"/>
-                            <constraint firstAttribute="bottom" secondItem="m4x-OU-gzq" secondAttribute="bottom" constant="20" symbolic="YES" id="kVK-c4-EaI"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="trailing" secondItem="n0d-dF-qv6" secondAttribute="trailing" id="mex-Ad-ODP"/>
                             <constraint firstItem="R4i-8a-Max" firstAttribute="top" secondItem="4AI-c3-5Ub" secondAttribute="bottom" constant="15" id="msT-Mm-CFH"/>
-                            <constraint firstItem="m4x-OU-gzq" firstAttribute="top" secondItem="Yig-MJ-D8F" secondAttribute="bottom" constant="8" symbolic="YES" id="ogi-Dy-PZz"/>
                             <constraint firstItem="n0d-dF-qv6" firstAttribute="leading" secondItem="HNV-Qy-cf0" secondAttribute="leadingMargin" constant="20" id="vOT-6c-5gD"/>
                             <constraint firstItem="Yz6-1a-SXc" firstAttribute="top" secondItem="ZG9-ON-CWK" secondAttribute="bottom" constant="30" id="wUh-Im-6zE"/>
                             <constraint firstItem="Ya1-4e-wFZ" firstAttribute="centerY" secondItem="R4i-8a-Max" secondAttribute="centerY" id="xtQ-uI-2i3"/>
@@ -189,7 +164,6 @@
                         <outlet property="email" destination="Ya1-4e-wFZ" id="5Wl-D9-jdY"/>
                         <outlet property="mob" destination="Vjr-Rd-xdY" id="qy9-Na-Q1Q"/>
                         <outlet property="name" destination="pL0-9m-ks9" id="NyB-yA-5Vw"/>
-                        <outlet property="signInButton" destination="Yig-MJ-D8F" id="4AX-l3-WdA"/>
                         <segue destination="gbp-5x-xKh" kind="push" identifier="member" id="NNO-aJ-Gw6"/>
                     </connections>
                 </viewController>
