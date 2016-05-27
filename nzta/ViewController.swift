@@ -8,16 +8,48 @@
 
 import UIKit
 
-class ViewController: UIViewController, GIDSignInUIDelegate
+class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDelegate
 {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var mob: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet var msg: UILabel!
     
+    @IBOutlet var btnFacebook: FBSDKLoginButton!
+    @IBOutlet var ivUserProfileImage: UIImageView!
+    @IBOutlet var lblName: UILabel!
+    
     @IBOutlet weak var signInButton: GIDSignInButton!
     
     let prefs = NSUserDefaults.standardUserDefaults()
+    
+    func configureFacebook()
+    {
+        btnFacebook.readPermissions = ["public_profile", "email", "user_friends"];
+        btnFacebook.delegate = self
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
+    {
+        FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large)"]).startWithCompletionHandler { (connection, result, error) -> Void in
+            
+            let strFirstName: String = (result.objectForKey("first_name") as? String)!
+            let strLastName: String = (result.objectForKey("last_name") as? String)!
+            let strPictureURL: String = (result.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
+            
+            self.lblName.text = "Welcome, \(strFirstName) \(strLastName)"
+            self.ivUserProfileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: strPictureURL)!)!)
+        }
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!)
+    {
+        let loginManager: FBSDKLoginManager = FBSDKLoginManager()
+        loginManager.logOut()
+        
+        ivUserProfileImage.image = nil
+        lblName.text = ""
+    }
     
     @IBAction func registerUser(sender: UIButton) {
         //performSegueWithIdentifier("member", sender: self)
@@ -80,7 +112,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate
     {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false
-        
+        configureFacebook()
         //GIDSignIn.sharedInstance().uiDelegate = self
         // Uncomment to automatically sign in the user.
         //GIDSignIn.sharedInstance().signInSilently()
