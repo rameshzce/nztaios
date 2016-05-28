@@ -255,16 +255,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BQf-os-AD4">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQf-os-AD4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLs-2i-x62">
-                                        <rect key="frame" x="96" y="110" width="128" height="23"/>
-                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7P-Oe-YUO">
+                                        <rect key="frame" x="86" y="50" width="148" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="148" id="PKf-yr-B05"/>
+                                            <constraint firstAttribute="height" constant="21" id="Rhl-JS-70B"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="H7P-Oe-YUO" firstAttribute="centerX" secondItem="BQf-os-AD4" secondAttribute="centerX" id="4F6-IO-mjy"/>
+                                    <constraint firstItem="H7P-Oe-YUO" firstAttribute="centerY" secondItem="BQf-os-AD4" secondAttribute="centerY" constant="-223.5" id="FcP-nT-g7h"/>
+                                    <constraint firstAttribute="trailing" secondItem="H7P-Oe-YUO" secondAttribute="trailing" constant="86" id="WTh-kr-qIj"/>
+                                    <constraint firstAttribute="bottom" secondItem="H7P-Oe-YUO" secondAttribute="bottom" constant="497" id="dGc-Ee-HvU"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
