@@ -130,6 +130,12 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
          }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        if prefs.stringForKey("login") != nil{
+            self.performSegueWithIdentifier("member", sender: self)
+        }
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
