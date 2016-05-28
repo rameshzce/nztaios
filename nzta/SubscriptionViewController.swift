@@ -11,6 +11,7 @@ import UIKit
 class SubscriptionViewController: UIViewController {
 
     @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var nameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +21,19 @@ class SubscriptionViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        scrollView.setContentOffset(CGPointMake(0, 150), animated: true)
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        scrollView.setContentOffset(CGPointMake(0, -50), animated: true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 

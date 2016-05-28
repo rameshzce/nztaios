@@ -25,6 +25,7 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -259,7 +260,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7P-Oe-YUO">
-                                        <rect key="frame" x="86" y="50" width="148" height="21"/>
+                                        <rect key="frame" x="86" y="40" width="148" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="148" id="PKf-yr-B05"/>
                                             <constraint firstAttribute="height" constant="21" id="Rhl-JS-70B"/>
@@ -268,12 +269,29 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JD2-ng-meO">
+                                        <rect key="frame" x="112" y="414" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="U53-VW-tQ4" id="Np7-QH-iPO"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQo-0o-HxR">
+                                        <rect key="frame" x="43" y="72" width="235" height="92"/>
+                                        <string key="text">Your small donations
+can make nzta events big 
+and its our family fun</string>
+                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="H7P-Oe-YUO" firstAttribute="centerX" secondItem="BQf-os-AD4" secondAttribute="centerX" id="4F6-IO-mjy"/>
-                                    <constraint firstItem="H7P-Oe-YUO" firstAttribute="centerY" secondItem="BQf-os-AD4" secondAttribute="centerY" constant="-223.5" id="FcP-nT-g7h"/>
+                                    <constraint firstItem="H7P-Oe-YUO" firstAttribute="centerY" secondItem="BQf-os-AD4" secondAttribute="centerY" constant="-233.5" id="FcP-nT-g7h"/>
                                     <constraint firstAttribute="trailing" secondItem="H7P-Oe-YUO" secondAttribute="trailing" constant="86" id="WTh-kr-qIj"/>
-                                    <constraint firstAttribute="bottom" secondItem="H7P-Oe-YUO" secondAttribute="bottom" constant="497" id="dGc-Ee-HvU"/>
+                                    <constraint firstAttribute="bottom" secondItem="H7P-Oe-YUO" secondAttribute="bottom" constant="507" id="dGc-Ee-HvU"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -287,6 +305,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="j3Q-Nl-Fe2"/>
                     <connections>
+                        <outlet property="nameTextField" destination="JD2-ng-meO" id="Dw8-Jt-KgW"/>
                         <outlet property="scrollView" destination="BQf-os-AD4" id="rgK-K7-40R"/>
                     </connections>
                 </viewController>
