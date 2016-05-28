@@ -66,7 +66,7 @@ class VideoGalleryViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! VideoGalleryViewCell
 
-        // Configure the cell...
+        // Configure the cell... 
 
         return cell
     }
