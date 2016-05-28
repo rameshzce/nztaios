@@ -10,6 +10,7 @@ import UIKit
 
 class SubscriptionViewController: UIViewController {
 
+    @IBOutlet var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

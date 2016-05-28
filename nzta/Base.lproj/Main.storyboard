@@ -25,11 +25,6 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -260,70 +255,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLs-2i-x62">
-                                <rect key="frame" x="117" y="114" width="86" height="23"/>
-                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrR-zn-fKE">
-                                <rect key="frame" x="75" y="157" width="171" height="69"/>
-                                <string key="text">Your small donations
-can make nzta events big 
-and its our family fun</string>
-                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0jk-SM-9fg">
-                                <rect key="frame" x="35" y="246" width="250" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="ljb-eB-8ka"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rXw-jj-4Rd">
-                                <rect key="frame" x="35" y="296" width="250" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="Xbh-Aa-9cK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Referred by" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nEm-7a-3PW">
-                                <rect key="frame" x="35" y="346" width="250" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="jEW-O7-OtH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSg-ea-BMy">
-                                <rect key="frame" x="131" y="473" width="60" height="33"/>
-                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="15"/>
-                                <state key="normal" title="Subscribe">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BQf-os-AD4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLs-2i-x62">
+                                        <rect key="frame" x="96" y="110" width="128" height="23"/>
+                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="0jk-SM-9fg" firstAttribute="top" secondItem="OrR-zn-fKE" secondAttribute="bottom" constant="20" id="1LS-pO-c8M"/>
-                            <constraint firstItem="rXw-jj-4Rd" firstAttribute="centerX" secondItem="cDr-Q3-aZf" secondAttribute="centerX" id="2rr-tU-K0S"/>
-                            <constraint firstItem="OrR-zn-fKE" firstAttribute="centerX" secondItem="cDr-Q3-aZf" secondAttribute="centerX" id="3aE-qd-CRZ"/>
-                            <constraint firstItem="nEm-7a-3PW" firstAttribute="centerX" secondItem="cDr-Q3-aZf" secondAttribute="centerX" id="M4R-Mz-dWL"/>
-                            <constraint firstItem="XLs-2i-x62" firstAttribute="top" secondItem="hFG-8G-pJL" secondAttribute="bottom" constant="50" id="PqV-fz-nPN"/>
-                            <constraint firstItem="OrR-zn-fKE" firstAttribute="centerX" secondItem="cSg-ea-BMy" secondAttribute="centerX" id="WVK-zY-gPJ"/>
-                            <constraint firstItem="rXw-jj-4Rd" firstAttribute="top" secondItem="0jk-SM-9fg" secondAttribute="bottom" constant="20" id="d5n-8E-260"/>
-                            <constraint firstItem="nEm-7a-3PW" firstAttribute="top" secondItem="rXw-jj-4Rd" secondAttribute="bottom" constant="20" id="lAS-Yk-idk"/>
-                            <constraint firstItem="cSg-ea-BMy" firstAttribute="top" secondItem="nEm-7a-3PW" secondAttribute="bottom" constant="97" id="p8K-Tb-KOz"/>
-                            <constraint firstItem="0jk-SM-9fg" firstAttribute="centerX" secondItem="cDr-Q3-aZf" secondAttribute="centerX" id="tut-5V-6c8"/>
-                            <constraint firstItem="XLs-2i-x62" firstAttribute="centerX" secondItem="cDr-Q3-aZf" secondAttribute="centerX" id="vIS-tx-ENf"/>
-                            <constraint firstItem="OrR-zn-fKE" firstAttribute="top" secondItem="XLs-2i-x62" secondAttribute="bottom" constant="20" id="xid-Ks-Lq9"/>
+                            <constraint firstItem="BQf-os-AD4" firstAttribute="width" secondItem="cDr-Q3-aZf" secondAttribute="width" id="eCP-pC-nor"/>
+                            <constraint firstItem="BQf-os-AD4" firstAttribute="centerX" secondItem="cDr-Q3-aZf" secondAttribute="centerX" id="hww-Ht-8ME"/>
+                            <constraint firstItem="BQf-os-AD4" firstAttribute="centerY" secondItem="cDr-Q3-aZf" secondAttribute="centerY" id="o3p-RO-NDc"/>
+                            <constraint firstItem="BQf-os-AD4" firstAttribute="height" secondItem="cDr-Q3-aZf" secondAttribute="height" id="xm3-wD-Dr8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j3Q-Nl-Fe2"/>
+                    <connections>
+                        <outlet property="scrollView" destination="BQf-os-AD4" id="rgK-K7-40R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VB7-1c-Uxl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
