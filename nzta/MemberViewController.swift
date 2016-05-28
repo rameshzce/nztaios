@@ -134,7 +134,7 @@ class MemberViewController: UITableViewController{
                 self.performSegueWithIdentifier("events", sender: self)
                 break
             case 3:
-                self.performSegueWithIdentifier("events", sender: self)
+                self.performSegueWithIdentifier("inviteFriend", sender: self)
                 break
             case 4:
                 self.performSegueWithIdentifier("events", sender: self)

@@ -402,6 +402,7 @@ and its our family fun</string>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="3lA-b0-SRs" kind="push" identifier="events" id="xPk-vA-a2a"/>
+                        <segue destination="uOV-us-5lA" kind="push" identifier="inviteFriend" id="lSg-GZ-zJZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZj-Wm-ut4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -676,6 +677,77 @@ and its our family fun</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVz-bl-3gW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2322" y="298"/>
+        </scene>
+        <!--Invite Friend View Controller-->
+        <scene sceneID="vlw-J0-Nat">
+            <objects>
+                <viewController id="uOV-us-5lA" userLabel="Invite Friend View Controller" customClass="InviteFriendViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aOh-Rb-X0N"/>
+                        <viewControllerLayoutGuide type="bottom" id="yOB-Vt-z8K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tRn-Ml-Lyt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVL-rt-DUg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gut-Kx-6MC">
+                                        <rect key="frame" x="104" y="441" width="97" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="97" id="Xp2-Nn-v8Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="uOV-us-5lA" id="lGh-OL-9Kc"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmq-ka-GW5">
+                                        <rect key="frame" x="104" y="393" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="uOV-us-5lA" id="Dfb-qi-7OO"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBR-92-Ktf">
+                                        <rect key="frame" x="104" y="334" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="uOV-us-5lA" id="g5T-a7-V5z"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gut-Kx-6MC" firstAttribute="top" secondItem="EVL-rt-DUg" secondAttribute="top" constant="441" id="apk-A2-UZ2"/>
+                                    <constraint firstAttribute="bottom" secondItem="gut-Kx-6MC" secondAttribute="bottom" constant="97" id="oc6-uF-Jgt"/>
+                                    <constraint firstAttribute="trailing" secondItem="gut-Kx-6MC" secondAttribute="trailing" constant="119" id="qeh-ri-glV"/>
+                                    <constraint firstItem="gut-Kx-6MC" firstAttribute="leading" secondItem="EVL-rt-DUg" secondAttribute="leading" constant="104" id="tNQ-kN-0Ba"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EVL-rt-DUg" firstAttribute="height" secondItem="tRn-Ml-Lyt" secondAttribute="height" id="1dv-hU-Tcr"/>
+                            <constraint firstItem="EVL-rt-DUg" firstAttribute="centerX" secondItem="tRn-Ml-Lyt" secondAttribute="centerX" id="4uq-fm-lLr"/>
+                            <constraint firstItem="EVL-rt-DUg" firstAttribute="centerY" secondItem="tRn-Ml-Lyt" secondAttribute="centerY" id="Oi8-R1-cdf"/>
+                            <constraint firstItem="EVL-rt-DUg" firstAttribute="width" secondItem="tRn-Ml-Lyt" secondAttribute="width" id="Pu8-Gz-1B3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Invite a Friend" id="v8K-zZ-4Sl"/>
+                    <connections>
+                        <outlet property="ScrollView" destination="EVL-rt-DUg" id="8NM-jC-IeM"/>
+                        <outlet property="TextField" destination="gut-Kx-6MC" id="E5V-GI-7wB"/>
+                        <outlet property="TextField2" destination="gmq-ka-GW5" id="mK8-lb-1G7"/>
+                        <outlet property="TextField3" destination="sBR-92-Ktf" id="Elt-Fg-Q1R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVP-Vj-1eR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2678" y="298"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="sE5-Uf-Yag">
