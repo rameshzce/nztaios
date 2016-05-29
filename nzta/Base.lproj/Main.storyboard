@@ -26,6 +26,8 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -269,16 +271,11 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JD2-ng-meO">
-                                        <rect key="frame" x="112" y="414" width="97" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="U53-VW-tQ4" id="Np7-QH-iPO"/>
-                                        </connections>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQo-0o-HxR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQo-0o-HxR">
                                         <rect key="frame" x="43" y="72" width="235" height="92"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="92" id="rSW-Ef-Uob"/>
+                                        </constraints>
                                         <string key="text">Your small donations
 can make nzta events big 
 and its our family fun</string>
@@ -286,12 +283,64 @@ and its our family fun</string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hM-Zf-UAJ">
+                                        <rect key="frame" x="60" y="172" width="200" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="HCh-Ux-GNM"/>
+                                            <constraint firstAttribute="width" constant="200" id="cFw-RM-kfi"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="gNj-n2-rIr"/>
+                                            <constraint firstAttribute="height" constant="30" id="icD-ig-QPZ"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="U53-VW-tQ4" id="UMT-54-I2D"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cmH-lw-vNH">
+                                        <rect key="frame" x="60" y="210" width="200" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="U53-VW-tQ4" id="C7f-DK-8PE"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckv-pd-hpr">
+                                        <rect key="frame" x="60" y="248" width="200" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="U53-VW-tQ4" id="fwP-sH-mdY"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="cmH-lw-vNH" firstAttribute="width" secondItem="2hM-Zf-UAJ" secondAttribute="width" id="2Pr-T6-dBy"/>
                                     <constraint firstItem="H7P-Oe-YUO" firstAttribute="centerX" secondItem="BQf-os-AD4" secondAttribute="centerX" id="4F6-IO-mjy"/>
+                                    <constraint firstItem="ckv-pd-hpr" firstAttribute="height" secondItem="cmH-lw-vNH" secondAttribute="height" id="7wk-uI-R9G"/>
+                                    <constraint firstItem="2hM-Zf-UAJ" firstAttribute="top" secondItem="fQo-0o-HxR" secondAttribute="bottom" constant="8" id="DIc-Xa-n1A"/>
+                                    <constraint firstItem="cmH-lw-vNH" firstAttribute="top" secondItem="2hM-Zf-UAJ" secondAttribute="bottom" constant="8" symbolic="YES" id="EMK-FN-7Em"/>
                                     <constraint firstItem="H7P-Oe-YUO" firstAttribute="centerY" secondItem="BQf-os-AD4" secondAttribute="centerY" constant="-233.5" id="FcP-nT-g7h"/>
+                                    <constraint firstItem="fQo-0o-HxR" firstAttribute="top" secondItem="H7P-Oe-YUO" secondAttribute="bottom" constant="11" id="LxZ-KU-S1j"/>
+                                    <constraint firstItem="ckv-pd-hpr" firstAttribute="centerX" secondItem="cmH-lw-vNH" secondAttribute="centerX" id="Sqo-9u-5hn"/>
+                                    <constraint firstItem="2hM-Zf-UAJ" firstAttribute="centerX" secondItem="cmH-lw-vNH" secondAttribute="centerX" id="Tr0-7S-K12"/>
+                                    <constraint firstItem="fQo-0o-HxR" firstAttribute="centerX" secondItem="2hM-Zf-UAJ" secondAttribute="centerX" id="VVd-Ko-veo"/>
                                     <constraint firstAttribute="trailing" secondItem="H7P-Oe-YUO" secondAttribute="trailing" constant="86" id="WTh-kr-qIj"/>
+                                    <constraint firstItem="fQo-0o-HxR" firstAttribute="centerX" secondItem="H7P-Oe-YUO" secondAttribute="centerX" id="Zwh-l9-i3B"/>
                                     <constraint firstAttribute="bottom" secondItem="H7P-Oe-YUO" secondAttribute="bottom" constant="507" id="dGc-Ee-HvU"/>
+                                    <constraint firstItem="fQo-0o-HxR" firstAttribute="leading" secondItem="BQf-os-AD4" secondAttribute="leading" constant="43" id="ndb-pZ-Ff7"/>
+                                    <constraint firstItem="2hM-Zf-UAJ" firstAttribute="top" secondItem="fQo-0o-HxR" secondAttribute="bottom" constant="8" symbolic="YES" id="tTt-bc-Jma"/>
+                                    <constraint firstItem="ckv-pd-hpr" firstAttribute="width" secondItem="cmH-lw-vNH" secondAttribute="width" id="vp5-ON-KZS"/>
+                                    <constraint firstItem="cmH-lw-vNH" firstAttribute="height" secondItem="2hM-Zf-UAJ" secondAttribute="height" id="xxq-Ce-t8T"/>
+                                    <constraint firstItem="ckv-pd-hpr" firstAttribute="top" secondItem="cmH-lw-vNH" secondAttribute="bottom" constant="8" symbolic="YES" id="zYj-mv-FBP"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -305,7 +354,6 @@ and its our family fun</string>
                     </view>
                     <navigationItem key="navigationItem" id="j3Q-Nl-Fe2"/>
                     <connections>
-                        <outlet property="nameTextField" destination="JD2-ng-meO" id="Dw8-Jt-KgW"/>
                         <outlet property="scrollView" destination="BQf-os-AD4" id="rgK-K7-40R"/>
                     </connections>
                 </viewController>

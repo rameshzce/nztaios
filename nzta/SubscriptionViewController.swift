@@ -24,7 +24,7 @@ class SubscriptionViewController: UIViewController {
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        scrollView.setContentOffset(CGPointMake(0, 150), animated: true)
+        scrollView.setContentOffset(CGPointMake(0, 10), animated: true)
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
