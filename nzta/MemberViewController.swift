@@ -128,7 +128,7 @@ class MemberViewController: UITableViewController{
                 self.performSegueWithIdentifier("events", sender: self)
                 break;
             case 1:
-                self.performSegueWithIdentifier("events", sender: self)
+                self.performSegueWithIdentifier("existingEvents", sender: self)
                 break;
             case 2:
                 self.performSegueWithIdentifier("events", sender: self)

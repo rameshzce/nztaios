@@ -15,6 +15,7 @@
 		751E412D1CF4488F001A8BD5 /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E412C1CF4488F001A8BD5 /* MenuTransitionManager.swift */; };
 		751E412F1CF451F2001A8BD5 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E412E1CF451F2001A8BD5 /* SubscriptionViewController.swift */; };
 		751E41311CF4620B001A8BD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E41301CF4620B001A8BD5 /* ProfileViewController.swift */; };
+		753585051CFACAD7000C04CA /* ExistingEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753585041CFACAD7000C04CA /* ExistingEventsViewController.swift */; };
 		75446F521CF747A300C78F29 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75446F501CF747A300C78F29 /* GoogleSignIn.bundle */; };
 		75446F531CF747A300C78F29 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75446F511CF747A300C78F29 /* GoogleSignIn.framework */; };
 		75446F551CF7482400C78F29 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75446F541CF7482400C78F29 /* StoreKit.framework */; };
@@ -52,6 +53,7 @@
 		751E412C1CF4488F001A8BD5 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 		751E412E1CF451F2001A8BD5 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		751E41301CF4620B001A8BD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		753585041CFACAD7000C04CA /* ExistingEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistingEventsViewController.swift; sourceTree = "<group>"; };
 		75446F501CF747A300C78F29 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
 		75446F511CF747A300C78F29 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
 		75446F541CF7482400C78F29 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -162,6 +164,7 @@
 				755E529D1CF6997500DBE1C4 /* nzta-Bridging-Header.h */,
 				75D0EBF31CF9819C00563C68 /* PlayVideoViewController.swift */,
 				75CF43391CF99FFA005C6BCA /* InviteFriendViewController.swift */,
+				753585041CFACAD7000C04CA /* ExistingEventsViewController.swift */,
 			);
 			path = nzta;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				751E41291CF42224001A8BD5 /* MenuViewController.swift in Sources */,
 				751E412B1CF422A5001A8BD5 /* MenuViewCell.swift in Sources */,
 				75B622FF1CF0773100493F98 /* EventsViewCell.swift in Sources */,
+				753585051CFACAD7000C04CA /* ExistingEventsViewController.swift in Sources */,
 				75B622E61CF04ABD00493F98 /* ViewController.swift in Sources */,
 				751E412F1CF451F2001A8BD5 /* SubscriptionViewController.swift in Sources */,
 				75B622FB1CF0630100493F98 /* MemberViewCell.swift in Sources */,
