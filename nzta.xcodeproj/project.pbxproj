@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		64DCA4494B3ACF0E7B21C191 /* Pods_nzta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E33452CB056B9F072D582CBB /* Pods_nzta.framework */; };
+		750EA0541CFBD57200AF7A6E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750EA0531CFBD57200AF7A6E /* AVFoundation.framework */; };
 		751179A61CF693BF003A0314 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751179A41CF693BF003A0314 /* FBSDKCoreKit.framework */; };
 		751179A71CF693BF003A0314 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751179A51CF693BF003A0314 /* FBSDKLoginKit.framework */; };
 		751E41291CF42224001A8BD5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E41281CF42224001A8BD5 /* MenuViewController.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		2B567CF55897306DEA9262D1 /* Pods-nzta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nzta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nzta/Pods-nzta.debug.xcconfig"; sourceTree = "<group>"; };
 		565EE79F3C76D58BA15432AD /* Pods-nzta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nzta.release.xcconfig"; path = "Pods/Target Support Files/Pods-nzta/Pods-nzta.release.xcconfig"; sourceTree = "<group>"; };
+		750EA0531CFBD57200AF7A6E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		751179A41CF693BF003A0314 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		751179A51CF693BF003A0314 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		751E41281CF42224001A8BD5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../MenuViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750EA0541CFBD57200AF7A6E /* AVFoundation.framework in Frameworks */,
 				75D0EBEA1CF97F0800563C68 /* MediaPlayer.framework in Frameworks */,
 				75D0EBE81CF97EEA00563C68 /* AVKit.framework in Frameworks */,
 				75446F591CF7484100C78F29 /* SystemConfiguration.framework in Frameworks */,
@@ -180,6 +183,7 @@
 		DB161817BD7CA58465924D53 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				750EA0531CFBD57200AF7A6E /* AVFoundation.framework */,
 				75D0EBE91CF97F0800563C68 /* MediaPlayer.framework */,
 				75D0EBE71CF97EEA00563C68 /* AVKit.framework */,
 				75446F581CF7484100C78F29 /* SystemConfiguration.framework */,

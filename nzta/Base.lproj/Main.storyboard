@@ -225,17 +225,35 @@
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <state key="normal" title="Select year 'n' Go"/>
+                                <connections>
+                                    <action selector="selectYear:" destination="Nuj-V6-Geo" eventType="touchUpInside" id="fbU-K4-tl7"/>
+                                </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNr-ak-T7h">
+                                <rect key="frame" x="0.0" y="392" width="320" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="CAn-zc-g5K"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Nuj-V6-Geo" id="Pyr-CG-QLc"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OVh-Gd-8zd" firstAttribute="top" secondItem="rED-lK-PvO" secondAttribute="bottom" constant="50" id="3Hz-1o-HSU"/>
                             <constraint firstItem="OVh-Gd-8zd" firstAttribute="leading" secondItem="6cC-GQ-lMu" secondAttribute="leading" id="9IB-He-Dfy"/>
+                            <constraint firstItem="qNr-ak-T7h" firstAttribute="width" secondItem="6cC-GQ-lMu" secondAttribute="width" id="BgC-1f-jAT"/>
+                            <constraint firstItem="qkq-MP-UAN" firstAttribute="top" secondItem="qNr-ak-T7h" secondAttribute="bottom" constant="30" id="Eti-54-a55"/>
                             <constraint firstItem="OVh-Gd-8zd" firstAttribute="centerX" secondItem="jq6-zl-AVp" secondAttribute="centerX" id="aWI-kF-rRQ"/>
                             <constraint firstItem="jq6-zl-AVp" firstAttribute="top" secondItem="OVh-Gd-8zd" secondAttribute="bottom" constant="68" id="dn0-Fi-7UX"/>
+                            <constraint firstItem="qNr-ak-T7h" firstAttribute="centerX" secondItem="6cC-GQ-lMu" secondAttribute="centerX" id="hd6-rs-ilL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Existing Events" id="IWX-0u-bG9"/>
+                    <connections>
+                        <outlet property="datePicker" destination="qNr-ak-T7h" id="IWq-J7-RXX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggz-Zq-KSL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
