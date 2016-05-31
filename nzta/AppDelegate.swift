@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
          //   let types: UIRemoteNotificationType = [.Alert, .Badge, .Sound]
          //   application.registerForRemoteNotificationTypes(types)
        // }
-        
+        registerForPushNotifications(application)
         FIRApp.configure()
         
         // Add observer for InstanceID token refresh callback.
