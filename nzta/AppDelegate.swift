@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         // Override point for customization after application launch.
         application.registerForRemoteNotifications()
-        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: .Alert, categories: nil))
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Badge, .Sound, .Alert], categories: nil))
         
         GIDSignIn.sharedInstance().clientID = "65039566976-ncemvcdc35q8942q2ocrgc77m16uo9hn.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
