@@ -49,8 +49,6 @@
 	<string>889401934502412</string>
 	<key>FacebookDisplayName</key>
 	<string>NZTA</string>
-	<key>FirebaseAppDelegateProxyEnabled</key>
-	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

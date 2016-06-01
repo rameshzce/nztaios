@@ -948,7 +948,7 @@ and its our family fun</string>
         <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="iv5-p6-1JK"/>
         <segue reference="0o9-gl-Z1m"/>
-        <segue reference="Zik-Ut-SY0"/>
     </inferredMetricsTieBreakers>
 </document>
