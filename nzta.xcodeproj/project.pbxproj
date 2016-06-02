@@ -40,6 +40,7 @@
 		75D0EBE81CF97EEA00563C68 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D0EBE71CF97EEA00563C68 /* AVKit.framework */; };
 		75D0EBEA1CF97F0800563C68 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D0EBE91CF97F0800563C68 /* MediaPlayer.framework */; };
 		75D0EBF41CF9819C00563C68 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0EBF31CF9819C00563C68 /* PlayVideoViewController.swift */; };
+		75D4C7101D00F217008F06B3 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4C70F1D00F217008F06B3 /* NotificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		75D0EBE71CF97EEA00563C68 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		75D0EBE91CF97F0800563C68 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		75D0EBF31CF9819C00563C68 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
+		75D4C70F1D00F217008F06B3 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		E33452CB056B9F072D582CBB /* Pods_nzta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nzta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 				75D0EBF31CF9819C00563C68 /* PlayVideoViewController.swift */,
 				75CF43391CF99FFA005C6BCA /* InviteFriendViewController.swift */,
 				753585041CFACAD7000C04CA /* ExistingEventsViewController.swift */,
+				75D4C70F1D00F217008F06B3 /* NotificationViewController.swift */,
 			);
 			path = nzta;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				75B622E61CF04ABD00493F98 /* ViewController.swift in Sources */,
 				751E412F1CF451F2001A8BD5 /* SubscriptionViewController.swift in Sources */,
 				75B622FB1CF0630100493F98 /* MemberViewCell.swift in Sources */,
+				75D4C7101D00F217008F06B3 /* NotificationViewController.swift in Sources */,
 				751E412D1CF4488F001A8BD5 /* MenuTransitionManager.swift in Sources */,
 				75CF433A1CF99FFA005C6BCA /* InviteFriendViewController.swift in Sources */,
 				75D0BDE81CF17B1E009E030F /* VideoGalleryViewCell.swift in Sources */,
