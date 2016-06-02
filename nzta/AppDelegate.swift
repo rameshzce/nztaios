@@ -91,19 +91,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     // foreground (or if the app was in the background and the user clicks on the notification).
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
         // display the userInfo
-        if let notification = userInfo["aps"] as? NSDictionary,
-            let alert = notification["alert"] as? String {
-                let alertCtrl = UIAlertController(title: "Time Entry", message: alert as String, preferredStyle: UIAlertControllerStyle.Alert)
-                alertCtrl.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                // Find the presented VC...
-                var presentedVC = self.window?.rootViewController
-                while (presentedVC!.presentedViewController != nil)  {
+        if let notification = userInfo["aps"] as? NSDictionary, let alert = notification["alert"] as? String {
+            /*let alertCtrl = UIAlertController(title: "Time Entry", message: alert as String, preferredStyle: UIAlertControllerStyle.Alert)
+            alertCtrl.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            // Find the presented VC...
+            var presentedVC = self.window?.rootViewController
+            while (presentedVC!.presentedViewController != nil)  {
                 presentedVC = presentedVC!.presentedViewController
             }
-            presentedVC!.presentViewController(alertCtrl, animated: true, completion: nil)
+            presentedVC!.presentViewController(alertCtrl, animated: true, completion: nil)*/
             
             // call the completion handler
             // -- pass in NoData, since no new data was fetched from the server.
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mvc = storyboard.instantiateViewControllerWithIdentifier("notification") as! NotificationViewController
+            mvc.alertMessage = alert
+            let navController = UINavigationController(rootViewController: mvc) // Creating a navigation controller for mvc
+            
+            var topRootViewController : UIViewController! = self.window?.rootViewController
+            while let vvc = topRootViewController.presentedViewController{
+                topRootViewController = vvc
+                
+            }
+            topRootViewController.presentViewController(navController, animated: true, completion: nil)
             completionHandler(UIBackgroundFetchResult.NoData)
         }
     }
