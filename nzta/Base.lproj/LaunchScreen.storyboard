@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="handlee-regular.ttf">
+            <string>Handlee-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -20,10 +25,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="Yjg-gQ-guN">
                                 <rect key="frame" x="228" y="228" width="144" height="144"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Zealand Telugu Association" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4k-et-W6e">
+                                <rect key="frame" x="130" y="96" width="341" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="341" id="MIi-dM-BsQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="t4k-et-W6e" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Zj0-vd-Vqm"/>
                             <constraint firstItem="Yjg-gQ-guN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cOI-Ae-Yp0"/>
+                            <constraint firstItem="t4k-et-W6e" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="76" id="cPh-Y2-bi3"/>
                             <constraint firstItem="Yjg-gQ-guN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jFc-9y-ix1"/>
                         </constraints>
                     </view>

@@ -39,7 +39,6 @@
 		75D0BDE81CF17B1E009E030F /* VideoGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0BDE71CF17B1E009E030F /* VideoGalleryViewCell.swift */; };
 		75D0EBE81CF97EEA00563C68 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D0EBE71CF97EEA00563C68 /* AVKit.framework */; };
 		75D0EBEA1CF97F0800563C68 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D0EBE91CF97F0800563C68 /* MediaPlayer.framework */; };
-		75D0EBEE1CF980E000563C68 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 75D0EBED1CF980E000563C68 /* video1.mp4 */; };
 		75D0EBF41CF9819C00563C68 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0EBF31CF9819C00563C68 /* PlayVideoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +79,6 @@
 		75D0BDE71CF17B1E009E030F /* VideoGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGalleryViewCell.swift; sourceTree = "<group>"; };
 		75D0EBE71CF97EEA00563C68 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		75D0EBE91CF97F0800563C68 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		75D0EBED1CF980E000563C68 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
 		75D0EBF31CF9819C00563C68 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		E33452CB056B9F072D582CBB /* Pods_nzta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nzta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,7 +141,6 @@
 				75B622E71CF04ABD00493F98 /* Main.storyboard */,
 				75A3F5411CF12D270033E70A /* PhotoGalleryViewController.swift */,
 				75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */,
-				75D0EBED1CF980E000563C68 /* video1.mp4 */,
 				75B622EA1CF04ABD00493F98 /* Assets.xcassets */,
 				75B622EC1CF04ABE00493F98 /* LaunchScreen.storyboard */,
 				75B622EF1CF04ABE00493F98 /* Info.plist */,
@@ -265,7 +262,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				75B622F71CF0554700493F98 /* handlee-regular.ttf in Resources */,
-				75D0EBEE1CF980E000563C68 /* video1.mp4 in Resources */,
 				75B622EE1CF04ABE00493F98 /* LaunchScreen.storyboard in Resources */,
 				75B622EB1CF04ABD00493F98 /* Assets.xcassets in Resources */,
 				75446F521CF747A300C78F29 /* GoogleSignIn.bundle in Resources */,
