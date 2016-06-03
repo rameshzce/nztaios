@@ -1,5 +1,5 @@
 //
-//  NotificationViewController.swift
+//  TeamViewController.swift
 //  nzta
 //
 //  Created by Ramesh Kolamala on 03/06/16.
@@ -8,17 +8,11 @@
 
 import UIKit
 
-class NotificationViewController: UIViewController {
+class TeamViewController: UIViewController {
 
-    @IBOutlet var message: UILabel!
-    var alertMessage: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        message.lineBreakMode = .ByWordWrapping
-        message.numberOfLines = 0;
-        
-        self.message.text = alertMessage
-        
+
         // Do any additional setup after loading the view.
     }
 

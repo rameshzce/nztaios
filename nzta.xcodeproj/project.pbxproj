@@ -41,6 +41,8 @@
 		75D0EBEA1CF97F0800563C68 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D0EBE91CF97F0800563C68 /* MediaPlayer.framework */; };
 		75D0EBF41CF9819C00563C68 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0EBF31CF9819C00563C68 /* PlayVideoViewController.swift */; };
 		75D4C7101D00F217008F06B3 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4C70F1D00F217008F06B3 /* NotificationViewController.swift */; };
+		75D4C7131D01024E008F06B3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D4C7121D01024E008F06B3 /* iCarousel.m */; };
+		75D4C7151D0102B3008F06B3 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4C7141D0102B3008F06B3 /* TeamViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,9 @@
 		75D0EBE91CF97F0800563C68 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		75D0EBF31CF9819C00563C68 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		75D4C70F1D00F217008F06B3 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		75D4C7111D01024E008F06B3 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		75D4C7121D01024E008F06B3 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		75D4C7141D0102B3008F06B3 /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		E33452CB056B9F072D582CBB /* Pods_nzta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nzta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -142,6 +147,8 @@
 				75B622E51CF04ABD00493F98 /* ViewController.swift */,
 				75B622E71CF04ABD00493F98 /* Main.storyboard */,
 				75A3F5411CF12D270033E70A /* PhotoGalleryViewController.swift */,
+				75D4C7111D01024E008F06B3 /* iCarousel.h */,
+				75D4C7121D01024E008F06B3 /* iCarousel.m */,
 				75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */,
 				75B622EA1CF04ABD00493F98 /* Assets.xcassets */,
 				75B622EC1CF04ABE00493F98 /* LaunchScreen.storyboard */,
@@ -165,6 +172,7 @@
 				75CF43391CF99FFA005C6BCA /* InviteFriendViewController.swift */,
 				753585041CFACAD7000C04CA /* ExistingEventsViewController.swift */,
 				75D4C70F1D00F217008F06B3 /* NotificationViewController.swift */,
+				75D4C7141D0102B3008F06B3 /* TeamViewController.swift */,
 			);
 			path = nzta;
 			sourceTree = "<group>";
@@ -328,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75A3F5421CF12D270033E70A /* PhotoGalleryViewController.swift in Sources */,
+				75D4C7131D01024E008F06B3 /* iCarousel.m in Sources */,
 				75A3F5401CF12CDE0033E70A /* PhotoGalleryViewCell.swift in Sources */,
 				75D0BDE61CF17AB8009E030F /* VideoGalleryViewController.swift in Sources */,
 				75B622F91CF05DE000493F98 /* MemberViewController.swift in Sources */,
@@ -339,6 +348,7 @@
 				75B622E61CF04ABD00493F98 /* ViewController.swift in Sources */,
 				751E412F1CF451F2001A8BD5 /* SubscriptionViewController.swift in Sources */,
 				75B622FB1CF0630100493F98 /* MemberViewCell.swift in Sources */,
+				75D4C7151D0102B3008F06B3 /* TeamViewController.swift in Sources */,
 				75D4C7101D00F217008F06B3 /* NotificationViewController.swift in Sources */,
 				751E412D1CF4488F001A8BD5 /* MenuTransitionManager.swift in Sources */,
 				75CF433A1CF99FFA005C6BCA /* InviteFriendViewController.swift in Sources */,
