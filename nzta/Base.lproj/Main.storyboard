@@ -589,11 +589,62 @@ and its our family fun</string>
                     <navigationItem key="navigationItem" id="I08-yZ-XdR"/>
                     <connections>
                         <outlet property="carouselView" destination="jB5-HO-lNM" id="eHg-jL-VhF"/>
+                        <segue destination="eza-tE-HJH" kind="push" identifier="imageDisplaySegue" id="0LC-HC-PoG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyy-GT-Za8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1852" y="970"/>
+            <point key="canvasLocation" x="1835" y="963"/>
+        </scene>
+        <!--Image Display View Controller-->
+        <scene sceneID="unX-AN-6Vc">
+            <objects>
+                <viewController storyboardIdentifier="ImageDisplayViewController" id="eza-tE-HJH" customClass="ImageDisplayViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0eD-bo-l7y"/>
+                        <viewControllerLayoutGuide type="bottom" id="uUg-f2-4zy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WJN-kM-o3M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nXt-00-Ykq">
+                                <rect key="frame" x="25" y="75" width="270" height="468"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfS-vN-taF">
+                                <rect key="frame" x="25" y="17" width="90" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lQu-kx-acE"/>
+                                    <constraint firstAttribute="width" constant="90" id="oz1-tb-Ne7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBackClicked:" destination="eza-tE-HJH" eventType="touchUpInside" id="Ue7-L1-aM1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uUg-f2-4zy" firstAttribute="top" secondItem="nXt-00-Ykq" secondAttribute="bottom" constant="25" id="5cf-6i-5hO"/>
+                            <constraint firstItem="AfS-vN-taF" firstAttribute="top" secondItem="WJN-kM-o3M" secondAttribute="topMargin" constant="17" id="CJu-fo-9wr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nXt-00-Ykq" secondAttribute="trailing" constant="9" id="Ezc-u5-03O"/>
+                            <constraint firstItem="nXt-00-Ykq" firstAttribute="top" secondItem="AfS-vN-taF" secondAttribute="bottom" constant="18" id="IGM-1s-m5q"/>
+                            <constraint firstItem="AfS-vN-taF" firstAttribute="leading" secondItem="WJN-kM-o3M" secondAttribute="leadingMargin" constant="9" id="UD0-8D-9yP"/>
+                            <constraint firstItem="nXt-00-Ykq" firstAttribute="leading" secondItem="WJN-kM-o3M" secondAttribute="leadingMargin" constant="9" id="sYL-ib-Sbu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gN5-K5-DVK"/>
+                    <connections>
+                        <outlet property="ivDisplayImage" destination="nXt-00-Ykq" id="ZPO-IR-r8B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="spy-dH-5UE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2238" y="963"/>
         </scene>
         <!--Notification View Controller-->
         <scene sceneID="tcn-M6-gpW">

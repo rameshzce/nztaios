@@ -12,6 +12,9 @@ class TeamViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
     @IBOutlet var carouselView: iCarousel!
     var numbers = [Int]()
     
+    var images : NSMutableArray = NSMutableArray()
+    var selectedIndex : Int!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         numbers = [1,2,3,4,5,6]
@@ -21,7 +24,11 @@ class TeamViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
         super.viewDidLoad()
         
         numbers = [1,2,3,4,5,6]
-        carouselView.type = .Cylinder
+        images = NSMutableArray(array: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"])
+        
+        carouselView.type = .Rotary
+        
+        carouselView .reloadData()
         // Do any additional setup after loading the view.
     }
 
@@ -31,10 +38,10 @@ class TeamViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
     }
     
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
-        return numbers.count
+        return images.count
     }
     
-    func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
+    /*func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
         let tempView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
@@ -52,6 +59,35 @@ class TeamViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
         }
         
         return value
+    }*/
+    
+    func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView
+    {
+        var itemView: UIImageView
+        if (view == nil)
+        {
+            itemView = UIImageView(frame:CGRect(x:0, y:0, width:250, height:250))
+            itemView.contentMode = .ScaleAspectFit
+        }
+        else
+        {
+            itemView = view as! UIImageView;
+        }
+        itemView.image = UIImage(named: "\(images.objectAtIndex(index))")
+        return itemView
+    }
+    
+    func carousel(carousel: iCarousel, didSelectItemAtIndex index: Int) {
+        selectedIndex = index
+        self .performSegueWithIdentifier("imageDisplaySegue", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "imageDisplaySegue")
+        {
+            let viewController : ImageDisplayViewController = segue.destinationViewController as! ImageDisplayViewController
+            viewController.selectedImage = UIImage(named: "\(images.objectAtIndex(selectedIndex))")
+        }
     }
     
 

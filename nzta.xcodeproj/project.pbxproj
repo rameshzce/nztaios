@@ -22,6 +22,7 @@
 		75446F551CF7482400C78F29 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75446F541CF7482400C78F29 /* StoreKit.framework */; };
 		75446F571CF7483200C78F29 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75446F561CF7483200C78F29 /* AddressBook.framework */; };
 		75446F591CF7484100C78F29 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75446F581CF7484100C78F29 /* SystemConfiguration.framework */; };
+		755DD5581D0206AD009B6FE4 /* ImageDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DD5571D0206AD009B6FE4 /* ImageDisplayViewController.swift */; };
 		75A3F5401CF12CDE0033E70A /* PhotoGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */; };
 		75A3F5421CF12D270033E70A /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3F5411CF12D270033E70A /* PhotoGalleryViewController.swift */; };
 		75B622E41CF04ABD00493F98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B622E31CF04ABD00493F98 /* AppDelegate.swift */; };
@@ -62,6 +63,7 @@
 		75446F541CF7482400C78F29 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		75446F561CF7483200C78F29 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		75446F581CF7484100C78F29 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		755DD5571D0206AD009B6FE4 /* ImageDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDisplayViewController.swift; sourceTree = "<group>"; };
 		755E529D1CF6997500DBE1C4 /* nzta__-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nzta__-Bridging-Header.h"; sourceTree = "<group>"; };
 		75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewCell.swift; sourceTree = "<group>"; };
 		75A3F5411CF12D270033E70A /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				75D4C70F1D00F217008F06B3 /* NotificationViewController.swift */,
 				75FEE8881D01CD5200814F82 /* nzta-Bridging-Header.h */,
 				75FEE88C1D01CDB100814F82 /* TeamViewController.swift */,
+				755DD5571D0206AD009B6FE4 /* ImageDisplayViewController.swift */,
 			);
 			path = nzta;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				75B622F91CF05DE000493F98 /* MemberViewController.swift in Sources */,
 				75D0EBF41CF9819C00563C68 /* PlayVideoViewController.swift in Sources */,
 				751E41291CF42224001A8BD5 /* MenuViewController.swift in Sources */,
+				755DD5581D0206AD009B6FE4 /* ImageDisplayViewController.swift in Sources */,
 				751E412B1CF422A5001A8BD5 /* MenuViewCell.swift in Sources */,
 				75B622FF1CF0773100493F98 /* EventsViewCell.swift in Sources */,
 				753585051CFACAD7000C04CA /* ExistingEventsViewController.swift in Sources */,
