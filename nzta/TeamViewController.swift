@@ -24,9 +24,9 @@ class TeamViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
         super.viewDidLoad()
         
         numbers = [1,2,3,4,5,6]
-        images = NSMutableArray(array: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"])
+        images = NSMutableArray(array: ["team1.jpg","team2.jpg","team3.jpg","team4.jpg","team5.jpg","team6.jpg","team7.jpg","team8.jpg","team9.jpg","team10.jpg","team11.jpg","team12.jpg","team13.jpg"])
         
-        carouselView.vertical = true
+        //carouselView.vertical = true
         
         carouselView.type = .Rotary
         
@@ -69,7 +69,8 @@ class TeamViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
         if (view == nil)
         {
             itemView = UIImageView(frame:CGRect(x:0, y:0, width:250, height:250))
-            itemView.contentMode = .ScaleAspectFit
+            //itemView.contentMode = .ScaleAspectFit
+            itemView.contentMode = .ScaleAspectFill
         }
         else
         {

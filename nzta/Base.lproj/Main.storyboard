@@ -199,7 +199,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="OVh-Gd-8zd">
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="OVh-Gd-8zd">
                                 <rect key="frame" x="0.0" y="114" width="320" height="121"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="121" id="8Zx-B7-KgN"/>
@@ -214,7 +214,7 @@
                                     <!--2016-12-31 11:00:00 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jq6-zl-AVp">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jq6-zl-AVp">
                                 <rect key="frame" x="88" y="303" width="144" height="39"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
@@ -224,7 +224,7 @@
                                     <action selector="selectYear:" destination="Nuj-V6-Geo" eventType="touchUpInside" id="fbU-K4-tl7"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNr-ak-T7h">
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qNr-ak-T7h">
                                 <rect key="frame" x="0.0" y="392" width="320" height="102"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="CAn-zc-g5K"/>
@@ -434,7 +434,7 @@ and its our family fun</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="Qvf-up-huO" customClass="MemberViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qvf-up-huO" id="TzM-5D-eaI">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
@@ -514,13 +514,13 @@ and its our family fun</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="vLK-8t-Y0J">
-                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="F7l-vg-CnD" customClass="MenuViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="130" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F7l-vg-CnD" id="sbp-fz-E7v">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
