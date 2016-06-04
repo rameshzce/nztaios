@@ -1042,6 +1042,41 @@ and its our family fun</string>
             </objects>
             <point key="canvasLocation" x="-373" y="970"/>
         </scene>
+        <!--Image Display View Controller-->
+        <scene sceneID="gVs-5N-VW2">
+            <objects>
+                <viewController id="gSH-4C-b0s" userLabel="Image Display View Controller" customClass="DisplayGalleryImageViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B3y-Q1-888"/>
+                        <viewControllerLayoutGuide type="bottom" id="uAh-oS-s5B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8AK-zG-dTo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3f-eM-cTz">
+                                <rect key="frame" x="36" y="155" width="248" height="249"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A3f-eM-cTz" firstAttribute="centerY" secondItem="8AK-zG-dTo" secondAttribute="centerY" constant="-4.5" id="6ML-68-ZyY"/>
+                            <constraint firstItem="A3f-eM-cTz" firstAttribute="centerX" secondItem="8AK-zG-dTo" secondAttribute="centerX" id="7d7-pB-WSz"/>
+                            <constraint firstItem="uAh-oS-s5B" firstAttribute="top" secondItem="A3f-eM-cTz" secondAttribute="bottom" constant="120" id="Mkr-ag-Bdb"/>
+                            <constraint firstItem="A3f-eM-cTz" firstAttribute="centerY" secondItem="8AK-zG-dTo" secondAttribute="centerY" constant="-4.5" id="Vyq-1Q-2pJ"/>
+                            <constraint firstItem="A3f-eM-cTz" firstAttribute="centerX" secondItem="8AK-zG-dTo" secondAttribute="centerX" id="mXn-Vp-3xx"/>
+                            <constraint firstItem="A3f-eM-cTz" firstAttribute="leading" secondItem="8AK-zG-dTo" secondAttribute="leadingMargin" constant="20" id="v34-cf-yiQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gallery" id="fVk-kr-bYb"/>
+                    <connections>
+                        <outlet property="displayImage" destination="A3f-eM-cTz" id="yUY-qd-a4B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHO-sF-qYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="699" y="-356"/>
+        </scene>
         <!--Image Gallery View Controller-->
         <scene sceneID="VQe-XW-SwR">
             <objects>
@@ -1101,6 +1136,7 @@ and its our family fun</string>
                                     <outlet property="postAuthor" destination="FS8-HW-VIs" id="PYf-aT-d2V"/>
                                     <outlet property="postImageView" destination="UHw-lh-3gY" id="oZp-wR-jNb"/>
                                     <outlet property="postTitle" destination="aaN-qA-arE" id="Jw2-Dg-y3p"/>
+                                    <segue destination="gSH-4C-b0s" kind="push" identifier="displayGalleryImage" id="Bau-uG-1bY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
