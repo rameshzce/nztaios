@@ -62,7 +62,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         } else {
             let request = NSMutableURLRequest(URL: NSURL(string: "http://tokkalo.com/api/1/submit_user.php")!)
             request.HTTPMethod = "POST"
-            let postString = "fname=\(name.text!)&mobile=\(mob.text!)&organization=\(email.text!)"
+            let postString = "fname=\(name.text!)&mobile=\(mob.text!)&organization=\(email.text!)&login_type=1&device_id=\(prefs.stringForKey("tokenString")!)"
             request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
             
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
@@ -167,6 +167,22 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         GIDSignIn.sharedInstance().signOut()
     }
     
+    /*override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }*/
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated);
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        let value = UIInterfaceOrientation.Portrait.rawValue
+        UIDevice.currentDevice().setValue(value, forKey: "orientation")
+    }
     
 }
 

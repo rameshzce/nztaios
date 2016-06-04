@@ -79,7 +79,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        print(deviceToken)
+        //print(deviceToken)
+        
+        let prefs = NSUserDefaults.standardUserDefaults()
+        
+        let tokenChars = UnsafePointer<CChar>(deviceToken.bytes)
+        var tokenString = ""
+        
+        for i in 0..<deviceToken.length {
+            tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
+        }
+        
+        //print("tokenString: \(tokenString)")
+        
+        prefs.setValue(tokenString, forKey: "tokenString")
+        prefs.synchronize()
         
     }
     
