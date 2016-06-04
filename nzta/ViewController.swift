@@ -60,19 +60,24 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         } else if (email.text == "") {
             showAlert("Please enter email")
         } else {
+            SwiftLoading().showLoading()
             let request = NSMutableURLRequest(URL: NSURL(string: "http://tokkalo.com/api/1/submit_user.php")!)
             request.HTTPMethod = "POST"
             let postString = "fname=\(name.text!)&mobile=\(mob.text!)&organization=\(email.text!)&login_type=1&device_id=\(prefs.stringForKey("tokenString")!)"
             request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
             
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+                
                 data, response, error in
+                
+                
                 if error != nil {
                     self.showAlert("Error: \(error)")
                     return
                 }
                 
                 do {
+                    SwiftLoading().hideLoading()
                     let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                     let status = jsonDictionary["status"] as! String
                     //self.showAlert("\(status)")
@@ -83,7 +88,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
                         self.prefs.setValue(phone, forKey: "login")
                         self.performSegueWithIdentifier("member", sender: self)
                     }else if status == "FAILURE"{
-                        self.showAlert("\(status)")
+                        let message = jsonDictionary["message"] as! String
+                        self.showAlert("\(message)")
                         
                     }
                 } catch {
