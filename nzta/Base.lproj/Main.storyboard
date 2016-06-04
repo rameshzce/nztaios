@@ -30,6 +30,7 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1058,57 +1059,45 @@ and its our family fun</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UHw-lh-3gY">
-                                            <rect key="frame" x="15" y="8" width="290" height="203"/>
+                                            <rect key="frame" x="15" y="8" width="290" height="231"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sQd-cZ-Ai3">
-                                            <rect key="frame" x="15" y="255" width="40" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="BMW-ed-hmz"/>
-                                                <constraint firstAttribute="height" constant="40" id="xAd-PL-LiD"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaN-qA-arE">
-                                            <rect key="frame" x="15" y="219" width="290" height="28"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaN-qA-arE">
+                                            <rect key="frame" x="15" y="247" width="290" height="0.0"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FS8-HW-VIs">
-                                            <rect key="frame" x="63" y="255" width="242" height="21"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                            <rect key="frame" x="15" y="251" width="290" height="25"/>
+                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="an hour ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8o-Ra-xRJ">
-                                            <rect key="frame" x="63" y="274" width="242" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8o-Ra-xRJ">
+                                            <rect key="frame" x="15" y="274" width="290" height="21"/>
                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="FS8-HW-VIs" firstAttribute="top" secondItem="sQd-cZ-Ai3" secondAttribute="top" id="8bR-L2-5Lj"/>
                                         <constraint firstItem="FS8-HW-VIs" firstAttribute="trailing" secondItem="a8o-Ra-xRJ" secondAttribute="trailing" id="B6t-Or-TgW"/>
                                         <constraint firstItem="UHw-lh-3gY" firstAttribute="leading" secondItem="MnN-dq-Hkq" secondAttribute="leadingMargin" constant="7" id="BRf-rd-qwa"/>
+                                        <constraint firstItem="aaN-qA-arE" firstAttribute="leading" secondItem="FS8-HW-VIs" secondAttribute="leading" id="Jfl-pN-Lig"/>
                                         <constraint firstItem="a8o-Ra-xRJ" firstAttribute="top" secondItem="FS8-HW-VIs" secondAttribute="bottom" constant="-2" id="KgI-Gi-bej"/>
                                         <constraint firstItem="UHw-lh-3gY" firstAttribute="top" secondItem="MnN-dq-Hkq" secondAttribute="topMargin" id="MNC-BF-uX7"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="aaN-qA-arE" secondAttribute="trailing" constant="7" id="MNR-jU-2bC"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="a8o-Ra-xRJ" secondAttribute="bottom" constant="-0.5" id="Mnx-Io-6cy"/>
-                                        <constraint firstItem="a8o-Ra-xRJ" firstAttribute="bottom" secondItem="sQd-cZ-Ai3" secondAttribute="bottom" id="O5z-B7-97W"/>
-                                        <constraint firstItem="sQd-cZ-Ai3" firstAttribute="leading" secondItem="aaN-qA-arE" secondAttribute="leading" id="Oiz-4M-krU"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="FS8-HW-VIs" secondAttribute="trailing" constant="7" id="Pz7-Ea-0A8"/>
                                         <constraint firstItem="a8o-Ra-xRJ" firstAttribute="top" secondItem="aaN-qA-arE" secondAttribute="bottom" constant="27" id="Uoe-qY-070"/>
                                         <constraint firstItem="FS8-HW-VIs" firstAttribute="leading" secondItem="a8o-Ra-xRJ" secondAttribute="leading" id="Uvc-pT-CLZ"/>
                                         <constraint firstItem="aaN-qA-arE" firstAttribute="leading" secondItem="MnN-dq-Hkq" secondAttribute="leadingMargin" constant="7" id="Xax-Lb-QDG"/>
-                                        <constraint firstItem="sQd-cZ-Ai3" firstAttribute="top" secondItem="aaN-qA-arE" secondAttribute="bottom" constant="8" id="drH-pG-CO4"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="FS8-HW-VIs" secondAttribute="bottom" constant="18.5" id="fOf-Yk-d9P"/>
                                         <constraint firstItem="aaN-qA-arE" firstAttribute="top" secondItem="UHw-lh-3gY" secondAttribute="bottom" constant="8.5" id="hZc-W7-8NG"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="UHw-lh-3gY" secondAttribute="trailing" constant="7" id="uFv-Mx-vcY"/>
-                                        <constraint firstItem="FS8-HW-VIs" firstAttribute="leading" secondItem="sQd-cZ-Ai3" secondAttribute="trailing" constant="8" id="v6f-YG-jQQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="authorImageView" destination="sQd-cZ-Ai3" id="K1F-nQ-Bvq"/>
                                     <outlet property="postAuthor" destination="FS8-HW-VIs" id="PYf-aT-d2V"/>
                                     <outlet property="postImageView" destination="UHw-lh-3gY" id="oZp-wR-jNb"/>
                                     <outlet property="postTitle" destination="aaN-qA-arE" id="Jw2-Dg-y3p"/>

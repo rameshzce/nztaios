@@ -11,6 +11,8 @@ import UIKit
 class ImageGalleryViewController: UITableViewController {
     var eventName: String!
     
+    let images = ["thumb_event_name_image1", "thumb_event_name_image2", "thumb_event_name_image3", "thumb_event_name_image4", "thumb_event_name_image5", "thumb_event_name_image6", "thumb_event_name_image7", "thumb_event_name_image8", "thumb_event_name_image9", "thumb_event_name_image10", "thumb_event_name_image11"]
+    
     let prefs = NSUserDefaults.standardUserDefaults()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,7 @@ class ImageGalleryViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 4
+        return images.count
     }
     
     
@@ -43,8 +45,8 @@ class ImageGalleryViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ImageGalleryViewCell
         
         // Configure the cell...
-        if indexPath.row == 0 {
-            cell.postImageView.image = UIImage(named: "red-lights-lisbon")
+        /*if indexPath.row == 0 {
+            cell.postImageView.image = UIImage(named: "thumb_event_name_image1")
             cell.postTitle.text = "Red Lights, Lisbon"
             cell.postAuthor.text = "TOM EVERSLEY (@tomeversley)"
             cell.authorImageView.image = UIImage(named: "appcoda-300")
@@ -67,7 +69,10 @@ class ImageGalleryViewController: UITableViewController {
             cell.postAuthor.text = "TOM EVERSLEY (@tomeversley)"
             cell.authorImageView.image = UIImage(named: "appcoda-300")
             
-        }
+        }*/
+        
+        cell.postImageView.image = UIImage(named: images[indexPath.row])
+        cell.postAuthor.text = "Event description"
         
         return cell
     }

@@ -14,12 +14,7 @@ class ImageGalleryViewCell: UITableViewCell {
     @IBOutlet weak var postAuthor:UILabel!
     @IBOutlet weak var authorImageView:UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        authorImageView.layer.cornerRadius = authorImageView.frame.width / 2
-        authorImageView.layer.masksToBounds = true
-    }
+
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
