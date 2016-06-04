@@ -55,7 +55,7 @@ class MenuViewController: UITableViewController {
         switch (indexPath.row) {
         //case 0: [self performSegueWithIdentifier:@"Segue0" sender:self];
         case 0:
-            self.performSegueWithIdentifier("menuSubscription", sender: self)
+            self.performSegueWithIdentifier("menuNzta", sender: self)
             break;
         case 1:
             self.performSegueWithIdentifier("menuProfile", sender: self)

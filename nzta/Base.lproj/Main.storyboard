@@ -556,6 +556,7 @@ and its our family fun</string>
                         <segue destination="U53-VW-tQ4" kind="push" identifier="menuSubscription" id="YMc-TZ-PZh"/>
                         <segue destination="Lg2-yt-GHd" kind="push" identifier="menuProfile" id="zv7-5d-ouw"/>
                         <segue destination="HTY-hE-cqA" kind="push" identifier="menuTeam" id="rYm-Nk-CGQ"/>
+                        <segue destination="gbp-5x-xKh" kind="push" identifier="menuNzta" id="I58-nj-Cl3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cu-DX-CiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -679,7 +680,7 @@ and its our family fun</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="95" id="bxq-Vh-7eT" customClass="EventsViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="320" height="95"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bxq-Vh-7eT" id="47D-U6-Aez">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
@@ -830,7 +831,7 @@ and its our family fun</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="lpj-v0-YO8" customClass="VideoGalleryViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lpj-v0-YO8" id="eOx-uO-92Q">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -1054,7 +1055,7 @@ and its our family fun</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3f-eM-cTz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3f-eM-cTz">
                                 <rect key="frame" x="36" y="155" width="248" height="249"/>
                             </imageView>
                         </subviews>
@@ -1087,7 +1088,7 @@ and its our family fun</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="303" id="0Xr-LU-UWl" customClass="ImageGalleryViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="320" height="303"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="303"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Xr-LU-UWl" id="MnN-dq-Hkq">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="302"/>
@@ -1159,6 +1160,7 @@ and its our family fun</string>
         <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="I58-nj-Cl3"/>
         <segue reference="0o9-gl-Z1m"/>
     </inferredMetricsTieBreakers>
 </document>
