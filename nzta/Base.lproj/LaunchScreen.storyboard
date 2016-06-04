@@ -7,6 +7,7 @@
     <customFonts key="customFonts">
         <mutableArray key="handlee-regular.ttf">
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -34,13 +35,25 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Zealand Telugu Association" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-6b-583">
+                                <rect key="frame" x="130" y="528" width="341" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="Lv2-SB-dRR"/>
+                                    <constraint firstAttribute="width" constant="341" id="RXS-PG-IZ1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="cLg-6b-583" secondAttribute="bottom" constant="45" id="YWL-o9-R8T"/>
                             <constraint firstItem="t4k-et-W6e" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Zj0-vd-Vqm"/>
                             <constraint firstItem="Yjg-gQ-guN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cOI-Ae-Yp0"/>
                             <constraint firstItem="t4k-et-W6e" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="76" id="cPh-Y2-bi3"/>
                             <constraint firstItem="Yjg-gQ-guN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jFc-9y-ix1"/>
+                            <constraint firstItem="cLg-6b-583" firstAttribute="leading" secondItem="t4k-et-W6e" secondAttribute="leading" id="pHa-qQ-Ho7"/>
                         </constraints>
                     </view>
                 </viewController>
