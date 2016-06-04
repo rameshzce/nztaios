@@ -31,14 +31,54 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
     {
-        FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large)"]).startWithCompletionHandler { (connection, result, error) -> Void in
+        FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large), email"]).startWithCompletionHandler { (connection, result, error) -> Void in
             
             let strFirstName: String = (result.objectForKey("first_name") as? String)!
-            let strLastName: String = (result.objectForKey("last_name") as? String)!
-            let strPictureURL: String = (result.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
+            //let strLastName: String = (result.objectForKey("last_name") as? String)!
+            let strEmail: String = (result.objectForKey("email") as? String)!
+            //let strPictureURL: String = (result.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
             
-            self.lblName.text = "Welcome, \(strFirstName) \(strLastName)"
-            self.ivUserProfileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: strPictureURL)!)!)
+            //self.lblName.text = "Welcome, \(strFirstName) \(strLastName)"
+            //self.ivUserProfileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: strPictureURL)!)!)
+            
+            //register and login
+            SwiftLoading().showLoading()
+            let request = NSMutableURLRequest(URL: NSURL(string: "http://tokkalo.com/api/1/submit_user.php")!)
+            request.HTTPMethod = "POST"
+            let postString = "fname=\(strFirstName)&mobile=\(strEmail)&organization=\(strEmail)&login_type=2&device_id=\(self.prefs.stringForKey("tokenString")!)"
+            request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+                
+                data, response, error in
+                
+                
+                if error != nil {
+                    self.showAlert("Error: \(error)")
+                    return
+                }
+                
+                do {
+                    SwiftLoading().hideLoading()
+                    let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                    let status = jsonDictionary["status"] as! String
+                    //self.showAlert("\(status)")
+                    
+                    if status == "SUCCESS"{
+                        let phone = jsonDictionary["phone"] as! String
+                        //self.showAlert("\(phone)")
+                        self.prefs.setValue(phone, forKey: "login")
+                        self.performSegueWithIdentifier("member", sender: self)
+                    }else if status == "FAILURE"{
+                        let message = jsonDictionary["message"] as! String
+                        self.showAlert("\(message)")
+                        
+                    }
+                } catch {
+                    // Handle Error
+                }
+            }
+            task.resume()
         }
     }
     
