@@ -49,7 +49,6 @@ class ImageGalleryViewController: UITableViewController {
         
         
         cell.postImageView.image = UIImage(named: thumbs[indexPath.row])
-        cell.postAuthor.text = "Event description"
         
         return cell
     }

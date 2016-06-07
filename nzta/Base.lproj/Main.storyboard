@@ -30,7 +30,6 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1055,8 +1054,8 @@ and its our family fun</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3f-eM-cTz">
-                                <rect key="frame" x="36" y="155" width="248" height="249"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3f-eM-cTz">
+                                <rect key="frame" x="36" y="111" width="248" height="337"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1082,20 +1081,23 @@ and its our family fun</string>
         <scene sceneID="VQe-XW-SwR">
             <objects>
                 <tableViewController id="Gs7-dE-Ygq" userLabel="Image Gallery View Controller" customClass="ImageGalleryViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="303" sectionHeaderHeight="22" sectionFooterHeight="22" id="QvC-Fz-qUu">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="251" sectionHeaderHeight="22" sectionFooterHeight="22" id="QvC-Fz-qUu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="303" id="0Xr-LU-UWl" customClass="ImageGalleryViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="22" width="320" height="303"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="251" id="0Xr-LU-UWl" customClass="ImageGalleryViewCell" customModule="nzta" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="22" width="320" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Xr-LU-UWl" id="MnN-dq-Hkq">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="302"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UHw-lh-3gY">
                                             <rect key="frame" x="15" y="8" width="290" height="231"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="231" id="ByL-0X-C2I"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaN-qA-arE">
                                             <rect key="frame" x="15" y="247" width="290" height="0.0"/>
@@ -1103,38 +1105,17 @@ and its our family fun</string>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FS8-HW-VIs">
-                                            <rect key="frame" x="15" y="251" width="290" height="25"/>
-                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8o-Ra-xRJ">
-                                            <rect key="frame" x="15" y="274" width="290" height="21"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="FS8-HW-VIs" firstAttribute="trailing" secondItem="a8o-Ra-xRJ" secondAttribute="trailing" id="B6t-Or-TgW"/>
                                         <constraint firstItem="UHw-lh-3gY" firstAttribute="leading" secondItem="MnN-dq-Hkq" secondAttribute="leadingMargin" constant="7" id="BRf-rd-qwa"/>
-                                        <constraint firstItem="aaN-qA-arE" firstAttribute="leading" secondItem="FS8-HW-VIs" secondAttribute="leading" id="Jfl-pN-Lig"/>
-                                        <constraint firstItem="a8o-Ra-xRJ" firstAttribute="top" secondItem="FS8-HW-VIs" secondAttribute="bottom" constant="-2" id="KgI-Gi-bej"/>
+                                        <constraint firstItem="UHw-lh-3gY" firstAttribute="leading" secondItem="aaN-qA-arE" secondAttribute="leading" id="FEh-q0-RYg"/>
                                         <constraint firstItem="UHw-lh-3gY" firstAttribute="top" secondItem="MnN-dq-Hkq" secondAttribute="topMargin" id="MNC-BF-uX7"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="aaN-qA-arE" secondAttribute="trailing" constant="7" id="MNR-jU-2bC"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="a8o-Ra-xRJ" secondAttribute="bottom" constant="-0.5" id="Mnx-Io-6cy"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="FS8-HW-VIs" secondAttribute="trailing" constant="7" id="Pz7-Ea-0A8"/>
-                                        <constraint firstItem="a8o-Ra-xRJ" firstAttribute="top" secondItem="aaN-qA-arE" secondAttribute="bottom" constant="27" id="Uoe-qY-070"/>
-                                        <constraint firstItem="FS8-HW-VIs" firstAttribute="leading" secondItem="a8o-Ra-xRJ" secondAttribute="leading" id="Uvc-pT-CLZ"/>
-                                        <constraint firstItem="aaN-qA-arE" firstAttribute="leading" secondItem="MnN-dq-Hkq" secondAttribute="leadingMargin" constant="7" id="Xax-Lb-QDG"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="FS8-HW-VIs" secondAttribute="bottom" constant="18.5" id="fOf-Yk-d9P"/>
-                                        <constraint firstItem="aaN-qA-arE" firstAttribute="top" secondItem="UHw-lh-3gY" secondAttribute="bottom" constant="8.5" id="hZc-W7-8NG"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="UHw-lh-3gY" secondAttribute="trailing" constant="7" id="uFv-Mx-vcY"/>
+                                        <constraint firstItem="UHw-lh-3gY" firstAttribute="centerX" secondItem="MnN-dq-Hkq" secondAttribute="centerX" id="Z3s-RS-3sw"/>
+                                        <constraint firstItem="aaN-qA-arE" firstAttribute="top" secondItem="UHw-lh-3gY" secondAttribute="bottom" constant="8" symbolic="YES" id="u0u-Mr-4gd"/>
+                                        <constraint firstItem="UHw-lh-3gY" firstAttribute="trailing" secondItem="aaN-qA-arE" secondAttribute="trailing" id="z60-w8-zeu"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="postAuthor" destination="FS8-HW-VIs" id="PYf-aT-d2V"/>
                                     <outlet property="postImageView" destination="UHw-lh-3gY" id="oZp-wR-jNb"/>
                                     <outlet property="postTitle" destination="aaN-qA-arE" id="Jw2-Dg-y3p"/>
                                     <segue destination="gSH-4C-b0s" kind="push" identifier="displayGalleryImage" id="Bau-uG-1bY"/>
