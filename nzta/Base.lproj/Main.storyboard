@@ -689,12 +689,12 @@ and its our family fun</string>
                                             <rect key="frame" x="8" y="12" width="304" height="83"/>
                                             <color key="backgroundColor" red="0.53725490196078429" green="0.0" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RUn-EL-P2y" userLabel="View left sub bg">
-                                            <rect key="frame" x="8" y="69" width="150" height="26"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUn-EL-P2y" userLabel="View left sub bg">
+                                            <rect key="frame" x="8" y="62" width="150" height="33"/>
                                             <color key="backgroundColor" red="0.30588235294117649" green="0.0" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-gg-tXi" userLabel="View right sub bg">
-                                            <rect key="frame" x="162" y="62" width="150" height="26"/>
+                                            <rect key="frame" x="162" y="62" width="150" height="33"/>
                                             <color key="backgroundColor" red="0.30588235294117649" green="0.0" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-4j-B2V">
@@ -766,7 +766,6 @@ and its our family fun</string>
                                         <constraint firstItem="cae-IS-oNi" firstAttribute="leading" secondItem="2qH-gP-XMA" secondAttribute="trailing" constant="4" id="deM-tN-MJu"/>
                                         <constraint firstItem="Jfb-gg-tXi" firstAttribute="bottom" secondItem="RUn-EL-P2y" secondAttribute="bottom" id="dqd-jH-0Vh"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="ee5-IP-rl0" secondAttribute="bottom" constant="-1" id="gR9-iz-hOi"/>
-                                        <constraint firstItem="cws-Pb-vpl" firstAttribute="bottom" secondItem="RUn-EL-P2y" secondAttribute="bottom" constant="7" id="gph-Gf-x4n"/>
                                         <constraint firstItem="Jfb-gg-tXi" firstAttribute="top" secondItem="ee5-IP-rl0" secondAttribute="top" id="hB5-8V-c8T"/>
                                         <constraint firstItem="2fh-4j-B2V" firstAttribute="centerX" secondItem="47D-U6-Aez" secondAttribute="centerX" id="hY2-Pw-Yvt"/>
                                         <constraint firstItem="RUn-EL-P2y" firstAttribute="top" secondItem="ee5-IP-rl0" secondAttribute="top" id="iGC-HI-VlM"/>
