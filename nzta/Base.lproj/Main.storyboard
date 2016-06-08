@@ -685,14 +685,18 @@ and its our family fun</string>
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-4j-B2V">
-                                            <rect key="frame" x="15" y="8" width="290" height="30"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cws-Pb-vpl">
+                                            <rect key="frame" x="8" y="12" width="304" height="83"/>
+                                            <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-4j-B2V">
+                                            <rect key="frame" x="15" y="20" width="290" height="30"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGQ-rN-dYh">
-                                            <rect key="frame" x="15" y="39" width="290" height="22"/>
+                                            <rect key="frame" x="15" y="51" width="290" height="10"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="16"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -700,7 +704,7 @@ and its our family fun</string>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="ee5-IP-rl0">
                                             <rect key="frame" x="15" y="60" width="32" height="32"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt5-M0-AfX">
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="254" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt5-M0-AfX">
                                             <rect key="frame" x="50" y="62" width="103" height="28"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                             <state key="normal" title="Photo Gallery">
@@ -711,14 +715,14 @@ and its our family fun</string>
                                                 <segue destination="Gs7-dE-Ygq" kind="push" identifier="photoGallery" id="sVH-YN-csd"/>
                                             </connections>
                                         </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-gP-XMA">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="256" verticalHuggingPriority="251" image="video" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-gP-XMA">
                                             <rect key="frame" x="166" y="56" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="XY5-EM-bBh"/>
                                                 <constraint firstAttribute="width" constant="30" id="xyi-f0-hV6"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cae-IS-oNi">
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cae-IS-oNi">
                                             <rect key="frame" x="204" y="58" width="101" height="37"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                             <state key="normal" title="Video Gallery">
@@ -730,7 +734,6 @@ and its our family fun</string>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="YGQ-rN-dYh" firstAttribute="top" secondItem="2fh-4j-B2V" secondAttribute="bottom" constant="1" id="7ob-aT-Au2"/>
                                         <constraint firstItem="ee5-IP-rl0" firstAttribute="centerY" secondItem="Mt5-M0-AfX" secondAttribute="centerY" id="8dB-c3-UEi"/>
@@ -740,8 +743,11 @@ and its our family fun</string>
                                         <constraint firstItem="ee5-IP-rl0" firstAttribute="centerY" secondItem="cae-IS-oNi" secondAttribute="centerY" id="KWm-8g-TeV"/>
                                         <constraint firstItem="Mt5-M0-AfX" firstAttribute="top" secondItem="YGQ-rN-dYh" secondAttribute="bottom" constant="1" id="Khz-Oa-EDu"/>
                                         <constraint firstItem="2qH-gP-XMA" firstAttribute="bottom" secondItem="47D-U6-Aez" secondAttribute="bottomMargin" id="RCC-ao-eki"/>
+                                        <constraint firstItem="cws-Pb-vpl" firstAttribute="leading" secondItem="47D-U6-Aez" secondAttribute="leadingMargin" id="UGa-U5-oht"/>
                                         <constraint firstItem="2qH-gP-XMA" firstAttribute="leading" secondItem="ee5-IP-rl0" secondAttribute="trailing" constant="119" id="VyW-Bd-BUm"/>
                                         <constraint firstItem="cae-IS-oNi" firstAttribute="trailing" secondItem="YGQ-rN-dYh" secondAttribute="trailing" id="XE2-RJ-OGr"/>
+                                        <constraint firstItem="cws-Pb-vpl" firstAttribute="top" secondItem="47D-U6-Aez" secondAttribute="topMargin" constant="-8" id="YIk-GJ-RjE"/>
+                                        <constraint firstItem="cws-Pb-vpl" firstAttribute="centerX" secondItem="2fh-4j-B2V" secondAttribute="centerX" id="a3T-BB-B48"/>
                                         <constraint firstItem="ee5-IP-rl0" firstAttribute="top" secondItem="YGQ-rN-dYh" secondAttribute="bottom" constant="-1" id="bbf-fZ-brO"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="2fh-4j-B2V" secondAttribute="trailing" constant="7" id="f0h-hx-nt5"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="ee5-IP-rl0" secondAttribute="bottom" constant="-6" id="gR9-iz-hOi"/>
@@ -749,8 +755,10 @@ and its our family fun</string>
                                         <constraint firstItem="2fh-4j-B2V" firstAttribute="top" secondItem="47D-U6-Aez" secondAttribute="topMargin" id="jtz-0H-UBU"/>
                                         <constraint firstItem="Mt5-M0-AfX" firstAttribute="leading" secondItem="ee5-IP-rl0" secondAttribute="trailing" constant="3" id="mO7-yj-7NS"/>
                                         <constraint firstItem="cae-IS-oNi" firstAttribute="leading" secondItem="2qH-gP-XMA" secondAttribute="trailing" constant="8" symbolic="YES" id="ptU-xJ-cCt"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="cws-Pb-vpl" secondAttribute="bottom" constant="-9" id="sDH-pF-jkk"/>
                                         <constraint firstItem="YGQ-rN-dYh" firstAttribute="leading" secondItem="ee5-IP-rl0" secondAttribute="leading" id="vbh-7u-b66"/>
                                     </constraints>
+                                    <edgeInsets key="layoutMargins" top="20" left="8" bottom="8" right="8"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="YGQ-rN-dYh" id="EJt-Aq-dl2"/>

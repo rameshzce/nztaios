@@ -33,6 +33,8 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
         tableView.estimatedRowHeight = 95.0
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.backgroundColor = hexStringToUIColor("#ff218e")
+        
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
