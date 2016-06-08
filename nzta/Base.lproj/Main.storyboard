@@ -687,7 +687,15 @@ and its our family fun</string>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cws-Pb-vpl">
                                             <rect key="frame" x="8" y="12" width="304" height="83"/>
-                                            <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.66666666666666663" green="0.0" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUn-EL-P2y">
+                                            <rect key="frame" x="8" y="60" width="150" height="35"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-gg-tXi">
+                                            <rect key="frame" x="162" y="60" width="150" height="35"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-4j-B2V">
                                             <rect key="frame" x="15" y="20" width="290" height="30"/>
@@ -735,11 +743,14 @@ and its our family fun</string>
                                         </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="cae-IS-oNi" firstAttribute="leading" secondItem="RUn-EL-P2y" secondAttribute="trailing" constant="46" id="4gn-EM-Z77"/>
+                                        <constraint firstItem="Jfb-gg-tXi" firstAttribute="top" secondItem="ee5-IP-rl0" secondAttribute="top" id="5nf-Az-syQ"/>
                                         <constraint firstItem="YGQ-rN-dYh" firstAttribute="top" secondItem="2fh-4j-B2V" secondAttribute="bottom" constant="1" id="7ob-aT-Au2"/>
                                         <constraint firstItem="ee5-IP-rl0" firstAttribute="centerY" secondItem="Mt5-M0-AfX" secondAttribute="centerY" id="8dB-c3-UEi"/>
                                         <constraint firstItem="2fh-4j-B2V" firstAttribute="leading" secondItem="47D-U6-Aez" secondAttribute="leadingMargin" constant="7" id="BG9-aM-uMn"/>
                                         <constraint firstItem="2fh-4j-B2V" firstAttribute="leading" secondItem="YGQ-rN-dYh" secondAttribute="leading" id="Ckv-V0-zAU"/>
                                         <constraint firstItem="2fh-4j-B2V" firstAttribute="trailing" secondItem="YGQ-rN-dYh" secondAttribute="trailing" id="EYm-ey-D7o"/>
+                                        <constraint firstItem="Jfb-gg-tXi" firstAttribute="leading" secondItem="RUn-EL-P2y" secondAttribute="trailing" constant="4" id="Ezg-vN-GSV"/>
                                         <constraint firstItem="ee5-IP-rl0" firstAttribute="centerY" secondItem="cae-IS-oNi" secondAttribute="centerY" id="KWm-8g-TeV"/>
                                         <constraint firstItem="Mt5-M0-AfX" firstAttribute="top" secondItem="YGQ-rN-dYh" secondAttribute="bottom" constant="1" id="Khz-Oa-EDu"/>
                                         <constraint firstItem="2qH-gP-XMA" firstAttribute="bottom" secondItem="47D-U6-Aez" secondAttribute="bottomMargin" id="RCC-ao-eki"/>
@@ -747,16 +758,21 @@ and its our family fun</string>
                                         <constraint firstItem="2qH-gP-XMA" firstAttribute="leading" secondItem="ee5-IP-rl0" secondAttribute="trailing" constant="119" id="VyW-Bd-BUm"/>
                                         <constraint firstItem="cae-IS-oNi" firstAttribute="trailing" secondItem="YGQ-rN-dYh" secondAttribute="trailing" id="XE2-RJ-OGr"/>
                                         <constraint firstItem="cws-Pb-vpl" firstAttribute="top" secondItem="47D-U6-Aez" secondAttribute="topMargin" constant="-8" id="YIk-GJ-RjE"/>
+                                        <constraint firstItem="Jfb-gg-tXi" firstAttribute="trailing" secondItem="cws-Pb-vpl" secondAttribute="trailing" id="Ys5-TL-QN8"/>
                                         <constraint firstItem="cws-Pb-vpl" firstAttribute="centerX" secondItem="2fh-4j-B2V" secondAttribute="centerX" id="a3T-BB-B48"/>
                                         <constraint firstItem="ee5-IP-rl0" firstAttribute="top" secondItem="YGQ-rN-dYh" secondAttribute="bottom" constant="-1" id="bbf-fZ-brO"/>
+                                        <constraint firstItem="Jfb-gg-tXi" firstAttribute="bottom" secondItem="RUn-EL-P2y" secondAttribute="bottom" id="e51-2u-jU5"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="2fh-4j-B2V" secondAttribute="trailing" constant="7" id="f0h-hx-nt5"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="ee5-IP-rl0" secondAttribute="bottom" constant="-6" id="gR9-iz-hOi"/>
+                                        <constraint firstItem="RUn-EL-P2y" firstAttribute="top" secondItem="ee5-IP-rl0" secondAttribute="top" id="iGC-HI-VlM"/>
                                         <constraint firstItem="YGQ-rN-dYh" firstAttribute="trailing" secondItem="cae-IS-oNi" secondAttribute="trailing" id="iy7-Yv-Qmr"/>
+                                        <constraint firstItem="RUn-EL-P2y" firstAttribute="leading" secondItem="cws-Pb-vpl" secondAttribute="leading" id="izd-1f-4vE"/>
                                         <constraint firstItem="2fh-4j-B2V" firstAttribute="top" secondItem="47D-U6-Aez" secondAttribute="topMargin" id="jtz-0H-UBU"/>
                                         <constraint firstItem="Mt5-M0-AfX" firstAttribute="leading" secondItem="ee5-IP-rl0" secondAttribute="trailing" constant="3" id="mO7-yj-7NS"/>
                                         <constraint firstItem="cae-IS-oNi" firstAttribute="leading" secondItem="2qH-gP-XMA" secondAttribute="trailing" constant="8" symbolic="YES" id="ptU-xJ-cCt"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="cws-Pb-vpl" secondAttribute="bottom" constant="-9" id="sDH-pF-jkk"/>
                                         <constraint firstItem="YGQ-rN-dYh" firstAttribute="leading" secondItem="ee5-IP-rl0" secondAttribute="leading" id="vbh-7u-b66"/>
+                                        <constraint firstItem="RUn-EL-P2y" firstAttribute="bottom" secondItem="cws-Pb-vpl" secondAttribute="bottom" id="vdg-Of-auB"/>
                                     </constraints>
                                     <edgeInsets key="layoutMargins" top="20" left="8" bottom="8" right="8"/>
                                 </tableViewCellContentView>
