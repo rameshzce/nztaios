@@ -47,12 +47,10 @@ class ExistingEventsViewController: UIViewController, UIPickerViewDelegate, UIPi
     }
     
     @IBAction func selectYear(sender: UIButton) {
-        let alertController = UIAlertController(title: "NZTA",
-                                                message: "\(selectedYear)", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "OK", style:
-            UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alertController, animated: true, completion:
-            nil)
+        //let alertController = UIAlertController(title: "NZTA", message: "\(selectedYear)", preferredStyle: UIAlertControllerStyle.Alert)
+        //alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        //self.presentViewController(alertController, animated: true, completion: nil)
+        self.performSegueWithIdentifier("existingEvents", sender: self)
     }
 
     /*

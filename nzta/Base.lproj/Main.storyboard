@@ -30,6 +30,7 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -198,33 +199,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="OVh-Gd-8zd">
-                                <rect key="frame" x="0.0" y="114" width="320" height="121"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="121" id="8Zx-B7-KgN"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="486284677.59758401">
-                                    <!--2016-05-30 07:04:37 +0000-->
-                                </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="378730800">
-                                    <!--2013-01-01 11:00:00 +0000-->
-                                </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="504874800">
-                                    <!--2016-12-31 11:00:00 +0000-->
-                                </date>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jq6-zl-AVp">
-                                <rect key="frame" x="88" y="303" width="144" height="39"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <state key="normal" title="Select year 'n' Go"/>
-                                <connections>
-                                    <action selector="selectYear:" destination="Nuj-V6-Geo" eventType="touchUpInside" id="fbU-K4-tl7"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qNr-ak-T7h">
-                                <rect key="frame" x="0.0" y="392" width="320" height="102"/>
+                            <pickerView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNr-ak-T7h">
+                                <rect key="frame" x="0.0" y="233" width="320" height="102"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="CAn-zc-g5K"/>
                                 </constraints>
@@ -232,21 +208,39 @@
                                     <outlet property="dataSource" destination="Nuj-V6-Geo" id="Pyr-CG-QLc"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Existing Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPz-uv-TeB">
+                                <rect key="frame" x="68" y="146" width="185" height="41"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jq6-zl-AVp">
+                                <rect key="frame" x="12" y="380" width="296" height="49"/>
+                                <color key="backgroundColor" red="0.6470588235294118" green="0.34901960784313724" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Select year n' Go"/>
+                                <connections>
+                                    <action selector="selectYear:" destination="Nuj-V6-Geo" eventType="touchUpInside" id="fbU-K4-tl7"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.80000000000000004" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="OVh-Gd-8zd" firstAttribute="top" secondItem="rED-lK-PvO" secondAttribute="bottom" constant="50" id="3Hz-1o-HSU"/>
-                            <constraint firstItem="OVh-Gd-8zd" firstAttribute="leading" secondItem="6cC-GQ-lMu" secondAttribute="leading" id="9IB-He-Dfy"/>
-                            <constraint firstItem="qNr-ak-T7h" firstAttribute="width" secondItem="6cC-GQ-lMu" secondAttribute="width" id="BgC-1f-jAT"/>
-                            <constraint firstItem="qkq-MP-UAN" firstAttribute="top" secondItem="qNr-ak-T7h" secondAttribute="bottom" constant="30" id="Eti-54-a55"/>
-                            <constraint firstItem="OVh-Gd-8zd" firstAttribute="centerX" secondItem="jq6-zl-AVp" secondAttribute="centerX" id="aWI-kF-rRQ"/>
-                            <constraint firstItem="jq6-zl-AVp" firstAttribute="top" secondItem="OVh-Gd-8zd" secondAttribute="bottom" constant="68" id="dn0-Fi-7UX"/>
-                            <constraint firstItem="qNr-ak-T7h" firstAttribute="centerX" secondItem="6cC-GQ-lMu" secondAttribute="centerX" id="hd6-rs-ilL"/>
+                            <constraint firstItem="jq6-zl-AVp" firstAttribute="top" secondItem="qNr-ak-T7h" secondAttribute="bottom" constant="45" id="5Ga-vU-dOP"/>
+                            <constraint firstItem="jq6-zl-AVp" firstAttribute="leading" secondItem="6cC-GQ-lMu" secondAttribute="leadingMargin" constant="-4" id="8Pn-yt-g14"/>
+                            <constraint firstItem="qNr-ak-T7h" firstAttribute="top" secondItem="kPz-uv-TeB" secondAttribute="bottom" constant="46" id="8lU-Cq-IBT"/>
+                            <constraint firstItem="qNr-ak-T7h" firstAttribute="centerY" secondItem="jq6-zl-AVp" secondAttribute="centerY" constant="-120.5" id="EVH-by-d3P"/>
+                            <constraint firstItem="qNr-ak-T7h" firstAttribute="centerX" secondItem="6cC-GQ-lMu" secondAttribute="centerX" id="KiS-ru-KuR"/>
+                            <constraint firstItem="kPz-uv-TeB" firstAttribute="centerX" secondItem="6cC-GQ-lMu" secondAttribute="centerX" id="P1S-4T-jGq"/>
+                            <constraint firstItem="qNr-ak-T7h" firstAttribute="centerY" secondItem="6cC-GQ-lMu" secondAttribute="centerY" id="cgR-3e-8Rc"/>
+                            <constraint firstItem="jq6-zl-AVp" firstAttribute="centerX" secondItem="qNr-ak-T7h" secondAttribute="centerX" id="ySc-ZI-5Db"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Existing Events" id="IWX-0u-bG9"/>
                     <connections>
                         <outlet property="datePicker" destination="qNr-ak-T7h" id="IWq-J7-RXX"/>
+                        <segue destination="3lA-b0-SRs" kind="push" identifier="existingEvents" id="6ew-ZD-cM0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggz-Zq-KSL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1173,5 +1167,6 @@ and its our family fun</string>
     <inferredMetricsTieBreakers>
         <segue reference="I58-nj-Cl3"/>
         <segue reference="0o9-gl-Z1m"/>
+        <segue reference="6ew-ZD-cM0"/>
     </inferredMetricsTieBreakers>
 </document>
