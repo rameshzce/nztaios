@@ -863,6 +863,9 @@ and its our family fun</string>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                         <state key="normal" title="Invite"/>
+                                        <connections>
+                                            <action selector="sendInvite:" destination="uOV-us-5lA" eventType="touchUpInside" id="Hll-Zb-aWA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

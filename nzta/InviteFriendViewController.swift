@@ -10,6 +10,8 @@ import UIKit
 
 class InviteFriendViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
+    let prefs = NSUserDefaults.standardUserDefaults()
+    
     @IBOutlet var ScrollView: UIScrollView!
     @IBOutlet var TextField: UITextField!
     @IBOutlet var TextField2: UITextField!
@@ -20,6 +22,7 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate, UITextV
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
     }
 
@@ -49,6 +52,53 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate, UITextV
         ScrollView.setContentOffset(CGPointMake(0, 0), animated: true)
     }
     
+    @IBAction func sendInvite(sender: UIButton) {
+        if (TextField3.text == "") {
+            showAlert("Please enter mobile")
+        } else if (TextView.text == "") {
+            showAlert("Please enter message")
+        } else {
+            /*SwiftLoading().showLoading()
+            let request = NSMutableURLRequest(URL: NSURL(string: "http://tokkalo.com/api/1/invite_friend.php")!)
+            request.HTTPMethod = "POST"
+            let postString = "toMobile=\(TextField3.text!)&fromMobile=\(prefs.stringForKey("login")!)"
+            request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+                
+                data, response, error in
+                
+                
+                if error != nil {
+                    self.showAlert("Error: \(error)")
+                    return
+                }
+                
+                do {
+                    SwiftLoading().hideLoading()
+                    let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                    let message = jsonDictionary["message"] as! String
+                    self.showAlert("\(message)")
+                    
+                    
+                } catch {
+                    // Handle Error
+                }
+            }
+            task.resume()*/
+            
+            self.showAlert("Your invitation has been sent.")
+        }
+    }
+    
+    func showAlert(msg: String){
+        let alertController = UIAlertController(title: "NZTA",
+                                                message: msg, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "OK", style:
+            UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alertController, animated: true, completion:
+            nil)
+    }
 
     /*
     // MARK: - Navigation
