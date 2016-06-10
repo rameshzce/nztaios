@@ -17,14 +17,17 @@ class VideoGalleryViewController: UIViewController, UICollectionViewDelegate, UI
         
         let prefs = NSUserDefaults.standardUserDefaults()
         
-        private var trips = [Trip(city: "Paris", featuredImage: UIImage(named: "paris")),
-                             Trip(city: "Rome", featuredImage: UIImage(named: "rome")),
-                             Trip(city: "Istanbul", featuredImage: UIImage(named: "istanbul")),
-                             Trip(city: "London", featuredImage: UIImage(named: "london")),
-                             Trip(city: "Sydney", featuredImage: UIImage(named: "sydney")),
-                             Trip(city: "Santorini", featuredImage: UIImage(named: "santorini")),
-                             Trip(city: "New York", featuredImage: UIImage(named: "newyork")),
-                             Trip(city: "Kyoto", featuredImage: UIImage(named: "kyoto"))
+        private var trips = [Trip(city: "event name", featuredImage: UIImage(named: "event_name_image1")),
+                             Trip(city: "event name", featuredImage: UIImage(named: "event_name_image2")),
+                             Trip(city: "event name", featuredImage: UIImage(named: "event_name_image3")),
+                             Trip(city: "event name", featuredImage: UIImage(named: "event_name_image4")),
+                             Trip(city: "event name", featuredImage: UIImage(named: "event_name_image5")),
+                             Trip(city: "event name", featuredImage: UIImage(named: "event_name_image6")),
+                             Trip(city: "event name", featuredImage: UIImage(named: "event_name_image7")),
+                             Trip(city: "event name", featuredImage: UIImage(named: "event_name_image8")),
+                             Trip(city: "event name", featuredImage: UIImage(named: "event_name_image9")),
+                             Trip(city: "event name", featuredImage: UIImage(named: "event_name_image10")),
+                             Trip(city: "event name", featuredImage: UIImage(named: "event_name_image11"))
         ]
         
         // url for playing video
