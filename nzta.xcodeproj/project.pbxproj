@@ -46,6 +46,8 @@
 		75D0EBE81CF97EEA00563C68 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D0EBE71CF97EEA00563C68 /* AVKit.framework */; };
 		75D0EBEA1CF97F0800563C68 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D0EBE91CF97F0800563C68 /* MediaPlayer.framework */; };
 		75D0EBF41CF9819C00563C68 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0EBF31CF9819C00563C68 /* PlayVideoViewController.swift */; };
+		75D387481D0B235F00314052 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D387471D0B235F00314052 /* SponsorsViewController.swift */; };
+		75D3874A1D0B23AC00314052 /* SponsorsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D387491D0B23AC00314052 /* SponsorsViewCell.swift */; };
 		75D4C7101D00F217008F06B3 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4C70F1D00F217008F06B3 /* NotificationViewController.swift */; };
 		75FEE88B1D01CD5300814F82 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FEE88A1D01CD5300814F82 /* iCarousel.m */; };
 		75FEE88D1D01CDB100814F82 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FEE88C1D01CDB100814F82 /* TeamViewController.swift */; };
@@ -95,6 +97,8 @@
 		75D0EBE71CF97EEA00563C68 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		75D0EBE91CF97F0800563C68 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		75D0EBF31CF9819C00563C68 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
+		75D387471D0B235F00314052 /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
+		75D387491D0B23AC00314052 /* SponsorsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewCell.swift; sourceTree = "<group>"; };
 		75D4C70F1D00F217008F06B3 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		75FEE8881D01CD5200814F82 /* nzta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nzta-Bridging-Header.h"; sourceTree = "<group>"; };
 		75FEE8891D01CD5300814F82 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 				755097BC1D02DC6E0005AF83 /* ImageGalleryViewCell.swift */,
 				755097BE1D02EB820005AF83 /* DisplayGalleryImageViewController.swift */,
 				753F920A1D0A6E4300D53053 /* VideoGalleryViewCell.swift */,
+				75D387471D0B235F00314052 /* SponsorsViewController.swift */,
+				75D387491D0B23AC00314052 /* SponsorsViewCell.swift */,
 			);
 			path = nzta;
 			sourceTree = "<group>";
@@ -368,6 +374,7 @@
 				755097BF1D02EB820005AF83 /* DisplayGalleryImageViewController.swift in Sources */,
 				75B622FF1CF0773100493F98 /* EventsViewCell.swift in Sources */,
 				753F92051D0A5D7000D53053 /* Trip.swift in Sources */,
+				75D387481D0B235F00314052 /* SponsorsViewController.swift in Sources */,
 				753585051CFACAD7000C04CA /* ExistingEventsViewController.swift in Sources */,
 				75B622E61CF04ABD00493F98 /* ViewController.swift in Sources */,
 				751E412F1CF451F2001A8BD5 /* SubscriptionViewController.swift in Sources */,
@@ -382,6 +389,7 @@
 				75B622E41CF04ABD00493F98 /* AppDelegate.swift in Sources */,
 				75B622FD1CF076E400493F98 /* EventsViewController.swift in Sources */,
 				753F920B1D0A6E4300D53053 /* VideoGalleryViewCell.swift in Sources */,
+				75D3874A1D0B23AC00314052 /* SponsorsViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

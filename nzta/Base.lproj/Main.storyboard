@@ -37,6 +37,8 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -556,7 +558,7 @@ and its our family fun</string>
                         <segue destination="Lg2-yt-GHd" kind="push" identifier="menuProfile" id="zv7-5d-ouw"/>
                         <segue destination="HTY-hE-cqA" kind="push" identifier="menuTeam" id="rYm-Nk-CGQ"/>
                         <segue destination="gbp-5x-xKh" kind="push" identifier="menuNzta" id="I58-nj-Cl3"/>
-                        <segue destination="bbC-z6-Wgw" kind="push" identifier="menuSponsors" id="I0L-Lz-CiJ"/>
+                        <segue destination="w9l-qn-wlU" kind="push" identifier="menuSponsors" id="d56-yd-0QW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cu-DX-CiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -575,13 +577,13 @@ and its our family fun</string>
                     <view key="view" contentMode="scaleToFill" id="jB5-HO-lNM" customClass="iCarousel">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
                             <outlet property="dataSource" destination="HTY-hE-cqA" id="fLe-vZ-zYf"/>
                             <outlet property="delegate" destination="HTY-hE-cqA" id="5fU-U0-Xup"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="I08-yZ-XdR"/>
+                    <navigationItem key="navigationItem" title="Team NZTA" id="I08-yZ-XdR"/>
                     <connections>
                         <outlet property="carouselView" destination="jB5-HO-lNM" id="eHg-jL-VhF"/>
                         <segue destination="eza-tE-HJH" kind="push" identifier="imageDisplaySegue" id="0LC-HC-PoG"/>
@@ -943,6 +945,70 @@ and its our family fun</string>
             </objects>
             <point key="canvasLocation" x="939" y="1810"/>
         </scene>
+        <!--Sponsors NZTA-->
+        <scene sceneID="Dqs-BM-6SV">
+            <objects>
+                <tableViewController id="w9l-qn-wlU" customClass="SponsorsViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hq3-sj-LvM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="108" id="Bga-Q2-jrO" customClass="SponsorsViewCell" customModule="nzta" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="108"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bga-Q2-jrO" id="qhV-bz-6Yg">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="oiV-8V-DuX">
+                                            <rect key="frame" x="14" y="8" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="Kcu-rb-A3r"/>
+                                                <constraint firstAttribute="height" constant="80" id="fc0-yK-1V9"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uf-yu-bBh">
+                                            <rect key="frame" x="105" y="15" width="196" height="27"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="27" id="3jN-12-xVe"/>
+                                                <constraint firstAttribute="width" constant="196" id="PC6-aN-lWc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTS-d8-Oim">
+                                            <rect key="frame" x="105" y="50" width="196" height="25"/>
+                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="leading" secondItem="uTS-d8-Oim" secondAttribute="leading" id="3lh-zw-hho"/>
+                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="leading" secondItem="oiV-8V-DuX" secondAttribute="trailing" constant="11" id="bQQ-X6-DJC"/>
+                                        <constraint firstItem="oiV-8V-DuX" firstAttribute="leading" secondItem="qhV-bz-6Yg" secondAttribute="leadingMargin" constant="6" id="fMk-UL-lBZ"/>
+                                        <constraint firstItem="uTS-d8-Oim" firstAttribute="top" secondItem="8uf-yu-bBh" secondAttribute="bottom" constant="8" id="fXO-G3-xXk"/>
+                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="top" secondItem="qhV-bz-6Yg" secondAttribute="topMargin" constant="7" id="oJj-RF-g1G"/>
+                                        <constraint firstItem="oiV-8V-DuX" firstAttribute="centerY" secondItem="qhV-bz-6Yg" secondAttribute="centerY" constant="-5.5" id="sn7-C0-AGm"/>
+                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="width" secondItem="uTS-d8-Oim" secondAttribute="width" id="ugh-eW-3DK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="w9l-qn-wlU" id="4y1-T7-VfO"/>
+                            <outlet property="delegate" destination="w9l-qn-wlU" id="dph-Us-dam"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Sponsors NZTA" id="dY0-Lr-lYH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2h-3r-95m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1477" y="1660"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="HZx-go-1aQ">
             <objects>
@@ -1192,13 +1258,13 @@ and its our family fun</string>
     <resources>
         <image name="camera-icon-30" width="30" height="30"/>
         <image name="logo" width="48" height="48"/>
+        <image name="logo3" width="144" height="144"/>
         <image name="menu" width="22" height="22"/>
         <image name="video-icon-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="I58-nj-Cl3"/>
-        <segue reference="0o9-gl-Z1m"/>
         <segue reference="6ew-ZD-cM0"/>
-        <segue reference="u0z-jc-Nfe"/>
+        <segue reference="0o9-gl-Z1m"/>
+        <segue reference="I58-nj-Cl3"/>
     </inferredMetricsTieBreakers>
 </document>
