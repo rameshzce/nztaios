@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
-class TripViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, TripCollectionCellDelegate {
+class TripViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, TripCollectionCellDelegate, AVPlayerViewControllerDelegate {
     @IBOutlet weak var backgroundImageView:UIImageView!
     @IBOutlet var collectionView:UICollectionView!
     
@@ -21,6 +23,23 @@ class TripViewController: UIViewController, UICollectionViewDelegate, UICollecti
         Trip(tripId: "NewYork001", city: "New York", country: "United States", featuredImage: UIImage(named: "newyork"), price: 900, totalDays: 3, isLiked: false),
         Trip(tripId: "Kyoto001", city: "Kyoto", country: "Japan", featuredImage: UIImage(named: "kyoto"), price: 1000, totalDays: 5, isLiked: false)
     ]
+    
+    // url for playing video
+    var videoUrl: NSURL!
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "seguePlayVideo1" {
+            
+            // get destination view controller
+            let destVc = segue.destinationViewController as! AVPlayerViewController
+            
+            // set player
+            destVc.player = AVPlayer(URL: self.videoUrl)
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,11 +85,7 @@ class TripViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         // Configure the cell
         cell.cityLabel.text = trips[indexPath.row].city
-        cell.countryLabel.text = trips[indexPath.row].country
         cell.imageView.image = trips[indexPath.row].featuredImage
-        cell.priceLabel.text = "$\(String(trips[indexPath.row].price))"
-        cell.totalDaysLabel.text = "\(trips[indexPath.row].totalDays) days"
-        cell.isLiked = trips[indexPath.row].isLiked
         cell.delegate = self
         
         // Apply round corner
@@ -80,12 +95,12 @@ class TripViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let alertController = UIAlertController(title: "NZTA",
-                                                message: trips[indexPath.row].city, preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "OK", style:
-            UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alertController, animated: true, completion:
-            nil)
+        
+        
+        self.videoUrl = NSURL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8")
+        
+        // perform segue
+        self.performSegueWithIdentifier("seguePlayVideo1", sender: self)
     }
     
     // MARK: - TripCollectionCellDelegate Methods
