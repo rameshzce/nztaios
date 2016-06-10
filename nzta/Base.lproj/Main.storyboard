@@ -31,6 +31,7 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -860,9 +861,9 @@ and its our family fun</string>
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jua-YI-geW">
-                                            <rect key="frame" x="129" y="14" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jua-YI-geW">
+                                            <rect key="frame" x="110" y="14" width="100" height="21"/>
+                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -880,30 +881,12 @@ and its our family fun</string>
                     </tableView>
                     <navigationItem key="navigationItem" title="Video Gallery" id="HeI-cs-t5n"/>
                     <connections>
-                        <segue destination="wR6-Y5-F4g" kind="modal" identifier="playVideo" id="I98-Ie-Paq"/>
+                        <segue destination="jj8-Ew-8dG" kind="push" identifier="seguePlayVideo" id="uE1-Zx-Pdo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIZ-BN-9wr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2486" y="298"/>
-        </scene>
-        <!--Play Video View Controller-->
-        <scene sceneID="84x-gB-h9n">
-            <objects>
-                <viewController id="wR6-Y5-F4g" userLabel="Play Video View Controller" customClass="PlayVideoViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pvN-ne-Apx"/>
-                        <viewControllerLayoutGuide type="bottom" id="ipw-Ma-OP1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MGd-rR-nlw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YVz-bl-3gW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2854" y="298"/>
         </scene>
         <!--Invite Friend View Controller-->
         <scene sceneID="vlw-J0-Nat">
@@ -1156,6 +1139,16 @@ and its our family fun</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NN4-ex-YpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1068" y="-356"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="IbD-BO-lQi">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="jj8-Ew-8dG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gMY-zZ-ToG"/>
+                </avPlayerViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MjC-rg-vZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2876" y="298"/>
         </scene>
     </scenes>
     <resources>

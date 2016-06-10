@@ -7,23 +7,32 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
-class VideoGalleryViewController: UITableViewController {
+class VideoGalleryViewController: UITableViewController, AVPlayerViewControllerDelegate  {
     
     let prefs = NSUserDefaults.standardUserDefaults()
     
-    private var events:[(name: String, address: String)] = [
-        ("Sankranti", "Rangoli competition & kite festival on 17-1-2016"),
-        ("Ugadi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
-        ("Batukamma", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
-        ("Diwali", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
-        ("X'mas", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner."),
-        ("Sankranti", "Rangoli competition & kite festival on 17-1-2016"),
-        ("Ugadi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
-        ("Batukamma", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
-        ("Diwali", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
-        ("X'mas", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner.")
-    ]
+    // url for playing video
+    var videoUrl: NSURL!
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "seguePlayVideo" {
+            
+            // get destination view controller
+            let destVc = segue.destinationViewController as! AVPlayerViewController
+            
+            // set player
+            destVc.player = AVPlayer(URL: self.videoUrl)
+        }
+        
+    }
+
+    
+    private var videos:[String] = ["video1.mp4", "video2.mp4", "video3.mp4", "video4.mp4"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +68,7 @@ class VideoGalleryViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return events.count
+        return videos.count
     }
 
     
@@ -67,58 +76,21 @@ class VideoGalleryViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! VideoGalleryViewCell
 
         // Configure the cell... 
-
+        cell.eventName?.text = videos[indexPath.row]
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("playVideo", sender: self)
+        //self.performSegueWithIdentifier("playVideo", sender: self)
+        // create video url form remote location (i.e. video stored at domain etc.)
+        //self.videoUrl = NSURL(string: "http://sdctbheemili.org/ios/\(videos[indexPath.row])")
+        self.videoUrl = NSURL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8")
+        
+        // perform segue
+        self.performSegueWithIdentifier("seguePlayVideo", sender: self)
     }
     
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
