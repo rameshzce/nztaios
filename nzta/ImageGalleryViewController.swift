@@ -19,6 +19,8 @@ class ImageGalleryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
         if prefs.stringForKey("photoGallery") != nil{
             self.title = prefs.stringForKey("photoGallery")
         }

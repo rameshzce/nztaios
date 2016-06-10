@@ -801,55 +801,6 @@ and its our family fun</string>
             </objects>
             <point key="canvasLocation" x="1767" y="298"/>
         </scene>
-        <!--Photo Gallery View Controller-->
-        <scene sceneID="j4o-DE-Wqx">
-            <objects>
-                <collectionViewController id="0PZ-IO-wjp" userLabel="Photo Gallery View Controller" customClass="PhotoGalleryViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ewh-43-g43">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S0M-hc-oWJ">
-                            <size key="itemSize" width="100" height="100"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="z60-Mw-O0s" customClass="PhotoGalleryViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gDB-lq-OQA">
-                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstItem="gDB-lq-OQA" firstAttribute="top" secondItem="z60-Mw-O0s" secondAttribute="topMargin" id="L42-AF-PTY"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="gDB-lq-OQA" secondAttribute="bottom" id="a8E-pF-KFi"/>
-                                    <constraint firstItem="gDB-lq-OQA" firstAttribute="leading" secondItem="z60-Mw-O0s" secondAttribute="leadingMargin" id="idC-eV-t9o"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="gDB-lq-OQA" secondAttribute="trailing" id="mmj-dd-6ph"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="galleryImageView" destination="gDB-lq-OQA" id="xng-st-qF5"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="0PZ-IO-wjp" id="6Q8-X8-wLl"/>
-                            <outlet property="delegate" destination="0PZ-IO-wjp" id="UM5-7B-wYC"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Photo Gallery" id="72b-yL-HGq"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zzI-tA-ymg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2125" y="298"/>
-        </scene>
         <!--Invite Friend View Controller-->
         <scene sceneID="vlw-J0-Nat">
             <objects>
@@ -940,24 +891,6 @@ and its our family fun</string>
             <point key="canvasLocation" x="130" y="298"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="6rG-0B-C0g">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R22-jk-sff" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xMF-U2-zax">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="0PZ-IO-wjp" kind="relationship" relationship="rootViewController" id="iv5-p6-1JK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8oh-b1-T7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2657" y="930"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="ih3-9V-6sv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ShK-K1-VUs" sceneMemberID="viewController">
@@ -1027,7 +960,7 @@ and its our family fun</string>
                                 <rect key="frame" x="36" y="111" width="248" height="337"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="A3f-eM-cTz" firstAttribute="centerY" secondItem="8AK-zG-dTo" secondAttribute="centerY" constant="-4.5" id="6ML-68-ZyY"/>
                             <constraint firstItem="A3f-eM-cTz" firstAttribute="centerX" secondItem="8AK-zG-dTo" secondAttribute="centerX" id="7d7-pB-WSz"/>
@@ -1062,6 +995,12 @@ and its our family fun</string>
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ec-yM-ZKJ">
+                                            <rect key="frame" x="0.0" y="-159" width="320" height="568"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eD5-7m-NoB">
+                                            <rect key="frame" x="0.0" y="-159" width="320" height="568"/>
+                                        </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UHw-lh-3gY">
                                             <rect key="frame" x="15" y="8" width="290" height="231"/>
                                             <constraints>
@@ -1075,6 +1014,7 @@ and its our family fun</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="UHw-lh-3gY" firstAttribute="leading" secondItem="MnN-dq-Hkq" secondAttribute="leadingMargin" constant="7" id="BRf-rd-qwa"/>
                                         <constraint firstItem="UHw-lh-3gY" firstAttribute="leading" secondItem="aaN-qA-arE" secondAttribute="leading" id="FEh-q0-RYg"/>
