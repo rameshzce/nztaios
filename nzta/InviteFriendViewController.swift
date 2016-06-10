@@ -8,12 +8,15 @@
 
 import UIKit
 
-class InviteFriendViewController: UIViewController, UITextFieldDelegate {
+class InviteFriendViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
     @IBOutlet var ScrollView: UIScrollView!
     @IBOutlet var TextField: UITextField!
     @IBOutlet var TextField2: UITextField!
     @IBOutlet var TextField3: UITextField!
+    
+    @IBOutlet var TextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,16 +29,24 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        ScrollView.setContentOffset(CGPointMake(0, 150), animated: true)
+        //ScrollView.setContentOffset(CGPointMake(0, 150), animated: true)
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        ScrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        //ScrollView.setContentOffset(CGPointMake(0, 0), animated: true)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        ScrollView.setContentOffset(CGPointMake(0, 50), animated: true)
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        ScrollView.setContentOffset(CGPointMake(0, 0), animated: true)
     }
     
 
