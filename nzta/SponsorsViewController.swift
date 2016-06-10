@@ -48,7 +48,9 @@ class SponsorsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! SponsorsViewCell
 
         // Configure the cell...
-
+        
+        cell.companyName.text = self.sponsors[indexPath.row]
+        cell.addressLabel.text = self.address[indexPath.row]
         return cell
     }
     

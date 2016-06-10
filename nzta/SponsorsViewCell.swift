@@ -10,7 +10,12 @@ import UIKit
 
 class SponsorsViewCell: UITableViewCell {
 
+    @IBOutlet var companyName: UILabel!
+    @IBOutlet var addressLabel: UILabel!
+    
     override func awakeFromNib() {
+        
+        
         super.awakeFromNib()
         // Initialization code
     }

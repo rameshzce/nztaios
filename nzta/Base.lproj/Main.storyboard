@@ -970,32 +970,31 @@ and its our family fun</string>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uf-yu-bBh">
-                                            <rect key="frame" x="105" y="15" width="196" height="27"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="27" id="3jN-12-xVe"/>
-                                                <constraint firstAttribute="width" constant="196" id="PC6-aN-lWc"/>
-                                            </constraints>
+                                            <rect key="frame" x="105" y="15" width="121" height="27"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTS-d8-Oim">
-                                            <rect key="frame" x="105" y="50" width="196" height="25"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieF-hD-Dcb">
+                                            <rect key="frame" x="105" y="50" width="39" height="25"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="leading" secondItem="uTS-d8-Oim" secondAttribute="leading" id="3lh-zw-hho"/>
-                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="leading" secondItem="oiV-8V-DuX" secondAttribute="trailing" constant="11" id="bQQ-X6-DJC"/>
-                                        <constraint firstItem="oiV-8V-DuX" firstAttribute="leading" secondItem="qhV-bz-6Yg" secondAttribute="leadingMargin" constant="6" id="fMk-UL-lBZ"/>
-                                        <constraint firstItem="uTS-d8-Oim" firstAttribute="top" secondItem="8uf-yu-bBh" secondAttribute="bottom" constant="8" id="fXO-G3-xXk"/>
-                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="top" secondItem="qhV-bz-6Yg" secondAttribute="topMargin" constant="7" id="oJj-RF-g1G"/>
-                                        <constraint firstItem="oiV-8V-DuX" firstAttribute="centerY" secondItem="qhV-bz-6Yg" secondAttribute="centerY" constant="-5.5" id="sn7-C0-AGm"/>
-                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="width" secondItem="uTS-d8-Oim" secondAttribute="width" id="ugh-eW-3DK"/>
+                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="leading" secondItem="oiV-8V-DuX" secondAttribute="trailing" constant="11" id="2Rh-Zx-hF9"/>
+                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="leading" secondItem="ieF-hD-Dcb" secondAttribute="leading" id="GuW-Ez-neL"/>
+                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="top" secondItem="qhV-bz-6Yg" secondAttribute="topMargin" constant="7" id="isY-BS-PFu"/>
+                                        <constraint firstItem="ieF-hD-Dcb" firstAttribute="top" secondItem="8uf-yu-bBh" secondAttribute="bottom" constant="8" id="nvo-8D-00B"/>
+                                        <constraint firstItem="oiV-8V-DuX" firstAttribute="top" secondItem="qhV-bz-6Yg" secondAttribute="topMargin" id="pRw-mB-GVs"/>
+                                        <constraint firstItem="oiV-8V-DuX" firstAttribute="leading" secondItem="qhV-bz-6Yg" secondAttribute="leadingMargin" constant="6" id="vvm-Nc-Lv1"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="ieF-hD-Dcb" id="pZF-eT-SXu"/>
+                                    <outlet property="companyName" destination="8uf-yu-bBh" id="bt4-fo-fVX"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
