@@ -67,7 +67,7 @@ class MenuViewController: UITableViewController {
             self.performSegueWithIdentifier("menuTeam", sender: self)
             break
         case 4:
-            self.performSegueWithIdentifier("menuSubscription", sender: self)
+            self.performSegueWithIdentifier("menuSponsors", sender: self)
             break
         default:
             break

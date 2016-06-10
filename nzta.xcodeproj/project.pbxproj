@@ -17,6 +17,9 @@
 		751E412F1CF451F2001A8BD5 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E412E1CF451F2001A8BD5 /* SubscriptionViewController.swift */; };
 		751E41311CF4620B001A8BD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E41301CF4620B001A8BD5 /* ProfileViewController.swift */; };
 		753585051CFACAD7000C04CA /* ExistingEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753585041CFACAD7000C04CA /* ExistingEventsViewController.swift */; };
+		753F92051D0A5D7000D53053 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753F92041D0A5D7000D53053 /* Trip.swift */; };
+		753F92081D0A5D7F00D53053 /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753F92061D0A5D7F00D53053 /* TripViewController.swift */; };
+		753F92091D0A5D7F00D53053 /* TripCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753F92071D0A5D7F00D53053 /* TripCollectionCell.swift */; };
 		75446F521CF747A300C78F29 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75446F501CF747A300C78F29 /* GoogleSignIn.bundle */; };
 		75446F531CF747A300C78F29 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75446F511CF747A300C78F29 /* GoogleSignIn.framework */; };
 		75446F551CF7482400C78F29 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75446F541CF7482400C78F29 /* StoreKit.framework */; };
@@ -62,6 +65,9 @@
 		751E412E1CF451F2001A8BD5 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		751E41301CF4620B001A8BD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		753585041CFACAD7000C04CA /* ExistingEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistingEventsViewController.swift; sourceTree = "<group>"; };
+		753F92041D0A5D7000D53053 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		753F92061D0A5D7F00D53053 /* TripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		753F92071D0A5D7F00D53053 /* TripCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCollectionCell.swift; sourceTree = "<group>"; };
 		75446F501CF747A300C78F29 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
 		75446F511CF747A300C78F29 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
 		75446F541CF7482400C78F29 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -164,7 +170,10 @@
 				75B622EA1CF04ABD00493F98 /* Assets.xcassets */,
 				75B622EC1CF04ABE00493F98 /* LaunchScreen.storyboard */,
 				75B622EF1CF04ABE00493F98 /* Info.plist */,
+				753F92061D0A5D7F00D53053 /* TripViewController.swift */,
+				753F92071D0A5D7F00D53053 /* TripCollectionCell.swift */,
 				75B622F81CF05DE000493F98 /* MemberViewController.swift */,
+				753F92041D0A5D7000D53053 /* Trip.swift */,
 				75B622FC1CF076E400493F98 /* EventsViewController.swift */,
 				75B622FA1CF0630100493F98 /* MemberViewCell.swift */,
 				75B622FE1CF0773100493F98 /* EventsViewCell.swift */,
@@ -352,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753F92091D0A5D7F00D53053 /* TripCollectionCell.swift in Sources */,
 				75A3F5421CF12D270033E70A /* PhotoGalleryViewController.swift in Sources */,
 				755097BD1D02DC6E0005AF83 /* ImageGalleryViewCell.swift in Sources */,
 				75A3F5401CF12CDE0033E70A /* PhotoGalleryViewCell.swift in Sources */,
@@ -361,9 +371,11 @@
 				75D0EBF41CF9819C00563C68 /* PlayVideoViewController.swift in Sources */,
 				751E41291CF42224001A8BD5 /* MenuViewController.swift in Sources */,
 				755DD5581D0206AD009B6FE4 /* ImageDisplayViewController.swift in Sources */,
+				753F92081D0A5D7F00D53053 /* TripViewController.swift in Sources */,
 				751E412B1CF422A5001A8BD5 /* MenuViewCell.swift in Sources */,
 				755097BF1D02EB820005AF83 /* DisplayGalleryImageViewController.swift in Sources */,
 				75B622FF1CF0773100493F98 /* EventsViewCell.swift in Sources */,
+				753F92051D0A5D7000D53053 /* Trip.swift in Sources */,
 				753585051CFACAD7000C04CA /* ExistingEventsViewController.swift in Sources */,
 				75B622E61CF04ABD00493F98 /* ViewController.swift in Sources */,
 				751E412F1CF451F2001A8BD5 /* SubscriptionViewController.swift in Sources */,
