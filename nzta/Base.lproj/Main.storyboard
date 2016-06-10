@@ -781,8 +781,11 @@ and its our family fun</string>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="YGQ-rN-dYh" id="EJt-Aq-dl2"/>
+                                    <outlet property="leftSubBg" destination="RUn-EL-P2y" id="Hv8-y3-how"/>
+                                    <outlet property="mainBg" destination="cws-Pb-vpl" id="xdj-To-oUz"/>
                                     <outlet property="nameLabel" destination="2fh-4j-B2V" id="pFa-CG-fB8"/>
                                     <outlet property="photoGalleryBtn" destination="Mt5-M0-AfX" id="xQz-jJ-bvr"/>
+                                    <outlet property="rightSubBg" destination="Jfb-gg-tXi" id="jOg-jb-T5H"/>
                                     <outlet property="videoGalleryBtn" destination="cae-IS-oNi" id="qoP-Mp-Mb0"/>
                                 </connections>
                             </tableViewCell>

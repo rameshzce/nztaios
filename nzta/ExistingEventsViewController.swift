@@ -12,6 +12,8 @@ class ExistingEventsViewController: UIViewController, UIPickerViewDelegate, UIPi
 
     @IBOutlet var datePicker: UIPickerView!
     
+    let prefs = NSUserDefaults.standardUserDefaults()
+    
     var selectedYear: String = ""
     
     var Array = ["2012", "2013", "2014", "2015"]
@@ -47,9 +49,7 @@ class ExistingEventsViewController: UIViewController, UIPickerViewDelegate, UIPi
     }
     
     @IBAction func selectYear(sender: UIButton) {
-        //let alertController = UIAlertController(title: "NZTA", message: "\(selectedYear)", preferredStyle: UIAlertControllerStyle.Alert)
-        //alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        //self.presentViewController(alertController, animated: true, completion: nil)
+        self.prefs.setValue("Existing Events", forKey: "eventType")
         self.performSegueWithIdentifier("existingEvents", sender: self)
     }
 

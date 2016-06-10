@@ -9,7 +9,7 @@
 import UIKit
 
 class MemberViewController: UITableViewController{
-    
+    let prefs = NSUserDefaults.standardUserDefaults()
     
     var titles = ["Upcoming Events", "Existing Events", "Go Green / NZ Blood", "Invite a Friend", "Helping"]
     var titlesBig = ["2016", "2015", "Others", "Friend", "Hands!"]
@@ -125,12 +125,14 @@ class MemberViewController: UITableViewController{
         switch (indexPath.row) {
             //case 0: [self performSegueWithIdentifier:@"Segue0" sender:self];
             case 0:
+                self.prefs.setValue("Upcoming Events", forKey: "eventType")
                 self.performSegueWithIdentifier("events", sender: self)
                 break;
             case 1:
                 self.performSegueWithIdentifier("existingEvents", sender: self)
                 break;
             case 2:
+                self.prefs.setValue("Go Green", forKey: "eventType")
                 self.performSegueWithIdentifier("events", sender: self)
                 break
             case 3:

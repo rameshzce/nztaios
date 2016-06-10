@@ -14,7 +14,11 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
     
     let menuTransitionManager = MenuTransitionManager()
     
-    private var events:[(name: String, address: String)] = [
+    var mainViewcolor = "#ff218e"
+    var mainBgcolor = "#9D1457"
+    var subBgColor = "#630131"
+    
+    var events:[(name: String, address: String)] = [
         ("Sankranti", "Rangoli competition & kite festival on 17-1-2016"),
         ("Ugadi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
         ("Batukamma", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
@@ -32,15 +36,29 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
         
         tableView.estimatedRowHeight = 95.0
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.backgroundColor = hexStringToUIColor("#ff218e")
+        tableView.backgroundColor = hexStringToUIColor(mainViewcolor)
         
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        if prefs.stringForKey("eventType") != nil{
+            self.title = prefs.stringForKey("eventType")
+            if (prefs.stringForKey("eventType") == "Upcoming Events"){
+                tableView.backgroundColor = hexStringToUIColor("#ff218e")
+            } else if (prefs.stringForKey("eventType") == "Existing Events"){
+                tableView.backgroundColor = hexStringToUIColor("#FFD428")
+            } else if (prefs.stringForKey("eventType") == "Go Green"){
+                tableView.backgroundColor = hexStringToUIColor("#10D295")
+                
+                self.events = [
+                ("Plantation @ Western springs 2016", "Everything you need for better lving. NZTA planting for go green"),
+                ("Plantation @ Western springs 2016", "Everything you need for better lving. NZTA planting for go green")
+                
+                ]
+            } else if (prefs.stringForKey("eventType") == "NZ Blood"){
+                tableView.backgroundColor = hexStringToUIColor("#FF0000")
+            }
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,6 +95,24 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
         
         cell.videoGalleryBtn.tag = indexPath.row
         cell.videoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction2), forControlEvents: .TouchUpInside)
+        
+        if (prefs.stringForKey("eventType") == "Upcoming Events"){
+            self.mainBgcolor = "#9D1457"
+            self.subBgColor = "#630131"
+        } else if (prefs.stringForKey("eventType") == "Existing Events"){
+            self.mainBgcolor = "#B66D01"
+            self.subBgColor = "#744C00"
+        } else if (prefs.stringForKey("eventType") == "Go Green"){
+            self.mainBgcolor = "#41AA4B"
+            self.subBgColor = "#076A4B"
+        } else if (prefs.stringForKey("eventType") == "NZ Blood"){
+            self.mainBgcolor = "#C30000"
+            self.subBgColor = "#840000"
+        }
+        
+        cell.mainBg.backgroundColor = hexStringToUIColor(mainBgcolor)
+        cell.leftSubBg.backgroundColor = hexStringToUIColor(subBgColor)
+        cell.rightSubBg.backgroundColor = hexStringToUIColor(subBgColor)
  
         return cell
     }
