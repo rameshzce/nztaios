@@ -14,6 +14,8 @@ class TripViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var backgroundImageView:UIImageView!
     @IBOutlet var collectionView:UICollectionView!
     
+    let prefs = NSUserDefaults.standardUserDefaults()
+    
     private var trips = [Trip(tripId: "Paris001", city: "Paris", country: "France", featuredImage: UIImage(named: "paris"), price: 2000, totalDays: 5, isLiked: false),
         Trip(tripId: "Rome001", city: "Rome", country: "Italy", featuredImage: UIImage(named: "rome"), price: 800, totalDays: 3, isLiked: false),
         Trip(tripId: "Istanbul001", city: "Istanbul", country: "Turkey", featuredImage: UIImage(named: "istanbul"), price: 2200, totalDays: 10, isLiked: false),
@@ -57,6 +59,16 @@ class TripViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if UIScreen.mainScreen().bounds.size.height == 480.0 {
             let flowLayout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
             flowLayout.itemSize = CGSizeMake(250.0, 300.0)
+        }
+        
+        if prefs.stringForKey("videoGallery") != nil{
+            self.title = prefs.stringForKey("videoGallery")
+            /*let alertController = UIAlertController(title: "NZTA",
+             message: prefs.stringForKey("videoGallery"), preferredStyle: UIAlertControllerStyle.Alert)
+             alertController.addAction(UIAlertAction(title: "OK", style:
+             UIAlertActionStyle.Default, handler: nil))
+             self.presentViewController(alertController, animated: true, completion:
+             nil)*/
         }
     }
 

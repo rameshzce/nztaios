@@ -33,8 +33,6 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -739,7 +737,7 @@ and its our family fun</string>
                                             </state>
                                             <connections>
                                                 <action selector="logAction2:" destination="3lA-b0-SRs" eventType="touchUpInside" id="n15-bi-VKt"/>
-                                                <segue destination="e9h-2m-n2Z" kind="push" identifier="videoGallery" id="URV-US-eQR"/>
+                                                <segue destination="bbC-z6-Wgw" kind="push" identifier="videoGallery" id="u0z-jc-Nfe"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -848,49 +846,6 @@ and its our family fun</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzI-tA-ymg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2125" y="298"/>
-        </scene>
-        <!--Video Gallery View Controller-->
-        <scene sceneID="Cu1-1Q-yIX">
-            <objects>
-                <tableViewController id="e9h-2m-n2Z" userLabel="Video Gallery View Controller" customClass="VideoGalleryViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JKZ-nZ-LpA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="lpj-v0-YO8" customClass="VideoGalleryViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lpj-v0-YO8" id="eOx-uO-92Q">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jua-YI-geW">
-                                            <rect key="frame" x="110" y="14" width="100" height="21"/>
-                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="eventName" destination="Jua-YI-geW" id="aE4-em-BZN"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="e9h-2m-n2Z" id="OoM-x7-iBj"/>
-                            <outlet property="delegate" destination="e9h-2m-n2Z" id="e1R-Un-rZS"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Video Gallery" id="HeI-cs-t5n"/>
-                    <connections>
-                        <segue destination="jj8-Ew-8dG" kind="push" identifier="seguePlayVideo" id="uE1-Zx-Pdo"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gIZ-BN-9wr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2486" y="298"/>
         </scene>
         <!--Invite Friend View Controller-->
         <scene sceneID="vlw-J0-Nat">
@@ -1154,10 +1109,10 @@ and its our family fun</string>
             </objects>
             <point key="canvasLocation" x="2876" y="298"/>
         </scene>
-        <!--Trip View Controller-->
+        <!--Video Gallery View Controller-->
         <scene sceneID="Slt-Am-meT">
             <objects>
-                <viewController id="bbC-z6-Wgw" customClass="TripViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bbC-z6-Wgw" userLabel="Video Gallery View Controller" customClass="TripViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sp4-QL-4in"/>
                         <viewControllerLayoutGuide type="bottom" id="bZH-WM-9bu"/>
@@ -1191,13 +1146,19 @@ and its our family fun</string>
                                                 <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ucp-Ka-han">
                                                     <rect key="frame" x="0.0" y="311" width="250" height="69"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUo-4r-zZc">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUo-4r-zZc">
                                                             <rect key="frame" x="0.0" y="19" width="250" height="32"/>
                                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="23"/>
                                                             <color key="textColor" red="0.53725490200000003" green="0.0" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="XUo-4r-zZc" firstAttribute="leading" secondItem="Ucp-Ka-han" secondAttribute="leading" id="EMJ-Jg-Gqt"/>
+                                                        <constraint firstAttribute="trailing" secondItem="XUo-4r-zZc" secondAttribute="trailing" id="EZS-vb-Wxu"/>
+                                                        <constraint firstItem="XUo-4r-zZc" firstAttribute="centerY" secondItem="Ucp-Ka-han" secondAttribute="centerY" id="FIM-S7-uL2"/>
+                                                        <constraint firstItem="XUo-4r-zZc" firstAttribute="top" secondItem="Ucp-Ka-han" secondAttribute="top" constant="19" id="lnw-LN-NCp"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1224,30 +1185,18 @@ and its our family fun</string>
                                     <outlet property="delegate" destination="bbC-z6-Wgw" id="Dff-gK-iy7"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Popular Destinations" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPU-jw-d7P">
-                                <rect key="frame" x="16" y="20" width="174" height="57"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="CZv-Kg-nTo"/>
-                                    <constraint firstAttribute="width" constant="174" id="X8f-sY-8Q5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pWr-md-rfK" firstAttribute="bottom" secondItem="bZH-WM-9bu" secondAttribute="top" id="3JD-wg-Mks"/>
-                            <constraint firstItem="rPU-jw-d7P" firstAttribute="top" secondItem="sp4-QL-4in" secondAttribute="bottom" id="4ic-Jx-M6O"/>
+                            <constraint firstItem="pWr-md-rfK" firstAttribute="bottom" secondItem="bZH-WM-9bu" secondAttribute="top" id="FhN-Qi-sBF"/>
                             <constraint firstAttribute="trailing" secondItem="s5Q-We-GOv" secondAttribute="trailing" id="HbM-8E-XMS"/>
-                            <constraint firstItem="rPU-jw-d7P" firstAttribute="leading" secondItem="ahk-YN-X6B" secondAttribute="leadingMargin" id="K3D-0J-Zgq"/>
                             <constraint firstItem="s5Q-We-GOv" firstAttribute="centerX" secondItem="ahk-YN-X6B" secondAttribute="centerX" id="KrE-fz-lul"/>
                             <constraint firstAttribute="trailing" secondItem="pWr-md-rfK" secondAttribute="trailing" id="OUh-Ft-QF2"/>
                             <constraint firstItem="s5Q-We-GOv" firstAttribute="leading" secondItem="ahk-YN-X6B" secondAttribute="leading" id="UbG-Qt-Aek"/>
                             <constraint firstItem="pWr-md-rfK" firstAttribute="top" secondItem="ahk-YN-X6B" secondAttribute="top" id="Zr4-Gv-B3e"/>
                             <constraint firstItem="pWr-md-rfK" firstAttribute="leading" secondItem="ahk-YN-X6B" secondAttribute="leading" id="f2J-BI-qcw"/>
-                            <constraint firstItem="s5Q-We-GOv" firstAttribute="top" secondItem="rPU-jw-d7P" secondAttribute="bottom" constant="8" symbolic="YES" id="nFv-LX-XOT"/>
                             <constraint firstItem="s5Q-We-GOv" firstAttribute="centerY" secondItem="ahk-YN-X6B" secondAttribute="centerY" constant="35.5" id="uEA-cJ-cxe"/>
+                            <constraint firstItem="bZH-WM-9bu" firstAttribute="top" secondItem="s5Q-We-GOv" secondAttribute="bottom" constant="14" id="zUZ-TN-rs5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="f1y-8P-kxf"/>
@@ -1269,9 +1218,9 @@ and its our family fun</string>
         <image name="video-icon-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6ew-ZD-cM0"/>
-        <segue reference="0o9-gl-Z1m"/>
         <segue reference="I58-nj-Cl3"/>
-        <segue reference="jeM-NP-93y"/>
+        <segue reference="0o9-gl-Z1m"/>
+        <segue reference="6ew-ZD-cM0"/>
+        <segue reference="u0z-jc-Nfe"/>
     </inferredMetricsTieBreakers>
 </document>
