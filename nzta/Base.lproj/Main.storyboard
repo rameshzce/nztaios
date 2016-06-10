@@ -1112,7 +1112,7 @@ and its our family fun</string>
         <!--Video Gallery View Controller-->
         <scene sceneID="Slt-Am-meT">
             <objects>
-                <viewController id="bbC-z6-Wgw" userLabel="Video Gallery View Controller" customClass="TripViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bbC-z6-Wgw" userLabel="Video Gallery View Controller" customClass="VideoGalleryViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sp4-QL-4in"/>
                         <viewControllerLayoutGuide type="bottom" id="bZH-WM-9bu"/>
@@ -1133,7 +1133,7 @@ and its our family fun</string>
                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="mXY-et-BwX" customClass="TripCollectionCell" customModule="nzta" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="mXY-et-BwX" customClass="VideoGalleryViewCell" customModule="nzta" customModuleProvider="target">
                                         <rect key="frame" x="20" y="45" width="250" height="380"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">

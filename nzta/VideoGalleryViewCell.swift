@@ -2,24 +2,19 @@
 //  VideoGalleryViewCell.swift
 //  nzta
 //
-//  Created by Ramesh Kolamala on 22/05/16.
+//  Created by Ramesh Kolamala on 10/06/16.
 //  Copyright © 2016 tokkalo.com. All rights reserved.
 //
 
 import UIKit
 
-class VideoGalleryViewCell: UITableViewCell {
 
-    @IBOutlet weak var eventName: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+class VideoGalleryViewCell: UICollectionViewCell {
+    @IBOutlet var imageView:UIImageView!
+    @IBOutlet var cityLabel:UILabel!
+    @IBOutlet var countryLabel:UILabel!
+    @IBOutlet var totalDaysLabel:UILabel!
+    @IBOutlet var priceLabel:UILabel!
+    @IBOutlet var likeButton:UIButton!
+    
 }
