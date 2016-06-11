@@ -336,10 +336,20 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJZ-ms-YB6">
+                                <rect key="frame" x="279" y="28" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Hjv-1k-yOk"/>
+                                    <constraint firstAttribute="width" constant="20" id="KQv-Rg-1IL"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="edit"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="kJZ-ms-YB6" firstAttribute="top" secondItem="6fk-Ca-M47" secondAttribute="bottom" constant="8" id="EJT-7p-A64"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kJZ-ms-YB6" secondAttribute="trailing" constant="5" id="Eey-xo-HH2"/>
                             <constraint firstItem="B69-RN-RS9" firstAttribute="top" secondItem="6fk-Ca-M47" secondAttribute="bottom" constant="45" id="IZx-6T-Jht"/>
                             <constraint firstItem="B69-RN-RS9" firstAttribute="centerX" secondItem="gDL-Xp-RgJ" secondAttribute="centerX" id="L9I-pa-fha"/>
                             <constraint firstItem="Q3u-dN-2zz" firstAttribute="top" secondItem="bKJ-Pc-9qJ" secondAttribute="bottom" constant="10" id="T9Q-le-RWy"/>
@@ -1310,6 +1320,7 @@ and its our family fun</string>
     </scenes>
     <resources>
         <image name="camera-icon-30" width="30" height="30"/>
+        <image name="edit" width="36" height="36"/>
         <image name="logo" width="48" height="48"/>
         <image name="logo3" width="144" height="144"/>
         <image name="menu" width="22" height="22"/>
