@@ -32,6 +32,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
     {
+        if result.isCancelled {
+            return
+        }
+        
         FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large), email"]).startWithCompletionHandler { (connection, result, error) -> Void in
             
             let strFirstName: String = (result.objectForKey("first_name") as? String)!
