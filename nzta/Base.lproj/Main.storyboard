@@ -42,6 +42,7 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -299,7 +300,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B69-RN-RS9">
-                                <rect key="frame" x="73" y="70" width="175" height="175"/>
+                                <rect key="frame" x="73" y="65" width="175" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="4LY-P5-gPd"/>
                                     <constraint firstAttribute="height" constant="175" id="vYQ-TT-yVN"/>
@@ -323,18 +324,32 @@
                                 <color key="textColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmV-pB-ymc">
+                                <rect key="frame" x="74" y="421" width="180" height="40"/>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="hOD-5V-qzX"/>
+                                    <constraint firstAttribute="height" constant="40" id="nSz-fL-yWF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
+                                <state key="normal" title="My Gallery">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="B69-RN-RS9" firstAttribute="top" secondItem="6fk-Ca-M47" secondAttribute="bottom" constant="50" id="IZx-6T-Jht"/>
+                            <constraint firstItem="B69-RN-RS9" firstAttribute="top" secondItem="6fk-Ca-M47" secondAttribute="bottom" constant="45" id="IZx-6T-Jht"/>
                             <constraint firstItem="B69-RN-RS9" firstAttribute="centerX" secondItem="gDL-Xp-RgJ" secondAttribute="centerX" id="L9I-pa-fha"/>
                             <constraint firstItem="Q3u-dN-2zz" firstAttribute="top" secondItem="bKJ-Pc-9qJ" secondAttribute="bottom" constant="10" id="T9Q-le-RWy"/>
-                            <constraint firstItem="gDL-Xp-RgJ" firstAttribute="top" secondItem="B69-RN-RS9" secondAttribute="bottom" constant="27" id="ZhL-oR-Pkj"/>
+                            <constraint firstItem="gDL-Xp-RgJ" firstAttribute="top" secondItem="B69-RN-RS9" secondAttribute="bottom" constant="32" id="ZhL-oR-Pkj"/>
+                            <constraint firstItem="Q3u-dN-2zz" firstAttribute="centerX" secondItem="QmV-pB-ymc" secondAttribute="centerX" constant="-3.5" id="aCr-8R-9mk"/>
                             <constraint firstItem="bKJ-Pc-9qJ" firstAttribute="centerX" secondItem="Q3u-dN-2zz" secondAttribute="centerX" id="cPo-j1-apx"/>
                             <constraint firstItem="bKJ-Pc-9qJ" firstAttribute="top" secondItem="gDL-Xp-RgJ" secondAttribute="bottom" constant="11" id="dK6-Bz-85Z"/>
                             <constraint firstItem="B69-RN-RS9" firstAttribute="centerX" secondItem="mDt-Bk-NBv" secondAttribute="centerX" constant="0.5" id="fcN-ig-a0H"/>
                             <constraint firstItem="gDL-Xp-RgJ" firstAttribute="centerX" secondItem="bKJ-Pc-9qJ" secondAttribute="centerX" id="jsw-JL-B9H"/>
+                            <constraint firstItem="QmV-pB-ymc" firstAttribute="top" secondItem="Q3u-dN-2zz" secondAttribute="bottom" constant="26" id="t1I-oN-NGi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Cu7-bB-zaJ"/>
