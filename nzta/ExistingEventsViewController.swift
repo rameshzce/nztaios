@@ -22,8 +22,22 @@ class ExistingEventsViewController: UIViewController, UIPickerViewDelegate, UIPi
         
         datePicker.delegate = self
         datePicker.dataSource = self
+        
+        datePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
+        //datePicker.setValue("18", forKey: "textSize")
 
         // Do any additional setup after loading the view.
+    }
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView
+    {
+        let pickerLabel = UILabel()
+        pickerLabel.textColor = UIColor.whiteColor()
+        pickerLabel.text = Array[row]
+        // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
+        pickerLabel.font = UIFont(name: "handlee-regular", size: 35) // In this use your custom font
+        pickerLabel.textAlignment = NSTextAlignment.Center
+        return pickerLabel
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +48,13 @@ class ExistingEventsViewController: UIViewController, UIPickerViewDelegate, UIPi
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return Array[row]
     }
+    
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat
+    {
+        return 40;
+    }
+    
+    
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return Array.count
