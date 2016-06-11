@@ -43,6 +43,9 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -449,24 +452,94 @@ and its our family fun</string>
                                             <outlet property="delegate" destination="U53-VW-tQ4" id="fwP-sH-mdY"/>
                                         </connections>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPn-8B-Ev7" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
+                                        <rect key="frame" x="70" y="324" width="180" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="RDM-OG-lMA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="$35 family yearly">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBb-LI-guQ" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
+                                        <rect key="frame" x="70" y="292" width="180" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="S7E-7U-hLe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="$10 student yearly">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTk-s6-gaR" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
+                                        <rect key="frame" x="70" y="354" width="180" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="nPM-nm-7Us"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
+                                        <state key="normal" title="$250 lifetime">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="cmH-lw-vNH" firstAttribute="width" secondItem="2hM-Zf-UAJ" secondAttribute="width" id="2Pr-T6-dBy"/>
                                     <constraint firstItem="H7P-Oe-YUO" firstAttribute="centerX" secondItem="BQf-os-AD4" secondAttribute="centerX" id="4F6-IO-mjy"/>
                                     <constraint firstItem="ckv-pd-hpr" firstAttribute="height" secondItem="cmH-lw-vNH" secondAttribute="height" id="7wk-uI-R9G"/>
                                     <constraint firstItem="2hM-Zf-UAJ" firstAttribute="top" secondItem="fQo-0o-HxR" secondAttribute="bottom" constant="8" id="DIc-Xa-n1A"/>
+                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="trailing" secondItem="yPn-8B-Ev7" secondAttribute="trailing" id="EIk-Tg-j5k"/>
                                     <constraint firstItem="cmH-lw-vNH" firstAttribute="top" secondItem="2hM-Zf-UAJ" secondAttribute="bottom" constant="8" symbolic="YES" id="EMK-FN-7Em"/>
                                     <constraint firstItem="H7P-Oe-YUO" firstAttribute="centerY" secondItem="BQf-os-AD4" secondAttribute="centerY" constant="-233.5" id="FcP-nT-g7h"/>
+                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="top" secondItem="ckv-pd-hpr" secondAttribute="bottom" constant="14" id="G1u-Bm-BgP"/>
+                                    <constraint firstItem="yPn-8B-Ev7" firstAttribute="top" secondItem="DBb-LI-guQ" secondAttribute="bottom" constant="2" id="GUT-f5-7Hy"/>
                                     <constraint firstItem="fQo-0o-HxR" firstAttribute="top" secondItem="H7P-Oe-YUO" secondAttribute="bottom" constant="11" id="LxZ-KU-S1j"/>
+                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="leading" secondItem="TTk-s6-gaR" secondAttribute="leading" id="NQx-hc-clG"/>
+                                    <constraint firstItem="TTk-s6-gaR" firstAttribute="top" secondItem="yPn-8B-Ev7" secondAttribute="bottom" id="PI7-w8-rOH"/>
+                                    <constraint firstItem="yPn-8B-Ev7" firstAttribute="centerX" secondItem="TTk-s6-gaR" secondAttribute="centerX" id="Qgz-hR-JzG"/>
                                     <constraint firstItem="ckv-pd-hpr" firstAttribute="centerX" secondItem="cmH-lw-vNH" secondAttribute="centerX" id="Sqo-9u-5hn"/>
                                     <constraint firstItem="2hM-Zf-UAJ" firstAttribute="centerX" secondItem="cmH-lw-vNH" secondAttribute="centerX" id="Tr0-7S-K12"/>
                                     <constraint firstItem="fQo-0o-HxR" firstAttribute="centerX" secondItem="2hM-Zf-UAJ" secondAttribute="centerX" id="VVd-Ko-veo"/>
                                     <constraint firstAttribute="trailing" secondItem="H7P-Oe-YUO" secondAttribute="trailing" constant="86" id="WTh-kr-qIj"/>
                                     <constraint firstItem="fQo-0o-HxR" firstAttribute="centerX" secondItem="H7P-Oe-YUO" secondAttribute="centerX" id="Zwh-l9-i3B"/>
                                     <constraint firstAttribute="bottom" secondItem="H7P-Oe-YUO" secondAttribute="bottom" constant="507" id="dGc-Ee-HvU"/>
+                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="leading" secondItem="BQf-os-AD4" secondAttribute="leading" constant="70" id="dPc-Vt-8Dq"/>
+                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="centerX" secondItem="ckv-pd-hpr" secondAttribute="centerX" id="fqV-Vt-ORB"/>
                                     <constraint firstItem="fQo-0o-HxR" firstAttribute="leading" secondItem="BQf-os-AD4" secondAttribute="leading" constant="43" id="ndb-pZ-Ff7"/>
+                                    <constraint firstItem="TTk-s6-gaR" firstAttribute="top" secondItem="yPn-8B-Ev7" secondAttribute="bottom" id="pdn-Cf-Byd"/>
+                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="centerX" secondItem="yPn-8B-Ev7" secondAttribute="centerX" id="qQJ-1A-d3e"/>
                                     <constraint firstItem="2hM-Zf-UAJ" firstAttribute="top" secondItem="fQo-0o-HxR" secondAttribute="bottom" constant="8" symbolic="YES" id="tTt-bc-Jma"/>
                                     <constraint firstItem="ckv-pd-hpr" firstAttribute="width" secondItem="cmH-lw-vNH" secondAttribute="width" id="vp5-ON-KZS"/>
+                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="trailing" secondItem="TTk-s6-gaR" secondAttribute="trailing" id="xTq-pO-mER"/>
+                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="leading" secondItem="yPn-8B-Ev7" secondAttribute="leading" id="xxe-bU-aBT"/>
                                     <constraint firstItem="cmH-lw-vNH" firstAttribute="height" secondItem="2hM-Zf-UAJ" secondAttribute="height" id="xxq-Ce-t8T"/>
                                     <constraint firstItem="ckv-pd-hpr" firstAttribute="top" secondItem="cmH-lw-vNH" secondAttribute="bottom" constant="8" symbolic="YES" id="zYj-mv-FBP"/>
                                 </constraints>
@@ -482,6 +555,9 @@ and its our family fun</string>
                     </view>
                     <navigationItem key="navigationItem" id="j3Q-Nl-Fe2"/>
                     <connections>
+                        <outlet property="button1" destination="DBb-LI-guQ" id="Q2j-ge-DHm"/>
+                        <outlet property="button2" destination="yPn-8B-Ev7" id="BkB-m7-CbC"/>
+                        <outlet property="button3" destination="TTk-s6-gaR" id="Zvv-9Z-bkv"/>
                         <outlet property="scrollView" destination="BQf-os-AD4" id="rgK-K7-40R"/>
                     </connections>
                 </viewController>
@@ -746,7 +822,7 @@ and its our family fun</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="95" id="bxq-Vh-7eT" customClass="EventsViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="22" width="320" height="95"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bxq-Vh-7eT" id="47D-U6-Aez">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
@@ -1153,7 +1229,7 @@ and its our family fun</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="251" id="0Xr-LU-UWl" customClass="ImageGalleryViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="22" width="320" height="251"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Xr-LU-UWl" id="MnN-dq-Hkq">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
@@ -1327,8 +1403,8 @@ and its our family fun</string>
         <image name="video-icon-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6ew-ZD-cM0"/>
-        <segue reference="0o9-gl-Z1m"/>
         <segue reference="I58-nj-Cl3"/>
+        <segue reference="6ew-ZD-cM0"/>
+        <segue reference="JGb-kV-gIL"/>
     </inferredMetricsTieBreakers>
 </document>

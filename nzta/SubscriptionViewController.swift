@@ -8,14 +8,28 @@
 
 import UIKit
 
-class SubscriptionViewController: UIViewController {
+class SubscriptionViewController: UIViewController, SSRadioButtonControllerDelegate {
 
     @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var button1: SSRadioButton!
+    @IBOutlet var button2: SSRadioButton!
+    @IBOutlet var button3: UIButton!
     @IBOutlet var nameTextField: UITextField!
+    
+    var radioButtonController: SSRadioButtonsController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        radioButtonController = SSRadioButtonsController(buttons: button1, button2, button3)
+        radioButtonController!.delegate = self
+        radioButtonController!.shouldLetDeSelect = true
 
         // Do any additional setup after loading the view.
+    }
+    
+    func didSelectButton(aButton: UIButton?) {
+        //print(aButton.)
     }
 
     override func didReceiveMemoryWarning() {

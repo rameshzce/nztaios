@@ -30,6 +30,8 @@
 		755097BD1D02DC6E0005AF83 /* ImageGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755097BC1D02DC6E0005AF83 /* ImageGalleryViewCell.swift */; };
 		755097BF1D02EB820005AF83 /* DisplayGalleryImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755097BE1D02EB820005AF83 /* DisplayGalleryImageViewController.swift */; };
 		755DD5581D0206AD009B6FE4 /* ImageDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DD5571D0206AD009B6FE4 /* ImageDisplayViewController.swift */; };
+		756955841D0BEC3400B17CAB /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756955831D0BEC3400B17CAB /* SSRadioButtonsController.swift */; };
+		756955861D0BEE7500B17CAB /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756955851D0BEE7500B17CAB /* SSRadioButton.swift */; };
 		75A3F5401CF12CDE0033E70A /* PhotoGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */; };
 		75A3F5421CF12D270033E70A /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3F5411CF12D270033E70A /* PhotoGalleryViewController.swift */; };
 		75B622E41CF04ABD00493F98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B622E31CF04ABD00493F98 /* AppDelegate.swift */; };
@@ -80,6 +82,8 @@
 		755097BE1D02EB820005AF83 /* DisplayGalleryImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayGalleryImageViewController.swift; sourceTree = "<group>"; };
 		755DD5571D0206AD009B6FE4 /* ImageDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDisplayViewController.swift; sourceTree = "<group>"; };
 		755E529D1CF6997500DBE1C4 /* nzta__-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nzta__-Bridging-Header.h"; sourceTree = "<group>"; };
+		756955831D0BEC3400B17CAB /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
+		756955851D0BEE7500B17CAB /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewCell.swift; sourceTree = "<group>"; };
 		75A3F5411CF12D270033E70A /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
 		75B622E01CF04ABC00493F98 /* nzta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nzta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +206,8 @@
 				75D387471D0B235F00314052 /* SponsorsViewController.swift */,
 				75D387491D0B23AC00314052 /* SponsorsViewCell.swift */,
 				752EB26B1D0BAEDC00799DFE /* Common.swift */,
+				756955831D0BEC3400B17CAB /* SSRadioButtonsController.swift */,
+				756955851D0BEE7500B17CAB /* SSRadioButton.swift */,
 			);
 			path = nzta;
 			sourceTree = "<group>";
@@ -368,6 +374,7 @@
 				755097BD1D02DC6E0005AF83 /* ImageGalleryViewCell.swift in Sources */,
 				75A3F5401CF12CDE0033E70A /* PhotoGalleryViewCell.swift in Sources */,
 				755097BB1D02DC3A0005AF83 /* ImageGalleryViewController.swift in Sources */,
+				756955841D0BEC3400B17CAB /* SSRadioButtonsController.swift in Sources */,
 				75D0BDE61CF17AB8009E030F /* VideoGalleryViewController.swift in Sources */,
 				75B622F91CF05DE000493F98 /* MemberViewController.swift in Sources */,
 				75D0EBF41CF9819C00563C68 /* PlayVideoViewController.swift in Sources */,
@@ -394,6 +401,7 @@
 				753F920B1D0A6E4300D53053 /* VideoGalleryViewCell.swift in Sources */,
 				752EB26C1D0BAEDC00799DFE /* Common.swift in Sources */,
 				75D3874A1D0B23AC00314052 /* SponsorsViewCell.swift in Sources */,
+				756955861D0BEE7500B17CAB /* SSRadioButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
