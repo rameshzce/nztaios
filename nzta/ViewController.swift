@@ -132,6 +132,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
                         let phone = jsonDictionary["phone"] as! String
                         //self.showAlert("\(phone)")
                         self.prefs.setValue(phone, forKey: "login")
+                        self.prefs.setValue(self.name.text, forKey: "profileName")
+                        self.prefs.setValue(phone, forKey: "profileMobile")
+                        self.prefs.setValue(self.email.text, forKey: "profileEmail")
                         self.performSegueWithIdentifier("member", sender: self)
                     }else if status == "FAILURE"{
                         let message = jsonDictionary["message"] as! String
