@@ -27,16 +27,18 @@ class ProfileViewController: UIViewController {
         self.profileImage.layer.borderWidth = 10.0
         self.profileImage.layer.borderColor = hexStringToUIColor("#C4C4C4").CGColor
         
-        self.profileImage.image = UIImage(named: "logo3")
         
-        self.profileName.text = "\(prefs.stringForKey("profileName")!)"
-        self.profileMobile.text = "Mob: \(prefs.stringForKey("profileMobile")!)"
-        self.profileEmail.text = "\(prefs.stringForKey("profileEmail")!)"
         
         if prefs.stringForKey("profileImage") != nil{
             self.profileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: prefs.stringForKey("profileImage")!)!)!)
             
             self.profileName.text = "\(prefs.stringForKey("profileFirstName")!) \(prefs.stringForKey("profileLastName")!)"
+            self.profileMobile.text = "Mob: \(prefs.stringForKey("profileMobile")!)"
+            self.profileEmail.text = "\(prefs.stringForKey("profileEmail")!)"
+        } else {
+            self.profileImage.image = UIImage(named: "logo3")
+            
+            self.profileName.text = "\(prefs.stringForKey("profileName")!)"
             self.profileMobile.text = "Mob: \(prefs.stringForKey("profileMobile")!)"
             self.profileEmail.text = "\(prefs.stringForKey("profileEmail")!)"
         }

@@ -138,7 +138,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
                         //self.showAlert("\(phone)")
                         self.prefs.setValue(phone, forKey: "login")
                         self.prefs.setValue(self.name.text, forKey: "profileName")
-                        self.prefs.setValue(phone, forKey: "profileMobile")
+                        self.prefs.setValue(self.mob.text, forKey: "profileMobile")
                         self.prefs.setValue(self.email.text, forKey: "profileEmail")
                         self.performSegueWithIdentifier("member", sender: self)
                     }else if status == "FAILURE"{
