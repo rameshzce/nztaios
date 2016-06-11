@@ -46,6 +46,8 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -416,7 +418,7 @@ and its our family fun</string>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hM-Zf-UAJ">
                                         <rect key="frame" x="60" y="172" width="200" height="30"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="HCh-Ux-GNM"/>
@@ -433,7 +435,7 @@ and its our family fun</string>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cmH-lw-vNH">
                                         <rect key="frame" x="60" y="210" width="200" height="30"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -443,20 +445,17 @@ and its our family fun</string>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckv-pd-hpr">
                                         <rect key="frame" x="60" y="248" width="200" height="30"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="U53-VW-tQ4" id="fwP-sH-mdY"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPn-8B-Ev7" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
-                                        <rect key="frame" x="70" y="324" width="180" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="RDM-OG-lMA"/>
-                                        </constraints>
+                                        <rect key="frame" x="70" y="324" width="180" height="37"/>
                                         <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="$35 family yearly">
@@ -492,8 +491,10 @@ and its our family fun</string>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTk-s6-gaR" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
-                                        <rect key="frame" x="70" y="354" width="180" height="30"/>
+                                        <rect key="frame" x="70" y="361" width="180" height="30"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="jO2-Up-Jdz"/>
+                                            <constraint firstAttribute="width" constant="180" id="nJj-hy-Azy"/>
                                             <constraint firstAttribute="height" constant="30" id="nPM-nm-7Us"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
@@ -510,11 +511,20 @@ and its our family fun</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89V-gf-3Rk">
+                                        <rect key="frame" x="60" y="419" width="200" height="39"/>
+                                        <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                        <state key="normal" title="Subscribe">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="cmH-lw-vNH" firstAttribute="width" secondItem="2hM-Zf-UAJ" secondAttribute="width" id="2Pr-T6-dBy"/>
                                     <constraint firstItem="H7P-Oe-YUO" firstAttribute="centerX" secondItem="BQf-os-AD4" secondAttribute="centerX" id="4F6-IO-mjy"/>
                                     <constraint firstItem="ckv-pd-hpr" firstAttribute="height" secondItem="cmH-lw-vNH" secondAttribute="height" id="7wk-uI-R9G"/>
+                                    <constraint firstItem="TTk-s6-gaR" firstAttribute="centerX" secondItem="89V-gf-3Rk" secondAttribute="centerX" id="9Cc-fN-pub"/>
                                     <constraint firstItem="2hM-Zf-UAJ" firstAttribute="top" secondItem="fQo-0o-HxR" secondAttribute="bottom" constant="8" id="DIc-Xa-n1A"/>
                                     <constraint firstItem="DBb-LI-guQ" firstAttribute="trailing" secondItem="yPn-8B-Ev7" secondAttribute="trailing" id="EIk-Tg-j5k"/>
                                     <constraint firstItem="cmH-lw-vNH" firstAttribute="top" secondItem="2hM-Zf-UAJ" secondAttribute="bottom" constant="8" symbolic="YES" id="EMK-FN-7Em"/>
@@ -530,9 +540,11 @@ and its our family fun</string>
                                     <constraint firstItem="fQo-0o-HxR" firstAttribute="centerX" secondItem="2hM-Zf-UAJ" secondAttribute="centerX" id="VVd-Ko-veo"/>
                                     <constraint firstAttribute="trailing" secondItem="H7P-Oe-YUO" secondAttribute="trailing" constant="86" id="WTh-kr-qIj"/>
                                     <constraint firstItem="fQo-0o-HxR" firstAttribute="centerX" secondItem="H7P-Oe-YUO" secondAttribute="centerX" id="Zwh-l9-i3B"/>
+                                    <constraint firstItem="ckv-pd-hpr" firstAttribute="width" secondItem="89V-gf-3Rk" secondAttribute="width" id="bnM-pt-9LM"/>
                                     <constraint firstAttribute="bottom" secondItem="H7P-Oe-YUO" secondAttribute="bottom" constant="507" id="dGc-Ee-HvU"/>
                                     <constraint firstItem="DBb-LI-guQ" firstAttribute="leading" secondItem="BQf-os-AD4" secondAttribute="leading" constant="70" id="dPc-Vt-8Dq"/>
                                     <constraint firstItem="DBb-LI-guQ" firstAttribute="centerX" secondItem="ckv-pd-hpr" secondAttribute="centerX" id="fqV-Vt-ORB"/>
+                                    <constraint firstItem="89V-gf-3Rk" firstAttribute="top" secondItem="TTk-s6-gaR" secondAttribute="bottom" constant="28" id="k6r-sB-Uqj"/>
                                     <constraint firstItem="fQo-0o-HxR" firstAttribute="leading" secondItem="BQf-os-AD4" secondAttribute="leading" constant="43" id="ndb-pZ-Ff7"/>
                                     <constraint firstItem="TTk-s6-gaR" firstAttribute="top" secondItem="yPn-8B-Ev7" secondAttribute="bottom" id="pdn-Cf-Byd"/>
                                     <constraint firstItem="DBb-LI-guQ" firstAttribute="centerX" secondItem="yPn-8B-Ev7" secondAttribute="centerX" id="qQJ-1A-d3e"/>
