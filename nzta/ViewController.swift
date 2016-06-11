@@ -34,9 +34,15 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large), email"]).startWithCompletionHandler { (connection, result, error) -> Void in
             
             let strFirstName: String = (result.objectForKey("first_name") as? String)!
-            //let strLastName: String = (result.objectForKey("last_name") as? String)!
+            let strLastName: String = (result.objectForKey("last_name") as? String)!
             let strEmail: String = (result.objectForKey("email") as? String)!
-            //let strPictureURL: String = (result.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
+            let strPictureURL: String = (result.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
+            
+            self.prefs.setValue(strPictureURL, forKey: "profileImage")
+            self.prefs.setValue(strFirstName, forKey: "profileFirstName")
+            self.prefs.setValue(strLastName, forKey: "profileLastName")
+            self.prefs.setValue("", forKey: "profileMobile")
+            self.prefs.setValue(strEmail, forKey: "profileEmail")
             
             //self.lblName.text = "Welcome, \(strFirstName) \(strLastName)"
             //self.ivUserProfileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: strPictureURL)!)!)

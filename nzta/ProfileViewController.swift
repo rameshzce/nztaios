@@ -9,10 +9,33 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    let prefs = NSUserDefaults.standardUserDefaults()
+    
+    @IBOutlet var profileName: UILabel!
+    @IBOutlet var profileEmail: UILabel!
+    @IBOutlet var profileImage: UIImageView!
 
+    @IBOutlet var profileMobile: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if prefs.stringForKey("profileImage") != nil{
+            self.profileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: prefs.stringForKey("profileImage")!)!)!)
+            self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
+            self.profileImage.clipsToBounds = true
+            
+            self.profileImage.layer.borderWidth = 10.0
+            self.profileImage.layer.borderColor = hexStringToUIColor("#C4C4C4").CGColor
+            
+            self.profileName.text = "\(prefs.stringForKey("profileFirstName")!) \(prefs.stringForKey("profileLastName")!)"
+            self.profileMobile.text = "Mob: \(prefs.stringForKey("profileMobile")!)"
+            self.profileEmail.text = "\(prefs.stringForKey("profileEmail")!)"
+        }
+        
+        
+        self.view.backgroundColor = hexStringToUIColor("#EAEAEA")
         // Do any additional setup after loading the view.
     }
 
@@ -22,14 +45,26 @@ class ProfileViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.grayColor()
+        }
+        
+        var rgbValue:UInt32 = 0
+        NSScanner(string: cString).scanHexInt(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
-    */
 
 }
