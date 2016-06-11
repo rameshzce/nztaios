@@ -11,8 +11,8 @@ import UIKit
 class SponsorsViewController: UITableViewController {
     
    
-    let sponsors = ["XYZ Company", "XYZ Company", "XYZ Company", "XYZ Company", "XYZ Company"]
-    let address = ["Address", "Address", "Address", "Address", "Address"]
+    let sponsors = ["9737909_orig.jpg", "5007580.jpg", "7083908.jpg", "1095625.jpg", "5818936.jpg","1558207.jpg", "5328070.jpg", "2572405.jpg", "1004766.jpg", "8154066.jpg", "5625609.jpg", "5883002.jpg", "998445.jpg", "5812852.jpg", "5582596.jpg", "9947944.png", "9533872.jpg"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,9 +48,8 @@ class SponsorsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! SponsorsViewCell
 
         // Configure the cell...
-        
-        cell.companyName.text = self.sponsors[indexPath.row]
-        cell.addressLabel.text = self.address[indexPath.row]
+        cell.sponsorLogo.image = UIImage(named: "\(sponsors[indexPath.row])")
+        //cell.sponsorLogo.image = UIImage(named: "logo3")
         return cell
     }
     

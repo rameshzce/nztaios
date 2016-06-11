@@ -12,6 +12,7 @@ class SponsorsViewCell: UITableViewCell {
 
     @IBOutlet var companyName: UILabel!
     @IBOutlet var addressLabel: UILabel!
+    @IBOutlet var sponsorLogo: UIImageView!
     
     override func awakeFromNib() {
         

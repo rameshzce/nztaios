@@ -46,8 +46,6 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -449,7 +447,7 @@ and its our family fun</string>
                                             <outlet property="delegate" destination="U53-VW-tQ4" id="fwP-sH-mdY"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPn-8B-Ev7" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPn-8B-Ev7" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
                                         <rect key="frame" x="70" y="324" width="180" height="37"/>
                                         <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -485,7 +483,7 @@ and its our family fun</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTk-s6-gaR" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTk-s6-gaR" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
                                         <rect key="frame" x="70" y="361" width="180" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="jO2-Up-Jdz"/>
@@ -506,7 +504,7 @@ and its our family fun</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89V-gf-3Rk">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89V-gf-3Rk">
                                         <rect key="frame" x="60" y="419" width="200" height="39"/>
                                         <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
@@ -1110,37 +1108,20 @@ and its our family fun</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="oiV-8V-DuX">
-                                            <rect key="frame" x="14" y="8" width="80" height="80"/>
+                                            <rect key="frame" x="15" y="8" width="291" height="91"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="80" id="Kcu-rb-A3r"/>
-                                                <constraint firstAttribute="height" constant="80" id="fc0-yK-1V9"/>
+                                                <constraint firstAttribute="width" constant="291" id="Kcu-rb-A3r"/>
+                                                <constraint firstAttribute="height" constant="91" id="fc0-yK-1V9"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uf-yu-bBh">
-                                            <rect key="frame" x="105" y="15" width="121" height="27"/>
-                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieF-hD-Dcb">
-                                            <rect key="frame" x="105" y="50" width="39" height="25"/>
-                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="leading" secondItem="oiV-8V-DuX" secondAttribute="trailing" constant="11" id="2Rh-Zx-hF9"/>
-                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="leading" secondItem="ieF-hD-Dcb" secondAttribute="leading" id="GuW-Ez-neL"/>
-                                        <constraint firstItem="8uf-yu-bBh" firstAttribute="top" secondItem="qhV-bz-6Yg" secondAttribute="topMargin" constant="7" id="isY-BS-PFu"/>
-                                        <constraint firstItem="ieF-hD-Dcb" firstAttribute="top" secondItem="8uf-yu-bBh" secondAttribute="bottom" constant="8" id="nvo-8D-00B"/>
                                         <constraint firstItem="oiV-8V-DuX" firstAttribute="top" secondItem="qhV-bz-6Yg" secondAttribute="topMargin" id="pRw-mB-GVs"/>
-                                        <constraint firstItem="oiV-8V-DuX" firstAttribute="leading" secondItem="qhV-bz-6Yg" secondAttribute="leadingMargin" constant="6" id="vvm-Nc-Lv1"/>
+                                        <constraint firstItem="oiV-8V-DuX" firstAttribute="leading" secondItem="qhV-bz-6Yg" secondAttribute="leadingMargin" constant="7" id="vvm-Nc-Lv1"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="addressLabel" destination="ieF-hD-Dcb" id="pZF-eT-SXu"/>
-                                    <outlet property="companyName" destination="8uf-yu-bBh" id="bt4-fo-fVX"/>
+                                    <outlet property="sponsorLogo" destination="oiV-8V-DuX" id="XPj-kZ-YeO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
