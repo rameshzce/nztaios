@@ -876,7 +876,7 @@ and its our family fun</string>
                                             </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="256" verticalHuggingPriority="251" image="video-icon-30" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-gP-XMA">
-                                            <rect key="frame" x="171" y="68" width="25" height="22"/>
+                                            <rect key="frame" x="171" y="68" width="25" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="N0s-Xo-waa"/>
                                             </constraints>
@@ -906,7 +906,7 @@ and its our family fun</string>
                                         <constraint firstItem="Mt5-M0-AfX" firstAttribute="top" secondItem="YGQ-rN-dYh" secondAttribute="bottom" constant="5" id="Khz-Oa-EDu"/>
                                         <constraint firstItem="2fh-4j-B2V" firstAttribute="trailing" secondItem="YGQ-rN-dYh" secondAttribute="trailing" id="OoZ-4e-U4F"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="cws-Pb-vpl" secondAttribute="bottom" constant="-9" id="RAB-cI-XuI"/>
-                                        <constraint firstItem="2qH-gP-XMA" firstAttribute="centerY" secondItem="Jfb-gg-tXi" secondAttribute="centerY" constant="-1" id="VpM-qa-sYs"/>
+                                        <constraint firstItem="2qH-gP-XMA" firstAttribute="centerY" secondItem="Jfb-gg-tXi" secondAttribute="centerY" constant="-2" id="VpM-qa-sYs"/>
                                         <constraint firstItem="2fh-4j-B2V" firstAttribute="top" secondItem="47D-U6-Aez" secondAttribute="topMargin" constant="-3" id="Xdy-m2-cEn"/>
                                         <constraint firstItem="YGQ-rN-dYh" firstAttribute="top" secondItem="2fh-4j-B2V" secondAttribute="bottom" id="Z6X-ih-aBg"/>
                                         <constraint firstItem="cws-Pb-vpl" firstAttribute="centerX" secondItem="2fh-4j-B2V" secondAttribute="centerX" id="awN-jB-2RY"/>
@@ -1202,7 +1202,7 @@ and its our family fun</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3f-eM-cTz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3f-eM-cTz">
                                 <rect key="frame" x="36" y="111" width="248" height="337"/>
                             </imageView>
                         </subviews>
@@ -1310,10 +1310,10 @@ and its our family fun</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pWr-md-rfK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pWr-md-rfK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s5Q-We-GOv">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s5Q-We-GOv">
                                 <rect key="frame" x="0.0" y="85" width="320" height="469"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="iWt-yV-ibn">
                                     <size key="itemSize" width="250" height="380"/>
