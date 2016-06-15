@@ -189,6 +189,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         btnRegister.layer.borderColor = UIColor.whiteColor().CGColor
         btnRegister.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
         
+        customizeButton(name)
+        customizeButton(mob)
+        customizeButton(email)
+        
         //GIDSignIn.sharedInstance().uiDelegate = self
         // Uncomment to automatically sign in the user.
         //GIDSignIn.sharedInstance().signInSilently()
@@ -258,6 +262,20 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         
         let value = UIInterfaceOrientation.Portrait.rawValue
         UIDevice.currentDevice().setValue(value, forKey: "orientation")
+    }
+    
+    func customizeButton(textField: UITextField!) {
+        textField.backgroundColor = UIColor.clearColor()
+        textField.layer.cornerRadius = 10
+        textField.layer.borderWidth = 2
+        textField.layer.borderColor = UIColor.whiteColor().CGColor
+        textField.attributedPlaceholder = NSAttributedString(string:"placeholder text", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
+        
+        let paddingView = UIView(frame: CGRectMake(0, 0, 10, textField.frame.height))
+        
+        textField.leftView = paddingView
+        
+        textField.leftViewMode = UITextFieldViewMode.Always
     }
     
 }
