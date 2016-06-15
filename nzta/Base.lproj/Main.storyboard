@@ -46,6 +46,7 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -61,6 +62,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nz_bg1" translatesAutoresizingMaskIntoConstraints="NO" id="sXV-Jq-rUz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="WAM-f3-uDE">
                                 <rect key="frame" x="110" y="57" width="100" height="100"/>
                                 <constraints>
@@ -143,6 +147,7 @@
                                     <constraint firstAttribute="height" constant="36" id="Pm6-HM-R75"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="ZPc-bH-WhN"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                 <state key="normal" title="Facebook Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -163,9 +168,12 @@
                             <constraint firstItem="Yz6-1a-SXc" firstAttribute="centerX" secondItem="ZG9-ON-CWK" secondAttribute="centerX" id="JqZ-E5-q0Z"/>
                             <constraint firstItem="wPb-xM-vfA" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="KGN-VV-ikr"/>
                             <constraint firstItem="n0d-dF-qv6" firstAttribute="top" secondItem="pL0-9m-ks9" secondAttribute="top" id="NBL-Lq-lVt"/>
+                            <constraint firstItem="sXV-Jq-rUz" firstAttribute="width" secondItem="HNV-Qy-cf0" secondAttribute="width" id="NQp-3p-nsn"/>
                             <constraint firstItem="n0d-dF-qv6" firstAttribute="trailing" secondItem="wPb-xM-vfA" secondAttribute="trailing" id="NZ9-Vh-dwf"/>
+                            <constraint firstItem="sXV-Jq-rUz" firstAttribute="centerY" secondItem="HNV-Qy-cf0" secondAttribute="centerY" id="PnH-zx-PoP"/>
                             <constraint firstItem="4AI-c3-5Ub" firstAttribute="baseline" secondItem="Vjr-Rd-xdY" secondAttribute="baseline" id="QJZ-BY-8NU"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="top" secondItem="pL0-9m-ks9" secondAttribute="bottom" constant="19" id="Qoo-1o-nbp"/>
+                            <constraint firstItem="sXV-Jq-rUz" firstAttribute="height" secondItem="HNV-Qy-cf0" secondAttribute="height" id="Tfl-qX-1xu"/>
                             <constraint firstItem="pL0-9m-ks9" firstAttribute="leading" secondItem="Vjr-Rd-xdY" secondAttribute="leading" id="Tvh-Cy-wW9"/>
                             <constraint firstItem="n0d-dF-qv6" firstAttribute="leading" secondItem="wPb-xM-vfA" secondAttribute="leading" id="V9P-fm-qVo"/>
                             <constraint firstItem="n0d-dF-qv6" firstAttribute="leading" secondItem="4AI-c3-5Ub" secondAttribute="leading" id="Wr6-4Q-uf9"/>
@@ -179,6 +187,7 @@
                             <constraint firstItem="ZG9-ON-CWK" firstAttribute="width" secondItem="Yz6-1a-SXc" secondAttribute="width" id="nKo-R9-gAn"/>
                             <constraint firstItem="4AI-c3-5Ub" firstAttribute="leading" secondItem="R4i-8a-Max" secondAttribute="leading" id="nLB-Ku-coV"/>
                             <constraint firstItem="pL0-9m-ks9" firstAttribute="leading" secondItem="HNV-Qy-cf0" secondAttribute="leadingMargin" constant="90" id="oeM-5N-p72"/>
+                            <constraint firstItem="sXV-Jq-rUz" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="pNs-KM-wvD"/>
                             <constraint firstItem="Ya1-4e-wFZ" firstAttribute="leading" secondItem="R4i-8a-Max" secondAttribute="trailing" constant="22" id="rd0-FE-V1m"/>
                             <constraint firstItem="pL0-9m-ks9" firstAttribute="top" secondItem="6ES-z6-KhE" secondAttribute="bottom" constant="24" id="xBj-l5-gSY"/>
                         </constraints>
@@ -186,6 +195,7 @@
                     <navigationItem key="navigationItem" title="NZTA" id="gxq-Za-oet"/>
                     <connections>
                         <outlet property="btnFacebook" destination="Yz6-1a-SXc" id="D4d-2H-nZU"/>
+                        <outlet property="btnRegister" destination="ZG9-ON-CWK" id="Y7f-uk-zPK"/>
                         <outlet property="email" destination="Ya1-4e-wFZ" id="5Wl-D9-jdY"/>
                         <outlet property="lblName" destination="wPb-xM-vfA" id="r8n-qF-rLO"/>
                         <outlet property="mob" destination="Vjr-Rd-xdY" id="qy9-Na-Q1Q"/>
@@ -1375,6 +1385,7 @@ and its our family fun</string>
         <image name="edit" width="36" height="36"/>
         <image name="logo3" width="144" height="144"/>
         <image name="menu" width="22" height="22"/>
+        <image name="nz_bg1" width="559" height="600"/>
         <image name="video-icon-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>

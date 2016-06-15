@@ -15,6 +15,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
     @IBOutlet weak var email: UITextField!
     @IBOutlet var msg: UILabel!
     
+    @IBOutlet var btnRegister: UIButton!
     @IBOutlet var btnFacebook: FBSDKLoginButton!
     @IBOutlet var ivUserProfileImage: UIImageView!
     @IBOutlet var lblName: UILabel!
@@ -173,6 +174,21 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false
         configureFacebook()
+        
+        btnFacebook.setBackgroundImage(nil, forState: .Normal)
+        btnFacebook.backgroundColor = UIColor.clearColor()
+        btnFacebook.layer.cornerRadius = 10
+        btnFacebook.layer.borderWidth = 2
+        btnFacebook.layer.borderColor = UIColor.whiteColor().CGColor
+        btnFacebook.titleLabel!.font =  UIFont(name: "handlee-regular", size: 18)
+        btnFacebook.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+        
+        btnRegister.backgroundColor = UIColor.clearColor()
+        btnRegister.layer.cornerRadius = 10
+        btnRegister.layer.borderWidth = 2
+        btnRegister.layer.borderColor = UIColor.whiteColor().CGColor
+        btnRegister.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+        
         //GIDSignIn.sharedInstance().uiDelegate = self
         // Uncomment to automatically sign in the user.
         //GIDSignIn.sharedInstance().signInSilently()
