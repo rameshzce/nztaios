@@ -43,10 +43,6 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -65,55 +61,30 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nz_bg1" translatesAutoresizingMaskIntoConstraints="NO" id="sXV-Jq-rUz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="WAM-f3-uDE">
-                                <rect key="frame" x="110" y="57" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="DpM-Ja-RNu"/>
-                                    <constraint firstAttribute="width" constant="100" id="l6n-Gl-8vt"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Zealand Telugu Association" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ES-z6-KhE">
-                                <rect key="frame" x="29" y="177" width="262" height="27"/>
+                                <rect key="frame" x="29" y="182" width="262" height="27"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0d-dF-qv6">
-                                <rect key="frame" x="36" y="228" width="248" height="30"/>
-                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pL0-9m-ks9">
-                                <rect key="frame" x="106" y="228" width="178" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pL0-9m-ks9">
+                                <rect key="frame" x="40" y="229" width="240" height="30"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Wil-3Z-g3l"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mob" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AI-c3-5Ub">
-                                <rect key="frame" x="36" y="278" width="36" height="27"/>
-                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vjr-Rd-xdY">
-                                <rect key="frame" x="106" y="277" width="178" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mob" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vjr-Rd-xdY">
+                                <rect key="frame" x="40" y="269" width="240" height="30"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="6Hs-VL-AaJ"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4i-8a-Max">
-                                <rect key="frame" x="36" y="327" width="48" height="27"/>
-                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ya1-4e-wFZ">
-                                <rect key="frame" x="106" y="326" width="178" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ya1-4e-wFZ">
+                                <rect key="frame" x="40" y="309" width="240" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -121,18 +92,9 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="fwm-Uf-Rrf"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPb-xM-vfA">
-                                <rect key="frame" x="36" y="10" width="248" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZG9-ON-CWK">
-                                <rect key="frame" x="36" y="385" width="250" height="36"/>
+                                <rect key="frame" x="40" y="359" width="240" height="39"/>
                                 <color key="backgroundColor" red="0.17647058823529413" green="0.76470588235294112" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="22t-o8-Ukg"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -142,54 +104,49 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz6-1a-SXc" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="36" y="447" width="250" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="Pm6-HM-R75"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="ZPc-bH-WhN"/>
-                                </constraints>
+                                <rect key="frame" x="40" y="418" width="240" height="39"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                 <state key="normal" title="Facebook Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-RA-M2W">
+                                <rect key="frame" x="110" y="62" width="100" height="100"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1333333333" green="0.57254901960000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="R4i-8a-Max" firstAttribute="top" secondItem="4AI-c3-5Ub" secondAttribute="bottom" constant="22" id="3iC-Z6-cF7"/>
-                            <constraint firstItem="Yz6-1a-SXc" firstAttribute="top" secondItem="ZG9-ON-CWK" secondAttribute="bottom" constant="26" id="7FD-B4-XHM"/>
-                            <constraint firstItem="pL0-9m-ks9" firstAttribute="trailing" secondItem="Vjr-Rd-xdY" secondAttribute="trailing" id="98B-nX-Sat"/>
-                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="leading" secondItem="4AI-c3-5Ub" secondAttribute="trailing" constant="34" id="Ai5-ZW-sOY"/>
-                            <constraint firstItem="6ES-z6-KhE" firstAttribute="top" secondItem="WAM-f3-uDE" secondAttribute="bottom" constant="20" id="Azj-y8-f7E"/>
-                            <constraint firstItem="WAM-f3-uDE" firstAttribute="centerX" secondItem="6ES-z6-KhE" secondAttribute="centerX" id="Cy9-G7-wW2"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZG9-ON-CWK" secondAttribute="bottom" constant="147" id="EOO-MX-ifs"/>
-                            <constraint firstItem="Yz6-1a-SXc" firstAttribute="leading" secondItem="HNV-Qy-cf0" secondAttribute="leadingMargin" constant="20" id="EPv-DZ-1La"/>
-                            <constraint firstItem="R4i-8a-Max" firstAttribute="baseline" secondItem="Ya1-4e-wFZ" secondAttribute="baseline" id="I1c-MM-PCh"/>
-                            <constraint firstItem="n0d-dF-qv6" firstAttribute="bottom" secondItem="pL0-9m-ks9" secondAttribute="bottom" id="Ids-p1-MZp"/>
-                            <constraint firstItem="Yz6-1a-SXc" firstAttribute="centerX" secondItem="ZG9-ON-CWK" secondAttribute="centerX" id="JqZ-E5-q0Z"/>
-                            <constraint firstItem="wPb-xM-vfA" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="KGN-VV-ikr"/>
-                            <constraint firstItem="n0d-dF-qv6" firstAttribute="top" secondItem="pL0-9m-ks9" secondAttribute="top" id="NBL-Lq-lVt"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="width" secondItem="Ya1-4e-wFZ" secondAttribute="width" id="2Sv-Su-TP6"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="width" secondItem="pL0-9m-ks9" secondAttribute="width" id="47n-Wq-Wzc"/>
+                            <constraint firstItem="ZG9-ON-CWK" firstAttribute="height" secondItem="Yz6-1a-SXc" secondAttribute="height" id="BsU-1i-jXJ"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="height" secondItem="Ya1-4e-wFZ" secondAttribute="height" id="CAF-TK-GCi"/>
+                            <constraint firstItem="Ya1-4e-wFZ" firstAttribute="trailing" secondItem="ZG9-ON-CWK" secondAttribute="trailing" id="CBS-f6-UIw"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="leading" secondItem="Ya1-4e-wFZ" secondAttribute="leading" id="Epw-aC-cNW"/>
+                            <constraint firstItem="ZG9-ON-CWK" firstAttribute="width" secondItem="Yz6-1a-SXc" secondAttribute="width" id="EyU-EL-gqi"/>
+                            <constraint firstItem="Yz6-1a-SXc" firstAttribute="top" secondItem="ZG9-ON-CWK" secondAttribute="bottom" constant="20" id="KM0-ty-a4b"/>
+                            <constraint firstItem="pL0-9m-ks9" firstAttribute="top" secondItem="6ES-z6-KhE" secondAttribute="bottom" constant="20" id="NQ7-8L-aGs"/>
                             <constraint firstItem="sXV-Jq-rUz" firstAttribute="width" secondItem="HNV-Qy-cf0" secondAttribute="width" id="NQp-3p-nsn"/>
-                            <constraint firstItem="n0d-dF-qv6" firstAttribute="trailing" secondItem="wPb-xM-vfA" secondAttribute="trailing" id="NZ9-Vh-dwf"/>
                             <constraint firstItem="sXV-Jq-rUz" firstAttribute="centerY" secondItem="HNV-Qy-cf0" secondAttribute="centerY" id="PnH-zx-PoP"/>
-                            <constraint firstItem="4AI-c3-5Ub" firstAttribute="baseline" secondItem="Vjr-Rd-xdY" secondAttribute="baseline" id="QJZ-BY-8NU"/>
-                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="top" secondItem="pL0-9m-ks9" secondAttribute="bottom" constant="19" id="Qoo-1o-nbp"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="top" secondItem="pL0-9m-ks9" secondAttribute="bottom" constant="10" id="Q9u-S6-RrB"/>
+                            <constraint firstItem="ZG9-ON-CWK" firstAttribute="leading" secondItem="Yz6-1a-SXc" secondAttribute="leading" id="Qiw-L2-Jg4"/>
+                            <constraint firstItem="6ES-z6-KhE" firstAttribute="centerX" secondItem="m6g-RA-M2W" secondAttribute="centerX" id="RVU-Kh-e65"/>
                             <constraint firstItem="sXV-Jq-rUz" firstAttribute="height" secondItem="HNV-Qy-cf0" secondAttribute="height" id="Tfl-qX-1xu"/>
-                            <constraint firstItem="pL0-9m-ks9" firstAttribute="leading" secondItem="Vjr-Rd-xdY" secondAttribute="leading" id="Tvh-Cy-wW9"/>
-                            <constraint firstItem="n0d-dF-qv6" firstAttribute="leading" secondItem="wPb-xM-vfA" secondAttribute="leading" id="V9P-fm-qVo"/>
-                            <constraint firstItem="n0d-dF-qv6" firstAttribute="leading" secondItem="4AI-c3-5Ub" secondAttribute="leading" id="Wr6-4Q-uf9"/>
-                            <constraint firstItem="Ya1-4e-wFZ" firstAttribute="leading" secondItem="Vjr-Rd-xdY" secondAttribute="leading" id="Xyj-PN-fdT"/>
-                            <constraint firstItem="n0d-dF-qv6" firstAttribute="trailing" secondItem="pL0-9m-ks9" secondAttribute="trailing" id="aQ1-Wk-v6q"/>
-                            <constraint firstItem="ZG9-ON-CWK" firstAttribute="top" secondItem="Ya1-4e-wFZ" secondAttribute="bottom" constant="29" id="dfs-4k-GZQ"/>
-                            <constraint firstItem="6ES-z6-KhE" firstAttribute="centerX" secondItem="n0d-dF-qv6" secondAttribute="centerX" id="etV-nU-ObS"/>
-                            <constraint firstItem="wPb-xM-vfA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-54" id="g11-Gv-VOm"/>
-                            <constraint firstItem="Ya1-4e-wFZ" firstAttribute="trailing" secondItem="Vjr-Rd-xdY" secondAttribute="trailing" id="gVJ-3e-FLv"/>
-                            <constraint firstItem="ZG9-ON-CWK" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" constant="1" id="kMo-JF-ZUs"/>
-                            <constraint firstItem="ZG9-ON-CWK" firstAttribute="width" secondItem="Yz6-1a-SXc" secondAttribute="width" id="nKo-R9-gAn"/>
-                            <constraint firstItem="4AI-c3-5Ub" firstAttribute="leading" secondItem="R4i-8a-Max" secondAttribute="leading" id="nLB-Ku-coV"/>
-                            <constraint firstItem="pL0-9m-ks9" firstAttribute="leading" secondItem="HNV-Qy-cf0" secondAttribute="leadingMargin" constant="90" id="oeM-5N-p72"/>
+                            <constraint firstItem="ZG9-ON-CWK" firstAttribute="top" secondItem="Ya1-4e-wFZ" secondAttribute="bottom" constant="20" id="V2F-PT-kko"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="leading" secondItem="pL0-9m-ks9" secondAttribute="leading" id="VXD-hU-yPC"/>
+                            <constraint firstItem="pL0-9m-ks9" firstAttribute="centerX" secondItem="6ES-z6-KhE" secondAttribute="centerX" id="YGf-VQ-Rlt"/>
+                            <constraint firstItem="ZG9-ON-CWK" firstAttribute="trailing" secondItem="Yz6-1a-SXc" secondAttribute="trailing" id="Zdo-0n-Quz"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="centerY" secondItem="sXV-Jq-rUz" secondAttribute="centerY" id="b5p-8i-xab"/>
+                            <constraint firstItem="Ya1-4e-wFZ" firstAttribute="top" secondItem="Vjr-Rd-xdY" secondAttribute="bottom" constant="10" id="bze-Yd-7CB"/>
+                            <constraint firstItem="Ya1-4e-wFZ" firstAttribute="width" secondItem="ZG9-ON-CWK" secondAttribute="width" id="d1w-5X-SeQ"/>
+                            <constraint firstItem="6ES-z6-KhE" firstAttribute="top" secondItem="m6g-RA-M2W" secondAttribute="bottom" constant="20" id="hO1-GB-Uap"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="height" secondItem="pL0-9m-ks9" secondAttribute="height" id="hdz-31-D7m"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="centerX" secondItem="sXV-Jq-rUz" secondAttribute="centerX" id="k23-fG-biU"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="leading" secondItem="sXV-Jq-rUz" secondAttribute="leading" constant="40" id="nYR-mQ-l1D"/>
                             <constraint firstItem="sXV-Jq-rUz" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="pNs-KM-wvD"/>
-                            <constraint firstItem="Ya1-4e-wFZ" firstAttribute="leading" secondItem="R4i-8a-Max" secondAttribute="trailing" constant="22" id="rd0-FE-V1m"/>
-                            <constraint firstItem="pL0-9m-ks9" firstAttribute="top" secondItem="6ES-z6-KhE" secondAttribute="bottom" constant="24" id="xBj-l5-gSY"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="trailing" secondItem="sXV-Jq-rUz" secondAttribute="trailing" constant="-40" id="sAX-63-c2d"/>
+                            <constraint firstItem="Ya1-4e-wFZ" firstAttribute="leading" secondItem="ZG9-ON-CWK" secondAttribute="leading" id="ukf-vC-LWO"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="trailing" secondItem="Ya1-4e-wFZ" secondAttribute="trailing" id="wb1-B8-krd"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="trailing" secondItem="pL0-9m-ks9" secondAttribute="trailing" id="xPq-YB-9SY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="NZTA" id="gxq-Za-oet"/>
@@ -197,7 +154,6 @@
                         <outlet property="btnFacebook" destination="Yz6-1a-SXc" id="D4d-2H-nZU"/>
                         <outlet property="btnRegister" destination="ZG9-ON-CWK" id="Y7f-uk-zPK"/>
                         <outlet property="email" destination="Ya1-4e-wFZ" id="5Wl-D9-jdY"/>
-                        <outlet property="lblName" destination="wPb-xM-vfA" id="r8n-qF-rLO"/>
                         <outlet property="mob" destination="Vjr-Rd-xdY" id="qy9-Na-Q1Q"/>
                         <outlet property="name" destination="pL0-9m-ks9" id="NyB-yA-5Vw"/>
                         <segue destination="SBW-Gj-Btz" kind="modal" identifier="member" id="NNO-aJ-Gw6"/>
@@ -205,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495" y="298"/>
+            <point key="canvasLocation" x="489" y="328"/>
         </scene>
         <!--Existing Events View Controller-->
         <scene sceneID="WZg-T5-H5M">
@@ -1383,7 +1339,7 @@ and its our family fun</string>
     <resources>
         <image name="camera-icon-30" width="30" height="30"/>
         <image name="edit" width="36" height="36"/>
-        <image name="logo3" width="144" height="144"/>
+        <image name="logo3" width="100" height="100"/>
         <image name="menu" width="22" height="22"/>
         <image name="nz_bg1" width="559" height="600"/>
         <image name="video-icon-30" width="30" height="30"/>

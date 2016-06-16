@@ -269,7 +269,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         textField.layer.cornerRadius = 10
         textField.layer.borderWidth = 2
         textField.layer.borderColor = UIColor.whiteColor().CGColor
-        textField.attributedPlaceholder = NSAttributedString(string:"placeholder text", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
+        //textField.attributedPlaceholder = NSAttributedString(string:"placeholder text", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
         
         let paddingView = UIView(frame: CGRectMake(0, 0, 10, textField.frame.height))
         
