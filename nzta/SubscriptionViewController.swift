@@ -16,6 +16,7 @@ class SubscriptionViewController: UIViewController, SSRadioButtonControllerDeleg
     @IBOutlet var button3: UIButton!
     @IBOutlet var nameTextField: UITextField!
     
+    @IBOutlet var btnSubscribe: UIButton!
     var radioButtonController: SSRadioButtonsController?
     
     override func viewDidLoad() {
@@ -24,6 +25,9 @@ class SubscriptionViewController: UIViewController, SSRadioButtonControllerDeleg
         radioButtonController = SSRadioButtonsController(buttons: button1, button2, button3)
         radioButtonController!.delegate = self
         radioButtonController!.shouldLetDeSelect = true
+        
+        Helper.customizetextField(nameTextField)
+        Helper.customizeButton(btnSubscribe)
 
         // Do any additional setup after loading the view.
     }
