@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController {
         
         
         
-        if prefs.stringForKey("profileImage") != nil{
+        /*if prefs.stringForKey("profileImage") != nil{
             self.profileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: prefs.stringForKey("profileImage")!)!)!)
             
             self.profileName.text = "\(prefs.stringForKey("profileFirstName")!) \(prefs.stringForKey("profileLastName")!)"
@@ -41,7 +41,7 @@ class ProfileViewController: UIViewController {
             self.profileName.text = "\(prefs.stringForKey("profileName")!)"
             self.profileMobile.text = "Mob: \(prefs.stringForKey("profileMobile")!)"
             self.profileEmail.text = "\(prefs.stringForKey("profileEmail")!)"
-        }
+        }*/
         
         
         self.view.backgroundColor = hexStringToUIColor("#EAEAEA")
