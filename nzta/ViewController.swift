@@ -178,14 +178,14 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         btnFacebook.setBackgroundImage(nil, forState: .Normal)
         btnFacebook.backgroundColor = UIColor.clearColor()
         btnFacebook.layer.cornerRadius = 10
-        btnFacebook.layer.borderWidth = 2
+        btnFacebook.layer.borderWidth = 1
         btnFacebook.layer.borderColor = UIColor.whiteColor().CGColor
         btnFacebook.titleLabel!.font =  UIFont(name: "handlee-regular", size: 18)
         btnFacebook.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
         
         btnRegister.backgroundColor = UIColor.clearColor()
         btnRegister.layer.cornerRadius = 10
-        btnRegister.layer.borderWidth = 2
+        btnRegister.layer.borderWidth = 1
         btnRegister.layer.borderColor = UIColor.whiteColor().CGColor
         btnRegister.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
         
@@ -273,7 +273,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
     func customizeButton(textField: UITextField!) {
         textField.backgroundColor = UIColor.clearColor()
         textField.layer.cornerRadius = 10
-        textField.layer.borderWidth = 2
+        textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.whiteColor().CGColor
         //textField.attributedPlaceholder = NSAttributedString(string:"placeholder text", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
         
