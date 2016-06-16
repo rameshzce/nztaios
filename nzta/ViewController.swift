@@ -193,6 +193,12 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         customizeButton(mob)
         customizeButton(email)
         
+        name.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
+        
+        mob.attributedPlaceholder = NSAttributedString(string:"Mob", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
+        
+        email.attributedPlaceholder = NSAttributedString(string:"Email", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
+        
         //GIDSignIn.sharedInstance().uiDelegate = self
         // Uncomment to automatically sign in the user.
         //GIDSignIn.sharedInstance().signInSilently()

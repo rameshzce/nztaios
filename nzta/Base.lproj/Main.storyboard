@@ -111,7 +111,11 @@
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-RA-M2W">
-                                <rect key="frame" x="110" y="62" width="100" height="100"/>
+                                <rect key="frame" x="110" y="67" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="F6a-Ap-XAc"/>
+                                    <constraint firstAttribute="height" constant="100" id="bt4-Qn-QgQ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1333333333" green="0.57254901960000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
@@ -138,7 +142,7 @@
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="centerY" secondItem="sXV-Jq-rUz" secondAttribute="centerY" id="b5p-8i-xab"/>
                             <constraint firstItem="Ya1-4e-wFZ" firstAttribute="top" secondItem="Vjr-Rd-xdY" secondAttribute="bottom" constant="10" id="bze-Yd-7CB"/>
                             <constraint firstItem="Ya1-4e-wFZ" firstAttribute="width" secondItem="ZG9-ON-CWK" secondAttribute="width" id="d1w-5X-SeQ"/>
-                            <constraint firstItem="6ES-z6-KhE" firstAttribute="top" secondItem="m6g-RA-M2W" secondAttribute="bottom" constant="20" id="hO1-GB-Uap"/>
+                            <constraint firstItem="6ES-z6-KhE" firstAttribute="top" secondItem="m6g-RA-M2W" secondAttribute="bottom" constant="15" id="hO1-GB-Uap"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="height" secondItem="pL0-9m-ks9" secondAttribute="height" id="hdz-31-D7m"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="centerX" secondItem="sXV-Jq-rUz" secondAttribute="centerX" id="k23-fG-biU"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="leading" secondItem="sXV-Jq-rUz" secondAttribute="leading" constant="40" id="nYR-mQ-l1D"/>
