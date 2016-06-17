@@ -175,29 +175,29 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         self.navigationController?.navigationBarHidden = false
         configureFacebook()
         
-        btnFacebook.setBackgroundImage(nil, forState: .Normal)
-        btnFacebook.backgroundColor = UIColor.clearColor()
-        btnFacebook.layer.cornerRadius = 10
-        btnFacebook.layer.borderWidth = 1
-        btnFacebook.layer.borderColor = UIColor.whiteColor().CGColor
+        //btnFacebook.setBackgroundImage(nil, forState: .Normal)
+        //btnFacebook.backgroundColor = UIColor.clearColor()
+        btnFacebook.layer.cornerRadius = 5
+        //btnFacebook.layer.borderWidth = 1
+        //btnFacebook.layer.borderColor = UIColor.whiteColor().CGColor
         btnFacebook.titleLabel!.font =  UIFont(name: "handlee-regular", size: 18)
-        btnFacebook.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+        //btnFacebook.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
         
-        btnRegister.backgroundColor = UIColor.clearColor()
-        btnRegister.layer.cornerRadius = 10
-        btnRegister.layer.borderWidth = 1
-        btnRegister.layer.borderColor = UIColor.whiteColor().CGColor
-        btnRegister.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+        btnRegister.backgroundColor = UIColor.magentaColor()
+        btnRegister.layer.cornerRadius = 5
+        //btnRegister.layer.borderWidth = 1
+        //btnRegister.layer.borderColor = UIColor.whiteColor().CGColor
+        //btnRegister.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
         
         customizeButton(name)
         customizeButton(mob)
         customizeButton(email)
         
-        name.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
+        name.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         
-        mob.attributedPlaceholder = NSAttributedString(string:"Mob", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
+        mob.attributedPlaceholder = NSAttributedString(string:"Mob", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         
-        email.attributedPlaceholder = NSAttributedString(string:"Email", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
+        email.attributedPlaceholder = NSAttributedString(string:"Email", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         
         //GIDSignIn.sharedInstance().uiDelegate = self
         // Uncomment to automatically sign in the user.
@@ -272,7 +272,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
     
     func customizeButton(textField: UITextField!) {
         textField.backgroundColor = UIColor.clearColor()
-        textField.layer.cornerRadius = 10
+        textField.layer.cornerRadius = 5
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.whiteColor().CGColor
         //textField.attributedPlaceholder = NSAttributedString(string:"placeholder text", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])

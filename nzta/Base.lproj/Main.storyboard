@@ -58,17 +58,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nz_bg2" translatesAutoresizingMaskIntoConstraints="NO" id="sXV-Jq-rUz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nz_bg5" translatesAutoresizingMaskIntoConstraints="NO" id="sXV-Jq-rUz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Zealand Telugu Association" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ES-z6-KhE">
-                                <rect key="frame" x="15" y="185" width="291" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Zealand Telugu Association" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ES-z6-KhE">
+                                <rect key="frame" x="29" y="182" width="262" height="27"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pL0-9m-ks9">
-                                <rect key="frame" x="40" y="229" width="240" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pL0-9m-ks9">
+                                <rect key="frame" x="60" y="229" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.2274509804" green="0.1450980392" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -76,8 +77,9 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Wil-3Z-g3l"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mob" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vjr-Rd-xdY">
-                                <rect key="frame" x="40" y="269" width="240" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mob" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vjr-Rd-xdY">
+                                <rect key="frame" x="60" y="269" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.22745098039215686" green="0.14509803921568629" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -85,8 +87,9 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="6Hs-VL-AaJ"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ya1-4e-wFZ">
-                                <rect key="frame" x="40" y="309" width="240" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ya1-4e-wFZ">
+                                <rect key="frame" x="60" y="309" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.2274509804" green="0.1450980392" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -94,8 +97,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="fwm-Uf-Rrf"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZG9-ON-CWK">
-                                <rect key="frame" x="40" y="359" width="240" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZG9-ON-CWK">
+                                <rect key="frame" x="60" y="379" width="200" height="39"/>
                                 <color key="backgroundColor" red="0.17647058823529413" green="0.76470588235294112" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <state key="normal" title="Register">
@@ -105,15 +108,15 @@
                                     <action selector="registerUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Njz-sL-tao"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz6-1a-SXc" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="40" y="415" width="240" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz6-1a-SXc" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="60" y="438" width="200" height="39"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                 <state key="normal" title="Facebook Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-RA-M2W">
-                                <rect key="frame" x="110" y="70" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-RA-M2W">
+                                <rect key="frame" x="110" y="67" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="F6a-Ap-XAc"/>
                                     <constraint firstAttribute="height" constant="100" id="bt4-Qn-QgQ"/>
@@ -137,7 +140,7 @@
                             <constraint firstItem="ZG9-ON-CWK" firstAttribute="leading" secondItem="Yz6-1a-SXc" secondAttribute="leading" id="Qiw-L2-Jg4"/>
                             <constraint firstItem="6ES-z6-KhE" firstAttribute="centerX" secondItem="m6g-RA-M2W" secondAttribute="centerX" id="RVU-Kh-e65"/>
                             <constraint firstItem="sXV-Jq-rUz" firstAttribute="height" secondItem="HNV-Qy-cf0" secondAttribute="height" id="Tfl-qX-1xu"/>
-                            <constraint firstItem="ZG9-ON-CWK" firstAttribute="top" secondItem="Ya1-4e-wFZ" secondAttribute="bottom" constant="20" id="V2F-PT-kko"/>
+                            <constraint firstItem="ZG9-ON-CWK" firstAttribute="top" secondItem="Ya1-4e-wFZ" secondAttribute="bottom" constant="40" id="V2F-PT-kko"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="leading" secondItem="pL0-9m-ks9" secondAttribute="leading" id="VXD-hU-yPC"/>
                             <constraint firstItem="pL0-9m-ks9" firstAttribute="centerX" secondItem="6ES-z6-KhE" secondAttribute="centerX" id="YGf-VQ-Rlt"/>
                             <constraint firstItem="ZG9-ON-CWK" firstAttribute="trailing" secondItem="Yz6-1a-SXc" secondAttribute="trailing" id="Zdo-0n-Quz"/>
@@ -147,9 +150,9 @@
                             <constraint firstItem="6ES-z6-KhE" firstAttribute="top" secondItem="m6g-RA-M2W" secondAttribute="bottom" constant="15" id="hO1-GB-Uap"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="height" secondItem="pL0-9m-ks9" secondAttribute="height" id="hdz-31-D7m"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="centerX" secondItem="sXV-Jq-rUz" secondAttribute="centerX" id="k23-fG-biU"/>
-                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="leading" secondItem="sXV-Jq-rUz" secondAttribute="leading" constant="40" id="nYR-mQ-l1D"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="leading" secondItem="sXV-Jq-rUz" secondAttribute="leading" constant="60" id="nYR-mQ-l1D"/>
                             <constraint firstItem="sXV-Jq-rUz" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="pNs-KM-wvD"/>
-                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="trailing" secondItem="sXV-Jq-rUz" secondAttribute="trailing" constant="-40" id="sAX-63-c2d"/>
+                            <constraint firstItem="Vjr-Rd-xdY" firstAttribute="trailing" secondItem="sXV-Jq-rUz" secondAttribute="trailing" constant="-60" id="sAX-63-c2d"/>
                             <constraint firstItem="Ya1-4e-wFZ" firstAttribute="leading" secondItem="ZG9-ON-CWK" secondAttribute="leading" id="ukf-vC-LWO"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="trailing" secondItem="Ya1-4e-wFZ" secondAttribute="trailing" id="wb1-B8-krd"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="trailing" secondItem="pL0-9m-ks9" secondAttribute="trailing" id="xPq-YB-9SY"/>
@@ -1327,7 +1330,7 @@ and its our family fun</string>
         <image name="edit" width="36" height="36"/>
         <image name="logo3" width="100" height="100"/>
         <image name="menu" width="22" height="22"/>
-        <image name="nz_bg2" width="1280" height="1040"/>
+        <image name="nz_bg5" width="414" height="736"/>
         <image name="video-icon-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
