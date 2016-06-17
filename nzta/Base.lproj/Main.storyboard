@@ -366,13 +366,13 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQf-os-AD4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SS6-DN-yFA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Subscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SS6-DN-yFA">
                                 <rect key="frame" x="0.0" y="99" width="320" height="34"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsM-pX-MWp">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsM-pX-MWp">
                                 <rect key="frame" x="40" y="456" width="240" height="39"/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
@@ -380,7 +380,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gi-7I-Sad" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gi-7I-Sad" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
                                 <rect key="frame" x="40" y="409" width="240" height="37"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                 <state key="normal" title="$250 lifetime">
@@ -396,7 +396,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6I5-1h-00Q" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6I5-1h-00Q" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
                                 <rect key="frame" x="40" y="372" width="240" height="37"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -412,7 +412,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsp-sK-cNG" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsp-sK-cNG" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
                                 <rect key="frame" x="40" y="335" width="240" height="37"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -429,7 +429,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJt-g8-dmO" userLabel="Your small donations can make nzta events big  and its our family fun">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJt-g8-dmO" userLabel="Your small donations can make nzta events big  and its our family fun">
                                 <rect key="frame" x="0.0" y="143" width="320" height="81"/>
                                 <string key="text">Your small donations
 can make nzta events big 
@@ -438,7 +438,7 @@ and its our family fun</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mob" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sHf-53-hKM">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mob" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sHf-53-hKM">
                                 <rect key="frame" x="40" y="308" width="240" height="27"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -449,7 +449,7 @@ and its our family fun</string>
                                     <outlet property="delegate" destination="U53-VW-tQ4" id="Juu-mZ-4Hw"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YVi-Ga-y1J">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YVi-Ga-y1J">
                                 <rect key="frame" x="40" y="234" width="240" height="27"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -460,7 +460,7 @@ and its our family fun</string>
                                     <outlet property="delegate" destination="U53-VW-tQ4" id="Dbz-07-pwW"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xxv-0D-VUv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xxv-0D-VUv">
                                 <rect key="frame" x="40" y="271" width="240" height="27"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1055,6 +1055,7 @@ and its our family fun</string>
                     <connections>
                         <outlet property="myActivityIndicator" destination="y1U-za-uWS" id="b1G-IK-h5Q"/>
                         <outlet property="myImageView" destination="1Td-nQ-diP" id="93c-fm-hyZ"/>
+                        <segue destination="Lg2-yt-GHd" kind="push" identifier="editProfile" id="ipK-54-FXD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qbc-qS-x8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1390,5 +1391,6 @@ and its our family fun</string>
         <segue reference="6GN-Pv-HPz"/>
         <segue reference="0o9-gl-Z1m"/>
         <segue reference="6ew-ZD-cM0"/>
+        <segue reference="ipK-54-FXD"/>
     </inferredMetricsTieBreakers>
 </document>

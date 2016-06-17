@@ -115,7 +115,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
                 //let status = json["status"] as! String
                 //self.showAlert("\(status)")
                 
-                
+                self.prefs.setValue("\(self.prefs.stringForKey("login")!).jpg", forKey: "profileImage")
             } catch {
                 // Handle Error
             }
@@ -125,6 +125,8 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
             dispatch_async(dispatch_get_main_queue(),{
                 self.myActivityIndicator.stopAnimating()
                 self.myImageView.image = nil;
+                
+                self.performSegueWithIdentifier("editProfile", sender: self)
             });
             
             

@@ -29,7 +29,13 @@ class ProfileViewController: UIViewController {
         self.profileImage.layer.borderWidth = 10.0
         self.profileImage.layer.borderColor = hexStringToUIColor("#C4C4C4").CGColor
         
+        Helper.loadImageFromUrl("http://tokkalo.com/api/1/profile_images/logo.png", view: profileImage)
         
+        if prefs.stringForKey("profileImage") != nil{
+            Helper.loadImageFromUrl("http://tokkalo.com/api/1/profile_images/\(self.prefs.stringForKey("profileImage")!)", view: profileImage)
+        } else {
+            Helper.loadImageFromUrl("http://tokkalo.com/api/1/profile_images/logo.png", view: profileImage)
+        }
         
         /*if prefs.stringForKey("profileImage") != nil{
             self.profileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: prefs.stringForKey("profileImage")!)!)!)
