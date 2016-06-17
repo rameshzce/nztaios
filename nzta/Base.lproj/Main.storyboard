@@ -358,185 +358,162 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQf-os-AD4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7P-Oe-YUO">
-                                        <rect key="frame" x="86" y="40" width="148" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="148" id="PKf-yr-B05"/>
-                                            <constraint firstAttribute="height" constant="21" id="Rhl-JS-70B"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQo-0o-HxR">
-                                        <rect key="frame" x="43" y="72" width="235" height="92"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="92" id="rSW-Ef-Uob"/>
-                                        </constraints>
-                                        <string key="text">Your small donations
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SS6-DN-yFA">
+                                <rect key="frame" x="0.0" y="99" width="320" height="34"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsM-pX-MWp">
+                                <rect key="frame" x="40" y="456" width="240" height="39"/>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <state key="normal" title="Subscribe">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gi-7I-Sad" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
+                                <rect key="frame" x="40" y="409" width="240" height="37"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
+                                <state key="normal" title="$250 lifetime">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6I5-1h-00Q" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
+                                <rect key="frame" x="40" y="372" width="240" height="37"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="$35 family yearly">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsp-sK-cNG" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
+                                <rect key="frame" x="40" y="335" width="240" height="37"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="$10 student yearly">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJt-g8-dmO" userLabel="Your small donations can make nzta events big  and its our family fun">
+                                <rect key="frame" x="0.0" y="143" width="320" height="81"/>
+                                <string key="text">Your small donations
 can make nzta events big 
 and its our family fun</string>
-                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hM-Zf-UAJ">
-                                        <rect key="frame" x="60" y="172" width="200" height="30"/>
-                                        <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="HCh-Ux-GNM"/>
-                                            <constraint firstAttribute="width" constant="200" id="cFw-RM-kfi"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="gNj-n2-rIr"/>
-                                            <constraint firstAttribute="height" constant="30" id="icD-ig-QPZ"/>
-                                        </constraints>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="U53-VW-tQ4" id="UMT-54-I2D"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cmH-lw-vNH">
-                                        <rect key="frame" x="60" y="210" width="200" height="30"/>
-                                        <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="U53-VW-tQ4" id="C7f-DK-8PE"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckv-pd-hpr">
-                                        <rect key="frame" x="60" y="248" width="200" height="30"/>
-                                        <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="U53-VW-tQ4" id="fwP-sH-mdY"/>
-                                        </connections>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPn-8B-Ev7" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
-                                        <rect key="frame" x="70" y="324" width="180" height="37"/>
-                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="$35 family yearly">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                <real key="value" value="7"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBb-LI-guQ" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
-                                        <rect key="frame" x="70" y="292" width="180" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="S7E-7U-hLe"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="$10 student yearly">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                <real key="value" value="7"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTk-s6-gaR" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
-                                        <rect key="frame" x="70" y="361" width="180" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="jO2-Up-Jdz"/>
-                                            <constraint firstAttribute="width" constant="180" id="nJj-hy-Azy"/>
-                                            <constraint firstAttribute="height" constant="30" id="nPM-nm-7Us"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
-                                        <state key="normal" title="$250 lifetime">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
-                                                <real key="value" value="7"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89V-gf-3Rk">
-                                        <rect key="frame" x="60" y="419" width="200" height="39"/>
-                                        <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
-                                        <state key="normal" title="Subscribe">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="cmH-lw-vNH" firstAttribute="width" secondItem="2hM-Zf-UAJ" secondAttribute="width" id="2Pr-T6-dBy"/>
-                                    <constraint firstItem="H7P-Oe-YUO" firstAttribute="centerX" secondItem="BQf-os-AD4" secondAttribute="centerX" id="4F6-IO-mjy"/>
-                                    <constraint firstItem="ckv-pd-hpr" firstAttribute="height" secondItem="cmH-lw-vNH" secondAttribute="height" id="7wk-uI-R9G"/>
-                                    <constraint firstItem="TTk-s6-gaR" firstAttribute="centerX" secondItem="89V-gf-3Rk" secondAttribute="centerX" id="9Cc-fN-pub"/>
-                                    <constraint firstItem="2hM-Zf-UAJ" firstAttribute="top" secondItem="fQo-0o-HxR" secondAttribute="bottom" constant="8" id="DIc-Xa-n1A"/>
-                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="trailing" secondItem="yPn-8B-Ev7" secondAttribute="trailing" id="EIk-Tg-j5k"/>
-                                    <constraint firstItem="cmH-lw-vNH" firstAttribute="top" secondItem="2hM-Zf-UAJ" secondAttribute="bottom" constant="8" symbolic="YES" id="EMK-FN-7Em"/>
-                                    <constraint firstItem="H7P-Oe-YUO" firstAttribute="centerY" secondItem="BQf-os-AD4" secondAttribute="centerY" constant="-233.5" id="FcP-nT-g7h"/>
-                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="top" secondItem="ckv-pd-hpr" secondAttribute="bottom" constant="14" id="G1u-Bm-BgP"/>
-                                    <constraint firstItem="yPn-8B-Ev7" firstAttribute="top" secondItem="DBb-LI-guQ" secondAttribute="bottom" constant="2" id="GUT-f5-7Hy"/>
-                                    <constraint firstItem="fQo-0o-HxR" firstAttribute="top" secondItem="H7P-Oe-YUO" secondAttribute="bottom" constant="11" id="LxZ-KU-S1j"/>
-                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="leading" secondItem="TTk-s6-gaR" secondAttribute="leading" id="NQx-hc-clG"/>
-                                    <constraint firstItem="TTk-s6-gaR" firstAttribute="top" secondItem="yPn-8B-Ev7" secondAttribute="bottom" id="PI7-w8-rOH"/>
-                                    <constraint firstItem="yPn-8B-Ev7" firstAttribute="centerX" secondItem="TTk-s6-gaR" secondAttribute="centerX" id="Qgz-hR-JzG"/>
-                                    <constraint firstItem="ckv-pd-hpr" firstAttribute="centerX" secondItem="cmH-lw-vNH" secondAttribute="centerX" id="Sqo-9u-5hn"/>
-                                    <constraint firstItem="2hM-Zf-UAJ" firstAttribute="centerX" secondItem="cmH-lw-vNH" secondAttribute="centerX" id="Tr0-7S-K12"/>
-                                    <constraint firstItem="fQo-0o-HxR" firstAttribute="centerX" secondItem="2hM-Zf-UAJ" secondAttribute="centerX" id="VVd-Ko-veo"/>
-                                    <constraint firstAttribute="trailing" secondItem="H7P-Oe-YUO" secondAttribute="trailing" constant="86" id="WTh-kr-qIj"/>
-                                    <constraint firstItem="fQo-0o-HxR" firstAttribute="centerX" secondItem="H7P-Oe-YUO" secondAttribute="centerX" id="Zwh-l9-i3B"/>
-                                    <constraint firstItem="ckv-pd-hpr" firstAttribute="width" secondItem="89V-gf-3Rk" secondAttribute="width" id="bnM-pt-9LM"/>
-                                    <constraint firstAttribute="bottom" secondItem="H7P-Oe-YUO" secondAttribute="bottom" constant="507" id="dGc-Ee-HvU"/>
-                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="leading" secondItem="BQf-os-AD4" secondAttribute="leading" constant="70" id="dPc-Vt-8Dq"/>
-                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="centerX" secondItem="ckv-pd-hpr" secondAttribute="centerX" id="fqV-Vt-ORB"/>
-                                    <constraint firstItem="89V-gf-3Rk" firstAttribute="top" secondItem="TTk-s6-gaR" secondAttribute="bottom" constant="28" id="k6r-sB-Uqj"/>
-                                    <constraint firstItem="fQo-0o-HxR" firstAttribute="leading" secondItem="BQf-os-AD4" secondAttribute="leading" constant="43" id="ndb-pZ-Ff7"/>
-                                    <constraint firstItem="TTk-s6-gaR" firstAttribute="top" secondItem="yPn-8B-Ev7" secondAttribute="bottom" id="pdn-Cf-Byd"/>
-                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="centerX" secondItem="yPn-8B-Ev7" secondAttribute="centerX" id="qQJ-1A-d3e"/>
-                                    <constraint firstItem="2hM-Zf-UAJ" firstAttribute="top" secondItem="fQo-0o-HxR" secondAttribute="bottom" constant="8" symbolic="YES" id="tTt-bc-Jma"/>
-                                    <constraint firstItem="ckv-pd-hpr" firstAttribute="width" secondItem="cmH-lw-vNH" secondAttribute="width" id="vp5-ON-KZS"/>
-                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="trailing" secondItem="TTk-s6-gaR" secondAttribute="trailing" id="xTq-pO-mER"/>
-                                    <constraint firstItem="DBb-LI-guQ" firstAttribute="leading" secondItem="yPn-8B-Ev7" secondAttribute="leading" id="xxe-bU-aBT"/>
-                                    <constraint firstItem="cmH-lw-vNH" firstAttribute="height" secondItem="2hM-Zf-UAJ" secondAttribute="height" id="xxq-Ce-t8T"/>
-                                    <constraint firstItem="ckv-pd-hpr" firstAttribute="top" secondItem="cmH-lw-vNH" secondAttribute="bottom" constant="8" symbolic="YES" id="zYj-mv-FBP"/>
-                                </constraints>
-                            </scrollView>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mob" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sHf-53-hKM">
+                                <rect key="frame" x="40" y="308" width="240" height="27"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="U53-VW-tQ4" id="Juu-mZ-4Hw"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YVi-Ga-y1J">
+                                <rect key="frame" x="40" y="234" width="240" height="27"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="U53-VW-tQ4" id="Dbz-07-pwW"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xxv-0D-VUv">
+                                <rect key="frame" x="40" y="271" width="240" height="27"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="U53-VW-tQ4" id="AtS-Ed-qJN"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Xxv-0D-VUv" firstAttribute="trailing" secondItem="BQf-os-AD4" secondAttribute="trailing" constant="-40" id="6lt-VN-V4Q"/>
+                            <constraint firstItem="Xxv-0D-VUv" firstAttribute="width" secondItem="sHf-53-hKM" secondAttribute="width" id="6xF-MV-4oL"/>
+                            <constraint firstItem="sHf-53-hKM" firstAttribute="leading" secondItem="QsM-pX-MWp" secondAttribute="leading" id="7mM-EF-GxS"/>
+                            <constraint firstItem="Xxv-0D-VUv" firstAttribute="leading" secondItem="YVi-Ga-y1J" secondAttribute="leading" id="8dZ-hg-dAl"/>
+                            <constraint firstItem="Lsp-sK-cNG" firstAttribute="leading" secondItem="6I5-1h-00Q" secondAttribute="leading" id="BGk-x1-hqs"/>
+                            <constraint firstItem="QsM-pX-MWp" firstAttribute="top" secondItem="7Gi-7I-Sad" secondAttribute="bottom" constant="10" id="Caj-CE-t6t"/>
+                            <constraint firstItem="SS6-DN-yFA" firstAttribute="leading" secondItem="BQf-os-AD4" secondAttribute="leading" id="F9E-ey-2dA"/>
+                            <constraint firstItem="sHf-53-hKM" firstAttribute="trailing" secondItem="QsM-pX-MWp" secondAttribute="trailing" id="IIa-YE-6QS"/>
+                            <constraint firstItem="6I5-1h-00Q" firstAttribute="top" secondItem="Lsp-sK-cNG" secondAttribute="bottom" id="M17-ma-Sie"/>
+                            <constraint firstItem="Xxv-0D-VUv" firstAttribute="top" secondItem="YVi-Ga-y1J" secondAttribute="bottom" constant="10" id="Onb-Xb-J1A"/>
+                            <constraint firstItem="Xxv-0D-VUv" firstAttribute="height" secondItem="sHf-53-hKM" secondAttribute="height" id="PxW-bI-Opp"/>
+                            <constraint firstItem="jJt-g8-dmO" firstAttribute="top" secondItem="SS6-DN-yFA" secondAttribute="bottom" constant="10" id="RaK-Fb-EaY"/>
+                            <constraint firstItem="Xxv-0D-VUv" firstAttribute="leading" secondItem="BQf-os-AD4" secondAttribute="leading" constant="40" id="Rkl-G5-A67"/>
+                            <constraint firstItem="Xxv-0D-VUv" firstAttribute="trailing" secondItem="sHf-53-hKM" secondAttribute="trailing" id="SzE-rZ-6Wg"/>
+                            <constraint firstItem="sHf-53-hKM" firstAttribute="top" secondItem="Xxv-0D-VUv" secondAttribute="bottom" constant="10" id="XCb-iy-i2u"/>
+                            <constraint firstItem="Lsp-sK-cNG" firstAttribute="top" secondItem="sHf-53-hKM" secondAttribute="bottom" id="XhK-58-YJn"/>
+                            <constraint firstItem="sHf-53-hKM" firstAttribute="leading" secondItem="Lsp-sK-cNG" secondAttribute="leading" id="Yvs-td-z5s"/>
+                            <constraint firstItem="6I5-1h-00Q" firstAttribute="leading" secondItem="7Gi-7I-Sad" secondAttribute="leading" id="ZYZ-7I-yoc"/>
+                            <constraint firstItem="6I5-1h-00Q" firstAttribute="trailing" secondItem="7Gi-7I-Sad" secondAttribute="trailing" id="ZsS-67-RDA"/>
+                            <constraint firstItem="Xxv-0D-VUv" firstAttribute="centerX" secondItem="BQf-os-AD4" secondAttribute="centerX" id="bxB-AI-DLh"/>
+                            <constraint firstItem="Xxv-0D-VUv" firstAttribute="trailing" secondItem="YVi-Ga-y1J" secondAttribute="trailing" id="chn-lY-LXy"/>
                             <constraint firstItem="BQf-os-AD4" firstAttribute="width" secondItem="cDr-Q3-aZf" secondAttribute="width" id="eCP-pC-nor"/>
+                            <constraint firstItem="Xxv-0D-VUv" firstAttribute="leading" secondItem="sHf-53-hKM" secondAttribute="leading" id="ewc-wh-hPt"/>
+                            <constraint firstItem="Xxv-0D-VUv" firstAttribute="width" secondItem="YVi-Ga-y1J" secondAttribute="width" id="f2M-KA-JMg"/>
+                            <constraint firstItem="sHf-53-hKM" firstAttribute="width" secondItem="QsM-pX-MWp" secondAttribute="width" id="h1x-NN-Lft"/>
                             <constraint firstItem="BQf-os-AD4" firstAttribute="centerX" secondItem="cDr-Q3-aZf" secondAttribute="centerX" id="hww-Ht-8ME"/>
+                            <constraint firstItem="Lsp-sK-cNG" firstAttribute="trailing" secondItem="6I5-1h-00Q" secondAttribute="trailing" id="iwR-mT-RbK"/>
+                            <constraint firstItem="Xxv-0D-VUv" firstAttribute="height" secondItem="YVi-Ga-y1J" secondAttribute="height" id="mfQ-3e-9Fs"/>
                             <constraint firstItem="BQf-os-AD4" firstAttribute="centerY" secondItem="cDr-Q3-aZf" secondAttribute="centerY" id="o3p-RO-NDc"/>
+                            <constraint firstItem="jJt-g8-dmO" firstAttribute="trailing" secondItem="BQf-os-AD4" secondAttribute="trailing" id="p6d-Jb-uaG"/>
+                            <constraint firstItem="sHf-53-hKM" firstAttribute="trailing" secondItem="Lsp-sK-cNG" secondAttribute="trailing" id="r1H-DI-B9F"/>
+                            <constraint firstItem="7Gi-7I-Sad" firstAttribute="top" secondItem="6I5-1h-00Q" secondAttribute="bottom" id="rOp-Gj-2m8"/>
+                            <constraint firstItem="Xxv-0D-VUv" firstAttribute="centerY" secondItem="BQf-os-AD4" secondAttribute="centerY" id="tAz-do-1oy"/>
+                            <constraint firstItem="SS6-DN-yFA" firstAttribute="trailing" secondItem="BQf-os-AD4" secondAttribute="trailing" id="tEi-Cn-JZN"/>
+                            <constraint firstItem="YVi-Ga-y1J" firstAttribute="top" secondItem="jJt-g8-dmO" secondAttribute="bottom" constant="10" id="xim-P9-LNx"/>
                             <constraint firstItem="BQf-os-AD4" firstAttribute="height" secondItem="cDr-Q3-aZf" secondAttribute="height" id="xm3-wD-Dr8"/>
+                            <constraint firstItem="jJt-g8-dmO" firstAttribute="leading" secondItem="BQf-os-AD4" secondAttribute="leading" id="y8Z-6S-WIX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j3Q-Nl-Fe2"/>
                     <connections>
-                        <outlet property="btnSubscribe" destination="89V-gf-3Rk" id="zUB-gX-02J"/>
-                        <outlet property="button1" destination="DBb-LI-guQ" id="Q2j-ge-DHm"/>
-                        <outlet property="button2" destination="yPn-8B-Ev7" id="BkB-m7-CbC"/>
-                        <outlet property="button3" destination="TTk-s6-gaR" id="Zvv-9Z-bkv"/>
-                        <outlet property="nameTextField" destination="2hM-Zf-UAJ" id="9un-8h-IUJ"/>
+                        <outlet property="btnSubscribe" destination="QsM-pX-MWp" id="rju-NZ-zOb"/>
+                        <outlet property="button1" destination="Lsp-sK-cNG" id="Vf7-mL-XAN"/>
+                        <outlet property="button2" destination="6I5-1h-00Q" id="bVS-Io-VrV"/>
+                        <outlet property="button3" destination="7Gi-7I-Sad" id="l2Q-DE-wVm"/>
+                        <outlet property="emailTextField" destination="Xxv-0D-VUv" id="aky-gi-kYE"/>
+                        <outlet property="mobileTextField" destination="sHf-53-hKM" id="5yI-Ed-uwZ"/>
+                        <outlet property="nameTextField" destination="YVi-Ga-y1J" id="EV1-Qz-83q"/>
                         <outlet property="scrollView" destination="BQf-os-AD4" id="rgK-K7-40R"/>
                     </connections>
                 </viewController>

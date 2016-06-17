@@ -16,6 +16,8 @@ class SubscriptionViewController: UIViewController, SSRadioButtonControllerDeleg
     @IBOutlet var button3: UIButton!
     @IBOutlet var nameTextField: UITextField!
     
+    @IBOutlet var mobileTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
     @IBOutlet var btnSubscribe: UIButton!
     var radioButtonController: SSRadioButtonsController?
     
@@ -26,8 +28,12 @@ class SubscriptionViewController: UIViewController, SSRadioButtonControllerDeleg
         radioButtonController!.delegate = self
         radioButtonController!.shouldLetDeSelect = true
         
-        Helper.customizetextField(nameTextField)
+        
         Helper.customizeButton(btnSubscribe)
+        
+        Helper.customizetextField(emailTextField)
+        Helper.customizetextField(nameTextField)
+        Helper.customizetextField(mobileTextField)
 
         // Do any additional setup after loading the view.
     }
