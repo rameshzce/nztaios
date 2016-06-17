@@ -19,6 +19,8 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         
     }
     
+    let prefs = NSUserDefaults.standardUserDefaults()
+    
     @IBAction func selectPhotoButtonTapped(sender: AnyObject) {
         
         let myPickerController = UIImagePickerController()
@@ -71,7 +73,8 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         let param = [
             "firstName"  : "Sergey",
             "lastName"    : "Kargopolov",
-            "userId"    : "9"
+            "userId"    : "9",
+            "phone"    : prefs.stringForKey("login")!
         ]
         
         let boundary = generateBoundaryString()
@@ -149,7 +152,8 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
             }
         }
         
-        let filename = "user-profile.jpg"
+        //let filename = "user-profile.jpg"
+        let filename = "\(prefs.stringForKey("login")!).jpg"
         
         let mimetype = "image/jpg"
         
