@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    @IBAction func doEdit(sender: AnyObject) {
+    }
     let prefs = NSUserDefaults.standardUserDefaults()
     
     @IBOutlet var profileName: UILabel!
