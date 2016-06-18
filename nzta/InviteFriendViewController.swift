@@ -12,6 +12,7 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
 
     let prefs = NSUserDefaults.standardUserDefaults()
     
+    @IBOutlet var btnSendInvite: UIButton!
     @IBOutlet var textMoble: UITextField!
     @IBOutlet var labelMsg: UILabel!
     @IBAction func sendInvite(sender: UIButton) {
@@ -38,13 +39,19 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
                     
                     let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                     let message = jsonDictionary["message"] as! String
-                    SwiftLoading().hideLoading()
+                    
                     self.labelMsg.text = "\(message)"
+                    SwiftLoading().hideLoading()
                     
                     
                 } catch {
                     // Handle Error
                 }
+                
+                dispatch_async(dispatch_get_main_queue(),{
+                    //SwiftLoading().hideLoading()
+                    //self.labelMsg.text = "\(message)"
+                });
             }
             task.resume()
             
@@ -55,6 +62,11 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Helper.customizeButton(btnSendInvite)
+        
+        Helper.customizetextField(textMoble)
+        textMoble.attributedPlaceholder = NSAttributedString(string:"Mobile", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
 
         
         // Do any additional setup after loading the view.

@@ -994,6 +994,7 @@ and its our family fun</string>
                     </view>
                     <navigationItem key="navigationItem" title="Invite a Friend" id="v8K-zZ-4Sl"/>
                     <connections>
+                        <outlet property="btnSendInvite" destination="dC9-CS-CQo" id="vMg-mq-kbE"/>
                         <outlet property="labelMsg" destination="YTu-mD-lGG" id="9CR-zd-Uag"/>
                         <outlet property="textMoble" destination="KLS-OR-4kG" id="wMb-QE-pxZ"/>
                     </connections>
@@ -1450,6 +1451,9 @@ and its our family fun</string>
                                                         <constraint firstItem="XUo-4r-zZc" firstAttribute="top" secondItem="Ucp-Ka-han" secondAttribute="top" constant="19" id="lnw-LN-NCp"/>
                                                     </constraints>
                                                 </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="play_btn" translatesAutoresizingMaskIntoConstraints="NO" id="DWM-lB-Voh">
+                                                    <rect key="frame" x="100" y="126" width="50" height="50"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -1507,6 +1511,7 @@ and its our family fun</string>
         <image name="logo3" width="100" height="100"/>
         <image name="menu" width="22" height="22"/>
         <image name="nz_bg5" width="414" height="736"/>
+        <image name="play_btn" width="50" height="50"/>
         <image name="video-icon-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
