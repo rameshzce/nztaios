@@ -101,11 +101,11 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
             }
             
             // You can print out response object
-            print("******* response = \(response)")
+            //print("******* response = \(response)")
             
             // Print out reponse body
-            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print("****** response data = \(responseString!)")
+            //let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            //print("****** response data = \(responseString!)")
             
             //var err: NSError?
             //let json = NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers, error: &err) as? NSDictionary
