@@ -46,6 +46,8 @@
 		75B622FB1CF0630100493F98 /* MemberViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B622FA1CF0630100493F98 /* MemberViewCell.swift */; };
 		75B622FD1CF076E400493F98 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B622FC1CF076E400493F98 /* EventsViewController.swift */; };
 		75B622FF1CF0773100493F98 /* EventsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B622FE1CF0773100493F98 /* EventsViewCell.swift */; };
+		75C79B4E1D14FF09005BBC49 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C79B4D1D14FF09005BBC49 /* WalkthroughContentViewController.swift */; };
+		75C79B501D150158005BBC49 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C79B4F1D150158005BBC49 /* WalkthroughPageViewController.swift */; };
 		75CF433A1CF99FFA005C6BCA /* InviteFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF43391CF99FFA005C6BCA /* InviteFriendViewController.swift */; };
 		75D0BDE61CF17AB8009E030F /* VideoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0BDE51CF17AB8009E030F /* VideoGalleryViewController.swift */; };
 		75D0EBE81CF97EEA00563C68 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D0EBE71CF97EEA00563C68 /* AVKit.framework */; };
@@ -102,6 +104,8 @@
 		75B622FA1CF0630100493F98 /* MemberViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewCell.swift; sourceTree = "<group>"; };
 		75B622FC1CF076E400493F98 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		75B622FE1CF0773100493F98 /* EventsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewCell.swift; sourceTree = "<group>"; };
+		75C79B4D1D14FF09005BBC49 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		75C79B4F1D150158005BBC49 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		75CF43391CF99FFA005C6BCA /* InviteFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendViewController.swift; sourceTree = "<group>"; };
 		75D0BDE51CF17AB8009E030F /* VideoGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGalleryViewController.swift; sourceTree = "<group>"; };
 		75D0EBE71CF97EEA00563C68 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -214,6 +218,8 @@
 				756955851D0BEE7500B17CAB /* SSRadioButton.swift */,
 				7591A1231D130E96001A615F /* Helper.swift */,
 				7588F00C1D1455490011031A /* EditProfileViewController.swift */,
+				75C79B4D1D14FF09005BBC49 /* WalkthroughContentViewController.swift */,
+				75C79B4F1D150158005BBC49 /* WalkthroughPageViewController.swift */,
 			);
 			path = nzta;
 			sourceTree = "<group>";
@@ -399,12 +405,14 @@
 				75B622FB1CF0630100493F98 /* MemberViewCell.swift in Sources */,
 				75FEE88B1D01CD5300814F82 /* iCarousel.m in Sources */,
 				75FEE88D1D01CDB100814F82 /* TeamViewController.swift in Sources */,
+				75C79B4E1D14FF09005BBC49 /* WalkthroughContentViewController.swift in Sources */,
 				75D4C7101D00F217008F06B3 /* NotificationViewController.swift in Sources */,
 				751E412D1CF4488F001A8BD5 /* MenuTransitionManager.swift in Sources */,
 				755097B91D02CC970005AF83 /* SwiftLoading.swift in Sources */,
 				75CF433A1CF99FFA005C6BCA /* InviteFriendViewController.swift in Sources */,
 				751E41311CF4620B001A8BD5 /* ProfileViewController.swift in Sources */,
 				75B622E41CF04ABD00493F98 /* AppDelegate.swift in Sources */,
+				75C79B501D150158005BBC49 /* WalkthroughPageViewController.swift in Sources */,
 				75B622FD1CF076E400493F98 /* EventsViewController.swift in Sources */,
 				753F920B1D0A6E4300D53053 /* VideoGalleryViewCell.swift in Sources */,
 				752EB26C1D0BAEDC00799DFE /* Common.swift in Sources */,

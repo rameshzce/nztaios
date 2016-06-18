@@ -43,6 +43,7 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -539,7 +540,7 @@ and its our family fun</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="Qvf-up-huO" customClass="MemberViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qvf-up-huO" id="TzM-5D-eaI">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
@@ -619,13 +620,13 @@ and its our family fun</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="vLK-8t-Y0J">
-                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="F7l-vg-CnD" customClass="MenuViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="130" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F7l-vg-CnD" id="sbp-fz-E7v">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
@@ -663,6 +664,7 @@ and its our family fun</string>
                         <segue destination="HTY-hE-cqA" kind="push" identifier="menuTeam" id="rYm-Nk-CGQ"/>
                         <segue destination="gbp-5x-xKh" kind="push" identifier="menuNzta" id="I58-nj-Cl3"/>
                         <segue destination="w9l-qn-wlU" kind="push" identifier="menuSponsors" id="d56-yd-0QW"/>
+                        <segue destination="JO9-DT-THX" kind="push" identifier="menuNZTeam" id="4GF-PD-IbF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cu-DX-CiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -786,7 +788,7 @@ and its our family fun</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="95" id="bxq-Vh-7eT" customClass="EventsViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="320" height="95"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bxq-Vh-7eT" id="47D-U6-Aez">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
@@ -923,7 +925,7 @@ and its our family fun</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite a friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4f-bx-DTt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Invite a friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4f-bx-DTt">
                                 <rect key="frame" x="20" y="126" width="280" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="nny-IZ-BOi"/>
@@ -933,7 +935,7 @@ and its our family fun</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLS-OR-4kG">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLS-OR-4kG">
                                 <rect key="frame" x="40" y="194" width="250" height="36"/>
                                 <color key="backgroundColor" red="0.08235294118" green="0.35294117650000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -947,7 +949,7 @@ and its our family fun</string>
                                     <outlet property="delegate" destination="uOV-us-5lA" id="fPK-Gl-FSv"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC9-CS-CQo">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC9-CS-CQo">
                                 <rect key="frame" x="40" y="272" width="250" height="36"/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -960,7 +962,7 @@ and its our family fun</string>
                                     <action selector="sendInvite:" destination="uOV-us-5lA" eventType="touchUpInside" id="QaZ-D7-DUB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTu-mD-lGG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTu-mD-lGG">
                                 <rect key="frame" x="30" y="362" width="270" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Zi4-wL-AXk"/>
@@ -1091,7 +1093,7 @@ and its our family fun</string>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="108" id="Bga-Q2-jrO" customClass="SponsorsViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="320" height="108"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bga-Q2-jrO" id="qhV-bz-6Yg">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
@@ -1174,10 +1176,10 @@ and its our family fun</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3f-eM-cTz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3f-eM-cTz">
                                 <rect key="frame" x="32" y="111" width="256" height="337"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bE7-4J-vIk">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bE7-4J-vIk">
                                 <rect key="frame" x="111" y="470" width="98" height="39"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <state key="normal" title="Share image"/>
@@ -1214,7 +1216,7 @@ and its our family fun</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="251" id="0Xr-LU-UWl" customClass="ImageGalleryViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="320" height="251"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Xr-LU-UWl" id="MnN-dq-Hkq">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
@@ -1277,6 +1279,84 @@ and its our family fun</string>
             </objects>
             <point key="canvasLocation" x="2876" y="298"/>
         </scene>
+        <!--Personalize View Controller-->
+        <scene sceneID="Scy-4C-GzM">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughContentViewController" id="tX9-Y4-UXE" userLabel="Personalize View Controller" customClass="WalkthroughContentViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hPz-2M-IQD"/>
+                        <viewControllerLayoutGuide type="bottom" id="qbb-FE-ufy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EKU-TC-cp9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAZ-va-ldl" userLabel="bottom bg">
+                                <rect key="frame" x="0.0" y="368" width="320" height="200"/>
+                                <color key="backgroundColor" red="0.64705882349999999" green="0.34901960780000002" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="eZy-eX-t1s"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="moU-SZ-wtT" userLabel="profile image">
+                                <rect key="frame" x="40" y="83" width="240" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="NhY-0A-djP"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDs-Ir-mef" userLabel="top bg">
+                                <rect key="frame" x="40" y="-10" width="240" height="90"/>
+                                <color key="backgroundColor" red="0.64705882349999999" green="0.34901960780000002" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="mBF-yS-qnB"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxn-xT-I1B" userLabel="position">
+                                <rect key="frame" x="40" y="40" width="240" height="27"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="moU-SZ-wtT" firstAttribute="leading" secondItem="tDs-Ir-mef" secondAttribute="leading" id="3ka-kh-qXI"/>
+                            <constraint firstItem="tDs-Ir-mef" firstAttribute="top" secondItem="hPz-2M-IQD" secondAttribute="bottom" constant="-30" id="5DB-oU-iwt"/>
+                            <constraint firstItem="tDs-Ir-mef" firstAttribute="width" secondItem="Uxn-xT-I1B" secondAttribute="width" id="81g-Sm-tlc"/>
+                            <constraint firstItem="moU-SZ-wtT" firstAttribute="trailing" secondItem="tDs-Ir-mef" secondAttribute="trailing" id="89V-G8-VbO"/>
+                            <constraint firstItem="tDs-Ir-mef" firstAttribute="centerX" secondItem="Uxn-xT-I1B" secondAttribute="centerX" id="BGl-67-tKd"/>
+                            <constraint firstItem="Uxn-xT-I1B" firstAttribute="top" secondItem="tDs-Ir-mef" secondAttribute="bottom" constant="-40" id="L7g-qa-2Pi"/>
+                            <constraint firstAttribute="trailing" secondItem="bAZ-va-ldl" secondAttribute="trailing" id="Rp8-gk-EMa"/>
+                            <constraint firstItem="moU-SZ-wtT" firstAttribute="width" secondItem="tDs-Ir-mef" secondAttribute="width" id="bHf-jq-gta"/>
+                            <constraint firstItem="moU-SZ-wtT" firstAttribute="top" secondItem="tDs-Ir-mef" secondAttribute="bottom" constant="3" id="dgk-oD-da0"/>
+                            <constraint firstItem="bAZ-va-ldl" firstAttribute="leading" secondItem="EKU-TC-cp9" secondAttribute="leading" id="g0S-aN-KWc"/>
+                            <constraint firstAttribute="trailing" secondItem="moU-SZ-wtT" secondAttribute="trailing" constant="40" id="jgZ-J6-Nq4"/>
+                            <constraint firstAttribute="bottom" secondItem="bAZ-va-ldl" secondAttribute="bottom" id="nxq-nM-wU0"/>
+                            <constraint firstItem="moU-SZ-wtT" firstAttribute="leading" secondItem="EKU-TC-cp9" secondAttribute="leading" constant="40" id="xUz-uq-Gag"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Team" id="3dk-Ko-P93"/>
+                    <connections>
+                        <outlet property="bottomBg" destination="bAZ-va-ldl" id="g3u-58-0ho"/>
+                        <outlet property="contentImageView" destination="moU-SZ-wtT" id="nNV-AE-mlR"/>
+                        <outlet property="positionLabel" destination="Uxn-xT-I1B" id="1Py-vM-ekP"/>
+                        <outlet property="topBg" destination="tDs-Ir-mef" id="mjF-Yn-2J0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A4r-Ad-SuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458" y="-404"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="gj8-rq-bvG">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="JO9-DT-THX" customClass="WalkthroughPageViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hL7-2B-xHf"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXc-D6-ZZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-109" y="-345"/>
+        </scene>
         <!--Video Gallery View Controller-->
         <scene sceneID="Slt-Am-meT">
             <objects>
@@ -1289,10 +1369,10 @@ and its our family fun</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pWr-md-rfK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pWr-md-rfK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s5Q-We-GOv">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s5Q-We-GOv">
                                 <rect key="frame" x="0.0" y="85" width="320" height="469"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="iWt-yV-ibn">
                                     <size key="itemSize" width="250" height="380"/>
@@ -1388,9 +1468,9 @@ and its our family fun</string>
         <image name="video-icon-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6GN-Pv-HPz"/>
+        <segue reference="I58-nj-Cl3"/>
         <segue reference="0o9-gl-Z1m"/>
         <segue reference="6ew-ZD-cM0"/>
-        <segue reference="ipK-54-FXD"/>
+        <segue reference="zv7-5d-ouw"/>
     </inferredMetricsTieBreakers>
 </document>

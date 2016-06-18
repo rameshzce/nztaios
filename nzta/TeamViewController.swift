@@ -43,6 +43,15 @@ class TeamViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
         return images.count
     }
     
+    /*override func viewDidAppear(animated: Bool) {
+     super.viewDidAppear(animated)
+     if let pageViewController =
+     storyboard?.instantiateViewControllerWithIdentifier("WalkthroughController")
+     as? WalkthroughPageViewController {
+     presentViewController(pageViewController, animated: true, completion:nil)
+     }
+     }*/
+    
     /*func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
         let tempView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         
