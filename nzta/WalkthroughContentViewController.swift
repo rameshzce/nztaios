@@ -14,17 +14,24 @@ class WalkthroughContentViewController: UIViewController {
     @IBOutlet var designation: UILabel!
     @IBOutlet var topBg: UIView!
     @IBOutlet var bottomBg: UIView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var mobileLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel!
     
     var index = 0
     var position = ""
-    var desig = ""
+    var name = ""
+    var mobile = ""
+    var email = ""
     var imageFile = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         positionLabel.text = position
-        //designation.text = desig
+        nameLabel.text = name
+        mobileLabel.text = mobile
+        emailLabel.text = email
         contentImageView.image = UIImage(named: imageFile)
 
         // Do any additional setup after loading the view.

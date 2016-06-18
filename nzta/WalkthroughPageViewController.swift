@@ -10,7 +10,7 @@ import UIKit
 
 class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
-    var pageHeadings = ["Mr. Dharmendar Alle", "Mr. Venkata Ramana Rao salvaji", "Mr.Arun Rao Paidigummala", "Mrs.Rajeshwari Gangishetty", "Mr.Raja Shekar Reddy Patlolla", "Mr. Narsing Rao Enaganti", "Mr. Srinivas Yepuri", "Mr.Sai Santhan Reddy Kusam"]
+    var names = ["Mr. Dharmendar Alle", "Mr. Venkata Ramana Rao salvaji", "Mr.Arun Rao Paidigummala", "Mrs.Rajeshwari Gangishetty", "Mr.Raja Shekar Reddy Patlolla", "Mr. Narsing Rao Enaganti", "Mr. Srinivas Yepuri", "Mr.Sai Santhan Reddy Kusam"]
     
     var positions = ["President", "General Secretary", "Vice President", "Vice President", "Treasurer", "Joint Secretary", "Joint Secretary", "Joint Treasurer"]
     
@@ -58,7 +58,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
     }
     
     func viewControllerAtIndex(index: Int) -> WalkthroughContentViewController? {
-        if index == NSNotFound || index < 0 || index >= pageHeadings.count {
+        if index == NSNotFound || index < 0 || index >= names.count {
             return nil
         }
         // Create a new view controller and pass suitable data.
@@ -67,7 +67,9 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
                 as? WalkthroughContentViewController {
             pageContentViewController.imageFile = pageImages[index]
             pageContentViewController.position = positions[index]
-            //pageContentViewController.desig = pageHeadings[index]
+            pageContentViewController.name = names[index]
+            pageContentViewController.mobile = "M. \(mobiles[index])"
+            pageContentViewController.email = emails[index]
             pageContentViewController.index = index
             return pageContentViewController
         }

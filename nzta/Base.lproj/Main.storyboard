@@ -44,6 +44,9 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1311,8 +1314,26 @@ and its our family fun</string>
                                     <constraint firstAttribute="height" constant="90" id="mBF-yS-qnB"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxn-xT-I1B" userLabel="position">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxn-xT-I1B" userLabel="position">
                                 <rect key="frame" x="40" y="40" width="240" height="27"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clv-AU-T9O" userLabel="name">
+                                <rect key="frame" x="0.0" y="380" width="320" height="27"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mobile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rv-5C-gnB">
+                                <rect key="frame" x="0.0" y="415" width="320" height="27"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0V-JG-IyA" userLabel="email">
+                                <rect key="frame" x="0.0" y="450" width="320" height="27"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1320,18 +1341,31 @@ and its our family fun</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="clv-AU-T9O" firstAttribute="width" secondItem="0Rv-5C-gnB" secondAttribute="width" id="0K6-fx-yhN"/>
                             <constraint firstItem="moU-SZ-wtT" firstAttribute="leading" secondItem="tDs-Ir-mef" secondAttribute="leading" id="3ka-kh-qXI"/>
                             <constraint firstItem="tDs-Ir-mef" firstAttribute="top" secondItem="hPz-2M-IQD" secondAttribute="bottom" constant="-30" id="5DB-oU-iwt"/>
+                            <constraint firstItem="clv-AU-T9O" firstAttribute="leading" secondItem="0Rv-5C-gnB" secondAttribute="leading" id="6E8-Pw-ESX"/>
                             <constraint firstItem="tDs-Ir-mef" firstAttribute="width" secondItem="Uxn-xT-I1B" secondAttribute="width" id="81g-Sm-tlc"/>
                             <constraint firstItem="moU-SZ-wtT" firstAttribute="trailing" secondItem="tDs-Ir-mef" secondAttribute="trailing" id="89V-G8-VbO"/>
+                            <constraint firstItem="0Rv-5C-gnB" firstAttribute="top" secondItem="clv-AU-T9O" secondAttribute="bottom" constant="8" id="8kt-VF-g8b"/>
                             <constraint firstItem="tDs-Ir-mef" firstAttribute="centerX" secondItem="Uxn-xT-I1B" secondAttribute="centerX" id="BGl-67-tKd"/>
+                            <constraint firstItem="0Rv-5C-gnB" firstAttribute="width" secondItem="a0V-JG-IyA" secondAttribute="width" id="Jjm-5Q-niF"/>
+                            <constraint firstItem="0Rv-5C-gnB" firstAttribute="leading" secondItem="a0V-JG-IyA" secondAttribute="leading" id="KpZ-y4-ZNe"/>
                             <constraint firstItem="Uxn-xT-I1B" firstAttribute="top" secondItem="tDs-Ir-mef" secondAttribute="bottom" constant="-40" id="L7g-qa-2Pi"/>
+                            <constraint firstItem="a0V-JG-IyA" firstAttribute="top" secondItem="0Rv-5C-gnB" secondAttribute="bottom" constant="8" id="NzB-s5-TE8"/>
+                            <constraint firstItem="clv-AU-T9O" firstAttribute="trailing" secondItem="0Rv-5C-gnB" secondAttribute="trailing" id="PEp-z3-e4G"/>
                             <constraint firstAttribute="trailing" secondItem="bAZ-va-ldl" secondAttribute="trailing" id="Rp8-gk-EMa"/>
+                            <constraint firstItem="clv-AU-T9O" firstAttribute="height" secondItem="0Rv-5C-gnB" secondAttribute="height" id="XBX-iw-OAa"/>
+                            <constraint firstItem="0Rv-5C-gnB" firstAttribute="trailing" secondItem="a0V-JG-IyA" secondAttribute="trailing" id="a1v-Ow-1dL"/>
+                            <constraint firstItem="clv-AU-T9O" firstAttribute="top" secondItem="moU-SZ-wtT" secondAttribute="bottom" constant="17" id="aI7-QN-obF"/>
                             <constraint firstItem="moU-SZ-wtT" firstAttribute="width" secondItem="tDs-Ir-mef" secondAttribute="width" id="bHf-jq-gta"/>
                             <constraint firstItem="moU-SZ-wtT" firstAttribute="top" secondItem="tDs-Ir-mef" secondAttribute="bottom" constant="3" id="dgk-oD-da0"/>
                             <constraint firstItem="bAZ-va-ldl" firstAttribute="leading" secondItem="EKU-TC-cp9" secondAttribute="leading" id="g0S-aN-KWc"/>
                             <constraint firstAttribute="trailing" secondItem="moU-SZ-wtT" secondAttribute="trailing" constant="40" id="jgZ-J6-Nq4"/>
+                            <constraint firstItem="0Rv-5C-gnB" firstAttribute="height" secondItem="a0V-JG-IyA" secondAttribute="height" id="mJo-Mb-nsP"/>
+                            <constraint firstItem="bAZ-va-ldl" firstAttribute="width" secondItem="clv-AU-T9O" secondAttribute="width" id="mX1-fa-Qt8"/>
                             <constraint firstAttribute="bottom" secondItem="bAZ-va-ldl" secondAttribute="bottom" id="nxq-nM-wU0"/>
+                            <constraint firstItem="bAZ-va-ldl" firstAttribute="centerX" secondItem="clv-AU-T9O" secondAttribute="centerX" id="pVr-rC-e4I"/>
                             <constraint firstItem="moU-SZ-wtT" firstAttribute="leading" secondItem="EKU-TC-cp9" secondAttribute="leading" constant="40" id="xUz-uq-Gag"/>
                         </constraints>
                     </view>
@@ -1339,6 +1373,9 @@ and its our family fun</string>
                     <connections>
                         <outlet property="bottomBg" destination="bAZ-va-ldl" id="g3u-58-0ho"/>
                         <outlet property="contentImageView" destination="moU-SZ-wtT" id="nNV-AE-mlR"/>
+                        <outlet property="emailLabel" destination="a0V-JG-IyA" id="dlC-2S-byN"/>
+                        <outlet property="mobileLabel" destination="0Rv-5C-gnB" id="0bo-59-6Dw"/>
+                        <outlet property="nameLabel" destination="clv-AU-T9O" id="WCl-rC-LNr"/>
                         <outlet property="positionLabel" destination="Uxn-xT-I1B" id="1Py-vM-ekP"/>
                         <outlet property="topBg" destination="tDs-Ir-mef" id="mjF-Yn-2J0"/>
                     </connections>
