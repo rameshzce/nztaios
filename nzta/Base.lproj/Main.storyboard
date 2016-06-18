@@ -47,6 +47,8 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1033,6 +1035,7 @@ and its our family fun</string>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5j-Lg-aIB">
                                 <rect key="frame" x="20" y="105" width="110" height="30"/>
                                 <color key="backgroundColor" red="0.08235294118" green="0.35294117650000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="15"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Select Photo"/>
                                 <connections>
@@ -1048,6 +1051,7 @@ and its our family fun</string>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OW2-7f-JKX">
                                 <rect key="frame" x="190" y="105" width="110" height="30"/>
                                 <color key="backgroundColor" red="0.08235294118" green="0.35294117650000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="15"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Upload"/>
                                 <connections>
@@ -1509,6 +1513,6 @@ and its our family fun</string>
         <segue reference="I58-nj-Cl3"/>
         <segue reference="0o9-gl-Z1m"/>
         <segue reference="6ew-ZD-cM0"/>
-        <segue reference="zv7-5d-ouw"/>
+        <segue reference="ipK-54-FXD"/>
     </inferredMetricsTieBreakers>
 </document>

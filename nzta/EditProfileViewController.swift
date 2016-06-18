@@ -115,7 +115,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
                 //let status = json["status"] as! String
                 //self.showAlert("\(status)")
                 
-                self.prefs.setValue("\(self.prefs.stringForKey("login")!).jpg", forKey: "profileImage")
+                self.prefs.setValue("http://tokkalo.com/api/1/profile_images/\(self.prefs.stringForKey("login")!).jpg", forKey: "profileImage")
             } catch {
                 // Handle Error
             }
