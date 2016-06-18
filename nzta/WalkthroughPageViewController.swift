@@ -20,6 +20,8 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
     
     var pageImages = ["team1", "team2", "team3", "team4", "team5", "team6", "team7", "team8"]
     
+    var bgColors = ["#AC36CA", "#C59107", "#0671B5", "#AC36CA", "#C59107", "#0671B5", "#AC36CA", "#C59107"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +72,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
             pageContentViewController.name = names[index]
             pageContentViewController.mobile = "M. \(mobiles[index])"
             pageContentViewController.email = emails[index]
+            pageContentViewController.bgColor = bgColors[index]
             pageContentViewController.index = index
             return pageContentViewController
         }

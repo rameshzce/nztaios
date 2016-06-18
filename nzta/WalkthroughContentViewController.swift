@@ -24,6 +24,7 @@ class WalkthroughContentViewController: UIViewController {
     var mobile = ""
     var email = ""
     var imageFile = ""
+    var bgColor = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,8 @@ class WalkthroughContentViewController: UIViewController {
         nameLabel.text = name
         mobileLabel.text = mobile
         emailLabel.text = email
+        topBg.backgroundColor = Helper.hexStringToUIColor(bgColor)
+        bottomBg.backgroundColor = Helper.hexStringToUIColor(bgColor)
         contentImageView.image = UIImage(named: imageFile)
 
         // Do any additional setup after loading the view.
