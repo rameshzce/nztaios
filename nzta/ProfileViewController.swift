@@ -19,37 +19,33 @@ class ProfileViewController: UIViewController {
     @IBOutlet var profileImage: UIImageView!
 
     @IBOutlet var profileMobile: UILabel!
+    @IBOutlet var btnGallery: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        btnGallery.layer.cornerRadius = 5
         self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
         self.profileImage.clipsToBounds = true
         
         self.profileImage.layer.borderWidth = 10.0
         self.profileImage.layer.borderColor = hexStringToUIColor("#C4C4C4").CGColor
         
-        Helper.loadImageFromUrl("http://tokkalo.com/api/1/profile_images/logo.png", view: profileImage)
+        Helper.loadImageFromUrl("\(prefs.stringForKey("profileImage")!)", view: profileImage)
         
         if prefs.stringForKey("profileImage") != nil{
-            Helper.loadImageFromUrl("http://tokkalo.com/api/1/profile_images/\(self.prefs.stringForKey("profileImage")!)", view: profileImage)
+            //Helper.loadImageFromUrl("http://tokkalo.com/api/1/profile_images/\(self.prefs.stringForKey("profileImage")!)", view: profileImage)
         } else {
-            Helper.loadImageFromUrl("http://tokkalo.com/api/1/profile_images/logo.png", view: profileImage)
+            //Helper.loadImageFromUrl("http://tokkalo.com/api/1/profile_images/logo.png", view: profileImage)
         }
         
-        /*if prefs.stringForKey("profileImage") != nil{
-            self.profileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: prefs.stringForKey("profileImage")!)!)!)
-            
-            self.profileName.text = "\(prefs.stringForKey("profileFirstName")!) \(prefs.stringForKey("profileLastName")!)"
-            self.profileMobile.text = "Mob: \(prefs.stringForKey("profileMobile")!)"
-            self.profileEmail.text = "\(prefs.stringForKey("profileEmail")!)"
-        } else {
-            self.profileImage.image = UIImage(named: "logo3")
+        
+            //self.profileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: prefs.stringForKey("profileImage")!)!)!)
             
             self.profileName.text = "\(prefs.stringForKey("profileName")!)"
             self.profileMobile.text = "Mob: \(prefs.stringForKey("profileMobile")!)"
             self.profileEmail.text = "\(prefs.stringForKey("profileEmail")!)"
-        }*/
+ 
         
         
         self.view.backgroundColor = hexStringToUIColor("#EAEAEA")

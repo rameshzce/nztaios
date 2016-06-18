@@ -11,7 +11,7 @@ import Foundation
 class Helper{
     static func customizetextField(textField: UITextField!) {
         textField.backgroundColor = UIColor.clearColor()
-        textField.layer.cornerRadius = 10
+        textField.layer.cornerRadius = 5
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.whiteColor().CGColor
         
@@ -25,7 +25,7 @@ class Helper{
     static func customizeButton(button: UIButton!) {
         button.setBackgroundImage(nil, forState: .Normal)
         button.backgroundColor = UIColor.clearColor()
-        button.layer.cornerRadius = 10
+        button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.whiteColor().CGColor
         button.titleLabel!.font =  UIFont(name: "handlee-regular", size: 18)

@@ -44,10 +44,13 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
             let strEmail: String = (result.objectForKey("email") as? String)!
             let strPictureURL: String = (result.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
             
+            let profileName = "\(strFirstName) \(strLastName)"
+            
             self.prefs.setValue(strPictureURL, forKey: "profileImage")
             self.prefs.setValue(strFirstName, forKey: "profileFirstName")
             self.prefs.setValue(strLastName, forKey: "profileLastName")
-            self.prefs.setValue("", forKey: "profileMobile")
+            self.prefs.setValue(profileName, forKey: "profileName")
+            self.prefs.setValue("xxx", forKey: "profileMobile")
             self.prefs.setValue(strEmail, forKey: "profileEmail")
             
             //self.lblName.text = "Welcome, \(strFirstName) \(strLastName)"
@@ -141,6 +144,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
                         self.prefs.setValue(self.name.text, forKey: "profileName")
                         self.prefs.setValue(self.mob.text, forKey: "profileMobile")
                         self.prefs.setValue(self.email.text, forKey: "profileEmail")
+                        self.prefs.setValue("http://tokkalo.com/api/1/profile_images/logo.png", forKey: "profileImage")
                         self.performSegueWithIdentifier("member", sender: self)
                     }else if status == "FAILURE"{
                         let message = jsonDictionary["message"] as! String

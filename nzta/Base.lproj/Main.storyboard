@@ -345,6 +345,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Cu7-bB-zaJ"/>
                     <connections>
+                        <outlet property="btnGallery" destination="QmV-pB-ymc" id="7yP-ph-CmK"/>
                         <outlet property="profileEmail" destination="Q3u-dN-2zz" id="iuE-wV-gXx"/>
                         <outlet property="profileImage" destination="B69-RN-RS9" id="vGN-p4-EhE"/>
                         <outlet property="profileMobile" destination="bKJ-Pc-9qJ" id="B2w-RG-426"/>
