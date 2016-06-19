@@ -47,7 +47,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.myActivityIndicator.hidden = true
         //myImageUploadRequest()
         
     }
@@ -89,7 +89,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         request.HTTPBody = createBodyWithParameters(param, filePathKey: "file", imageDataKey: imageData!, boundary: boundary)
         
         
-        
+        myActivityIndicator.hidden = false
         myActivityIndicator.startAnimating();
         
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {

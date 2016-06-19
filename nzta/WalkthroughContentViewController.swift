@@ -30,10 +30,11 @@ class WalkthroughContentViewController: UIViewController {
         super.viewDidLoad()
         
         positionLabel.text = position
+        positionLabel.textColor = Helper.hexStringToUIColor(bgColor)
         nameLabel.text = name
         mobileLabel.text = mobile
         emailLabel.text = email
-        topBg.backgroundColor = Helper.hexStringToUIColor(bgColor)
+        topBg.backgroundColor = Helper.hexStringToUIColor("#ffffff")
         bottomBg.backgroundColor = Helper.hexStringToUIColor(bgColor)
         contentImageView.image = UIImage(named: imageFile)
 
