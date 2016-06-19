@@ -1309,20 +1309,20 @@ and its our family fun</string>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="moU-SZ-wtT" userLabel="profile image">
-                                <rect key="frame" x="40" y="83" width="240" height="280"/>
+                                <rect key="frame" x="0.0" y="83" width="320" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="NhY-0A-djP"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDs-Ir-mef" userLabel="top bg">
-                                <rect key="frame" x="40" y="-10" width="240" height="90"/>
+                                <rect key="frame" x="0.0" y="-10" width="320" height="90"/>
                                 <color key="backgroundColor" red="0.64705882349999999" green="0.34901960780000002" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="mBF-yS-qnB"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxn-xT-I1B" userLabel="position">
-                                <rect key="frame" x="40" y="40" width="240" height="34"/>
+                                <rect key="frame" x="0.0" y="40" width="320" height="34"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1368,12 +1368,12 @@ and its our family fun</string>
                             <constraint firstItem="moU-SZ-wtT" firstAttribute="width" secondItem="tDs-Ir-mef" secondAttribute="width" id="bHf-jq-gta"/>
                             <constraint firstItem="moU-SZ-wtT" firstAttribute="top" secondItem="tDs-Ir-mef" secondAttribute="bottom" constant="3" id="dgk-oD-da0"/>
                             <constraint firstItem="bAZ-va-ldl" firstAttribute="leading" secondItem="EKU-TC-cp9" secondAttribute="leading" id="g0S-aN-KWc"/>
-                            <constraint firstAttribute="trailing" secondItem="moU-SZ-wtT" secondAttribute="trailing" constant="40" id="jgZ-J6-Nq4"/>
+                            <constraint firstAttribute="trailing" secondItem="moU-SZ-wtT" secondAttribute="trailing" id="jgZ-J6-Nq4"/>
                             <constraint firstItem="0Rv-5C-gnB" firstAttribute="height" secondItem="a0V-JG-IyA" secondAttribute="height" id="mJo-Mb-nsP"/>
                             <constraint firstItem="bAZ-va-ldl" firstAttribute="width" secondItem="clv-AU-T9O" secondAttribute="width" id="mX1-fa-Qt8"/>
                             <constraint firstAttribute="bottom" secondItem="bAZ-va-ldl" secondAttribute="bottom" id="nxq-nM-wU0"/>
                             <constraint firstItem="bAZ-va-ldl" firstAttribute="centerX" secondItem="clv-AU-T9O" secondAttribute="centerX" id="pVr-rC-e4I"/>
-                            <constraint firstItem="moU-SZ-wtT" firstAttribute="leading" secondItem="EKU-TC-cp9" secondAttribute="leading" constant="40" id="xUz-uq-Gag"/>
+                            <constraint firstItem="moU-SZ-wtT" firstAttribute="leading" secondItem="EKU-TC-cp9" secondAttribute="leading" id="xUz-uq-Gag"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Team" id="3dk-Ko-P93"/>
