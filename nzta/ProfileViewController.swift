@@ -24,7 +24,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        btnGallery.layer.cornerRadius = 5
+        //btnGallery.layer.cornerRadius = 5
+        Helper.customizeButton(btnGallery)
         self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
         self.profileImage.clipsToBounds = true
         
