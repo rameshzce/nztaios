@@ -19,7 +19,8 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
         if (textMoble.text == "") {
             showAlert("Please enter mobile")
         }  else {
-            SwiftLoading().showLoading()
+            //SwiftLoading().showLoading()
+            //self.labelMsg.text = "Sending..."
             let request = NSMutableURLRequest(URL: NSURL(string: "http://tokkalo.com/api/1/invite_friend.php")!)
             request.HTTPMethod = "POST"
             let postString = "toMobile=\(textMoble.text!)&fromMobile=\(prefs.stringForKey("login")!)"
@@ -39,9 +40,10 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
                     
                     let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                     let message = jsonDictionary["message"] as! String
-                    
-                    self.labelMsg.text = "\(message)"
+                    self.prefs.setValue(message, forKey: "inviteMsg")
+                    //self.labelMsg.text = "\(message)"
                     SwiftLoading().hideLoading()
+                    //self.showAlert("\(message)")
                     
                     
                 } catch {
@@ -49,13 +51,14 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
                 }
                 
                 dispatch_async(dispatch_get_main_queue(),{
-                    //SwiftLoading().hideLoading()
-                    //self.labelMsg.text = "\(message)"
+                    if (self.prefs.stringForKey("inviteMsg") != nil){
+                        self.showAlert("\(self.prefs.stringForKey("inviteMsg")!)")
+                    }
                 });
             }
             task.resume()
             
-            //self.showAlert("Your invitation has been sent.")
+            
         }
     }
    
@@ -63,7 +66,7 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Helper.customizeButton(btnSendInvite)
+        btnSendInvite.layer.cornerRadius = 5
         
         Helper.customizetextField(textMoble)
         textMoble.attributedPlaceholder = NSAttributedString(string:"Mobile", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
