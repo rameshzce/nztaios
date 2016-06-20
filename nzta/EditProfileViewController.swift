@@ -10,6 +10,8 @@ import UIKit
 
 class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet var btnSelectPhoto: UIButton!
+    @IBOutlet var btnUpload: UIButton!
     @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var myImageView: UIImageView!
     
@@ -39,6 +41,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         myImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         
         self.dismissViewControllerAnimated(true, completion: nil)
+        self.btnUpload.hidden = false
         
     }
     
@@ -46,8 +49,13 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Helper.customizeButton(btnSelectPhoto)
+        Helper.customizeButton(btnUpload)
+        
         // Do any additional setup after loading the view, typically from a nib.
         self.myActivityIndicator.hidden = true
+        self.btnUpload.hidden = true
         //myImageUploadRequest()
         
     }
