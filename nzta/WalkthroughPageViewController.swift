@@ -18,7 +18,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
     
     var emails = ["nztapresident@gmail.com", "generalsecretarynzta@gmail.com", "arunrao.p@gmail.com", "rajjugangishetty@gmail.com", "rrpatllola@gmail.com", "xxx", "xxx", "xxx"]
     
-    var pageImages = ["team1", "team2", "team3", "team4", "team5", "team6", "team7", "team8"]
+    var pageImages = ["president", "ramana-salvaji", "arun", "rajeswri", "raj", "narsing", "srinivas", "team8"]
     
     var bgColors = ["#AC36CA", "#C59107", "#0671B5", "#AC36CA", "#C59107", "#0671B5", "#AC36CA", "#C59107"]
     

@@ -34,7 +34,7 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.estimatedRowHeight = 95.0
+        tableView.estimatedRowHeight = 110.0
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.backgroundColor = hexStringToUIColor(mainViewcolor)
         

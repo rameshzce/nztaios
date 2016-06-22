@@ -66,7 +66,8 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        btnSendInvite.layer.cornerRadius = 5
+        //btnSendInvite.layer.cornerRadius = 5
+        Helper.customizeButton(btnSendInvite)
         
         Helper.customizetextField(textMoble)
         textMoble.attributedPlaceholder = NSAttributedString(string:"Mobile", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
