@@ -20,7 +20,8 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
     
     var pageImages = ["president", "ramana-salvaji", "arun", "rajeswri", "raj", "narsing", "srinivas", "team8"]
     
-    var bgColors = ["#AC36CA", "#C59107", "#0671B5", "#AC36CA", "#C59107", "#0671B5", "#AC36CA", "#C59107"]
+    var bgColors = ["#AC36CA", "#AC36CA", "#C59107", "#C59107", "#C59107", "#C59107", "#C59107", "#C59107"]
+    //var bgColors = ["#AC36CA", "#C59107", "#0671B5", "#AC36CA", "#C59107", "#0671B5", "#AC36CA", "#C59107"]
     
     
     override func viewDidLoad() {
