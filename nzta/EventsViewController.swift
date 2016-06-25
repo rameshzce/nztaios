@@ -127,13 +127,13 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
         UIView.animateWithDuration(1.0, animations: { cell.alpha = 1 })*/
         
         // Define the initial state (Before the animation)
-        let rotationAngleInRadians = 90.0 * CGFloat(M_PI/180.0)
+        /*let rotationAngleInRadians = 45.0 * CGFloat(M_PI/180.0)
         let rotationTransform = CATransform3DMakeRotation(rotationAngleInRadians, 0, 0, 1)
         //let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 100, 0)
         cell.layer.transform = rotationTransform
         // Define the final state (After the animation)
         UIView.animateWithDuration(1.0, animations: { cell.layer.transform =
-            CATransform3DIdentity })
+            CATransform3DIdentity })*/
     }
     
     @IBAction func logAction(sender: UIButton) {
