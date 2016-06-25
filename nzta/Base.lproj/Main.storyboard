@@ -58,6 +58,8 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
+            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -790,22 +792,69 @@ and its our family fun</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynh-RH-dun">
-                                <rect key="frame" x="32" y="165" width="247" height="157"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9U-jn-RZA">
+                                <rect key="frame" x="10" y="10" width="300" height="548"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DjP-yN-vgX">
+                                        <rect key="frame" x="50" y="338" width="200" height="44"/>
+                                        <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="6uL-SE-XLl"/>
+                                            <constraint firstAttribute="height" constant="44" id="zCh-b6-HTh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                        <state key="normal" title="Ok">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToHome:" destination="A5e-cU-GQa" eventType="touchUpInside" id="PPb-AL-E50"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynh-RH-dun">
+                                <rect key="frame" x="10" y="271" width="300" height="27"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvK-8L-bYM">
+                                <rect key="frame" x="135" y="194" width="50" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3CE-sJ-QO9"/>
+                                    <constraint firstAttribute="height" constant="27" id="Tc1-xI-oau"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
+                                <color key="textColor" red="0.13333334028720856" green="0.57254904508590698" blue="0.24705882370471954" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1333333333" green="0.57254901960000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="F9U-jn-RZA" firstAttribute="centerY" secondItem="pHs-1C-Ork" secondAttribute="centerY" id="6Ot-2A-7vG"/>
+                            <constraint firstItem="DjP-yN-vgX" firstAttribute="centerX" secondItem="Ynh-RH-dun" secondAttribute="centerX" id="6c3-FH-TE6"/>
+                            <constraint firstItem="Ynh-RH-dun" firstAttribute="centerX" secondItem="F9U-jn-RZA" secondAttribute="centerX" id="AEu-hH-cOv"/>
+                            <constraint firstItem="Ynh-RH-dun" firstAttribute="centerY" secondItem="F9U-jn-RZA" secondAttribute="centerY" id="Ct4-S7-05l"/>
+                            <constraint firstItem="F9U-jn-RZA" firstAttribute="height" secondItem="pHs-1C-Ork" secondAttribute="height" constant="-20" id="JG2-jq-tUo"/>
+                            <constraint firstItem="Ynh-RH-dun" firstAttribute="width" secondItem="F9U-jn-RZA" secondAttribute="width" id="W0G-hZ-LBu"/>
+                            <constraint firstItem="Ynh-RH-dun" firstAttribute="top" secondItem="ZvK-8L-bYM" secondAttribute="bottom" constant="50" id="bvc-Hh-bJM"/>
+                            <constraint firstItem="DjP-yN-vgX" firstAttribute="top" secondItem="Ynh-RH-dun" secondAttribute="bottom" constant="50" id="gjC-xE-4r4"/>
+                            <constraint firstItem="F9U-jn-RZA" firstAttribute="centerX" secondItem="pHs-1C-Ork" secondAttribute="centerX" id="p3H-e8-Fve"/>
+                            <constraint firstItem="ZvK-8L-bYM" firstAttribute="centerX" secondItem="Ynh-RH-dun" secondAttribute="centerX" id="q9A-dt-7M8"/>
+                            <constraint firstItem="F9U-jn-RZA" firstAttribute="width" secondItem="pHs-1C-Ork" secondAttribute="width" constant="-20" id="una-Qw-Fzz"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ehg-0a-aIE"/>
                     <connections>
+                        <outlet property="btnOk" destination="DjP-yN-vgX" id="HLC-bd-ya6"/>
                         <outlet property="message" destination="Ynh-RH-dun" id="HlP-sx-9ah"/>
+                        <segue destination="gbp-5x-xKh" kind="push" identifier="goToHome" id="a6G-TX-FPf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feN-kh-0qt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864" y="-442"/>
+            <point key="canvasLocation" x="2396" y="-442"/>
         </scene>
         <!--Events View Controller-->
         <scene sceneID="lzG-nn-QBH">
@@ -1738,6 +1787,24 @@ all</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jhm-5A-uD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JGE-T9-zOE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vij-5E-90h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7zM-eF-lI0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A5e-cU-GQa" kind="relationship" relationship="rootViewController" id="nSv-Nf-LEg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBT-CE-kO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1864" y="-442"/>
+        </scene>
     </scenes>
     <resources>
         <image name="camera-icon-30" width="30" height="30"/>
@@ -1750,10 +1817,10 @@ all</string>
         <image name="video-icon-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ipK-54-FXD"/>
-        <segue reference="xPk-vA-a2a"/>
-        <segue reference="Jg3-9G-4Rm"/>
-        <segue reference="ZWk-WU-XrL"/>
+        <segue reference="a6G-TX-FPf"/>
         <segue reference="0o9-gl-Z1m"/>
+        <segue reference="xPk-vA-a2a"/>
+        <segue reference="ipK-54-FXD"/>
+        <segue reference="ZWk-WU-XrL"/>
     </inferredMetricsTieBreakers>
 </document>

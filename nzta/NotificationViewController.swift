@@ -10,10 +10,15 @@ import UIKit
 
 class NotificationViewController: UIViewController {
 
+    @IBAction func goToHome(sender: AnyObject) {
+        self.performSegueWithIdentifier("goToHome", sender: self)
+    }
     @IBOutlet var message: UILabel!
+    @IBOutlet var btnOk: UIButton!
     var alertMessage: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        Helper.customizeButton(btnOk)
         message.lineBreakMode = .ByWordWrapping
         message.numberOfLines = 0;
         
