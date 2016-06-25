@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0My-B7-MZN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zgG-Rj-7Hf">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -571,36 +571,38 @@ and its our family fun</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2f-7k-lma">
-                                            <rect key="frame" x="99" y="43" width="135" height="33"/>
+                                            <rect key="frame" x="129" y="54" width="75" height="33"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="33" id="Lft-hs-Z7D"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="35"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Events" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5J-od-1CN">
-                                            <rect key="frame" x="82" y="5" width="152" height="30"/>
+                                            <rect key="frame" x="4" y="15" width="200" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="tFP-21-gDn"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vjn-bG-q13">
-                                            <rect key="frame" x="90" y="42" width="30" height="30"/>
+                                            <rect key="frame" x="234" y="35" width="30" height="30"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="30" id="oPW-iB-NjR"/>
+                                                <constraint firstAttribute="height" constant="30" id="2xD-3W-brZ"/>
+                                                <constraint firstAttribute="width" constant="30" id="74J-XQ-raB"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Z2f-7k-lma" firstAttribute="bottom" secondItem="vjn-bG-q13" secondAttribute="bottom" constant="4" id="8kC-6J-ZWQ"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Z2f-7k-lma" secondAttribute="trailing" constant="45" id="AYz-JW-GiS"/>
-                                        <constraint firstItem="Z2f-7k-lma" firstAttribute="top" secondItem="x5J-od-1CN" secondAttribute="bottom" constant="8" symbolic="YES" id="Mxf-gk-qjX"/>
-                                        <constraint firstItem="Z2f-7k-lma" firstAttribute="leading" secondItem="TzM-5D-eaI" secondAttribute="leadingMargin" constant="91" id="QLF-eI-GvX"/>
-                                        <constraint firstItem="vjn-bG-q13" firstAttribute="leading" secondItem="TzM-5D-eaI" secondAttribute="leadingMargin" constant="82" id="Wg9-Zm-GyN"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Z2f-7k-lma" secondAttribute="bottom" constant="15" id="vhO-ba-VEk"/>
-                                        <constraint firstItem="Z2f-7k-lma" firstAttribute="trailing" secondItem="x5J-od-1CN" secondAttribute="trailing" id="wtG-at-S4G"/>
-                                        <constraint firstItem="vjn-bG-q13" firstAttribute="top" secondItem="x5J-od-1CN" secondAttribute="bottom" constant="7" id="yHL-hJ-qW3"/>
+                                        <constraint firstItem="Z2f-7k-lma" firstAttribute="trailing" secondItem="x5J-od-1CN" secondAttribute="trailing" id="F4x-ox-D6r"/>
+                                        <constraint firstItem="x5J-od-1CN" firstAttribute="centerY" secondItem="vjn-bG-q13" secondAttribute="centerY" constant="-20" id="FbW-d0-75M"/>
+                                        <constraint firstItem="vjn-bG-q13" firstAttribute="leading" secondItem="x5J-od-1CN" secondAttribute="trailing" constant="30" id="LBU-g2-258"/>
+                                        <constraint firstItem="Z2f-7k-lma" firstAttribute="centerY" secondItem="vjn-bG-q13" secondAttribute="centerY" constant="20" id="hUu-Hs-JPV"/>
+                                        <constraint firstItem="vjn-bG-q13" firstAttribute="centerY" secondItem="TzM-5D-eaI" secondAttribute="centerY" id="htK-Q6-SFm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vjn-bG-q13" secondAttribute="trailing" constant="15" id="yRZ-DD-3g3"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
