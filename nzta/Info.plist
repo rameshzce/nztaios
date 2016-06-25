@@ -76,6 +76,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>handlee-regular.ttf</string>
+		<string>A-Love-of-Thunder.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

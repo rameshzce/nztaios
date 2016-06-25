@@ -77,6 +77,7 @@
 		753585041CFACAD7000C04CA /* ExistingEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistingEventsViewController.swift; sourceTree = "<group>"; };
 		753F92041D0A5D7000D53053 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		753F920A1D0A6E4300D53053 /* VideoGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGalleryViewCell.swift; sourceTree = "<group>"; };
+		75424F641D1EA089008D3F58 /* A-Love-of-Thunder.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A-Love-of-Thunder.ttf"; sourceTree = "<group>"; };
 		75446F501CF747A300C78F29 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
 		75446F511CF747A300C78F29 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
 		75446F541CF7482400C78F29 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -231,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				75B622F61CF054F700493F98 /* handlee-regular.ttf */,
+				75424F641D1EA089008D3F58 /* A-Love-of-Thunder.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";

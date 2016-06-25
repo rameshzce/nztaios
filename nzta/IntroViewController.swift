@@ -17,6 +17,7 @@ class IntroViewController: UIViewController {
     @IBOutlet var lblText4: UILabel!
     @IBOutlet var lblText5: UILabel!
     @IBOutlet var lblText6: UILabel!
+    @IBOutlet var lblText7: UILabel!
     @IBOutlet var circleView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class IntroViewController: UIViewController {
         self.lblText4.alpha=0;
         self.lblText5.alpha=0;
         self.lblText6.alpha=0;
+        self.lblText7.alpha=0;
 
         // Do any additional setup after loading the view.
     }
@@ -43,7 +45,7 @@ class IntroViewController: UIViewController {
         super.viewDidLayoutSubviews()
         //myImageView.center.x = myImageView.center.x  - self.view.frame.width
         //lblText1.frame = CGRect(x: lblText1.center.x, y: lblText1.center.y, width: 0, height: 0)
-        
+        self.circleView.frame = CGRect(x: self.circleView.frame.origin.x, y: self.circleView.frame.origin.y, width: 0, height: 0)
         
     }
     
@@ -61,8 +63,8 @@ class IntroViewController: UIViewController {
             print("Completion")
         }*/
         
-        let rotationAngleInRadians = 180.0 * CGFloat(M_PI/180.0)
-        let rotationTransform = CATransform3DMakeRotation(rotationAngleInRadians, 0, 0, 1)
+        //let rotationAngleInRadians = 180.0 * CGFloat(M_PI/180.0)
+        //let rotationTransform = CATransform3DMakeRotation(rotationAngleInRadians, 0, 0, 1)
         //let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 100, 0)
         
         //self.lblText1.layer.transform = rotationTransform
@@ -79,15 +81,17 @@ class IntroViewController: UIViewController {
             
         })*/
         
-        self.lblText1.layer.transform = rotationTransform
+        /*self.lblText1.layer.transform = rotationTransform
         self.lblText2.layer.transform = rotationTransform
         self.lblText3.layer.transform = rotationTransform
         self.lblText4.layer.transform = rotationTransform
         self.lblText5.layer.transform = rotationTransform
         self.lblText6.layer.transform = rotationTransform
+        self.lblText7.layer.transform = rotationTransform*/
         
         UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
             self.lblText1.alpha = 1.0
+            self.circleView.frame = CGRect(x: self.circleView.frame.origin.x, y: self.circleView.frame.origin.y, width: 200, height: 200)
         }) { (_) -> Void in
             //print("Completion1")
             UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
@@ -142,10 +146,26 @@ class IntroViewController: UIViewController {
                                                         //print("Completion")
                                                         UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
                                                             self.lblText6.alpha = 0
+                                                            self.lblText7.alpha = 1.0
                                                         }) { (_) -> Void in
                                                             //print("Completion")
-                                                            self.navigationController?.navigationBarHidden = false
-                                                            self.performSegueWithIdentifier("introToMain", sender: self)
+                                                            UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                                                self.lblText7.layer.transform = CATransform3DIdentity
+                                                            }) { (_) -> Void in
+                                                                //print("Completion")
+                                                                UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                                                    self.lblText7.alpha = 0
+                                                                }) { (_) -> Void in
+                                                                    //print("Completion")
+                                                                    UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                                                        self.circleView.frame = CGRect(x: self.circleView.frame.origin.x, y: self.circleView.frame.origin.y, width: 0, height: 0)
+                                                                    }) { (_) -> Void in
+                                                                        //print("Completion")
+                                                                        self.navigationController?.navigationBarHidden = false
+                                                                        self.performSegueWithIdentifier("introToMain", sender: self)
+                                                                    }
+                                                                }
+                                                            }
                                                         }
                                                     }
                                                 }
