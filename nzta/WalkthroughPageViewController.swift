@@ -10,17 +10,17 @@ import UIKit
 
 class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
-    var names = ["Mr. Dharmendar Alle", "Mr. Venkata Ramana Rao salvaji", "Mr.Arun Rao Paidigummala", "Mrs.Rajeshwari Gangishetty", "Mr.Raja Shekar Reddy Patlolla", "Mr. Narsing Rao Enaganti", "Mr. Srinivas Yepuri", "Mr.Sai Santhan Reddy Kusam"]
+    var names = ["Mr. Dharmendar Alle", "Mr. Venkata Ramana Rao salvaji", "Mr.Arun Rao Paidigummala", "Mrs.Rajeshwari Gangishetty", "Mr.Raja Shekar Reddy Patlolla", "Mr. Narsing Rao Enaganti", "Mr. Srinivas Yepuri", "Mr.Sai Santhan Reddy Kusam", "Mr.Aravind Reddy Bathula", "Mrs.Aruna Salvaji", "Mr. Vijay Kosana", "Mrs.Dharani Shruthi Akoju", "Mr.Rakesh Gondlyala", "Mr.D.V.S.R.Subrahmanyam"]
     
-    var positions = ["President", "General Secretary", "Vice President", "Vice President", "Treasurer", "Joint Secretary", "Joint Secretary", "Joint Treasurer"]
+    var positions = ["President", "General Secretary", "Vice President", "Vice President", "Treasurer", "Joint Secretary", "Joint Secretary", "Joint Treasurer", "Executive Committee Member", "Executive Committee Member", "Executive Committee Member", "Executive Committee Member", "Executive Committee Member", "Executive Committee Member"]
     
-    var mobiles = ["0212663666", "0220491003", "0212511454", "02102604222", "02102468855", "xxx", "xxx", "02102399325"]
+    var mobiles = ["0212663666", "0220491003", "0212511454", "02102604222", "02102468855", "xxx", "xxx", "02102399325", "0220372376", "0211262640", "021739943", "02102923569", "0211558543", "0211899494"]
     
-    var emails = ["nztapresident@gmail.com", "generalsecretarynzta@gmail.com", "arunrao.p@gmail.com", "rajjugangishetty@gmail.com", "rrpatllola@gmail.com", "xxx", "xxx", "xxx"]
+    var emails = ["nztapresident@gmail.com", "generalsecretarynzta@gmail.com", "arunrao.p@gmail.com", "rajjugangishetty@gmail.com", "rrpatllola@gmail.com", "xxx", "xxx", "xxx", "aravind.bathula@gmail.com", "asalvaji@yahoo.com", "vijaykosana@gmail.com", "sruthiakoju@hotmail.com", "rakesh.gon@hotmail.com", "subbu.desu@gmail.com"]
     
-    var pageImages = ["president", "ramana-salvaji", "arun", "rajeswri", "raj", "narsing", "srinivas", "team8"]
+    var pageImages = ["president", "ramana-salvaji", "arun", "rajeswri", "raj", "narsing", "srinivas", "santhan-redddy", "Aravind-Reddy", "aruna", "vijaykosna", "sruti", "Rakesh-Gondlyala", "subrahamanyam"]
     
-    var bgColors = ["#AC36CA", "#AC36CA", "#C59107", "#C59107", "#C59107", "#C59107", "#C59107", "#C59107"]
+    var bgColors = ["#AC36CA", "#AC36CA", "#C59107", "#C59107", "#C59107", "#C59107", "#C59107", "#C59107", "#0671B5", "#0671B5", "#0671B5", "#0671B5", "#0671B5", "#0671B5"]
     //var bgColors = ["#AC36CA", "#C59107", "#0671B5", "#AC36CA", "#C59107", "#0671B5", "#AC36CA", "#C59107"]
     
     
@@ -75,6 +75,10 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
             pageContentViewController.email = emails[index]
             pageContentViewController.bgColor = bgColors[index]
             pageContentViewController.index = index
+            
+            if( index == (names.count - 1) ){
+                pageContentViewController.lastImage = "yes"
+            }
             return pageContentViewController
         }
         return nil

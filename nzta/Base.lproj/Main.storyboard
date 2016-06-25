@@ -1629,6 +1629,7 @@ all</string>
                         <outlet property="bottomBg" destination="bAZ-va-ldl" id="g3u-58-0ho"/>
                         <outlet property="contentImageView" destination="moU-SZ-wtT" id="nNV-AE-mlR"/>
                         <outlet property="emailLabel" destination="a0V-JG-IyA" id="dlC-2S-byN"/>
+                        <outlet property="imgDnArrow" destination="kmI-MP-N7O" id="BKX-LF-PcH"/>
                         <outlet property="mobileLabel" destination="0Rv-5C-gnB" id="0bo-59-6Dw"/>
                         <outlet property="nameLabel" destination="clv-AU-T9O" id="WCl-rC-LNr"/>
                         <outlet property="positionLabel" destination="Uxn-xT-I1B" id="1Py-vM-ekP"/>

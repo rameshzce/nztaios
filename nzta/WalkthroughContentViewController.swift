@@ -17,6 +17,7 @@ class WalkthroughContentViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var mobileLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
+    @IBOutlet var imgDnArrow: UIImageView!
     
     var index = 0
     var position = ""
@@ -25,6 +26,7 @@ class WalkthroughContentViewController: UIViewController {
     var email = ""
     var imageFile = ""
     var bgColor = ""
+    var lastImage = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,11 @@ class WalkthroughContentViewController: UIViewController {
         topBg.backgroundColor = Helper.hexStringToUIColor("#ffffff")
         bottomBg.backgroundColor = Helper.hexStringToUIColor(bgColor)
         contentImageView.image = UIImage(named: imageFile)
+        
+        if(lastImage == "yes"){
+            imgDnArrow.hidden = true
+        }
+        
 
         // Do any additional setup after loading the view.
     }
