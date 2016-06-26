@@ -78,7 +78,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nz_bg5" translatesAutoresizingMaskIntoConstraints="NO" id="sXV-Jq-rUz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Zealand Telugu Association" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ES-z6-KhE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Zealand Telugu Association" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ES-z6-KhE">
                                 <rect key="frame" x="29" y="176" width="262" height="27"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -138,7 +138,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-RA-M2W">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-RA-M2W">
                                 <rect key="frame" x="110" y="61" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="F6a-Ap-XAc"/>
@@ -223,8 +223,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jq6-zl-AVp">
-                                <rect key="frame" x="12" y="380" width="296" height="49"/>
+                                <rect key="frame" x="60" y="380" width="200" height="44"/>
                                 <color key="backgroundColor" red="0.6470588235294118" green="0.34901960784313724" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0y3-mR-G0u"/>
+                                    <constraint firstAttribute="height" constant="44" id="gC9-y0-zOE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <state key="normal" title="Select year n' Go"/>
@@ -236,9 +240,7 @@
                         <color key="backgroundColor" red="0.9882352941176471" green="0.80000000000000004" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="jq6-zl-AVp" firstAttribute="top" secondItem="qNr-ak-T7h" secondAttribute="bottom" constant="45" id="5Ga-vU-dOP"/>
-                            <constraint firstItem="jq6-zl-AVp" firstAttribute="leading" secondItem="6cC-GQ-lMu" secondAttribute="leadingMargin" constant="-4" id="8Pn-yt-g14"/>
                             <constraint firstItem="qNr-ak-T7h" firstAttribute="top" secondItem="kPz-uv-TeB" secondAttribute="bottom" constant="14" id="8lU-Cq-IBT"/>
-                            <constraint firstItem="qNr-ak-T7h" firstAttribute="centerY" secondItem="jq6-zl-AVp" secondAttribute="centerY" constant="-136.5" id="EVH-by-d3P"/>
                             <constraint firstItem="qNr-ak-T7h" firstAttribute="centerX" secondItem="6cC-GQ-lMu" secondAttribute="centerX" id="KiS-ru-KuR"/>
                             <constraint firstItem="kPz-uv-TeB" firstAttribute="centerX" secondItem="6cC-GQ-lMu" secondAttribute="centerX" id="P1S-4T-jGq"/>
                             <constraint firstItem="qNr-ak-T7h" firstAttribute="centerY" secondItem="6cC-GQ-lMu" secondAttribute="centerY" constant="-16" id="cgR-3e-8Rc"/>
@@ -247,6 +249,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Existing Events" id="IWX-0u-bG9"/>
                     <connections>
+                        <outlet property="btnSelectYear" destination="jq6-zl-AVp" id="cVd-i0-yOr"/>
                         <outlet property="datePicker" destination="qNr-ak-T7h" id="IWq-J7-RXX"/>
                         <segue destination="3lA-b0-SRs" kind="push" identifier="existingEvents" id="6ew-ZD-cM0"/>
                     </connections>
@@ -295,26 +298,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B69-RN-RS9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B69-RN-RS9">
                                 <rect key="frame" x="73" y="80" width="175" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="4LY-P5-gPd"/>
                                     <constraint firstAttribute="height" constant="175" id="vYQ-TT-yVN"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDL-Xp-RgJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDL-Xp-RgJ">
                                 <rect key="frame" x="131" y="275" width="60" height="34"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
                                 <color key="textColor" red="0.070588235294117646" green="0.26666666666666666" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Mob" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-Pc-9qJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Mob" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-Pc-9qJ">
                                 <rect key="frame" x="139" y="319" width="45" height="34"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
                                 <color key="textColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmV-pB-ymc">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmV-pB-ymc">
                                 <rect key="frame" x="62" y="427" width="200" height="44"/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -326,7 +329,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJZ-ms-YB6">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJZ-ms-YB6">
                                 <rect key="frame" x="264" y="30" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Hjv-1k-yOk"/>
@@ -338,7 +341,7 @@
                                     <segue destination="Hg7-Eq-u79" kind="push" id="h6l-0t-5ge"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3u-dN-2zz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3u-dN-2zz">
                                 <rect key="frame" x="134" y="363" width="55" height="34"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
                                 <color key="textColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
@@ -575,7 +578,7 @@ and its our family fun</string>
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2f-7k-lma">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2f-7k-lma">
                                             <rect key="frame" x="129" y="54" width="75" height="33"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="33" id="Lft-hs-Z7D"/>
@@ -584,7 +587,7 @@ and its our family fun</string>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Events" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5J-od-1CN">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Upcoming Events" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5J-od-1CN">
                                             <rect key="frame" x="4" y="15" width="200" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="200" id="tFP-21-gDn"/>
@@ -663,7 +666,7 @@ and its our family fun</string>
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpg-Y3-laH">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpg-Y3-laH">
                                             <rect key="frame" x="17" y="10" width="52" height="30"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -795,7 +798,7 @@ and its our family fun</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9U-jn-RZA">
                                 <rect key="frame" x="10" y="10" width="300" height="548"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DjP-yN-vgX">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DjP-yN-vgX">
                                         <rect key="frame" x="50" y="338" width="200" height="44"/>
                                         <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -813,13 +816,13 @@ and its our family fun</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynh-RH-dun">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynh-RH-dun">
                                 <rect key="frame" x="10" y="271" width="300" height="27"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <color key="textColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvK-8L-bYM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvK-8L-bYM">
                                 <rect key="frame" x="135" y="194" width="50" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="3CE-sJ-QO9"/>
@@ -876,21 +879,21 @@ and its our family fun</string>
                                             <rect key="frame" x="8" y="9" width="304" height="101"/>
                                             <color key="backgroundColor" red="0.53725490196078429" green="0.0" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUn-EL-P2y" userLabel="View left sub bg">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RUn-EL-P2y" userLabel="View left sub bg">
                                             <rect key="frame" x="8" y="80" width="150" height="30"/>
                                             <color key="backgroundColor" red="0.30588235294117649" green="0.0" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-gg-tXi" userLabel="View right sub bg">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-gg-tXi" userLabel="View right sub bg">
                                             <rect key="frame" x="162" y="80" width="150" height="30"/>
                                             <color key="backgroundColor" red="0.30588235294117649" green="0.0" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-4j-B2V">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-4j-B2V">
                                             <rect key="frame" x="15" y="16" width="290" height="33"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGQ-rN-dYh">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGQ-rN-dYh">
                                             <rect key="frame" x="15" y="51" width="290" height="22"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="16"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -899,7 +902,7 @@ and its our family fun</string>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-icon-30" translatesAutoresizingMaskIntoConstraints="NO" id="ee5-IP-rl0">
                                             <rect key="frame" x="17" y="82" width="25" height="25"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="254" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt5-M0-AfX">
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="254" horizontalCompressionResistancePriority="751" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt5-M0-AfX">
                                             <rect key="frame" x="55" y="82" width="92" height="26"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="26" id="nLr-7T-1c6"/>
@@ -913,13 +916,13 @@ and its our family fun</string>
                                                 <segue destination="Gs7-dE-Ygq" kind="push" identifier="photoGallery" id="sVH-YN-csd"/>
                                             </connections>
                                         </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="256" verticalHuggingPriority="251" image="video-icon-30" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-gP-XMA">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="256" verticalHuggingPriority="251" misplaced="YES" image="video-icon-30" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-gP-XMA">
                                             <rect key="frame" x="171" y="83" width="25" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="N0s-Xo-waa"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cae-IS-oNi">
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" horizontalCompressionResistancePriority="752" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cae-IS-oNi">
                                             <rect key="frame" x="208" y="78" width="98" height="34"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="16"/>
                                             <state key="normal" title="Video Gallery">
@@ -1003,13 +1006,13 @@ and its our family fun</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite a friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4f-bx-DTt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Invite a friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4f-bx-DTt">
                                 <rect key="frame" x="92" y="164" width="136" height="34"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLS-OR-4kG">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLS-OR-4kG">
                                 <rect key="frame" x="60" y="218" width="200" height="34"/>
                                 <color key="backgroundColor" red="0.08235294118" green="0.35294117650000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1023,7 +1026,7 @@ and its our family fun</string>
                                     <outlet property="delegate" destination="uOV-us-5lA" id="fPK-Gl-FSv"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC9-CS-CQo">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC9-CS-CQo">
                                 <rect key="frame" x="60" y="282" width="200" height="44"/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1036,7 +1039,7 @@ and its our family fun</string>
                                     <action selector="sendInvite:" destination="uOV-us-5lA" eventType="touchUpInside" id="QaZ-D7-DUB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTu-mD-lGG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTu-mD-lGG">
                                 <rect key="frame" x="0.0" y="356" width="320" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Li7-bc-7gp"/>
@@ -1247,17 +1250,17 @@ all</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Td-nQ-diP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Td-nQ-diP">
                                 <rect key="frame" x="40" y="174" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="q3j-kr-bjZ"/>
                                     <constraint firstAttribute="width" constant="240" id="ttn-OK-dta"/>
                                 </constraints>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="y1U-za-uWS">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="y1U-za-uWS">
                                 <rect key="frame" x="150" y="406" width="20" height="20"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OW2-7f-JKX">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OW2-7f-JKX">
                                 <rect key="frame" x="56" y="332" width="208" height="44"/>
                                 <color key="backgroundColor" red="0.08235294118" green="0.35294117650000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="15"/>
@@ -1267,7 +1270,7 @@ all</string>
                                     <action selector="uploadButtonTapped:" destination="Hg7-Eq-u79" eventType="touchUpInside" id="R8e-0B-AE2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5j-Lg-aIB">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5j-Lg-aIB">
                                 <rect key="frame" x="56" y="100" width="208" height="44"/>
                                 <color key="backgroundColor" red="0.08235294118" green="0.35294117650000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1423,10 +1426,10 @@ all</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3f-eM-cTz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3f-eM-cTz">
                                 <rect key="frame" x="32" y="67" width="256" height="425"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bE7-4J-vIk">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bE7-4J-vIk">
                                 <rect key="frame" x="111" y="514" width="98" height="39"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <state key="normal" title="Share image"/>
@@ -1541,7 +1544,7 @@ all</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAZ-va-ldl" userLabel="bottom bg">
                                 <rect key="frame" x="0.0" y="368" width="320" height="200"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dn_arrow_2" translatesAutoresizingMaskIntoConstraints="NO" id="kmI-MP-N7O">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dn_arrow_2" translatesAutoresizingMaskIntoConstraints="NO" id="kmI-MP-N7O">
                                         <rect key="frame" x="145" y="170" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="1I4-OD-pxr"/>
@@ -1564,25 +1567,25 @@ all</string>
                                     <constraint firstAttribute="height" constant="90" id="mBF-yS-qnB"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxn-xT-I1B" userLabel="position">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxn-xT-I1B" userLabel="position">
                                 <rect key="frame" x="0.0" y="40" width="320" height="34"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clv-AU-T9O" userLabel="name">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clv-AU-T9O" userLabel="name">
                                 <rect key="frame" x="0.0" y="423" width="320" height="27"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mobile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rv-5C-gnB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="mobile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rv-5C-gnB">
                                 <rect key="frame" x="0.0" y="458" width="320" height="27"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0V-JG-IyA" userLabel="email">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0V-JG-IyA" userLabel="email">
                                 <rect key="frame" x="0.0" y="493" width="320" height="27"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1867,10 +1870,10 @@ all</string>
         <image name="video-icon-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jg3-9G-4Rm"/>
         <segue reference="ZWk-WU-XrL"/>
+        <segue reference="Jg3-9G-4Rm"/>
         <segue reference="0o9-gl-Z1m"/>
-        <segue reference="xPk-vA-a2a"/>
         <segue reference="zv7-5d-ouw"/>
+        <segue reference="6ew-ZD-cM0"/>
     </inferredMetricsTieBreakers>
 </document>

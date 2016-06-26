@@ -14,11 +14,14 @@ class ExistingEventsViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     let prefs = NSUserDefaults.standardUserDefaults()
     
+    @IBOutlet var btnSelectYear: UIButton!
     var selectedYear: String = ""
     
     var Array = ["2015", "2014", "2013", "2012"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Helper.customizeButton(btnSelectYear)
         
         datePicker.delegate = self
         datePicker.dataSource = self
