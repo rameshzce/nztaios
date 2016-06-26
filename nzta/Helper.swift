@@ -26,7 +26,7 @@ class Helper{
         //button.setBackgroundImage(nil, forState: .Normal)
         //button.backgroundColor = UIColor.clearColor()
         button.layer.cornerRadius = 5
-        button.layer.borderWidth = 1
+        button.layer.borderWidth = 0
         //button.layer.borderColor = UIColor.whiteColor().CGColor
         button.titleLabel!.font =  UIFont(name: "handlee-regular", size: 18)
         //button.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
