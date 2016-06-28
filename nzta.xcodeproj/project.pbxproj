@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		64DCA4494B3ACF0E7B21C191 /* Pods_nzta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E33452CB056B9F072D582CBB /* Pods_nzta.framework */; };
+		75061D121D21FF6100DFD577 /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75061D111D21FF6100DFD577 /* SendMessageViewController.swift */; };
 		750DC4B41D1252F400C30D03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750DC4B31D1252F400C30D03 /* Assets.xcassets */; };
 		750EA0541CFBD57200AF7A6E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750EA0531CFBD57200AF7A6E /* AVFoundation.framework */; };
 		751179A61CF693BF003A0314 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751179A41CF693BF003A0314 /* FBSDKCoreKit.framework */; };
@@ -66,6 +67,7 @@
 /* Begin PBXFileReference section */
 		2B567CF55897306DEA9262D1 /* Pods-nzta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nzta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nzta/Pods-nzta.debug.xcconfig"; sourceTree = "<group>"; };
 		565EE79F3C76D58BA15432AD /* Pods-nzta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nzta.release.xcconfig"; path = "Pods/Target Support Files/Pods-nzta/Pods-nzta.release.xcconfig"; sourceTree = "<group>"; };
+		75061D111D21FF6100DFD577 /* SendMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageViewController.swift; sourceTree = "<group>"; };
 		750DC4B31D1252F400C30D03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		750EA0531CFBD57200AF7A6E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		751179A41CF693BF003A0314 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				75493BC31D1CC5F000D22EFE /* IntroViewController.swift */,
 				75A790911D1ECB1400EE0616 /* VideoViewController.swift */,
 				75A790931D1ECB7300EE0616 /* VideoViewCell.swift */,
+				75061D111D21FF6100DFD577 /* SendMessageViewController.swift */,
 			);
 			path = nzta;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				751E412B1CF422A5001A8BD5 /* MenuViewCell.swift in Sources */,
 				7591A1241D130E96001A615F /* Helper.swift in Sources */,
 				755097BF1D02EB820005AF83 /* DisplayGalleryImageViewController.swift in Sources */,
+				75061D121D21FF6100DFD577 /* SendMessageViewController.swift in Sources */,
 				75B622FF1CF0773100493F98 /* EventsViewCell.swift in Sources */,
 				753F92051D0A5D7000D53053 /* Trip.swift in Sources */,
 				75D387481D0B235F00314052 /* SponsorsViewController.swift in Sources */,
