@@ -8,56 +8,113 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    @IBOutlet var btnSelectPhoto: UIButton!
-    @IBOutlet var btnUpload: UIButton!
-    @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var myImageView: UIImageView!
-    
-    @IBAction func uploadButtonTapped(sender: AnyObject) {
-        
-        myImageUploadRequest()
-        
-    }
+class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let prefs = NSUserDefaults.standardUserDefaults()
     
-    @IBAction func selectPhotoButtonTapped(sender: AnyObject) {
+    @IBOutlet var scrollView: UIScrollView!
+    var imageView = UIImageView()
+    
+    @IBAction func cropAndUpload(sender: AnyObject) {
+        UIGraphicsBeginImageContextWithOptions(scrollView.bounds.size, true, UIScreen.mainScreen().scale)
         
-        let myPickerController = UIImagePickerController()
-        myPickerController.delegate = self;
-        myPickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        let offSet = scrollView.contentOffset
         
-        self.presentViewController(myPickerController, animated: true, completion: nil)
+        CGContextTranslateCTM(UIGraphicsGetCurrentContext(), -offSet.x, -offSet.y)
         
+        scrollView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        
+        UIGraphicsEndImageContext()
+        
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        
+        let alert = UIAlertController(title: "image saved", message: "your image has been saved", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
-    
-    
-        
-    {
-        myImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
-        self.btnUpload.hidden = false
-        
-    }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Helper.customizeButton(btnSelectPhoto)
-        Helper.customizeButton(btnUpload)
+        scrollView.delegate = self
         
-        // Do any additional setup after loading the view, typically from a nib.
-        self.myActivityIndicator.hidden = true
-        self.btnUpload.hidden = true
-        //myImageUploadRequest()
         
+        imageView.frame = CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height)
+        imageView.image = UIImage(named:"logo")
+        imageView.userInteractionEnabled = true
+        
+        scrollView.addSubview(imageView)
+        
+        let tapGestureRecongnizer = UITapGestureRecognizer(target: self, action: #selector(EditProfileViewController.loadImage))
+        tapGestureRecongnizer.numberOfTapsRequired = 1
+        imageView.addGestureRecognizer(tapGestureRecongnizer)
+        
+    }
+    
+    func loadImage(recognizer:UITapGestureRecognizer) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+         
+         imageView.image = image
+         imageView.contentMode = UIViewContentMode.Center
+         
+         imageView.frame = CGRectMake(0, 0, (image.size.width), (image.size.height))
+         
+         scrollView.contentSize = image.size
+         
+         let scrollViewFrame = scrollView.frame
+         let scaleWidth = scrollViewFrame.size.width / scrollView.contentSize.width
+         let scaleHeight = scrollViewFrame.size.height / scrollView.contentSize.height
+         
+         let minScale = min(scaleWidth, scaleHeight)
+         
+         scrollView.minimumZoomScale = minScale
+         scrollView.maximumZoomScale = 1
+         scrollView.zoomScale = minScale
+         
+         centerScrollViewContents()
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func centerScrollViewContents (){
+        let boundsSize = scrollView.bounds.size
+        var contentsFrame = imageView.frame
+        
+        if contentsFrame.size.width < boundsSize.width {
+            contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2
+        }else{
+            contentsFrame.origin.x = 0
+        }
+        
+        if contentsFrame.size.height < boundsSize.height {
+            contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2
+        }else{
+            contentsFrame.origin.y = 0
+        }
+        
+        imageView.frame = contentsFrame
+    }
+    
+    func scrollViewDidZoom(scrollView: UIScrollView) {
+        centerScrollViewContents()
+    }
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return imageView
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,137 +123,6 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     
-    
-    
-    
-    
-    func myImageUploadRequest()
-    {
-        
-        let myUrl = NSURL(string: "http://tokkalo.com/api/1/edit_profile.php");
-        
-        let request = NSMutableURLRequest(URL:myUrl!);
-        request.HTTPMethod = "POST";
-        
-        let param = [
-            "firstName"  : "Sergey",
-            "lastName"    : "Kargopolov",
-            "userId"    : "9",
-            "phone"    : prefs.stringForKey("login")!
-        ]
-        
-        let boundary = generateBoundaryString()
-        
-        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        
-        
-        let imageData = UIImageJPEGRepresentation(myImageView.image!, 1)
-        
-        if(imageData==nil)  { return; }
-        
-        request.HTTPBody = createBodyWithParameters(param, filePathKey: "file", imageDataKey: imageData!, boundary: boundary)
-        
-        
-        myActivityIndicator.hidden = false
-        myActivityIndicator.startAnimating();
-        
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
-            data, response, error in
-            
-            if error != nil {
-                print("error=\(error)")
-                return
-            }
-            
-            // You can print out response object
-            //print("******* response = \(response)")
-            
-            // Print out reponse body
-            //let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            //print("****** response data = \(responseString!)")
-            
-            //var err: NSError?
-            //let json = NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers, error: &err) as? NSDictionary
-            
-            do {
-                _ = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                //let status = json["status"] as! String
-                //self.showAlert("\(status)")
-                
-                self.prefs.setValue("http://tokkalo.com/api/1/profile_images/\(self.prefs.stringForKey("login")!).jpg", forKey: "profileImage")
-            } catch {
-                // Handle Error
-            }
-            
-            
-            
-            dispatch_async(dispatch_get_main_queue(),{
-                self.myActivityIndicator.stopAnimating()
-                self.myImageView.image = nil;
-                
-                self.performSegueWithIdentifier("editProfile", sender: self)
-            });
-            
-            
-             /*if let parseJSON = json {
-             var firstNameValue = parseJSON["firstName"] as? String
-             print("firstNameValue: \(firstNameValue)")
-             }*/
-            
-            
-        }
-        
-        task.resume()
-        
-    }
-    
-    
-    func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
-        let body = NSMutableData();
-        
-        if parameters != nil {
-            for (key, value) in parameters! {
-                body.appendString("--\(boundary)\r\n")
-                body.appendString("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
-                body.appendString("\(value)\r\n")
-            }
-        }
-        
-        //let filename = "user-profile.jpg"
-        let filename = "\(prefs.stringForKey("login")!).jpg"
-        
-        let mimetype = "image/jpg"
-        
-        body.appendString("--\(boundary)\r\n")
-        body.appendString("Content-Disposition: form-data; name=\"\(filePathKey!)\"; filename=\"\(filename)\"\r\n")
-        body.appendString("Content-Type: \(mimetype)\r\n\r\n")
-        body.appendData(imageDataKey)
-        body.appendString("\r\n")
-        
-        
-        
-        body.appendString("--\(boundary)--\r\n")
-        
-        return body
-    }
-    
-    
-    
-    
-    func generateBoundaryString() -> String {
-        return "Boundary-\(NSUUID().UUIDString)"
-    }
-    
-    
-    
 }
 
 
-
-extension NSMutableData {
-    
-    func appendString(string: String) {
-        let data = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
-        appendData(data!)
-    }
-}
