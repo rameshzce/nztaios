@@ -1271,8 +1271,14 @@ all</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5j-Lg-aIB">
-                                <rect key="frame" x="56" y="100" width="208" height="44"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IdT-uT-I8A">
+                                <rect key="frame" x="35" y="97" width="250" height="250"/>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tsn-6C-hOs">
+                                <rect key="frame" x="35" y="440" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5j-Lg-aIB">
+                                <rect key="frame" x="56" y="385" width="208" height="44"/>
                                 <color key="backgroundColor" red="0.08235294118" green="0.35294117650000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="KEf-6n-0FD"/>
@@ -1284,20 +1290,22 @@ all</string>
                                     <action selector="cropAndUpload:" destination="Hg7-Eq-u79" eventType="touchUpInside" id="xxg-Um-vgk"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IdT-uT-I8A">
-                                <rect key="frame" x="35" y="200" width="250" height="250"/>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="F5j-Lg-aIB" firstAttribute="top" secondItem="HtJ-Jy-BZD" secondAttribute="bottom" constant="80" id="5Bv-u4-DGE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="F5j-Lg-aIB" secondAttribute="trailing" constant="40" id="5OU-Hf-7SH"/>
-                            <constraint firstItem="F5j-Lg-aIB" firstAttribute="leading" secondItem="Z0q-kN-Wsf" secondAttribute="leadingMargin" constant="40" id="6PZ-up-emS"/>
+                            <constraint firstItem="F5j-Lg-aIB" firstAttribute="top" secondItem="HtJ-Jy-BZD" secondAttribute="bottom" constant="365" id="5Bv-u4-DGE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F5j-Lg-aIB" secondAttribute="trailing" constant="36" id="5OU-Hf-7SH"/>
+                            <constraint firstItem="IdT-uT-I8A" firstAttribute="centerX" secondItem="Z0q-kN-Wsf" secondAttribute="centerX" id="5Qa-Q0-Obp"/>
+                            <constraint firstItem="F5j-Lg-aIB" firstAttribute="leading" secondItem="Z0q-kN-Wsf" secondAttribute="leadingMargin" constant="36" id="6PZ-up-emS"/>
+                            <constraint firstItem="IdT-uT-I8A" firstAttribute="leading" secondItem="Z0q-kN-Wsf" secondAttribute="leadingMargin" constant="19" id="ApK-vh-uRF"/>
+                            <constraint firstItem="F5j-Lg-aIB" firstAttribute="top" secondItem="IdT-uT-I8A" secondAttribute="bottom" constant="38" id="BVz-j7-hfx"/>
                             <constraint firstItem="F5j-Lg-aIB" firstAttribute="centerX" secondItem="Z0q-kN-Wsf" secondAttribute="centerX" id="ELg-fU-PMq"/>
+                            <constraint firstItem="IdT-uT-I8A" firstAttribute="top" secondItem="HtJ-Jy-BZD" secondAttribute="bottom" constant="77" id="d9p-G5-OMk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile" id="GRe-Mj-L9F"/>
                     <connections>
+                        <outlet property="imageFromWeb" destination="Tsn-6C-hOs" id="Syf-zE-OEm"/>
                         <outlet property="scrollView" destination="IdT-uT-I8A" id="ILd-8O-NQu"/>
                         <segue destination="Lg2-yt-GHd" kind="push" identifier="editProfile" id="ipK-54-FXD"/>
                     </connections>

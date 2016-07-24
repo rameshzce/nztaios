@@ -8,10 +8,23 @@
 
 import UIKit
 
+func getDocumentsURL() -> NSURL {
+    let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+    return documentsURL
+}
+
+func fileInDocumentsDirectory(filename: String) -> String {
+    
+    let fileURL = getDocumentsURL().URLByAppendingPathComponent(filename)
+    return fileURL.path!
+    
+}
+
 class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let prefs = NSUserDefaults.standardUserDefaults()
     
+    @IBOutlet var imageFromWeb: UIImageView!
     @IBOutlet var scrollView: UIScrollView!
     var imageView = UIImageView()
     
@@ -25,23 +38,89 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
         scrollView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
-        
+        //print(image)
         
         UIGraphicsEndImageContext()
         
+        
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         
-        let alert = UIAlertController(title: "image saved", message: "your image has been saved", preferredStyle: UIAlertControllerStyle.Alert)
+        // Define the specific path, image name
+        let myImageName = "image.png"
+        let imagePath = fileInDocumentsDirectory(myImageName)
+        
+        if image != nil {
+            saveImage(image, path: imagePath)
+            print("image saved to \(imagePath)")
+        } else { print("some error message") }
+        
+        if let loadedImage = loadImageFromPath(imagePath) {
+            print(" Loaded Image: \(loadedImage)")
+        } else { print("some error message 2") }
+        
+        
+        let alert = UIAlertController(title: "image saved \(image)", message: "your image has been saved", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    func saveImage (image: UIImage, path: String ) -> Bool{
+        
+        let pngImageData = UIImagePNGRepresentation(image)
+        //let jpgImageData = UIImageJPEGRepresentation(image, 1.0)   // if you want to save as JPEG
+        let result = pngImageData!.writeToFile(path, atomically: true)
+        
+        return result
+        
+    }
+    
+    func loadImageFromPath(path: String) -> UIImage? {
+        
+        let image = UIImage(contentsOfFile: path)
+        
+        if image == nil {
+            
+            print("missing image at: \(path)")
+        }
+        print("Loading image from path: \(path)") // this is just for you to see the path in case you want to go to the directory, using Finder.
+        return image
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scrollView.delegate = self
+        
+        self.imageFromWeb.image = UIImage(contentsOfFile: "/var/mobile/Containers/Data/Application/10C6D07A-29F4-43B0-922F-6E6F1EA2F68E/Documents/image.png")
+        
+        // download image from web
+        /*let url = NSURL(string: "http://sdctbheemili.org/ios/images/event_name_image2.jpg")
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {
+            (data, response, error) -> Void in
+            
+            if error != nil {
+                print("error=\(error)")
+                return
+            } else {
+                
+                dispatch_async(dispatch_get_main_queue(),{ () -> Void in
+                    if let image = UIImage(data: data!){
+                        self.imageFromWeb.image = image
+                    }
+                });
+                
+            }
+            
+            
+        }
+        
+        task.resume()*/
+        
+ 
         
         
         imageView.frame = CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height)
