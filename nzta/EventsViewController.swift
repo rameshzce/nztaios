@@ -12,6 +12,8 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
     
     let prefs = NSUserDefaults.standardUserDefaults()
     
+    var selectedIndex = -1
+    
     let menuTransitionManager = MenuTransitionManager()
     
     var mainViewcolor = "#ff218e"
@@ -113,6 +115,8 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
         cell.mainBg.backgroundColor = hexStringToUIColor(mainBgcolor)
         cell.leftSubBg.backgroundColor = hexStringToUIColor(subBgColor)
         cell.rightSubBg.backgroundColor = hexStringToUIColor(subBgColor)
+        
+        
  
         return cell
     }
@@ -193,6 +197,25 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
             
         }
     }*/
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if(selectedIndex == indexPath.row) {
+            return UITableViewAutomaticDimension;
+        } else {
+            return 80;
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if(selectedIndex == indexPath.row) {
+            selectedIndex = -1
+        } else {
+            selectedIndex = indexPath.row
+        }
+        tableView.beginUpdates()
+        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic )
+        tableView.endUpdates()
+    }
     
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
