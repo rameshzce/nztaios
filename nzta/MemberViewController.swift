@@ -11,10 +11,10 @@ import UIKit
 class MemberViewController: UITableViewController{
     let prefs = NSUserDefaults.standardUserDefaults()
     
-    var titles = ["Upcoming Events", "Existing Events", "Go Green/NZ Blood", "Invite a Friend", "Helping"]
-    var titlesBig = ["2016", "2015", "Others", "Friend", "Hands!"]
-    var images = ["upcoming_events.png", "existing_events.png", "go_green.png", "invite_friend.png", "hands.png"]
-    var bgColors = ["#ff218e", "#ffd428", "#10d295", "#039cfd", "#b21b0f"]
+    var titles = ["Upcoming Events", "Existing Events", "Go Green/NZ Blood", "Invite a Friend", "Helping", "All"]
+    var titlesBig = ["2016", "2015", "Others", "Friend", "Hands!", "Messages"]
+    var images = ["upcoming_events.png", "existing_events.png", "go_green.png", "invite_friend.png", "hands.png", "hands.png"]
+    var bgColors = ["#ff218e", "#ffd428", "#10d295", "#039cfd", "#b21b0f", "#FD5F22"]
     
     var screenWidth: CGFloat {
         if UIInterfaceOrientationIsPortrait(screenOrientation) {
@@ -70,7 +70,7 @@ class MemberViewController: UITableViewController{
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 6
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -140,6 +140,9 @@ class MemberViewController: UITableViewController{
                 break
             case 4:
                 self.performSegueWithIdentifier("events", sender: self)
+                break
+            case 5:
+                self.performSegueWithIdentifier("messages", sender: self)
                 break
             default:
                 break

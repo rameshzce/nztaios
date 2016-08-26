@@ -646,6 +646,7 @@ and its our family fun</string>
                         <segue destination="3lA-b0-SRs" kind="push" identifier="events" id="xPk-vA-a2a"/>
                         <segue destination="uOV-us-5lA" kind="push" identifier="inviteFriend" id="lSg-GZ-zJZ"/>
                         <segue destination="Nuj-V6-Geo" kind="push" identifier="existingEvents" id="0o9-gl-Z1m"/>
+                        <segue destination="zMa-SH-c2C" kind="push" identifier="messages" id="dVn-UW-9EH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZj-Wm-ut4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1453,6 +1454,35 @@ all</string>
             </objects>
             <point key="canvasLocation" x="1068" y="-356"/>
         </scene>
+        <!--Messages View Controller-->
+        <scene sceneID="z9D-Os-ydG">
+            <objects>
+                <tableViewController id="zMa-SH-c2C" userLabel="Messages View Controller" customClass="MessagesTableViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1cK-r5-yW1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uua-aR-X6H" customClass="MessagesViewCell" customModule="nzta" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uua-aR-X6H" id="GB9-ub-quJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zMa-SH-c2C" id="fqM-CF-8lO"/>
+                            <outlet property="delegate" destination="zMa-SH-c2C" id="Ijb-RC-xPS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hLE-vM-ZtW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yjJ-ZW-Rnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1447" y="-356"/>
+        </scene>
         <!--AV Player View Controller-->
         <scene sceneID="IbD-BO-lQi">
             <objects>
@@ -1722,7 +1752,7 @@ all</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yBT-CE-kO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864" y="-442"/>
+            <point key="canvasLocation" x="1864" y="-356"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="Twe-BO-XJV">

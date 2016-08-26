@@ -35,6 +35,8 @@
 		755DD5581D0206AD009B6FE4 /* ImageDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DD5571D0206AD009B6FE4 /* ImageDisplayViewController.swift */; };
 		756955841D0BEC3400B17CAB /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756955831D0BEC3400B17CAB /* SSRadioButtonsController.swift */; };
 		756955861D0BEE7500B17CAB /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756955851D0BEE7500B17CAB /* SSRadioButton.swift */; };
+		7570CE211D7107FC003359D8 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7570CE201D7107FC003359D8 /* MessagesTableViewController.swift */; };
+		7570CE231D710840003359D8 /* MessagesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7570CE221D710840003359D8 /* MessagesViewCell.swift */; };
 		7588F00D1D1455490011031A /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7588F00C1D1455490011031A /* EditProfileViewController.swift */; };
 		7591A1241D130E96001A615F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7591A1231D130E96001A615F /* Helper.swift */; };
 		75A3F5401CF12CDE0033E70A /* PhotoGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */; };
@@ -96,6 +98,8 @@
 		755E529D1CF6997500DBE1C4 /* nzta__-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nzta__-Bridging-Header.h"; sourceTree = "<group>"; };
 		756955831D0BEC3400B17CAB /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		756955851D0BEE7500B17CAB /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
+		7570CE201D7107FC003359D8 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
+		7570CE221D710840003359D8 /* MessagesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewCell.swift; sourceTree = "<group>"; };
 		7588F00C1D1455490011031A /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		7591A1231D130E96001A615F /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewCell.swift; sourceTree = "<group>"; };
@@ -233,6 +237,8 @@
 				75A790911D1ECB1400EE0616 /* VideoViewController.swift */,
 				75A790931D1ECB7300EE0616 /* VideoViewCell.swift */,
 				75061D111D21FF6100DFD577 /* SendMessageViewController.swift */,
+				7570CE201D7107FC003359D8 /* MessagesTableViewController.swift */,
+				7570CE221D710840003359D8 /* MessagesViewCell.swift */,
 			);
 			path = nzta;
 			sourceTree = "<group>";
@@ -418,6 +424,7 @@
 				75D387481D0B235F00314052 /* SponsorsViewController.swift in Sources */,
 				753585051CFACAD7000C04CA /* ExistingEventsViewController.swift in Sources */,
 				75B622E61CF04ABD00493F98 /* ViewController.swift in Sources */,
+				7570CE231D710840003359D8 /* MessagesViewCell.swift in Sources */,
 				751E412F1CF451F2001A8BD5 /* SubscriptionViewController.swift in Sources */,
 				75B622FB1CF0630100493F98 /* MemberViewCell.swift in Sources */,
 				75FEE88B1D01CD5300814F82 /* iCarousel.m in Sources */,
@@ -431,6 +438,7 @@
 				751E41311CF4620B001A8BD5 /* ProfileViewController.swift in Sources */,
 				75B622E41CF04ABD00493F98 /* AppDelegate.swift in Sources */,
 				75C79B501D150158005BBC49 /* WalkthroughPageViewController.swift in Sources */,
+				7570CE211D7107FC003359D8 /* MessagesTableViewController.swift in Sources */,
 				75B622FD1CF076E400493F98 /* EventsViewController.swift in Sources */,
 				753F920B1D0A6E4300D53053 /* VideoGalleryViewCell.swift in Sources */,
 				752EB26C1D0BAEDC00799DFE /* Common.swift in Sources */,
