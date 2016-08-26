@@ -20,6 +20,18 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
     var mainBgcolor = "#9D1457"
     var subBgColor = "#630131"
     
+    var screenHeight: CGFloat {
+        if UIInterfaceOrientationIsPortrait(screenOrientation) {
+            return UIScreen.mainScreen().bounds.size.height
+        } else {
+            return UIScreen.mainScreen().bounds.size.width
+        }
+    }
+    
+    var screenOrientation: UIInterfaceOrientation {
+        return UIApplication.sharedApplication().statusBarOrientation
+    }
+    
     var events:[(name: String, address: String)] = [
         ("Sankranti", "Rangoli competition & kite festival on 17-1-2016"),
         ("Ugadi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
@@ -92,11 +104,11 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
         cell.nameLabel.text = event.name
         cell.addressLabel.text = event.address
         
-        cell.photoGalleryBtn.tag = indexPath.row
-        cell.photoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction), forControlEvents: .TouchUpInside)
+        //cell.photoGalleryBtn.tag = indexPath.row
+        //cell.photoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction), forControlEvents: .TouchUpInside)
         
-        cell.videoGalleryBtn.tag = indexPath.row
-        cell.videoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction2), forControlEvents: .TouchUpInside)
+        //cell.videoGalleryBtn.tag = indexPath.row
+        //cell.videoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction2), forControlEvents: .TouchUpInside)
         
         if (prefs.stringForKey("eventType") == "Upcoming Events"){
             self.mainBgcolor = "#9D1457"
@@ -113,8 +125,8 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
         }
         
         cell.mainBg.backgroundColor = hexStringToUIColor(mainBgcolor)
-        cell.leftSubBg.backgroundColor = hexStringToUIColor(subBgColor)
-        cell.rightSubBg.backgroundColor = hexStringToUIColor(subBgColor)
+        //cell.leftSubBg.backgroundColor = hexStringToUIColor(subBgColor)
+        //cell.rightSubBg.backgroundColor = hexStringToUIColor(subBgColor)
         
         
  
@@ -202,7 +214,9 @@ class EventsViewController: UITableViewController, MenuTransitionManagerDelegate
         if(selectedIndex == indexPath.row) {
             return UITableViewAutomaticDimension;
         } else {
-            return 80;
+            //return 40;
+            let height = (screenHeight / 4)
+            return height
         }
     }
     

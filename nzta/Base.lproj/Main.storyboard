@@ -61,8 +61,6 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -887,109 +885,45 @@ and its our family fun</string>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cws-Pb-vpl" userLabel="View main bg">
                                             <rect key="frame" x="8" y="9" width="304" height="101"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFE-dW-jWN">
+                                                    <rect key="frame" x="166" y="55" width="114" height="38"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" red="0.53725490196078429" green="0.0" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUn-EL-P2y" userLabel="View left sub bg">
-                                            <rect key="frame" x="8" y="80" width="150" height="30"/>
-                                            <color key="backgroundColor" red="0.30588235294117649" green="0.0" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-gg-tXi" userLabel="View right sub bg">
-                                            <rect key="frame" x="162" y="80" width="150" height="30"/>
-                                            <color key="backgroundColor" red="0.30588235294117649" green="0.0" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-4j-B2V">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-4j-B2V">
                                             <rect key="frame" x="15" y="16" width="290" height="33"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGQ-rN-dYh">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGQ-rN-dYh">
                                             <rect key="frame" x="15" y="51" width="290" height="22"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="16"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-icon-30" translatesAutoresizingMaskIntoConstraints="NO" id="ee5-IP-rl0">
-                                            <rect key="frame" x="17" y="82" width="25" height="25"/>
-                                        </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="254" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt5-M0-AfX">
-                                            <rect key="frame" x="55" y="82" width="92" height="26"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="26" id="nLr-7T-1c6"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="16"/>
-                                            <state key="normal" title="Photo Gallery">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="logAction:" destination="3lA-b0-SRs" eventType="touchUpInside" id="2HX-Gl-5E6"/>
-                                                <segue destination="Gs7-dE-Ygq" kind="push" identifier="photoGallery" id="sVH-YN-csd"/>
-                                            </connections>
-                                        </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="256" verticalHuggingPriority="251" image="video-icon-30" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-gP-XMA">
-                                            <rect key="frame" x="171" y="83" width="25" height="20"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="25" id="N0s-Xo-waa"/>
-                                            </constraints>
-                                        </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cae-IS-oNi">
-                                            <rect key="frame" x="208" y="78" width="98" height="34"/>
-                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="16"/>
-                                            <state key="normal" title="Video Gallery">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="logAction2:" destination="3lA-b0-SRs" eventType="touchUpInside" id="n15-bi-VKt"/>
-                                                <segue destination="ozl-eM-x71" kind="push" identifier="videoGallery" id="KZU-gg-iPG"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="2fh-4j-B2V" firstAttribute="leading" secondItem="47D-U6-Aez" secondAttribute="leadingMargin" constant="7" id="0qO-Wc-xWn"/>
-                                        <constraint firstItem="ee5-IP-rl0" firstAttribute="centerY" secondItem="Mt5-M0-AfX" secondAttribute="centerY" constant="-0.5" id="8dB-c3-UEi"/>
                                         <constraint firstItem="cws-Pb-vpl" firstAttribute="leading" secondItem="47D-U6-Aez" secondAttribute="leadingMargin" id="AWb-lz-T1l"/>
-                                        <constraint firstItem="cae-IS-oNi" firstAttribute="leading" secondItem="2qH-gP-XMA" secondAttribute="trailing" constant="12" id="BN3-WS-Fwx"/>
                                         <constraint firstItem="cws-Pb-vpl" firstAttribute="top" secondItem="47D-U6-Aez" secondAttribute="topMargin" constant="-11" id="Biv-1v-bYV"/>
-                                        <constraint firstItem="cws-Pb-vpl" firstAttribute="leading" secondItem="RUn-EL-P2y" secondAttribute="leading" id="EOj-gl-Dht"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="cae-IS-oNi" secondAttribute="trailing" constant="6" id="He2-L0-P1o"/>
-                                        <constraint firstItem="cws-Pb-vpl" firstAttribute="bottom" secondItem="RUn-EL-P2y" secondAttribute="bottom" id="K3l-y2-IFx"/>
-                                        <constraint firstItem="ee5-IP-rl0" firstAttribute="centerY" secondItem="cae-IS-oNi" secondAttribute="centerY" constant="-0.5" id="KWm-8g-TeV"/>
-                                        <constraint firstItem="Mt5-M0-AfX" firstAttribute="top" secondItem="YGQ-rN-dYh" secondAttribute="bottom" constant="9" id="Khz-Oa-EDu"/>
                                         <constraint firstItem="2fh-4j-B2V" firstAttribute="trailing" secondItem="YGQ-rN-dYh" secondAttribute="trailing" id="OoZ-4e-U4F"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="cws-Pb-vpl" secondAttribute="bottom" constant="-9" id="RAB-cI-XuI"/>
-                                        <constraint firstItem="2qH-gP-XMA" firstAttribute="centerY" secondItem="Jfb-gg-tXi" secondAttribute="centerY" constant="-2" id="VpM-qa-sYs"/>
                                         <constraint firstItem="2fh-4j-B2V" firstAttribute="top" secondItem="47D-U6-Aez" secondAttribute="topMargin" constant="-4" id="Xdy-m2-cEn"/>
                                         <constraint firstItem="YGQ-rN-dYh" firstAttribute="top" secondItem="2fh-4j-B2V" secondAttribute="bottom" constant="2" id="Z6X-ih-aBg"/>
                                         <constraint firstItem="cws-Pb-vpl" firstAttribute="centerX" secondItem="2fh-4j-B2V" secondAttribute="centerX" id="awN-jB-2RY"/>
-                                        <constraint firstItem="ee5-IP-rl0" firstAttribute="top" secondItem="YGQ-rN-dYh" secondAttribute="bottom" constant="9" id="bbf-fZ-brO"/>
-                                        <constraint firstItem="Jfb-gg-tXi" firstAttribute="bottom" secondItem="RUn-EL-P2y" secondAttribute="bottom" id="dqd-jH-0Vh"/>
-                                        <constraint firstItem="Jfb-gg-tXi" firstAttribute="leading" secondItem="RUn-EL-P2y" secondAttribute="trailing" constant="4" id="ejm-eg-77o"/>
-                                        <constraint firstItem="Jfb-gg-tXi" firstAttribute="top" secondItem="ee5-IP-rl0" secondAttribute="top" constant="-2" id="hB5-8V-c8T"/>
                                         <constraint firstItem="2fh-4j-B2V" firstAttribute="centerX" secondItem="47D-U6-Aez" secondAttribute="centerX" id="hY2-Pw-Yvt"/>
-                                        <constraint firstItem="RUn-EL-P2y" firstAttribute="top" secondItem="ee5-IP-rl0" secondAttribute="top" constant="-2" id="iGC-HI-VlM"/>
-                                        <constraint firstItem="YGQ-rN-dYh" firstAttribute="trailing" secondItem="cae-IS-oNi" secondAttribute="trailing" constant="-1" id="iy7-Yv-Qmr"/>
-                                        <constraint firstItem="2qH-gP-XMA" firstAttribute="top" secondItem="YGQ-rN-dYh" secondAttribute="bottom" constant="10" id="m87-gy-asA"/>
-                                        <constraint firstItem="RUn-EL-P2y" firstAttribute="centerY" secondItem="Mt5-M0-AfX" secondAttribute="centerY" id="mHt-xL-dYF"/>
-                                        <constraint firstItem="Jfb-gg-tXi" firstAttribute="trailing" secondItem="cws-Pb-vpl" secondAttribute="trailing" id="mRF-UY-6Zp"/>
-                                        <constraint firstItem="cws-Pb-vpl" firstAttribute="leading" secondItem="RUn-EL-P2y" secondAttribute="leading" id="mWF-Jw-xIy"/>
-                                        <constraint firstItem="Mt5-M0-AfX" firstAttribute="leading" secondItem="ee5-IP-rl0" secondAttribute="trailing" constant="13" id="n7f-w7-kPH"/>
-                                        <constraint firstItem="Mt5-M0-AfX" firstAttribute="leading" secondItem="47D-U6-Aez" secondAttribute="leading" constant="55" id="oJZ-Eh-olb"/>
-                                        <constraint firstItem="Jfb-gg-tXi" firstAttribute="leading" secondItem="Mt5-M0-AfX" secondAttribute="trailing" constant="15" id="psJ-10-7Qn"/>
-                                        <constraint firstItem="Jfb-gg-tXi" firstAttribute="leading" secondItem="Mt5-M0-AfX" secondAttribute="trailing" constant="15" id="uAW-Td-ylA"/>
-                                        <constraint firstItem="YGQ-rN-dYh" firstAttribute="leading" secondItem="ee5-IP-rl0" secondAttribute="leading" constant="-2" id="vbh-7u-b66"/>
-                                        <constraint firstItem="2qH-gP-XMA" firstAttribute="leading" secondItem="RUn-EL-P2y" secondAttribute="trailing" constant="13" id="xBI-wE-K3x"/>
                                         <constraint firstItem="2fh-4j-B2V" firstAttribute="leading" secondItem="YGQ-rN-dYh" secondAttribute="leading" id="z9V-Pg-tcX"/>
+                                        <constraint firstItem="YGQ-rN-dYh" firstAttribute="bottom" secondItem="cws-Pb-vpl" secondAttribute="bottom" id="zCi-Fs-LBb"/>
                                     </constraints>
                                     <edgeInsets key="layoutMargins" top="20" left="8" bottom="8" right="8"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="YGQ-rN-dYh" id="EJt-Aq-dl2"/>
-                                    <outlet property="leftSubBg" destination="RUn-EL-P2y" id="Hv8-y3-how"/>
                                     <outlet property="mainBg" destination="cws-Pb-vpl" id="xdj-To-oUz"/>
                                     <outlet property="nameLabel" destination="2fh-4j-B2V" id="pFa-CG-fB8"/>
-                                    <outlet property="photoGalleryBtn" destination="Mt5-M0-AfX" id="xQz-jJ-bvr"/>
-                                    <outlet property="rightSubBg" destination="Jfb-gg-tXi" id="jOg-jb-T5H"/>
-                                    <outlet property="videoGalleryBtn" destination="cae-IS-oNi" id="qoP-Mp-Mb0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1940,19 +1874,17 @@ all</string>
         </scene>
     </scenes>
     <resources>
-        <image name="camera-icon-30" width="30" height="30"/>
         <image name="dn_arrow_2" width="212" height="180"/>
         <image name="edit" width="36" height="36"/>
         <image name="logo3" width="100" height="100"/>
         <image name="menu" width="22" height="22"/>
         <image name="nz_bg5" width="414" height="736"/>
         <image name="play_btn" width="50" height="50"/>
-        <image name="video-icon-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="I58-nj-Cl3"/>
         <segue reference="0o9-gl-Z1m"/>
-        <segue reference="6ew-ZD-cM0"/>
+        <segue reference="xPk-vA-a2a"/>
         <segue reference="ZWk-WU-XrL"/>
         <segue reference="ipK-54-FXD"/>
     </inferredMetricsTieBreakers>
