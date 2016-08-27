@@ -61,8 +61,6 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -874,65 +872,53 @@ and its our family fun</string>
         <scene sceneID="lzG-nn-QBH">
             <objects>
                 <tableViewController id="3lA-b0-SRs" userLabel="Events View Controller" customClass="EventsViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" id="hL6-y2-grQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="XY9-sJ-AHD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="110" id="bxq-Vh-7eT" customClass="EventsViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="22" width="320" height="110"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="250" id="eVb-08-IA9" customClass="EventsViewCell" customModule="nzta" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="22" width="320" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bxq-Vh-7eT" id="47D-U6-Aez">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eVb-08-IA9" id="OuO-Wb-eba">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="249"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cws-Pb-vpl" userLabel="View main bg">
-                                            <rect key="frame" x="8" y="9" width="304" height="101"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFE-dW-jWN">
-                                                    <rect key="frame" x="166" y="55" width="114" height="38"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.53725490196078429" green="0.0" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-4j-B2V">
-                                            <rect key="frame" x="15" y="16" width="290" height="33"/>
-                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fwg-XP-fnf">
+                                            <rect key="frame" x="0.0" y="37" width="320" height="212"/>
+                                            <date key="date" timeIntervalSinceReferenceDate="450113790.65426201">
+                                                <!--2015-04-07 15:36:30 +0000-->
+                                            </date>
+                                        </datePicker>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJG-zJ-OcP">
+                                            <rect key="frame" x="9" y="8" width="34" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGQ-rN-dYh">
-                                            <rect key="frame" x="15" y="51" width="290" height="22"/>
-                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="16"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arun" translatesAutoresizingMaskIntoConstraints="NO" id="G1s-EG-6fN">
+                                            <rect key="frame" x="0.0" y="197" width="600" height="44"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="2fh-4j-B2V" firstAttribute="leading" secondItem="47D-U6-Aez" secondAttribute="leadingMargin" constant="7" id="0qO-Wc-xWn"/>
-                                        <constraint firstItem="cws-Pb-vpl" firstAttribute="leading" secondItem="47D-U6-Aez" secondAttribute="leadingMargin" id="AWb-lz-T1l"/>
-                                        <constraint firstItem="cws-Pb-vpl" firstAttribute="top" secondItem="47D-U6-Aez" secondAttribute="topMargin" constant="-11" id="Biv-1v-bYV"/>
-                                        <constraint firstItem="2fh-4j-B2V" firstAttribute="trailing" secondItem="YGQ-rN-dYh" secondAttribute="trailing" id="OoZ-4e-U4F"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="cws-Pb-vpl" secondAttribute="bottom" constant="-9" id="RAB-cI-XuI"/>
-                                        <constraint firstItem="2fh-4j-B2V" firstAttribute="top" secondItem="47D-U6-Aez" secondAttribute="topMargin" constant="-4" id="Xdy-m2-cEn"/>
-                                        <constraint firstItem="YGQ-rN-dYh" firstAttribute="top" secondItem="2fh-4j-B2V" secondAttribute="bottom" constant="2" id="Z6X-ih-aBg"/>
-                                        <constraint firstItem="cws-Pb-vpl" firstAttribute="centerX" secondItem="2fh-4j-B2V" secondAttribute="centerX" id="awN-jB-2RY"/>
-                                        <constraint firstItem="2fh-4j-B2V" firstAttribute="centerX" secondItem="47D-U6-Aez" secondAttribute="centerX" id="hY2-Pw-Yvt"/>
-                                        <constraint firstItem="2fh-4j-B2V" firstAttribute="leading" secondItem="YGQ-rN-dYh" secondAttribute="leading" id="z9V-Pg-tcX"/>
-                                        <constraint firstItem="YGQ-rN-dYh" firstAttribute="bottom" secondItem="cws-Pb-vpl" secondAttribute="bottom" id="zCi-Fs-LBb"/>
+                                        <constraint firstItem="Fwg-XP-fnf" firstAttribute="leading" secondItem="OuO-Wb-eba" secondAttribute="leadingMargin" constant="-8" id="0Ho-Ce-0JI"/>
+                                        <constraint firstItem="DJG-zJ-OcP" firstAttribute="top" secondItem="OuO-Wb-eba" secondAttribute="topMargin" id="2c4-JR-eRS"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Fwg-XP-fnf" secondAttribute="bottom" constant="-7.5" id="crg-Cg-DGN"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Fwg-XP-fnf" secondAttribute="trailing" constant="-8" id="kc5-o9-82h"/>
+                                        <constraint firstItem="Fwg-XP-fnf" firstAttribute="top" secondItem="DJG-zJ-OcP" secondAttribute="bottom" constant="8" id="oRg-L6-Lqe"/>
+                                        <constraint firstItem="DJG-zJ-OcP" firstAttribute="leading" secondItem="OuO-Wb-eba" secondAttribute="leadingMargin" constant="1" id="xdV-B1-llb"/>
                                     </constraints>
-                                    <edgeInsets key="layoutMargins" top="20" left="8" bottom="8" right="8"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="addressLabel" destination="YGQ-rN-dYh" id="EJt-Aq-dl2"/>
-                                    <outlet property="mainBg" destination="cws-Pb-vpl" id="xdj-To-oUz"/>
-                                    <outlet property="nameLabel" destination="2fh-4j-B2V" id="pFa-CG-fB8"/>
+                                    <outlet property="datePicker" destination="Fwg-XP-fnf" id="bto-kV-IUp"/>
+                                    <outlet property="imgr" destination="G1s-EG-6fN" id="Je0-B1-OHf"/>
+                                    <outlet property="titleLabel" destination="DJG-zJ-OcP" id="JIG-g8-9kd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="3lA-b0-SRs" id="1Hm-mC-6Nf"/>
-                            <outlet property="delegate" destination="3lA-b0-SRs" id="2Hk-xz-gSv"/>
+                            <outlet property="dataSource" destination="3lA-b0-SRs" id="CM1-lh-gkB"/>
+                            <outlet property="delegate" destination="3lA-b0-SRs" id="CnI-u3-6zP"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Events" id="ysV-yI-hKP"/>
@@ -1944,6 +1930,7 @@ all</string>
         </scene>
     </scenes>
     <resources>
+        <image name="arun" width="218" height="231"/>
         <image name="dn_arrow_2" width="212" height="180"/>
         <image name="edit" width="36" height="36"/>
         <image name="logo3" width="100" height="100"/>

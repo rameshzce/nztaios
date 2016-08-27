@@ -52,6 +52,8 @@
 		75B622FB1CF0630100493F98 /* MemberViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B622FA1CF0630100493F98 /* MemberViewCell.swift */; };
 		75B622FD1CF076E400493F98 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B622FC1CF076E400493F98 /* EventsViewController.swift */; };
 		75B622FF1CF0773100493F98 /* EventsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B622FE1CF0773100493F98 /* EventsViewCell.swift */; };
+		75BBAD591D7255AE007F6A1B /* EventsViewControllerCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BBAD581D7255AE007F6A1B /* EventsViewControllerCopy.swift */; };
+		75BBAD5B1D7255E4007F6A1B /* EventsViewCellCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BBAD5A1D7255E4007F6A1B /* EventsViewCellCopy.swift */; };
 		75C79B4E1D14FF09005BBC49 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C79B4D1D14FF09005BBC49 /* WalkthroughContentViewController.swift */; };
 		75C79B501D150158005BBC49 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C79B4F1D150158005BBC49 /* WalkthroughPageViewController.swift */; };
 		75CF433A1CF99FFA005C6BCA /* InviteFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF43391CF99FFA005C6BCA /* InviteFriendViewController.swift */; };
@@ -117,6 +119,8 @@
 		75B622FA1CF0630100493F98 /* MemberViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewCell.swift; sourceTree = "<group>"; };
 		75B622FC1CF076E400493F98 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		75B622FE1CF0773100493F98 /* EventsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewCell.swift; sourceTree = "<group>"; };
+		75BBAD581D7255AE007F6A1B /* EventsViewControllerCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewControllerCopy.swift; sourceTree = "<group>"; };
+		75BBAD5A1D7255E4007F6A1B /* EventsViewCellCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewCellCopy.swift; sourceTree = "<group>"; };
 		75C79B4D1D14FF09005BBC49 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		75C79B4F1D150158005BBC49 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		75CF43391CF99FFA005C6BCA /* InviteFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendViewController.swift; sourceTree = "<group>"; };
@@ -200,8 +204,10 @@
 				75B622F81CF05DE000493F98 /* MemberViewController.swift */,
 				753F92041D0A5D7000D53053 /* Trip.swift */,
 				75B622FC1CF076E400493F98 /* EventsViewController.swift */,
+				75BBAD581D7255AE007F6A1B /* EventsViewControllerCopy.swift */,
 				75B622FA1CF0630100493F98 /* MemberViewCell.swift */,
 				75B622FE1CF0773100493F98 /* EventsViewCell.swift */,
+				75BBAD5A1D7255E4007F6A1B /* EventsViewCellCopy.swift */,
 				75446F501CF747A300C78F29 /* GoogleSignIn.bundle */,
 				75446F511CF747A300C78F29 /* GoogleSignIn.framework */,
 				75D0BDE51CF17AB8009E030F /* VideoGalleryViewController.swift */,
@@ -440,9 +446,11 @@
 				75C79B501D150158005BBC49 /* WalkthroughPageViewController.swift in Sources */,
 				7570CE211D7107FC003359D8 /* MessagesTableViewController.swift in Sources */,
 				75B622FD1CF076E400493F98 /* EventsViewController.swift in Sources */,
+				75BBAD5B1D7255E4007F6A1B /* EventsViewCellCopy.swift in Sources */,
 				753F920B1D0A6E4300D53053 /* VideoGalleryViewCell.swift in Sources */,
 				752EB26C1D0BAEDC00799DFE /* Common.swift in Sources */,
 				75D3874A1D0B23AC00314052 /* SponsorsViewCell.swift in Sources */,
+				75BBAD591D7255AE007F6A1B /* EventsViewControllerCopy.swift in Sources */,
 				756955861D0BEE7500B17CAB /* SSRadioButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

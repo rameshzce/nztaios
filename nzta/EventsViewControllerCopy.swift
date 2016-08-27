@@ -8,73 +8,7 @@
 
 import UIKit
 
-class EventsViewController: UITableViewController{
-    var selectedIndexPath : NSIndexPath?
-    
-    var bgs = ["thumb_event_name_image1", "thumb_event_name_image2"]
-    
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EventsViewCell
-        cell.titleLabel.text = "Test Title"
-        cell.imgr.image = UIImage(named: bgs[indexPath.row])
-        return cell
-    }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let previousIndexPath = selectedIndexPath
-        if indexPath == selectedIndexPath {
-            selectedIndexPath = nil
-        } else {
-            selectedIndexPath = indexPath
-        }
-        
-        var indexPaths : Array<NSIndexPath> = []
-        if let previous = previousIndexPath {
-            indexPaths += [previous]
-        }
-        if let current = selectedIndexPath {
-            indexPaths += [current]
-        }
-        if indexPaths.count > 0 {
-            tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
-        }
-    }
-    
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        (cell as! EventsViewCell).watchFrameChanges()
-    }
-    
-    override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        (cell as! EventsViewCell).ignoreFrameChanges()
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        for cell in tableView.visibleCells as! [EventsViewCell] {
-            cell.ignoreFrameChanges()
-        }
-    }
-    
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath == selectedIndexPath {
-            return EventsViewCell.expandedHeight
-        } else {
-            return EventsViewCell.defaultHeight
-        }
-    }
-    
-    
-}
-
-/*class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDelegate {
+class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDelegate {
     
     let prefs = NSUserDefaults.standardUserDefaults()
     
@@ -163,7 +97,7 @@ class EventsViewController: UITableViewController{
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EventsViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EventsViewCellCopy
         
         // Configure the cell...
         let event = events[indexPath.row]
@@ -376,4 +310,4 @@ class EventsViewController: UITableViewController{
     }
     */
 
-}*/
+}

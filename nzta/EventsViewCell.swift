@@ -9,6 +9,41 @@
 import UIKit
 
 class EventsViewCell: UITableViewCell {
+    var isObserving = false;
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var datePicker: UIDatePicker!
+
+    class var expandedHeight: CGFloat { get { return 250 } }
+    @IBOutlet var imgr: UIImageView!
+    class var defaultHeight: CGFloat  { get { return 44  } }
+
+    func checkHeight() {
+        datePicker.hidden = (frame.size.height < EventsViewCell.expandedHeight)
+        imgr.hidden = (frame.size.height < EventsViewCell.expandedHeight)
+    }
+
+func watchFrameChanges() {
+    if !isObserving {
+        addObserver(self, forKeyPath: "frame", options: [NSKeyValueObservingOptions.New, NSKeyValueObservingOptions.Initial], context: nil)
+        isObserving = true;
+    }
+}
+
+func ignoreFrameChanges() {
+    if isObserving {
+        removeObserver(self, forKeyPath: "frame")
+        isObserving = false;
+    }
+}
+
+override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    if keyPath == "frame" {
+        checkHeight()
+    }
+}
+}
+
+/*class EventsViewCell: UITableViewCell {
     @IBOutlet var mainBg: UIView!
     @IBOutlet var leftSubBg: UIView!
     @IBOutlet var rightSubBg: UIView!
@@ -30,4 +65,4 @@ class EventsViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-}
+}*/
