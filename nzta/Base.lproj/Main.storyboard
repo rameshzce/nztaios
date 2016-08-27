@@ -1472,18 +1472,18 @@ all</string>
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrX-Fa-KLQ" userLabel="View main bg">
-                                            <rect key="frame" x="8" y="9" width="304" height="101"/>
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrX-Fa-KLQ" userLabel="View main bg">
+                                            <rect key="frame" x="8" y="9" width="304" height="44"/>
                                             <color key="backgroundColor" red="0.92156862745098034" green="0.71372549019607845" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1O-2D-jt9">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Name" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1O-2D-jt9">
                                             <rect key="frame" x="15" y="16" width="290" height="30"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIg-6a-3qj">
-                                            <rect key="frame" x="15" y="15" width="290" height="58"/>
+                                            <rect key="frame" x="15" y="15" width="290" height="65"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="16"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -1491,15 +1491,15 @@ all</string>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="lrX-Fa-KLQ" secondAttribute="bottom" constant="-9" id="2Hz-Jc-gBg"/>
-                                        <constraint firstItem="hIg-6a-3qj" firstAttribute="bottom" secondItem="lrX-Fa-KLQ" secondAttribute="bottom" constant="-37" id="7cR-3P-V0G"/>
+                                        <constraint firstItem="hIg-6a-3qj" firstAttribute="bottom" secondItem="lrX-Fa-KLQ" secondAttribute="bottom" constant="-30" id="7cR-3P-V0G"/>
                                         <constraint firstItem="I1O-2D-jt9" firstAttribute="trailing" secondItem="hIg-6a-3qj" secondAttribute="trailing" id="BsP-gk-qM6"/>
                                         <constraint firstItem="lrX-Fa-KLQ" firstAttribute="top" secondItem="csI-Sh-98z" secondAttribute="topMargin" constant="-11" id="Jwz-4l-JEm"/>
                                         <constraint firstItem="lrX-Fa-KLQ" firstAttribute="centerX" secondItem="I1O-2D-jt9" secondAttribute="centerX" id="bF8-5z-g1X"/>
                                         <constraint firstItem="I1O-2D-jt9" firstAttribute="centerX" secondItem="csI-Sh-98z" secondAttribute="centerX" id="blc-sz-b4L"/>
                                         <constraint firstItem="I1O-2D-jt9" firstAttribute="leading" secondItem="hIg-6a-3qj" secondAttribute="leading" id="bu0-Uu-YJy"/>
                                         <constraint firstItem="I1O-2D-jt9" firstAttribute="leading" secondItem="csI-Sh-98z" secondAttribute="leadingMargin" constant="7" id="ckf-0d-iFo"/>
-                                        <constraint firstItem="I1O-2D-jt9" firstAttribute="top" secondItem="csI-Sh-98z" secondAttribute="topMargin" constant="-4" id="eiI-GI-2km"/>
                                         <constraint firstItem="lrX-Fa-KLQ" firstAttribute="leading" secondItem="csI-Sh-98z" secondAttribute="leadingMargin" id="oP9-pX-YIg"/>
+                                        <constraint firstItem="hIg-6a-3qj" firstAttribute="bottom" secondItem="I1O-2D-jt9" secondAttribute="top" id="pWW-j4-t1F"/>
                                         <constraint firstItem="hIg-6a-3qj" firstAttribute="top" secondItem="csI-Sh-98z" secondAttribute="topMargin" constant="-5" id="vHL-jv-vgP"/>
                                     </constraints>
                                     <edgeInsets key="layoutMargins" top="20" left="8" bottom="8" right="8"/>
