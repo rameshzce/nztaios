@@ -44,7 +44,7 @@ class MessagesTableViewController: UITableViewController {
         
         self.title = "Messages"
         
-        tableView.estimatedRowHeight = 110.0
+        tableView.estimatedRowHeight = 100.0
         tableView.rowHeight = UITableViewAutomaticDimension
         //tableView.backgroundColor = hexStringToUIColor(mainViewcolor)
         
