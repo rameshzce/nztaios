@@ -9,6 +9,14 @@
 import UIKit
 
 class MessagesViewCell: UITableViewCell {
+    @IBOutlet var mainBg: UIView!
+    @IBOutlet var leftSubBg: UIView!
+    @IBOutlet var rightSubBg: UIView!
+    //@IBOutlet weak var photoGalleryBtn: UIButton!
+    //@IBOutlet weak var videoGalleryBtn: UIButton!
+    @IBOutlet weak var nameLabel:UILabel!
+    @IBOutlet weak var addressLabel:UILabel!
+    //@IBOutlet weak var descriptionLabel:UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
