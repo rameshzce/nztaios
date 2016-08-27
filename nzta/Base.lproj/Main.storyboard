@@ -1479,13 +1479,13 @@ all</string>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Name" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1O-2D-jt9">
                                             <rect key="frame" x="15" y="80" width="290" height="30"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="16"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.96470588239999999" green="0.2784313725" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIg-6a-3qj">
                                             <rect key="frame" x="15" y="15" width="290" height="70"/>
                                             <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.96470588239999999" green="0.2784313725" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -1504,6 +1504,7 @@ all</string>
                                     </constraints>
                                     <edgeInsets key="layoutMargins" top="20" left="8" bottom="8" right="8"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.27843137254901962" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="addressLabel" destination="hIg-6a-3qj" id="4Gz-Ug-WIs"/>
                                     <outlet property="mainBg" destination="lrX-Fa-KLQ" id="YpD-Tb-bdK"/>
