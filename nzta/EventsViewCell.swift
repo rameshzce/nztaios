@@ -11,14 +11,14 @@ import UIKit
 class EventsViewCell: UITableViewCell {
     var isObserving = false;
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet var titleBg: UIView!
 
+    @IBOutlet var icon: UIImageView!
     class var expandedHeight: CGFloat { get { return 250 } }
     @IBOutlet var imgr: UIImageView!
     class var defaultHeight: CGFloat  { get { return 44  } }
 
     func checkHeight() {
-        datePicker.hidden = (frame.size.height < EventsViewCell.expandedHeight)
         imgr.hidden = (frame.size.height < EventsViewCell.expandedHeight)
     }
 

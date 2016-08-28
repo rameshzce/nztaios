@@ -36,7 +36,8 @@ class EventsViewController: UITableViewController{
         ("X'mas", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner.")
     ]
     
-    var bgs = ["thumb_event_name_image1", "thumb_event_name_image2", "thumb_event_name_image3", "thumb_event_name_image4", "thumb_event_name_image5", "thumb_event_name_image6", "thumb_event_name_image7", "thumb_event_name_image8", "thumb_event_name_image9", "thumb_event_name_image10"]
+    var bgs = ["sankranti", "ugadi", "batukamma", "diwali", "xmas-22", "sankranti", "ugadi", "batukamma", "diwali", "xmas-22"]
+    var icons = ["icon_sankranthi", "icon_ugadi", "icon_batukamma", "icon_diwali", "icon_xmas", "icon_sankranthi", "icon_ugadi", "icon_batukamma", "icon_diwali", "icon_xmas"]
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -52,6 +53,7 @@ class EventsViewController: UITableViewController{
         let event = events[indexPath.row]
         cell.titleLabel.text = event.name
         cell.imgr.image = UIImage(named: bgs[indexPath.row])
+        cell.icon.image = UIImage(named: icons[indexPath.row])
         
         return cell
     }
