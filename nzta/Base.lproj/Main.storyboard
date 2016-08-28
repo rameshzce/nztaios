@@ -917,17 +917,46 @@ and its our family fun</string>
                                                 <constraint firstAttribute="height" constant="120" id="z4f-ae-Y5Y"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UnW-pr-uiW">
-                                            <rect key="frame" x="0.0" y="291" width="320" height="46"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnW-pr-uiW">
+                                            <rect key="frame" x="0.0" y="305" width="320" height="36"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="Vix-ig-4k0">
+                                                    <rect key="frame" x="75" y="3" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="80e-vr-G9f"/>
+                                                        <constraint firstAttribute="width" constant="30" id="Esv-kv-1fo"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video" translatesAutoresizingMaskIntoConstraints="NO" id="E86-Jh-oxT">
+                                                    <rect key="frame" x="215" y="3" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="E6C-NS-mjC"/>
+                                                        <constraint firstAttribute="width" constant="30" id="Jeu-7A-peJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" red="0.71764705880000002" green="0.50196078430000002" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="Vix-ig-4k0" firstAttribute="centerY" secondItem="UnW-pr-uiW" secondAttribute="centerY" id="FAe-lJ-y7W"/>
+                                                <constraint firstAttribute="trailing" secondItem="E86-Jh-oxT" secondAttribute="trailing" constant="75" id="c7d-25-bqz"/>
+                                                <constraint firstItem="E86-Jh-oxT" firstAttribute="centerY" secondItem="Vix-ig-4k0" secondAttribute="centerY" id="g95-Uf-BRa"/>
+                                                <constraint firstItem="Vix-ig-4k0" firstAttribute="leading" secondItem="UnW-pr-uiW" secondAttribute="leading" constant="75" id="kxT-0x-kgg"/>
+                                                <constraint firstAttribute="height" constant="36" id="tBG-al-czF"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstItem="UnW-pr-uiW" firstAttribute="centerX" secondItem="cM9-2h-pzG" secondAttribute="centerX" id="029-dM-eyr"/>
                                         <constraint firstItem="cM9-2h-pzG" firstAttribute="width" secondItem="OuO-Wb-eba" secondAttribute="width" id="ANU-Hi-FU2"/>
+                                        <constraint firstItem="UnW-pr-uiW" firstAttribute="width" secondItem="cM9-2h-pzG" secondAttribute="width" id="AYu-7l-ewN"/>
                                         <constraint firstItem="cM9-2h-pzG" firstAttribute="top" secondItem="OuO-Wb-eba" secondAttribute="topMargin" constant="-8" id="GnL-Zu-5m4"/>
+                                        <constraint firstItem="UnW-pr-uiW" firstAttribute="leading" secondItem="cM9-2h-pzG" secondAttribute="leading" id="Qm7-cn-Scx"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="UnW-pr-uiW" secondAttribute="bottom" id="bdo-8U-eSX"/>
                                         <constraint firstItem="cM9-2h-pzG" firstAttribute="leading" secondItem="OuO-Wb-eba" secondAttribute="leadingMargin" constant="-8" id="iNr-DP-JkF"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="cM9-2h-pzG" secondAttribute="trailing" constant="-8" id="mNj-tR-OzR"/>
+                                        <constraint firstItem="UnW-pr-uiW" firstAttribute="leading" secondItem="cM9-2h-pzG" secondAttribute="trailing" constant="-320" id="w4a-Pg-DV3"/>
+                                        <constraint firstItem="UnW-pr-uiW" firstAttribute="trailing" secondItem="cM9-2h-pzG" secondAttribute="trailing" id="wLU-U4-89M"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -1953,6 +1982,7 @@ all</string>
         </scene>
     </scenes>
     <resources>
+        <image name="camera" width="32" height="32"/>
         <image name="dn_arrow_2" width="212" height="180"/>
         <image name="edit" width="36" height="36"/>
         <image name="logo3" width="100" height="100"/>
@@ -1960,6 +1990,7 @@ all</string>
         <image name="nz_bg5" width="414" height="736"/>
         <image name="play_btn" width="50" height="50"/>
         <image name="sankranti" width="600" height="400"/>
+        <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ZWk-WU-XrL"/>
