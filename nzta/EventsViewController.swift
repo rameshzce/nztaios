@@ -11,20 +11,48 @@ import UIKit
 class EventsViewController: UITableViewController{
     var selectedIndexPath : NSIndexPath?
     
-    var bgs = ["thumb_event_name_image1", "thumb_event_name_image2"]
+    var screenHeight: CGFloat {
+        if UIInterfaceOrientationIsPortrait(screenOrientation) {
+            return UIScreen.mainScreen().bounds.size.height
+        } else {
+            return UIScreen.mainScreen().bounds.size.width
+        }
+    }
+    
+    var screenOrientation: UIInterfaceOrientation {
+        return UIApplication.sharedApplication().statusBarOrientation
+    }
+    
+    var events:[(name: String, address: String)] = [
+        ("Sankranti", "Rangoli competition & kite festival on 17-1-2016"),
+        ("Ugadi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
+        ("Batukamma", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
+        ("Diwali", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed. Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
+        ("X'mas", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner."),
+        ("Sankranti", "Rangoli competition & kite festival on 17-1-2016"),
+        ("Ugadi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
+        ("Batukamma", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
+        ("Diwali", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
+        ("X'mas", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner.")
+    ]
+    
+    var bgs = ["thumb_event_name_image1", "thumb_event_name_image2", "thumb_event_name_image3", "thumb_event_name_image4", "thumb_event_name_image5", "thumb_event_name_image6", "thumb_event_name_image7", "thumb_event_name_image8", "thumb_event_name_image9", "thumb_event_name_image10"]
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return events.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EventsViewCell
-        cell.titleLabel.text = "Test Title"
+        
+        let event = events[indexPath.row]
+        cell.titleLabel.text = event.name
         cell.imgr.image = UIImage(named: bgs[indexPath.row])
+        
         return cell
     }
     
@@ -67,7 +95,9 @@ class EventsViewController: UITableViewController{
         if indexPath == selectedIndexPath {
             return EventsViewCell.expandedHeight
         } else {
-            return EventsViewCell.defaultHeight
+            //return EventsViewCell.defaultHeight
+            let height = (screenHeight / 4) - 15
+            return height
         }
     }
     
