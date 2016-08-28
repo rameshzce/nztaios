@@ -872,22 +872,19 @@ and its our family fun</string>
         <scene sceneID="lzG-nn-QBH">
             <objects>
                 <tableViewController id="3lA-b0-SRs" userLabel="Events View Controller" customClass="EventsViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="346" sectionHeaderHeight="22" sectionFooterHeight="22" id="XY9-sJ-AHD">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="391" sectionHeaderHeight="22" sectionFooterHeight="22" id="XY9-sJ-AHD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.96078431372549022" green="0.0" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="350" id="eVb-08-IA9" customClass="EventsViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="320" height="350"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="391" id="eVb-08-IA9" customClass="EventsViewCell" customModule="nzta" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="320" height="391"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eVb-08-IA9" id="OuO-Wb-eba">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="349"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="390"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sankranti" translatesAutoresizingMaskIntoConstraints="NO" id="G1s-EG-6fN">
-                                            <rect key="frame" x="8" y="150" width="304" height="91"/>
-                                        </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-2h-pzG">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                                             <subviews>
@@ -918,7 +915,7 @@ and its our family fun</string>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnW-pr-uiW">
-                                            <rect key="frame" x="0.0" y="305" width="320" height="36"/>
+                                            <rect key="frame" x="0.0" y="346" width="320" height="36"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="Vix-ig-4k0">
                                                     <rect key="frame" x="75" y="3" width="30" height="30"/>
@@ -944,17 +941,59 @@ and its our family fun</string>
                                                 <constraint firstAttribute="height" constant="36" id="tBG-al-czF"/>
                                             </constraints>
                                         </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sankranti" translatesAutoresizingMaskIntoConstraints="NO" id="G1s-EG-6fN">
+                                            <rect key="frame" x="0.0" y="252" width="320" height="81"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="81" id="H1q-P0-kzS"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9Y-Sb-bih">
+                                            <rect key="frame" x="0.0" y="122" width="320" height="127"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XnZ-RO-B0C">
+                                                    <rect key="frame" x="8" y="22" width="304" height="84"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="304" id="8pq-0L-R92"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="84" id="W78-4z-nAs"/>
+                                                        <constraint firstAttribute="height" constant="84" id="iOU-f8-sEK"/>
+                                                    </constraints>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.98823529409999999" green="0.83921568629999999" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="XnZ-RO-B0C" firstAttribute="centerX" secondItem="u9Y-Sb-bih" secondAttribute="centerX" id="0BY-Be-Ftf"/>
+                                                <constraint firstItem="XnZ-RO-B0C" firstAttribute="top" secondItem="u9Y-Sb-bih" secondAttribute="top" constant="22" id="JEu-9V-ate"/>
+                                                <constraint firstAttribute="height" constant="127" id="sG6-Dt-qHL"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="UnW-pr-uiW" firstAttribute="centerX" secondItem="cM9-2h-pzG" secondAttribute="centerX" id="029-dM-eyr"/>
+                                        <constraint firstItem="G1s-EG-6fN" firstAttribute="width" secondItem="cM9-2h-pzG" secondAttribute="width" id="3W7-q2-WZA"/>
+                                        <constraint firstItem="u9Y-Sb-bih" firstAttribute="width" secondItem="cM9-2h-pzG" secondAttribute="width" id="6lC-S6-Vch"/>
+                                        <constraint firstItem="u9Y-Sb-bih" firstAttribute="trailing" secondItem="cM9-2h-pzG" secondAttribute="trailing" id="87K-IL-gAj"/>
+                                        <constraint firstItem="u9Y-Sb-bih" firstAttribute="leading" secondItem="cM9-2h-pzG" secondAttribute="leading" id="8OZ-eq-Whk"/>
+                                        <constraint firstItem="G1s-EG-6fN" firstAttribute="top" secondItem="cM9-2h-pzG" secondAttribute="bottom" constant="132" id="ABk-bf-aeW"/>
                                         <constraint firstItem="cM9-2h-pzG" firstAttribute="width" secondItem="OuO-Wb-eba" secondAttribute="width" id="ANU-Hi-FU2"/>
                                         <constraint firstItem="UnW-pr-uiW" firstAttribute="width" secondItem="cM9-2h-pzG" secondAttribute="width" id="AYu-7l-ewN"/>
                                         <constraint firstItem="cM9-2h-pzG" firstAttribute="top" secondItem="OuO-Wb-eba" secondAttribute="topMargin" constant="-8" id="GnL-Zu-5m4"/>
+                                        <constraint firstItem="G1s-EG-6fN" firstAttribute="trailing" secondItem="cM9-2h-pzG" secondAttribute="trailing" id="Haj-IE-mSi"/>
+                                        <constraint firstItem="G1s-EG-6fN" firstAttribute="top" secondItem="u9Y-Sb-bih" secondAttribute="bottom" constant="3" id="JIA-Uw-Jfn"/>
                                         <constraint firstItem="UnW-pr-uiW" firstAttribute="leading" secondItem="cM9-2h-pzG" secondAttribute="leading" id="Qm7-cn-Scx"/>
+                                        <constraint firstItem="u9Y-Sb-bih" firstAttribute="width" secondItem="cM9-2h-pzG" secondAttribute="width" id="Vxp-DZ-2aE"/>
+                                        <constraint firstItem="G1s-EG-6fN" firstAttribute="centerX" secondItem="cM9-2h-pzG" secondAttribute="centerX" id="YGM-SE-gPN"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="UnW-pr-uiW" secondAttribute="bottom" id="bdo-8U-eSX"/>
+                                        <constraint firstItem="u9Y-Sb-bih" firstAttribute="trailing" secondItem="cM9-2h-pzG" secondAttribute="trailing" id="cuC-Hx-oVx"/>
+                                        <constraint firstItem="u9Y-Sb-bih" firstAttribute="leading" secondItem="cM9-2h-pzG" secondAttribute="leading" id="emK-F7-X7o"/>
+                                        <constraint firstItem="u9Y-Sb-bih" firstAttribute="centerX" secondItem="cM9-2h-pzG" secondAttribute="centerX" id="flk-Yy-yfF"/>
+                                        <constraint firstItem="u9Y-Sb-bih" firstAttribute="centerX" secondItem="cM9-2h-pzG" secondAttribute="centerX" id="gw4-Mw-j32"/>
                                         <constraint firstItem="cM9-2h-pzG" firstAttribute="leading" secondItem="OuO-Wb-eba" secondAttribute="leadingMargin" constant="-8" id="iNr-DP-JkF"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="cM9-2h-pzG" secondAttribute="trailing" constant="-8" id="mNj-tR-OzR"/>
+                                        <constraint firstItem="G1s-EG-6fN" firstAttribute="leading" secondItem="cM9-2h-pzG" secondAttribute="leading" id="pda-FU-wMM"/>
                                         <constraint firstItem="UnW-pr-uiW" firstAttribute="leading" secondItem="cM9-2h-pzG" secondAttribute="trailing" constant="-320" id="w4a-Pg-DV3"/>
                                         <constraint firstItem="UnW-pr-uiW" firstAttribute="trailing" secondItem="cM9-2h-pzG" secondAttribute="trailing" id="wLU-U4-89M"/>
                                     </constraints>
@@ -963,6 +1002,8 @@ and its our family fun</string>
                                     <outlet property="bottomBg" destination="UnW-pr-uiW" id="2gd-lr-Id7"/>
                                     <outlet property="icon" destination="FJg-1v-M5G" id="o8a-KH-to0"/>
                                     <outlet property="imgr" destination="G1s-EG-6fN" id="Je0-B1-OHf"/>
+                                    <outlet property="textBg" destination="u9Y-Sb-bih" id="3L3-s2-DmQ"/>
+                                    <outlet property="textView" destination="XnZ-RO-B0C" id="lin-UU-lO3"/>
                                     <outlet property="titleBg" destination="cM9-2h-pzG" id="HsF-rh-6L1"/>
                                     <outlet property="titleLabel" destination="DJG-zJ-OcP" id="JIG-g8-9kd"/>
                                 </connections>
