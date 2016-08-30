@@ -11,10 +11,10 @@ import UIKit
 class MemberViewController: UITableViewController{
     let prefs = NSUserDefaults.standardUserDefaults()
     
-    var titles = ["Upcoming Events", "Existing Events", "Go Green/NZ Blood", "Invite a Friend", "Helping", "All"]
-    var titlesBig = ["2016", "2015", "Others", "Friend", "Hands!", "Messages"]
-    var images = ["upcoming_events.png", "existing_events.png", "go_green.png", "invite_friend.png", "hands.png", "hands.png"]
-    var bgColors = ["#ff218e", "#ffd428", "#10d295", "#039cfd", "#b21b0f", "#FD5F22"]
+    var titles = ["Upcoming Events", "Existing Events", "Go Green/NZ Blood", "Invite a Friend/", "Helping", "All"]
+    var titlesBig = ["2016", "2015", "Others", "Family", "Hands!", "Messages"]
+    var images = ["upcoming_events.png", "existing_events.png", "go_green.png", "invite_friend.png", "hands.png", "all_messaes.png"]
+    var bgColors = ["#ff218e", "#ffd428", "#10d295", "#039cfd", "#b21b0f", "#fc5f22"]
     
     var screenWidth: CGFloat {
         if UIInterfaceOrientationIsPortrait(screenOrientation) {
