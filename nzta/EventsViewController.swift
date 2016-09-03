@@ -39,7 +39,7 @@ class EventsViewController: UITableViewController{
         ("Xmas", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner.")
     ]
     
-    var bgs = ["sankranti", "ugadi", "batukamma", "diwali", "xmas-22", "sankranti", "ugadi", "batukamma", "diwali", "xmas-22", "diwali", "xmas-22"]
+    var bgs = ["sankranti", "ugadi", "batukamma", "events_blood-donations", "events_holy", "events_ugadi", "events_independence-day.jpg", "events_vinayaka-chaviti", "events_batukamma", "events_diwali", "diwali", "events_xmas"]
     var icons = ["icon_sankranthi", "icon_ugadi", "icon_batukamma", "icon_diwali", "icon_xmas", "icon_sankranthi", "icon_ugadi", "icon_batukamma", "icon_diwali", "icon_xmas", "icon_diwali", "icon_xmas"]
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

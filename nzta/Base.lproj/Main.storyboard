@@ -937,7 +937,7 @@ and its our family fun</string>
                                                 <constraint firstAttribute="height" constant="42" id="tBG-al-czF"/>
                                             </constraints>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sankranti" translatesAutoresizingMaskIntoConstraints="NO" id="G1s-EG-6fN">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events_batukamma" translatesAutoresizingMaskIntoConstraints="NO" id="G1s-EG-6fN">
                                             <rect key="frame" x="0.0" y="252" width="320" height="81"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="81" id="H1q-P0-kzS"/>
@@ -2053,12 +2053,12 @@ all</string>
         <image name="camera" width="32" height="32"/>
         <image name="dn_arrow_2" width="212" height="180"/>
         <image name="edit" width="36" height="36"/>
+        <image name="events_batukamma" width="256" height="123"/>
         <image name="icon_batukamma" width="54" height="54"/>
         <image name="logo3" width="100" height="100"/>
         <image name="menu" width="22" height="22"/>
         <image name="nz_bg5" width="414" height="736"/>
         <image name="play_btn" width="50" height="50"/>
-        <image name="sankranti" width="600" height="400"/>
         <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
