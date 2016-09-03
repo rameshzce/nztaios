@@ -884,16 +884,16 @@ and its our family fun</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-2h-pzG">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJG-zJ-OcP">
-                                                    <rect key="frame" x="40" y="48" width="240" height="21"/>
+                                                    <rect key="frame" x="40" y="33" width="240" height="24"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_batukamma" translatesAutoresizingMaskIntoConstraints="NO" id="FJg-1v-M5G">
-                                                    <rect key="frame" x="224" y="37" width="40" height="40"/>
+                                                    <rect key="frame" x="224" y="24" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="7et-aP-oUZ"/>
                                                         <constraint firstAttribute="width" constant="40" id="JPd-5k-hf2"/>
@@ -902,14 +902,13 @@ and its our family fun</string>
                                             </subviews>
                                             <color key="backgroundColor" red="0.66274509803921566" green="0.0" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="DJG-zJ-OcP" secondAttribute="bottom" constant="51" id="1ik-tL-osJ"/>
                                                 <constraint firstItem="FJg-1v-M5G" firstAttribute="centerX" secondItem="cM9-2h-pzG" secondAttribute="centerX" constant="84" id="3fB-Wa-fyS"/>
                                                 <constraint firstItem="DJG-zJ-OcP" firstAttribute="centerX" secondItem="cM9-2h-pzG" secondAttribute="centerX" id="DVo-3e-UQx"/>
-                                                <constraint firstItem="DJG-zJ-OcP" firstAttribute="top" secondItem="cM9-2h-pzG" secondAttribute="top" constant="48" id="Jzd-OW-Xy0"/>
                                                 <constraint firstItem="DJG-zJ-OcP" firstAttribute="leading" secondItem="cM9-2h-pzG" secondAttribute="leading" constant="40" id="Xg5-3Y-5QU"/>
+                                                <constraint firstItem="DJG-zJ-OcP" firstAttribute="centerY" secondItem="cM9-2h-pzG" secondAttribute="centerY" id="ZKf-oi-8XK"/>
                                                 <constraint firstItem="FJg-1v-M5G" firstAttribute="centerY" secondItem="DJG-zJ-OcP" secondAttribute="centerY" constant="-1.5" id="dWa-Mc-B5E"/>
                                                 <constraint firstAttribute="trailing" secondItem="FJg-1v-M5G" secondAttribute="trailing" constant="56" id="ws8-kk-Lpm"/>
-                                                <constraint firstAttribute="height" constant="120" id="z4f-ae-Y5Y"/>
+                                                <constraint firstAttribute="height" constant="90" id="z4f-ae-Y5Y"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnW-pr-uiW">
@@ -946,25 +945,54 @@ and its our family fun</string>
                                             </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9Y-Sb-bih">
-                                            <rect key="frame" x="0.0" y="122" width="320" height="127"/>
+                                            <rect key="frame" x="0.0" y="90" width="320" height="159"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XnZ-RO-B0C">
-                                                    <rect key="frame" x="8" y="22" width="304" height="84"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="304" id="8pq-0L-R92"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="84" id="W78-4z-nAs"/>
-                                                        <constraint firstAttribute="height" constant="84" id="iOU-f8-sEK"/>
                                                     </constraints>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <mutableString key="text">Namasthe ...
+
+New Zealand Telugu Association specially invites you with family and friends to be part of auspicious
+
+"VINAYAKA CHATURTHI POOJA"
+
+for all the best days of our lives, For every miracle of waking up each morning, we want to express how grateful we are to the Lord.
+
+Day:  Monday, 5th of September 2016.
+
+Time: 6.30pm
+
+Venue:  Three kings Fickling Convention enter 
+546, Mt Albert Road,
+Three Kings.
+
+Followed by Bhajans and Maha Prasadam.
+
+Main Sponsor :
+Smt&amp;Sri Sunitha-Vijay Kosna and family
+
+Maha Prasadam by :
+Satya South Indian Restaurant
+
+Please join us and get the blessings of "Lord Ganesh". We are sure the day will inspire you for creativity and motivate you for auspicious beginnings.
+
+See you all on Monday.
+
+... Executive Committee New Zealand 
+Telugu Association</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.98823529409999999" green="0.83921568629999999" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="XnZ-RO-B0C" firstAttribute="centerX" secondItem="u9Y-Sb-bih" secondAttribute="centerX" id="0BY-Be-Ftf"/>
-                                                <constraint firstItem="XnZ-RO-B0C" firstAttribute="top" secondItem="u9Y-Sb-bih" secondAttribute="top" constant="22" id="JEu-9V-ate"/>
-                                                <constraint firstAttribute="height" constant="127" id="sG6-Dt-qHL"/>
+                                                <constraint firstItem="XnZ-RO-B0C" firstAttribute="centerY" secondItem="u9Y-Sb-bih" secondAttribute="centerY" id="JAN-8R-Qnz"/>
+                                                <constraint firstItem="XnZ-RO-B0C" firstAttribute="centerX" secondItem="u9Y-Sb-bih" secondAttribute="centerX" id="U8z-wF-3j5"/>
+                                                <constraint firstItem="XnZ-RO-B0C" firstAttribute="height" secondItem="u9Y-Sb-bih" secondAttribute="height" id="Xa0-gQ-u7m"/>
+                                                <constraint firstItem="XnZ-RO-B0C" firstAttribute="width" secondItem="u9Y-Sb-bih" secondAttribute="width" id="pbM-2M-wdQ"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -975,7 +1003,8 @@ and its our family fun</string>
                                         <constraint firstItem="u9Y-Sb-bih" firstAttribute="width" secondItem="cM9-2h-pzG" secondAttribute="width" id="6lC-S6-Vch"/>
                                         <constraint firstItem="u9Y-Sb-bih" firstAttribute="trailing" secondItem="cM9-2h-pzG" secondAttribute="trailing" id="87K-IL-gAj"/>
                                         <constraint firstItem="u9Y-Sb-bih" firstAttribute="leading" secondItem="cM9-2h-pzG" secondAttribute="leading" id="8OZ-eq-Whk"/>
-                                        <constraint firstItem="G1s-EG-6fN" firstAttribute="top" secondItem="cM9-2h-pzG" secondAttribute="bottom" constant="132" id="ABk-bf-aeW"/>
+                                        <constraint firstItem="u9Y-Sb-bih" firstAttribute="top" secondItem="cM9-2h-pzG" secondAttribute="bottom" id="8ws-N7-qmO"/>
+                                        <constraint firstItem="G1s-EG-6fN" firstAttribute="top" secondItem="cM9-2h-pzG" secondAttribute="bottom" constant="162" id="ABk-bf-aeW"/>
                                         <constraint firstItem="cM9-2h-pzG" firstAttribute="width" secondItem="OuO-Wb-eba" secondAttribute="width" id="ANU-Hi-FU2"/>
                                         <constraint firstItem="UnW-pr-uiW" firstAttribute="width" secondItem="cM9-2h-pzG" secondAttribute="width" id="AYu-7l-ewN"/>
                                         <constraint firstItem="cM9-2h-pzG" firstAttribute="top" secondItem="OuO-Wb-eba" secondAttribute="topMargin" constant="-8" id="GnL-Zu-5m4"/>
@@ -2032,10 +2061,10 @@ all</string>
         <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZWk-WU-XrL"/>
-        <segue reference="ipK-54-FXD"/>
-        <segue reference="a6G-TX-FPf"/>
-        <segue reference="xPk-vA-a2a"/>
         <segue reference="0o9-gl-Z1m"/>
+        <segue reference="a6G-TX-FPf"/>
+        <segue reference="6ew-ZD-cM0"/>
+        <segue reference="ipK-54-FXD"/>
+        <segue reference="ZWk-WU-XrL"/>
     </inferredMetricsTieBreakers>
 </document>

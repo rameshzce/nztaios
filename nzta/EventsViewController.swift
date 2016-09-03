@@ -24,20 +24,22 @@ class EventsViewController: UITableViewController{
     }
     
     var events:[(name: String, address: String)] = [
-        ("Sankranti", "Rangoli competition & kite festival on 17-1-2016"),
-        ("Ugadi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
-        ("Batukamma", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
-        ("Diwali", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed. Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
-        ("X'mas", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner."),
-        ("Sankranti", "Rangoli competition & kite festival on 17-1-2016"),
-        ("Ugadi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
-        ("Batukamma", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
-        ("Diwali", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
-        ("X'mas", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner.")
+        ("Calender Inaguration", "Rangoli competition & kite festival on 17-1-2016"),
+        ("Sankranthi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
+        ("Republic Day", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
+        ("Blood Donations", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed. Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
+        ("Holy Funday", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner."),
+        ("Ugadi", "Rangoli competition & kite festival on 17-1-2016"),
+        ("Independence Day", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
+        ("Vinayaka Chaviti", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
+        ("Batukamma", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
+        ("Dasara & Diwali", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner."),
+        ("Vanabojanalu", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner."),
+        ("Xmas", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner.")
     ]
     
-    var bgs = ["sankranti", "ugadi", "batukamma", "diwali", "xmas-22", "sankranti", "ugadi", "batukamma", "diwali", "xmas-22"]
-    var icons = ["icon_sankranthi", "icon_ugadi", "icon_batukamma", "icon_diwali", "icon_xmas", "icon_sankranthi", "icon_ugadi", "icon_batukamma", "icon_diwali", "icon_xmas"]
+    var bgs = ["sankranti", "ugadi", "batukamma", "diwali", "xmas-22", "sankranti", "ugadi", "batukamma", "diwali", "xmas-22", "diwali", "xmas-22"]
+    var icons = ["icon_sankranthi", "icon_ugadi", "icon_batukamma", "icon_diwali", "icon_xmas", "icon_sankranthi", "icon_ugadi", "icon_batukamma", "icon_diwali", "icon_xmas", "icon_diwali", "icon_xmas"]
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -98,7 +100,7 @@ class EventsViewController: UITableViewController{
             return EventsViewCell.expandedHeight
         } else {
             //return EventsViewCell.defaultHeight
-            let height = (screenHeight / 4) - 15
+            let height = (screenHeight / 5) - 15
             return height
         }
     }
