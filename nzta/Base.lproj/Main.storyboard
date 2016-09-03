@@ -910,18 +910,18 @@ and its our family fun</string>
                                                 <constraint firstAttribute="height" constant="90" id="z4f-ae-Y5Y"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UnW-pr-uiW">
-                                            <rect key="frame" x="0.0" y="346" width="320" height="36"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnW-pr-uiW">
+                                            <rect key="frame" x="0.0" y="341" width="320" height="42"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="Vix-ig-4k0">
-                                                    <rect key="frame" x="75" y="3" width="30" height="30"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="Vix-ig-4k0">
+                                                    <rect key="frame" x="75" y="7" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="80e-vr-G9f"/>
                                                         <constraint firstAttribute="width" constant="30" id="Esv-kv-1fo"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video" translatesAutoresizingMaskIntoConstraints="NO" id="E86-Jh-oxT">
-                                                    <rect key="frame" x="215" y="3" width="30" height="30"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="video" translatesAutoresizingMaskIntoConstraints="NO" id="E86-Jh-oxT">
+                                                    <rect key="frame" x="215" y="7" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="E6C-NS-mjC"/>
                                                         <constraint firstAttribute="width" constant="30" id="Jeu-7A-peJ"/>
@@ -934,7 +934,7 @@ and its our family fun</string>
                                                 <constraint firstAttribute="trailing" secondItem="E86-Jh-oxT" secondAttribute="trailing" constant="75" id="c7d-25-bqz"/>
                                                 <constraint firstItem="E86-Jh-oxT" firstAttribute="centerY" secondItem="Vix-ig-4k0" secondAttribute="centerY" id="g95-Uf-BRa"/>
                                                 <constraint firstItem="Vix-ig-4k0" firstAttribute="leading" secondItem="UnW-pr-uiW" secondAttribute="leading" constant="75" id="kxT-0x-kgg"/>
-                                                <constraint firstAttribute="height" constant="36" id="tBG-al-czF"/>
+                                                <constraint firstAttribute="height" constant="42" id="tBG-al-czF"/>
                                             </constraints>
                                         </view>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sankranti" translatesAutoresizingMaskIntoConstraints="NO" id="G1s-EG-6fN">
@@ -1012,7 +1012,7 @@ Telugu Association</string>
                                         <constraint firstItem="UnW-pr-uiW" firstAttribute="leading" secondItem="cM9-2h-pzG" secondAttribute="leading" id="Qm7-cn-Scx"/>
                                         <constraint firstItem="u9Y-Sb-bih" firstAttribute="width" secondItem="cM9-2h-pzG" secondAttribute="width" id="Vxp-DZ-2aE"/>
                                         <constraint firstItem="G1s-EG-6fN" firstAttribute="centerX" secondItem="cM9-2h-pzG" secondAttribute="centerX" id="YGM-SE-gPN"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="UnW-pr-uiW" secondAttribute="bottom" id="bdo-8U-eSX"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="UnW-pr-uiW" secondAttribute="bottom" constant="-8" id="bdo-8U-eSX"/>
                                         <constraint firstItem="u9Y-Sb-bih" firstAttribute="trailing" secondItem="cM9-2h-pzG" secondAttribute="trailing" id="cuC-Hx-oVx"/>
                                         <constraint firstItem="u9Y-Sb-bih" firstAttribute="leading" secondItem="cM9-2h-pzG" secondAttribute="leading" id="emK-F7-X7o"/>
                                         <constraint firstItem="u9Y-Sb-bih" firstAttribute="centerX" secondItem="cM9-2h-pzG" secondAttribute="centerX" id="flk-Yy-yfF"/>
