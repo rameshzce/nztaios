@@ -100,8 +100,9 @@ class EventsViewController: UITableViewController{
             return EventsViewCell.expandedHeight
         } else {
             //return EventsViewCell.defaultHeight
-            let height = (screenHeight / 5) - 15
-            return height
+            //let height = (screenHeight / 5) - 15
+            //let height = 90.0
+            return 90
         }
     }
     
