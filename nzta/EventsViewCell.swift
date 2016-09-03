@@ -15,6 +15,8 @@ class EventsViewCell: UITableViewCell {
     @IBOutlet var bottomBg: UIView!
     @IBOutlet var textView: UITextView!
     @IBOutlet var textBg: UIView!
+    @IBOutlet var photoGalleryBtn: UIButton!
+    @IBOutlet var videoGalleryBtn: UIButton!
 
     @IBOutlet var icon: UIImageView!
     class var expandedHeight: CGFloat { get { return 380 } }

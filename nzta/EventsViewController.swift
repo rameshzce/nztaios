@@ -9,6 +9,7 @@
 import UIKit
 
 class EventsViewController: UITableViewController{
+    let prefs = NSUserDefaults.standardUserDefaults()
     var selectedIndexPath : NSIndexPath?
     
     var screenHeight: CGFloat {
@@ -57,6 +58,12 @@ class EventsViewController: UITableViewController{
         cell.imgr.image = UIImage(named: bgs[indexPath.row])
         cell.icon.image = UIImage(named: icons[indexPath.row])
         
+        cell.photoGalleryBtn.tag = indexPath.row
+        cell.photoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction), forControlEvents: .TouchUpInside)
+        
+        cell.videoGalleryBtn.tag = indexPath.row
+        cell.videoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction2), forControlEvents: .TouchUpInside)
+        
         return cell
     }
     
@@ -78,6 +85,44 @@ class EventsViewController: UITableViewController{
         if indexPaths.count > 0 {
             tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
         }
+    }
+    
+    @IBAction func logAction(sender: UIButton) {
+        let event = self.events[sender.tag]
+        
+        let eventName = "\(event.name)"
+        
+        self.prefs.setValue(eventName, forKey: "photoGallery")
+        
+        /*let alertController = UIAlertController(title: "NZTA",
+         message: eventName, preferredStyle: UIAlertControllerStyle.Alert)
+         alertController.addAction(UIAlertAction(title: "OK", style:
+         UIAlertActionStyle.Default, handler: nil))
+         self.presentViewController(alertController, animated: true, completion:
+         nil)*/
+        
+        //let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [eventName], applicationActivities: nil)
+        
+        //self.presentViewController(activityViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func logAction2(sender: UIButton) {
+        let event = self.events[sender.tag]
+        
+        let eventName = "\(event.name)"
+        
+        self.prefs.setValue(eventName, forKey: "videoGallery")
+        
+        /*let alertController = UIAlertController(title: "NZTA",
+         message: eventName, preferredStyle: UIAlertControllerStyle.Alert)
+         alertController.addAction(UIAlertAction(title: "OK", style:
+         UIAlertActionStyle.Default, handler: nil))
+         self.presentViewController(alertController, animated: true, completion:
+         nil)*/
+        
+        //let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [eventName], applicationActivities: nil)
+        
+        //self.presentViewController(activityViewController, animated: true, completion: nil)
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
