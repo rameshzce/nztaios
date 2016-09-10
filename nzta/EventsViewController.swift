@@ -12,6 +12,10 @@ class EventsViewController: UITableViewController{
     let prefs = NSUserDefaults.standardUserDefaults()
     var selectedIndexPath : NSIndexPath?
     
+    var titleBg = "#ff218e"
+    var textBg = "#9D1457"
+    var subBgColor = "#630131"
+    
     var screenHeight: CGFloat {
         if UIInterfaceOrientationIsPortrait(screenOrientation) {
             return UIScreen.mainScreen().bounds.size.height
@@ -63,6 +67,25 @@ class EventsViewController: UITableViewController{
         
         cell.videoGalleryBtn.tag = indexPath.row
         cell.videoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction2), forControlEvents: .TouchUpInside)
+        
+        if (prefs.stringForKey("eventType") == "Upcoming Events"){
+            self.titleBg = "#ba1768"
+            self.textBg = "#FFDFF0"
+        } else if (prefs.stringForKey("eventType") == "Existing Events"){
+            self.titleBg = "#D9B219"
+            self.textBg = "#FFF9DF"
+        } else if (prefs.stringForKey("eventType") == "Go Green"){
+            self.titleBg = "#41AA4B"
+            self.textBg = "#076A4B"
+        } else if (prefs.stringForKey("eventType") == "NZ Blood"){
+            self.titleBg = "#C30000"
+            self.textBg = "#840000"
+        }
+        
+        cell.titleBg.backgroundColor = hexStringToUIColor(titleBg)
+        cell.textBg.backgroundColor = hexStringToUIColor(textBg)
+        //cell.leftSubBg.backgroundColor = hexStringToUIColor(subBgColor)
+        //cell.rightSubBg.backgroundColor = hexStringToUIColor(subBgColor)
         
         return cell
     }
@@ -149,6 +172,28 @@ class EventsViewController: UITableViewController{
             //let height = 90.0
             return 90
         }
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.grayColor()
+        }
+        
+        var rgbValue:UInt32 = 0
+        NSScanner(string: cString).scanHexInt(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
     
     

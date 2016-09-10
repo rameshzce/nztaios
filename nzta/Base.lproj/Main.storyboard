@@ -938,9 +938,9 @@ and its our family fun</string>
                                             </constraints>
                                         </view>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events_batukamma" translatesAutoresizingMaskIntoConstraints="NO" id="G1s-EG-6fN">
-                                            <rect key="frame" x="0.0" y="252" width="320" height="81"/>
+                                            <rect key="frame" x="0.0" y="252" width="320" height="80"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="81" id="H1q-P0-kzS"/>
+                                                <constraint firstAttribute="height" constant="80" id="H1q-P0-kzS"/>
                                             </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9Y-Sb-bih">
