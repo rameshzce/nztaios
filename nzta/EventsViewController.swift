@@ -59,31 +59,31 @@ class EventsViewController: UITableViewController{
         
         let event = events[indexPath.row]
         cell.titleLabel.text = event.name
-        cell.imgr.image = UIImage(named: bgs[indexPath.row])
+        //cell.imgr.image = UIImage(named: bgs[indexPath.row])
         cell.icon.image = UIImage(named: icons[indexPath.row])
         
-        cell.photoGalleryBtn.tag = indexPath.row
-        cell.photoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction), forControlEvents: .TouchUpInside)
+        //cell.photoGalleryBtn.tag = indexPath.row
+        //cell.photoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction), forControlEvents: .TouchUpInside)
         
-        cell.videoGalleryBtn.tag = indexPath.row
-        cell.videoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction2), forControlEvents: .TouchUpInside)
+        //cell.videoGalleryBtn.tag = indexPath.row
+        //cell.videoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction2), forControlEvents: .TouchUpInside)
         
         if (prefs.stringForKey("eventType") == "Upcoming Events"){
             self.titleBg = "#ba1768"
-            self.textBg = "#FFDFF0"
+            //self.textBg = "#FFDFF0"
         } else if (prefs.stringForKey("eventType") == "Existing Events"){
             self.titleBg = "#D9B219"
-            self.textBg = "#FFF9DF"
+            //self.textBg = "#FFF9DF"
         } else if (prefs.stringForKey("eventType") == "Go Green"){
             self.titleBg = "#41AA4B"
-            self.textBg = "#076A4B"
+            //self.textBg = "#076A4B"
         } else if (prefs.stringForKey("eventType") == "NZ Blood"){
             self.titleBg = "#C30000"
-            self.textBg = "#840000"
+            //self.textBg = "#840000"
         }
         
-        cell.titleBg.backgroundColor = hexStringToUIColor(titleBg)
-        cell.textBg.backgroundColor = hexStringToUIColor(textBg)
+        cell.titleBg.backgroundColor = Helper.hexStringToUIColor(titleBg)
+        //cell.textBg.backgroundColor = hexStringToUIColor(textBg)
         //cell.leftSubBg.backgroundColor = hexStringToUIColor(subBgColor)
         //cell.rightSubBg.backgroundColor = hexStringToUIColor(subBgColor)
         
@@ -91,7 +91,7 @@ class EventsViewController: UITableViewController{
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let previousIndexPath = selectedIndexPath
+        /*let previousIndexPath = selectedIndexPath
         if indexPath == selectedIndexPath {
             selectedIndexPath = nil
         } else {
@@ -107,95 +107,40 @@ class EventsViewController: UITableViewController{
         }
         if indexPaths.count > 0 {
             tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
-            tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Top, animated: true)
-        }
+            //tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Top, animated: true)
+        }*/
     }
     
-    @IBAction func logAction(sender: UIButton) {
-        let event = self.events[sender.tag]
-        
-        let eventName = "\(event.name)"
-        
-        self.prefs.setValue(eventName, forKey: "photoGallery")
-        
-        /*let alertController = UIAlertController(title: "NZTA",
-         message: eventName, preferredStyle: UIAlertControllerStyle.Alert)
-         alertController.addAction(UIAlertAction(title: "OK", style:
-         UIAlertActionStyle.Default, handler: nil))
-         self.presentViewController(alertController, animated: true, completion:
-         nil)*/
-        
-        //let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [eventName], applicationActivities: nil)
-        
-        //self.presentViewController(activityViewController, animated: true, completion: nil)
-    }
     
-    @IBAction func logAction2(sender: UIButton) {
-        let event = self.events[sender.tag]
-        
-        let eventName = "\(event.name)"
-        
-        self.prefs.setValue(eventName, forKey: "videoGallery")
-        
-        /*let alertController = UIAlertController(title: "NZTA",
-         message: eventName, preferredStyle: UIAlertControllerStyle.Alert)
-         alertController.addAction(UIAlertAction(title: "OK", style:
-         UIAlertActionStyle.Default, handler: nil))
-         self.presentViewController(alertController, animated: true, completion:
-         nil)*/
-        
-        //let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [eventName], applicationActivities: nil)
-        
-        //self.presentViewController(activityViewController, animated: true, completion: nil)
-    }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        (cell as! EventsViewCell).watchFrameChanges()
+        //(cell as! EventsViewCell).watchFrameChanges()
     }
     
     override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        (cell as! EventsViewCell).ignoreFrameChanges()
+        //(cell as! EventsViewCell).ignoreFrameChanges()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        for cell in tableView.visibleCells as! [EventsViewCell] {
-            cell.ignoreFrameChanges()
-        }
+        /*for cell in tableView.visibleCells as! [EventsViewCell] {
+            //cell.ignoreFrameChanges()
+        }*/
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath == selectedIndexPath {
+        /*if indexPath == selectedIndexPath {
             return EventsViewCell.expandedHeight
         } else {
             //return EventsViewCell.defaultHeight
             //let height = (screenHeight / 5) - 15
             //let height = 90.0
             return 90
-        }
+        }*/
+        
+        return 90
     }
     
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
-        
-        if (cString.hasPrefix("#")) {
-            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
-        }
-        
-        if ((cString.characters.count) != 6) {
-            return UIColor.grayColor()
-        }
-        
-        var rgbValue:UInt32 = 0
-        NSScanner(string: cString).scanHexInt(&rgbValue)
-        
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
-    }
     
     
 }

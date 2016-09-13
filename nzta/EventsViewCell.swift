@@ -19,18 +19,18 @@ class EventsViewCell: UITableViewCell {
     @IBOutlet var videoGalleryBtn: UIButton!
 
     @IBOutlet var icon: UIImageView!
-    class var expandedHeight: CGFloat { get { return 380 } }
+    //class var expandedHeight: CGFloat { get { return 380 } }
     @IBOutlet var imgr: UIImageView!
-    class var defaultHeight: CGFloat  { get { return 44  } }
+    //class var defaultHeight: CGFloat  { get { return 44  } }
 
-    func checkHeight() {
+    /*func checkHeight() {
         imgr.hidden = (frame.size.height < EventsViewCell.expandedHeight)
         textView.hidden = (frame.size.height < EventsViewCell.expandedHeight)
         bottomBg.hidden = (frame.size.height < EventsViewCell.expandedHeight)
         textBg.hidden = (frame.size.height < EventsViewCell.expandedHeight)
-    }
+    }*/
 
-func watchFrameChanges() {
+/*func watchFrameChanges() {
     if !isObserving {
         addObserver(self, forKeyPath: "frame", options: [NSKeyValueObservingOptions.New, NSKeyValueObservingOptions.Initial], context: nil)
         isObserving = true;
@@ -48,7 +48,7 @@ override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObjec
     if keyPath == "frame" {
         checkHeight()
     }
-}
+}*/
 }
 
 /*class EventsViewCell: UITableViewCell {
