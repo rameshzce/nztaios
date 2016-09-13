@@ -37,6 +37,10 @@
 		756955861D0BEE7500B17CAB /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756955851D0BEE7500B17CAB /* SSRadioButton.swift */; };
 		7570CE211D7107FC003359D8 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7570CE201D7107FC003359D8 /* MessagesTableViewController.swift */; };
 		7570CE231D710840003359D8 /* MessagesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7570CE221D710840003359D8 /* MessagesViewCell.swift */; };
+		757BA9E41D87C4F500B74370 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BA9E31D87C4F500B74370 /* InterestViewController.swift */; };
+		757BA9E61D87C53E00B74370 /* InterestHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BA9E51D87C53E00B74370 /* InterestHeaderView.swift */; };
+		757BA9E81D87C5F400B74370 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BA9E71D87C5F400B74370 /* Interest.swift */; };
+		757BA9EA1D87D3B800B74370 /* InterestViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BA9E91D87D3B800B74370 /* InterestViewCell.swift */; };
 		7588F00D1D1455490011031A /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7588F00C1D1455490011031A /* EditProfileViewController.swift */; };
 		7591A1241D130E96001A615F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7591A1231D130E96001A615F /* Helper.swift */; };
 		75A3F5401CF12CDE0033E70A /* PhotoGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */; };
@@ -102,6 +106,10 @@
 		756955851D0BEE7500B17CAB /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		7570CE201D7107FC003359D8 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		7570CE221D710840003359D8 /* MessagesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewCell.swift; sourceTree = "<group>"; };
+		757BA9E31D87C4F500B74370 /* InterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
+		757BA9E51D87C53E00B74370 /* InterestHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestHeaderView.swift; sourceTree = "<group>"; };
+		757BA9E71D87C5F400B74370 /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
+		757BA9E91D87D3B800B74370 /* InterestViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestViewCell.swift; sourceTree = "<group>"; };
 		7588F00C1D1455490011031A /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		7591A1231D130E96001A615F /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewCell.swift; sourceTree = "<group>"; };
@@ -189,6 +197,9 @@
 		75B622E21CF04ABD00493F98 /* nzta */ = {
 			isa = PBXGroup;
 			children = (
+				757BA9E31D87C4F500B74370 /* InterestViewController.swift */,
+				757BA9E51D87C53E00B74370 /* InterestHeaderView.swift */,
+				757BA9E71D87C5F400B74370 /* Interest.swift */,
 				75B622F51CF053C700493F98 /* Resources */,
 				75B622E31CF04ABD00493F98 /* AppDelegate.swift */,
 				751E41281CF42224001A8BD5 /* MenuViewController.swift */,
@@ -245,6 +256,7 @@
 				75061D111D21FF6100DFD577 /* SendMessageViewController.swift */,
 				7570CE201D7107FC003359D8 /* MessagesTableViewController.swift */,
 				7570CE221D710840003359D8 /* MessagesViewCell.swift */,
+				757BA9E91D87D3B800B74370 /* InterestViewCell.swift */,
 			);
 			path = nzta;
 			sourceTree = "<group>";
@@ -411,12 +423,14 @@
 				75A790941D1ECB7300EE0616 /* VideoViewCell.swift in Sources */,
 				75A3F5421CF12D270033E70A /* PhotoGalleryViewController.swift in Sources */,
 				755097BD1D02DC6E0005AF83 /* ImageGalleryViewCell.swift in Sources */,
+				757BA9E81D87C5F400B74370 /* Interest.swift in Sources */,
 				75A3F5401CF12CDE0033E70A /* PhotoGalleryViewCell.swift in Sources */,
 				755097BB1D02DC3A0005AF83 /* ImageGalleryViewController.swift in Sources */,
 				75493BC41D1CC5F000D22EFE /* IntroViewController.swift in Sources */,
 				756955841D0BEC3400B17CAB /* SSRadioButtonsController.swift in Sources */,
 				75D0BDE61CF17AB8009E030F /* VideoGalleryViewController.swift in Sources */,
 				75B622F91CF05DE000493F98 /* MemberViewController.swift in Sources */,
+				757BA9EA1D87D3B800B74370 /* InterestViewCell.swift in Sources */,
 				75D0EBF41CF9819C00563C68 /* PlayVideoViewController.swift in Sources */,
 				751E41291CF42224001A8BD5 /* MenuViewController.swift in Sources */,
 				755DD5581D0206AD009B6FE4 /* ImageDisplayViewController.swift in Sources */,
@@ -435,9 +449,11 @@
 				75B622FB1CF0630100493F98 /* MemberViewCell.swift in Sources */,
 				75FEE88B1D01CD5300814F82 /* iCarousel.m in Sources */,
 				75FEE88D1D01CDB100814F82 /* TeamViewController.swift in Sources */,
+				757BA9E41D87C4F500B74370 /* InterestViewController.swift in Sources */,
 				75A790921D1ECB1400EE0616 /* VideoViewController.swift in Sources */,
 				75C79B4E1D14FF09005BBC49 /* WalkthroughContentViewController.swift in Sources */,
 				75D4C7101D00F217008F06B3 /* NotificationViewController.swift in Sources */,
+				757BA9E61D87C53E00B74370 /* InterestHeaderView.swift in Sources */,
 				751E412D1CF4488F001A8BD5 /* MenuTransitionManager.swift in Sources */,
 				755097B91D02CC970005AF83 /* SwiftLoading.swift in Sources */,
 				75CF433A1CF99FFA005C6BCA /* InviteFriendViewController.swift in Sources */,
