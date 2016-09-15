@@ -27,7 +27,7 @@ class InterestViewController: UIViewController {
     ]
     
     // MARK: - Public API
-    var interest: Interest! = Interest.createInterests()[0]
+    //var interest: Interest! = Interest.createInterests()[0]
     
     // MARK: - Private
     @IBOutlet weak var tableView: UITableView!
@@ -53,7 +53,7 @@ class InterestViewController: UIViewController {
         
         tableView.estimatedRowHeight = 300.0
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.backgroundColor = Helper.hexStringToUIColor("#FFDFF0")
+        tableView.backgroundColor = Helper.hexStringToUIColor("#FFFFFF")
         
         updateHeaderView()
     }
