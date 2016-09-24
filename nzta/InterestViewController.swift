@@ -13,7 +13,7 @@ class InterestViewController: UIViewController {
     
     
     var events:[(name: String, address: String)] = [
-        ("Calender Inaguration", "Rangoli competition & kite festival on 17-1-2016"),
+        ("Calender Inauguration", "Rangoli competition & kite festival on 17-1-2016"),
         ("Sankranthi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
         ("Republic Day", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
         ("Blood Donations", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed. Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
@@ -46,7 +46,7 @@ class InterestViewController: UIViewController {
         if prefs.stringForKey("eventName") != nil{
             self.title = prefs.stringForKey("eventName")
             
-            if (prefs.stringForKey("eventName") == "Calender Inaguration"){
+            if (prefs.stringForKey("eventName") == "Calender Inauguration"){
                 imageName = "img_calender_inauguration"
             } else if (prefs.stringForKey("eventName") == "Sankranthi"){
                 imageName = "img_sankranti"
