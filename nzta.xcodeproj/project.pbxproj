@@ -20,6 +20,7 @@
 		751E41311CF4620B001A8BD5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751E41301CF4620B001A8BD5 /* ProfileViewController.swift */; };
 		752EB26C1D0BAEDC00799DFE /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752EB26B1D0BAEDC00799DFE /* Common.swift */; };
 		753585051CFACAD7000C04CA /* ExistingEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753585041CFACAD7000C04CA /* ExistingEventsViewController.swift */; };
+		753671961D96516900AA710B /* ScrollViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753671951D96516900AA710B /* ScrollViewContoller.swift */; };
 		753F92051D0A5D7000D53053 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753F92041D0A5D7000D53053 /* Trip.swift */; };
 		753F920B1D0A6E4300D53053 /* VideoGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753F920A1D0A6E4300D53053 /* VideoGalleryViewCell.swift */; };
 		75446F521CF747A300C78F29 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75446F501CF747A300C78F29 /* GoogleSignIn.bundle */; };
@@ -87,6 +88,7 @@
 		751E41301CF4620B001A8BD5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		752EB26B1D0BAEDC00799DFE /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		753585041CFACAD7000C04CA /* ExistingEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistingEventsViewController.swift; sourceTree = "<group>"; };
+		753671951D96516900AA710B /* ScrollViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewContoller.swift; sourceTree = "<group>"; };
 		753F92041D0A5D7000D53053 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		753F920A1D0A6E4300D53053 /* VideoGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGalleryViewCell.swift; sourceTree = "<group>"; };
 		75424F641D1EA089008D3F58 /* A-Love-of-Thunder.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A-Love-of-Thunder.ttf"; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				7570CE201D7107FC003359D8 /* MessagesTableViewController.swift */,
 				7570CE221D710840003359D8 /* MessagesViewCell.swift */,
 				757BA9E91D87D3B800B74370 /* InterestViewCell.swift */,
+				753671951D96516900AA710B /* ScrollViewContoller.swift */,
 			);
 			path = nzta;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				7591A1241D130E96001A615F /* Helper.swift in Sources */,
 				755097BF1D02EB820005AF83 /* DisplayGalleryImageViewController.swift in Sources */,
 				75061D121D21FF6100DFD577 /* SendMessageViewController.swift in Sources */,
+				753671961D96516900AA710B /* ScrollViewContoller.swift in Sources */,
 				75B622FF1CF0773100493F98 /* EventsViewCell.swift in Sources */,
 				753F92051D0A5D7000D53053 /* Trip.swift in Sources */,
 				75D387481D0B235F00314052 /* SponsorsViewController.swift in Sources */,

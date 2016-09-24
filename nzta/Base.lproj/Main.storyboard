@@ -635,7 +635,7 @@ and its our family fun</string>
                         <barButtonItem key="rightBarButtonItem" image="menu" id="e6d-0z-ZnQ">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="ShK-K1-VUs" kind="modal" id="gEe-0R-6ka"/>
+                                <segue destination="ShK-K1-VUs" kind="modal" identifier="" id="gEe-0R-6ka"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -645,6 +645,7 @@ and its our family fun</string>
                         <segue destination="uOV-us-5lA" kind="push" identifier="inviteFriend" id="lSg-GZ-zJZ"/>
                         <segue destination="Nuj-V6-Geo" kind="push" identifier="existingEvents" id="0o9-gl-Z1m"/>
                         <segue destination="zMa-SH-c2C" kind="push" identifier="messages" id="dVn-UW-9EH"/>
+                        <segue destination="FCs-5B-QKC" kind="push" identifier="helpingHands" id="XqI-KJ-rjm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZj-Wm-ut4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1402,7 +1403,7 @@ all</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-Xb-n47">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-Xb-n47">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="3yn-vS-Cau" customClass="InterestHeaderView" customModule="nzta" customModuleProvider="target">
@@ -1608,7 +1609,7 @@ all</string>
                                 <connections>
                                     <outlet property="postImageView" destination="UHw-lh-3gY" id="oZp-wR-jNb"/>
                                     <outlet property="postTitle" destination="aaN-qA-arE" id="Jw2-Dg-y3p"/>
-                                    <segue destination="gSH-4C-b0s" kind="push" identifier="displayGalleryImage" id="Bau-uG-1bY"/>
+                                    <segue destination="FCs-5B-QKC" kind="push" identifier="displayGalleryImage" id="liW-Va-Wqk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -2108,12 +2109,63 @@ all</string>
             </objects>
             <point key="canvasLocation" x="3814" y="293"/>
         </scene>
+        <!--Scroll View Controller-->
+        <scene sceneID="cmL-a0-5Fj">
+            <objects>
+                <viewController id="FCs-5B-QKC" userLabel="Scroll View Controller" customClass="ScrollViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bI8-4T-JIf"/>
+                        <viewControllerLayoutGuide type="bottom" id="G23-GA-p05"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CC0-HF-p8k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LdX-gS-pN6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="event_name_image1" translatesAutoresizingMaskIntoConstraints="NO" id="84k-Wm-wej">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="84k-Wm-wej" secondAttribute="bottom" id="2jt-eb-OxY"/>
+                                    <constraint firstAttribute="trailing" secondItem="84k-Wm-wej" secondAttribute="trailing" id="6nR-sE-jMw"/>
+                                    <constraint firstItem="84k-Wm-wej" firstAttribute="centerX" secondItem="LdX-gS-pN6" secondAttribute="centerX" id="Jrk-oO-QsP"/>
+                                    <constraint firstItem="84k-Wm-wej" firstAttribute="top" secondItem="LdX-gS-pN6" secondAttribute="top" id="KrJ-GA-8fa"/>
+                                    <constraint firstItem="84k-Wm-wej" firstAttribute="leading" secondItem="LdX-gS-pN6" secondAttribute="leading" id="ezb-89-jXw"/>
+                                    <constraint firstItem="84k-Wm-wej" firstAttribute="centerY" secondItem="LdX-gS-pN6" secondAttribute="centerY" id="l32-US-Wvj"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="FCs-5B-QKC" id="sUY-WW-y1d"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LdX-gS-pN6" secondAttribute="trailing" id="Isc-Pp-CXA"/>
+                            <constraint firstItem="LdX-gS-pN6" firstAttribute="bottom" secondItem="G23-GA-p05" secondAttribute="top" id="PXv-Bf-cAu"/>
+                            <constraint firstItem="LdX-gS-pN6" firstAttribute="leading" secondItem="CC0-HF-p8k" secondAttribute="leading" id="g6A-N0-3xE"/>
+                            <constraint firstItem="LdX-gS-pN6" firstAttribute="top" secondItem="CC0-HF-p8k" secondAttribute="top" id="wAU-oD-Rds"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dcA-a7-JCi"/>
+                    <connections>
+                        <outlet property="imageView" destination="84k-Wm-wej" id="Ube-Eb-WKt"/>
+                        <outlet property="scrollView" destination="LdX-gS-pN6" id="2CQ-fP-4tA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7P-0I-egO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="-962"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Close" width="10" height="10"/>
         <image name="camera" width="32" height="32"/>
         <image name="dn_arrow_2" width="212" height="180"/>
         <image name="edit" width="36" height="36"/>
+        <image name="event_name_image1" width="2048" height="1365"/>
         <image name="icon_batukamma" width="54" height="54"/>
         <image name="logo3" width="100" height="100"/>
         <image name="menu" width="22" height="22"/>
@@ -2123,10 +2175,11 @@ all</string>
         <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZWk-WU-XrL"/>
-        <segue reference="JGb-kV-gIL"/>
-        <segue reference="6ew-ZD-cM0"/>
         <segue reference="a6G-TX-FPf"/>
+        <segue reference="xPk-vA-a2a"/>
+        <segue reference="0o9-gl-Z1m"/>
+        <segue reference="liW-Va-Wqk"/>
         <segue reference="ipK-54-FXD"/>
+        <segue reference="ZWk-WU-XrL"/>
     </inferredMetricsTieBreakers>
 </document>

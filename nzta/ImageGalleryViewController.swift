@@ -60,7 +60,7 @@ class ImageGalleryViewController: UITableViewController {
         if segue.identifier == "displayGalleryImage" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destinationViewController as!
-                DisplayGalleryImageViewController
+                ScrollViewController
                 destinationController.galleryImage =
                     images[indexPath.row]
             }
