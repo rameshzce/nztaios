@@ -109,6 +109,7 @@ class EventsViewController: UITableViewController{
             tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
             //tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Top, animated: true)
         }*/
+        self.prefs.setValue(events[indexPath.row].name, forKey: "eventName")
     }
     
     
