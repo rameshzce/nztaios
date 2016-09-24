@@ -11,6 +11,7 @@ import UIKit
 class InterestViewController: UIViewController {
     let prefs = NSUserDefaults.standardUserDefaults()
     
+    
     var events:[(name: String, address: String)] = [
         ("Calender Inaguration", "Rangoli competition & kite festival on 17-1-2016"),
         ("Sankranthi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
@@ -39,8 +40,38 @@ class InterestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var imageName = "img_calender_inauguration"
+        
+        
         if prefs.stringForKey("eventName") != nil{
             self.title = prefs.stringForKey("eventName")
+            
+            if (prefs.stringForKey("eventName") == "Calender Inaguration"){
+                imageName = "img_calender_inauguration"
+            } else if (prefs.stringForKey("eventName") == "Sankranthi"){
+                imageName = "img_sankranti"
+            } else if (prefs.stringForKey("eventName") == "Republic Day"){
+                imageName = "img_republic_day"
+            } else if (prefs.stringForKey("eventName") == "Blood Donations"){
+                imageName = "img_blood_donations"
+            } else if (prefs.stringForKey("eventName") == "Holy Funday"){
+                imageName = "img_holi"
+            } else if (prefs.stringForKey("eventName") == "Ugadi"){
+                imageName = "img_ugadi"
+            } else if (prefs.stringForKey("eventName") == "Independence Day"){
+                imageName = "img_independenceday"
+            } else if (prefs.stringForKey("eventName") == "Vinayaka Chaviti"){
+                imageName = "img_vinayakachaturdi"
+            } else if (prefs.stringForKey("eventName") == "Batukamma"){
+                imageName = "img_batukamma"
+            } else if (prefs.stringForKey("eventName") == "Dasara & Diwali"){
+                imageName = "img_dasara_diwali"
+            } else if (prefs.stringForKey("eventName") == "Vanabojanalu"){
+                imageName = "img_vanabojanalu"
+            } else if (prefs.stringForKey("eventName") == "Xmas"){
+                imageName = "img_xmas"
+            }
+            
         }
         
         
@@ -58,6 +89,7 @@ class InterestViewController: UIViewController {
         tableView.estimatedRowHeight = 300.0
         tableView.rowHeight = UITableViewAutomaticDimension
         //tableView.backgroundColor = Helper.hexStringToUIColor("#FFFFFF")
+        headerView.backgroundImageView.image = UIImage(named: imageName)
         
         updateHeaderView()
     }
