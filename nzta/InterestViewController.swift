@@ -142,6 +142,7 @@ extension InterestViewController : UITableViewDataSource
         
         self.prefs.setValue(eventName, forKey: "photoGallery")
         
+        
         /*let alertController = UIAlertController(title: "NZTA",
          message: eventName, preferredStyle: UIAlertControllerStyle.Alert)
          alertController.addAction(UIAlertAction(title: "OK", style:

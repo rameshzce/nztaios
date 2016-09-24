@@ -74,6 +74,7 @@ class VideoGalleryViewController: UIViewController, UICollectionViewDelegate, UI
                  self.presentViewController(alertController, animated: true, completion:
                  nil)*/
             }
+            self.title = prefs.stringForKey("eventName")
         }
         
         override func didReceiveMemoryWarning() {

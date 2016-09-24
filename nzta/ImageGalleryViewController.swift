@@ -24,6 +24,7 @@ class ImageGalleryViewController: UITableViewController {
         if prefs.stringForKey("photoGallery") != nil{
             self.title = prefs.stringForKey("photoGallery")
         }
+        self.title = prefs.stringForKey("eventName")
     }
     
     override func didReceiveMemoryWarning() {

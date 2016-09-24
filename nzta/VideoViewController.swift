@@ -44,6 +44,7 @@ class VideoViewController: UITableViewController, AVPlayerViewControllerDelegate
         if prefs.stringForKey("videoGallery") != nil{
             self.title = prefs.stringForKey("videoGallery")
         }
+        self.title = prefs.stringForKey("eventName")
     }
     
     override func didReceiveMemoryWarning() {
