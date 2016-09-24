@@ -43,6 +43,7 @@ class InterestViewController: UIViewController {
             self.title = prefs.stringForKey("eventName")
         }
         
+        
         headerView = tableView.tableHeaderView as! InterestHeaderView
         tableView.tableHeaderView = nil
         tableView.addSubview(headerView)

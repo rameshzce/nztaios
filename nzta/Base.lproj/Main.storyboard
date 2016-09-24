@@ -1548,7 +1548,9 @@ all</string>
                             <constraint firstItem="rFa-OV-34G" firstAttribute="top" secondItem="jbk-Xb-n47" secondAttribute="bottom" id="rML-dY-kWI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sa2-RF-dfZ"/>
+                    <navigationItem key="navigationItem" id="sa2-RF-dfZ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="G9q-ul-n1o"/>
+                    </navigationItem>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="jbk-Xb-n47" id="cdF-va-zsj"/>
