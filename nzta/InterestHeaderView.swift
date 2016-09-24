@@ -20,11 +20,11 @@ class InterestHeaderView: UIView
     private func updateUI()
     {
         backgroundImageView?.image! = interest.featuredImage
-        interestTitleLabel?.text! = interest.title
-        numberOfMembersLabel.text! = "\(interest.numberOfMembers)"
-        numberOfPostsLabel.text! = "\(interest.numberOfPosts)"
-        pullDownToCloseLabel.text! = "Pull down to close"
-        pullDownToCloseLabel.hidden = true
+        //interestTitleLabel?.text! = interest.title
+        //numberOfMembersLabel.text! = "\(interest.numberOfMembers)"
+        //numberOfPostsLabel.text! = "\(interest.numberOfPosts)"
+        //pullDownToCloseLabel.text! = "Pull down to close"
+        //pullDownToCloseLabel.hidden = true
     }
     
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -37,7 +37,7 @@ class InterestHeaderView: UIView
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        closeButtonBackgroundView.layer.cornerRadius = closeButtonBackgroundView.bounds.width / 2
-        closeButtonBackgroundView.layer.masksToBounds = true
+        //closeButtonBackgroundView.layer.cornerRadius = closeButtonBackgroundView.bounds.width / 2
+        //closeButtonBackgroundView.layer.masksToBounds = true
     }
 }

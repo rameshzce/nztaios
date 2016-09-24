@@ -22,8 +22,8 @@ class Interest
         self.title = title
         self.description = description
         self.featuredImage = featuredImage
-        numberOfMembers = 1
-        numberOfPosts = 1
+        //numberOfMembers = 1
+        //numberOfPosts = 1
     }
     
     // MARK: - Private
