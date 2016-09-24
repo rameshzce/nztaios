@@ -14,5 +14,6 @@ class InterestViewCell: UITableViewCell {
     @IBOutlet var bottomBg: UIView!
     @IBOutlet var photoGalleryBtn: UIButton!
     @IBOutlet var videoGalleryBtn: UIButton!
+    @IBOutlet var interestTitle: UILabel!
 
 }

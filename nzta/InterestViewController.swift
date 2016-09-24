@@ -31,7 +31,7 @@ class InterestViewController: UIViewController {
     
     // MARK: - Private
     @IBOutlet weak var tableView: UITableView!
-    private let tableHeaderHeight: CGFloat = 250.0
+    private let tableHeaderHeight: CGFloat = 350.0
     private let tableHeaderCutAway: CGFloat = 50.0
     
     private var headerView: InterestHeaderView!
