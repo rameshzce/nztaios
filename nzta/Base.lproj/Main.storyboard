@@ -1471,13 +1471,13 @@ all</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZN-5G-saT">
-                                                    <rect key="frame" x="8" y="33" width="304" height="13"/>
+                                                    <rect key="frame" x="8" y="43" width="304" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRl-B0-IZO">
-                                                    <rect key="frame" x="0.0" y="96" width="320" height="42"/>
+                                                    <rect key="frame" x="0.0" y="101" width="320" height="42"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ked-cE-rUE">
                                                             <rect key="frame" x="82" y="5" width="32" height="32"/>
@@ -1504,7 +1504,7 @@ all</string>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ugadi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6u-VL-XGg">
-                                                    <rect key="frame" x="8" y="-7" width="300" height="30"/>
+                                                    <rect key="frame" x="8" y="9" width="300" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="KYJ-nd-WiY"/>
                                                         <constraint firstAttribute="height" constant="30" id="TgW-OY-J2D"/>
@@ -1516,12 +1516,12 @@ all</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="p6u-VL-XGg" firstAttribute="leading" secondItem="dZN-5G-saT" secondAttribute="leading" id="4tZ-mc-LBv"/>
-                                                <constraint firstItem="dZN-5G-saT" firstAttribute="top" secondItem="p6u-VL-XGg" secondAttribute="bottom" constant="10" id="9hg-9E-iyW"/>
-                                                <constraint firstItem="dZN-5G-saT" firstAttribute="top" secondItem="kSU-6r-Ol1" secondAttribute="topMargin" constant="25" id="FOn-1G-hWe"/>
+                                                <constraint firstItem="dZN-5G-saT" firstAttribute="top" secondItem="p6u-VL-XGg" secondAttribute="bottom" constant="4" id="9hg-9E-iyW"/>
+                                                <constraint firstItem="dZN-5G-saT" firstAttribute="top" secondItem="kSU-6r-Ol1" secondAttribute="topMargin" constant="35" id="FOn-1G-hWe"/>
                                                 <constraint firstItem="dZN-5G-saT" firstAttribute="leading" secondItem="kSU-6r-Ol1" secondAttribute="leadingMargin" id="WVd-ij-to1"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="dZN-5G-saT" secondAttribute="bottom" constant="91" id="aZx-XY-hg6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dZN-5G-saT" secondAttribute="bottom" constant="62" id="aZx-XY-hg6"/>
                                                 <constraint firstItem="dZN-5G-saT" firstAttribute="trailing" secondItem="kSU-6r-Ol1" secondAttribute="trailingMargin" id="gAc-5t-qNh"/>
-                                                <constraint firstItem="FRl-B0-IZO" firstAttribute="top" secondItem="dZN-5G-saT" secondAttribute="bottom" constant="50" id="ppM-al-tYH"/>
+                                                <constraint firstItem="FRl-B0-IZO" firstAttribute="top" secondItem="dZN-5G-saT" secondAttribute="bottom" constant="26" id="ppM-al-tYH"/>
                                                 <constraint firstItem="FRl-B0-IZO" firstAttribute="centerX" secondItem="dZN-5G-saT" secondAttribute="centerX" id="rvD-ky-3dG"/>
                                                 <constraint firstItem="FRl-B0-IZO" firstAttribute="leading" secondItem="kSU-6r-Ol1" secondAttribute="leading" id="tAI-Ta-Yhq"/>
                                             </constraints>

@@ -33,7 +33,7 @@ class EventsViewController: UITableViewController{
         ("Sankranthi", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
         ("Republic Day", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
         ("Blood Donations", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed. Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
-        ("Holy Funday", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner."),
+        ("Holi Funday", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner."),
         ("Ugadi", "Rangoli competition & kite festival on 17-1-2016"),
         ("Independence Day", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
         ("Vinayaka Chaviti", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
@@ -82,6 +82,8 @@ class EventsViewController: UITableViewController{
             //self.textBg = "#840000"
         }
         
+        cell.selectionStyle = .None
+        
         cell.titleBg.backgroundColor = Helper.hexStringToUIColor(titleBg)
         //cell.textBg.backgroundColor = hexStringToUIColor(textBg)
         //cell.leftSubBg.backgroundColor = hexStringToUIColor(subBgColor)
@@ -109,6 +111,7 @@ class EventsViewController: UITableViewController{
             tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
             //tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Top, animated: true)
         }*/
+        
         self.prefs.setValue(events[indexPath.row].name, forKey: "eventName")
     }
     
@@ -147,7 +150,11 @@ class EventsViewController: UITableViewController{
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
     }
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //tableView.allowsSelection = false;
+    }
     
     
 }

@@ -90,6 +90,9 @@ class MemberViewController: UITableViewController{
         cell.titleLabel?.text = titles[indexPath.row]
         cell.titleBigLabel?.text = titlesBig[indexPath.row]
         cell.iconImageView?.image = UIImage(named: images[indexPath.row])
+        
+        cell.selectionStyle = .None
+        
         return cell
     }
     

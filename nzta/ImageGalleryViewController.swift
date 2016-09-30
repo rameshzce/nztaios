@@ -42,7 +42,7 @@ class ImageGalleryViewController: UITableViewController {
         } else if (prefs.stringForKey("eventName") == "Blood Donations"){
             images = ["img_event_blood_donation1", "img_event_blood_donation2", "img_event_blood_donation3", "img_event_blood_donation4", "img_event_blood_donation5"]
             thumbs = ["thumb_img_event_blood_donation1", "thumb_img_event_blood_donation2", "thumb_img_event_blood_donation3", "thumb_img_event_blood_donation4", "thumb_img_event_blood_donation5"]
-        } else if (prefs.stringForKey("eventName") == "Holy Funday"){
+        } else if (prefs.stringForKey("eventName") == "Holi Funday"){
             images = ["img_event_holi1", "img_event_holi2", "img_event_holi3", "img_event_holi4", "img_event_holi5", "img_event_holi6", "img_event_holi7", "img_event_holi8"]
             thumbs = ["thumb_img_event_holi1", "thumb_img_event_holi2", "thumb_img_event_holi3", "thumb_img_event_holi4", "thumb_img_event_holi5", "thumb_img_event_holi6", "thumb_img_event_holi7", "thumb_img_event_holi8"]
         } else if (prefs.stringForKey("eventName") == "Ugadi"){
