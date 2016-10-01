@@ -82,7 +82,7 @@ class EventsViewController: UITableViewController{
             //self.textBg = "#840000"
         }
         
-        cell.selectionStyle = .None
+        //cell.selectionStyle = .None
         
         cell.titleBg.backgroundColor = Helper.hexStringToUIColor(titleBg)
         //cell.textBg.backgroundColor = hexStringToUIColor(textBg)
@@ -112,6 +112,16 @@ class EventsViewController: UITableViewController{
             //tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Top, animated: true)
         }*/
         
+        var rowColor = ""
+        
+        if (prefs.stringForKey("eventType") == "Upcoming Events"){
+            rowColor = "#ff218e"
+        } else if (prefs.stringForKey("eventType") == "Existing Events"){
+            rowColor = "#ffd428"
+        }
+        
+        let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        selectedCell.contentView.backgroundColor = Helper.hexStringToUIColor(rowColor)
         self.prefs.setValue(events[indexPath.row].name, forKey: "eventName")
     }
     
@@ -155,6 +165,11 @@ class EventsViewController: UITableViewController{
         
         //tableView.allowsSelection = false;
     }
+    
+    
+    // if tableView is set in attribute inspector with selection to multiple Selection it should work.
+    
+    // Just set it back in deselect
     
     
 }
