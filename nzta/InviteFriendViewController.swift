@@ -52,7 +52,7 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
                 
                 dispatch_async(dispatch_get_main_queue(),{
                     if (self.prefs.stringForKey("inviteMsg") != nil){
-                        self.showAlert("\(self.prefs.stringForKey("inviteMsg")!)")
+                        self.showAlert("\(self.prefs.stringForKey("inviteMsg")!) Have a good day! ")
                     }
                 });
             }
@@ -69,8 +69,8 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
         //btnSendInvite.layer.cornerRadius = 5
         Helper.customizeButton(btnSendInvite)
         
-        Helper.customizetextField(textMoble)
-        textMoble.attributedPlaceholder = NSAttributedString(string:"Mobile", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
+        //Helper.customizetextField(textMoble)
+        textMoble.attributedPlaceholder = NSAttributedString(string:"Mobile", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
 
         
         // Do any additional setup after loading the view.
