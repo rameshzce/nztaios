@@ -93,6 +93,9 @@ class MemberViewController: UITableViewController{
         
         cell.selectionStyle = .None
         
+        cell.layoutMargins = UIEdgeInsetsZero
+        cell.separatorInset = UIEdgeInsetsZero
+        
         return cell
     }
     
