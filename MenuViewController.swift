@@ -39,7 +39,7 @@ class MenuViewController: UITableViewController {
         
         // Configure the cell...
         cell.titleLabel.text = menuItems[indexPath.row]
-        cell.titleLabel.textColor = (menuItems[indexPath.row] == currentItem) ? UIColor.whiteColor() : UIColor.grayColor()
+        cell.titleLabel.textColor = UIColor.whiteColor()
         
         return cell
     }

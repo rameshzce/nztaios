@@ -58,7 +58,6 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -659,11 +658,11 @@ and its our family fun</string>
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FxK-Ye-FiI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="vLK-8t-Y0J">
                             <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="F7l-vg-CnD" customClass="MenuViewCell" customModule="nzta" customModuleProvider="target">
@@ -673,19 +672,37 @@ and its our family fun</string>
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I62-VS-jVK">
+                                            <rect key="frame" x="0.0" y="-1" width="320" height="49"/>
+                                            <color key="backgroundColor" red="0.66666666669999997" green="0.0" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpg-Y3-laH">
-                                            <rect key="frame" x="17" y="10" width="52" height="30"/>
-                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="22"/>
+                                            <rect key="frame" x="63" y="12" width="60" height="26"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="8Em-d6-ROu">
+                                            <rect key="frame" x="18" y="10" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="Bej-qS-77Z"/>
+                                                <constraint firstAttribute="height" constant="30" id="wAf-tl-kqb"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstItem="8Em-d6-ROu" firstAttribute="leading" secondItem="sbp-fz-E7v" secondAttribute="leadingMargin" constant="10" id="1lv-86-cg6"/>
+                                        <constraint firstItem="I62-VS-jVK" firstAttribute="leading" secondItem="sbp-fz-E7v" secondAttribute="leading" id="Enq-MK-Vk2"/>
+                                        <constraint firstItem="fpg-Y3-laH" firstAttribute="leading" secondItem="8Em-d6-ROu" secondAttribute="trailing" constant="15" id="TCn-tF-k0N"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="I62-VS-jVK" secondAttribute="bottom" constant="-6" id="bmI-6w-4MP"/>
+                                        <constraint firstItem="I62-VS-jVK" firstAttribute="width" secondItem="sbp-fz-E7v" secondAttribute="width" id="csm-Y0-CgS"/>
                                         <constraint firstAttribute="centerY" secondItem="fpg-Y3-laH" secondAttribute="centerY" id="jtM-aq-CDa"/>
-                                        <constraint firstItem="fpg-Y3-laH" firstAttribute="leading" secondItem="sbp-fz-E7v" secondAttribute="leadingMargin" constant="9" id="lT4-pO-0Lf"/>
+                                        <constraint firstItem="I62-VS-jVK" firstAttribute="height" secondItem="sbp-fz-E7v" secondAttribute="height" constant="-1" id="oxg-fT-Zrp"/>
+                                        <constraint firstItem="8Em-d6-ROu" firstAttribute="centerY" secondItem="fpg-Y3-laH" secondAttribute="centerY" id="r1k-pd-VQt"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.0" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="titleLabel" destination="fpg-Y3-laH" id="FgM-77-N1y"/>
                                     <segue destination="6qb-Nk-LZe" kind="unwind" unwindAction="unwindToHome:" id="5gi-Oq-WMC"/>
@@ -878,7 +895,7 @@ and its our family fun</string>
                         <color key="sectionIndexBackgroundColor" red="0.96078431372549022" green="0.0" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="eVb-08-IA9" customClass="EventsViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="320" height="90"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eVb-08-IA9" id="OuO-Wb-eba">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
@@ -1403,7 +1420,7 @@ all</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-Xb-n47">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-Xb-n47">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="3yn-vS-Cau" customClass="InterestHeaderView" customModule="nzta" customModuleProvider="target">
@@ -2121,10 +2138,10 @@ all</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LdX-gS-pN6">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdX-gS-pN6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="event_name_image1" translatesAutoresizingMaskIntoConstraints="NO" id="84k-Wm-wej">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="event_name_image1" translatesAutoresizingMaskIntoConstraints="NO" id="84k-Wm-wej">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
                                 </subviews>
@@ -2167,6 +2184,7 @@ all</string>
         <image name="edit" width="36" height="36"/>
         <image name="event_name_image1" width="2048" height="1365"/>
         <image name="icon_batukamma" width="54" height="54"/>
+        <image name="logo" width="48" height="48"/>
         <image name="logo3" width="100" height="100"/>
         <image name="menu" width="22" height="22"/>
         <image name="nz_bg5" width="414" height="736"/>
@@ -2175,11 +2193,11 @@ all</string>
         <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="a6G-TX-FPf"/>
-        <segue reference="xPk-vA-a2a"/>
-        <segue reference="0o9-gl-Z1m"/>
         <segue reference="liW-Va-Wqk"/>
-        <segue reference="ipK-54-FXD"/>
+        <segue reference="xPk-vA-a2a"/>
+        <segue reference="I58-nj-Cl3"/>
+        <segue reference="zv7-5d-ouw"/>
+        <segue reference="0o9-gl-Z1m"/>
         <segue reference="ZWk-WU-XrL"/>
     </inferredMetricsTieBreakers>
 </document>
