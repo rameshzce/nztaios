@@ -1019,16 +1019,16 @@ cultural events</string>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="YTu-mD-lGG" firstAttribute="top" secondItem="KLS-OR-4kG" secondAttribute="bottom" constant="7" id="5CJ-fu-FJp"/>
-                            <constraint firstItem="YTu-mD-lGG" firstAttribute="centerX" secondItem="KLS-OR-4kG" secondAttribute="centerX" id="9m5-Tf-wwU"/>
-                            <constraint firstItem="KLS-OR-4kG" firstAttribute="centerY" secondItem="tRn-Ml-Lyt" secondAttribute="centerY" id="GE8-We-dcc"/>
-                            <constraint firstItem="YTu-mD-lGG" firstAttribute="leading" secondItem="tRn-Ml-Lyt" secondAttribute="leading" id="IMH-0F-Rq2"/>
-                            <constraint firstItem="2zT-Ro-yeQ" firstAttribute="centerX" secondItem="KLS-OR-4kG" secondAttribute="centerX" id="Vfy-xM-DRK"/>
-                            <constraint firstItem="2zT-Ro-yeQ" firstAttribute="top" secondItem="aOh-Rb-X0N" secondAttribute="bottom" constant="80" id="dt5-hu-O6Q"/>
+                            <constraint firstItem="2zT-Ro-yeQ" firstAttribute="centerX" secondItem="KLS-OR-4kG" secondAttribute="centerX" id="FqD-Ya-vDg"/>
+                            <constraint firstItem="YTu-mD-lGG" firstAttribute="leading" secondItem="tRn-Ml-Lyt" secondAttribute="leading" id="GXq-8H-wUi"/>
+                            <constraint firstItem="2zT-Ro-yeQ" firstAttribute="centerX" secondItem="YTu-mD-lGG" secondAttribute="centerX" id="WNf-Ko-7yT"/>
+                            <constraint firstItem="YTu-mD-lGG" firstAttribute="top" secondItem="KLS-OR-4kG" secondAttribute="bottom" constant="7" id="aQ2-Sh-BYm"/>
                             <constraint firstItem="dC9-CS-CQo" firstAttribute="top" secondItem="KLS-OR-4kG" secondAttribute="bottom" constant="34" id="eYM-BU-9Qa"/>
+                            <constraint firstItem="KLS-OR-4kG" firstAttribute="top" secondItem="2zT-Ro-yeQ" secondAttribute="bottom" constant="71" id="hjF-nb-zny"/>
                             <constraint firstItem="dC9-CS-CQo" firstAttribute="width" secondItem="KLS-OR-4kG" secondAttribute="width" id="ls7-7z-pkn"/>
+                            <constraint firstItem="2zT-Ro-yeQ" firstAttribute="centerX" secondItem="tRn-Ml-Lyt" secondAttribute="centerX" id="mQ2-W1-2pd"/>
                             <constraint firstItem="dC9-CS-CQo" firstAttribute="centerX" secondItem="KLS-OR-4kG" secondAttribute="centerX" id="mYS-w0-T91"/>
-                            <constraint firstItem="KLS-OR-4kG" firstAttribute="centerX" secondItem="tRn-Ml-Lyt" secondAttribute="centerX" id="tUT-6F-6if"/>
+                            <constraint firstItem="2zT-Ro-yeQ" firstAttribute="top" secondItem="aOh-Rb-X0N" secondAttribute="bottom" constant="80" id="oZT-sl-bAA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Invite a Friend" id="v8K-zZ-4Sl"/>
