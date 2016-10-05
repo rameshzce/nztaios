@@ -35,6 +35,19 @@ class Helper{
         textField.leftViewMode = UITextFieldViewMode.Always
     }
     
+    static func customizetextField3(textField: UITextField!) {
+        textField.backgroundColor = hexStringToUIColor("#3E7CC7")
+        textField.layer.cornerRadius = 3
+        textField.layer.borderWidth = 0
+        textField.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        let paddingView = UIView(frame: CGRectMake(0, 0, 10, textField.frame.height))
+        
+        textField.leftView = paddingView
+        
+        textField.leftViewMode = UITextFieldViewMode.Always
+    }
+    
     static func customizeButton(button: UIButton!) {
         //button.setBackgroundImage(nil, forState: .Normal)
         //button.backgroundColor = UIColor.clearColor()

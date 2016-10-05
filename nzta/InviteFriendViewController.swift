@@ -68,9 +68,10 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
         
         //btnSendInvite.layer.cornerRadius = 5
         Helper.customizeButton(btnSendInvite)
+        Helper.customizetextField3(textMoble)
         
         //Helper.customizetextField(textMoble)
-        textMoble.attributedPlaceholder = NSAttributedString(string:"Mobile", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        textMoble.attributedPlaceholder = NSAttributedString(string:"Mobile here", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
 
         
         // Do any additional setup after loading the view.
