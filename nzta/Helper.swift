@@ -9,6 +9,10 @@
 import Foundation
 
 class Helper{
+    static var url = "http://sdctbheemili.org/ios/events/"
+    static var image = "img_event_"
+    static var thumb = "thumb_img_event_"
+    
     static func customizetextField(textField: UITextField!) {
         textField.backgroundColor = UIColor.clearColor()
         textField.layer.cornerRadius = 5

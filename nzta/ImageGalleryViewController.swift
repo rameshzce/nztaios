@@ -16,6 +16,8 @@ class ImageGalleryViewController: UITableViewController {
     
     var array:NSArray!
     
+    var url: String!
+    
     
     var images = ["event_name_image1", "event_name_image2", "event_name_image3", "event_name_image4", "event_name_image5", "event_name_image6", "event_name_image7", "event_name_image8", "event_name_image9", "event_name_image10", "event_name_image11"]
     
@@ -25,13 +27,90 @@ class ImageGalleryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        url = "http://sdctbheemili.org/ios/events/"
+        
         array = NSArray(objects:
-            "http://i3.mirror.co.uk/incoming/article5871156.ece/ALTERNATES/s615b/iPhone-7-Concept.jpg",
-            "https://i.ytimg.com/vi/Ru0U3gv8cEk/maxresdefault.jpg",
-            "http://www.iphone7.tips/wp-content/uploads/2016/05/iphone-7-apple.jpg",
-            "http://iosjailbreaker.com/wp-content/uploads/2013/06/0f262__Redesign_iOS7_Big.jpg",
-            "http://s1.dmcdn.net/IuWfG/1280x720-gtq.jpg"
+            url + "ugadi/thumb1.png",
+            url + "ugadi/thumb2.png",
+            url + "ugadi/thumb3.png",
+            url + "ugadi/thumb4.png",
+            url + "ugadi/thumb5.png",
+            url + "ugadi/thumb6.png",
+            url + "ugadi/thumb7.png",
+            url + "ugadi/thumb8.png",
+            url + "ugadi/thumb9.png",
+            url + "ugadi/thumb10.png",
+            url + "ugadi/thumb11.png",
+            url + "ugadi/thumb12.png",
+            url + "ugadi/thumb13.png",
+            url + "ugadi/thumb14.png"
         );
+        
+        if (prefs.stringForKey("eventName") == "Ugadi"){
+            array = NSArray(objects:
+                url + "ugadi/thumb1.png",
+                            url + "ugadi/thumb2.png",
+                            url + "ugadi/thumb3.png",
+                            url + "ugadi/thumb4.png",
+                            url + "ugadi/thumb5.png",
+                            url + "ugadi/thumb6.png",
+                            url + "ugadi/thumb7.png",
+                            url + "ugadi/thumb8.png",
+                            url + "ugadi/thumb9.png",
+                            url + "ugadi/thumb10.png",
+                            url + "ugadi/thumb11.png",
+                            url + "ugadi/thumb12.png",
+                            url + "ugadi/thumb13.png",
+                            url + "ugadi/thumb14.png"
+            );
+        } else if (prefs.stringForKey("eventName") == "Sankranthi"){
+            array = NSArray(objects:
+                url + "sankranti/thumb1.png",
+                url + "sankranti/thumb2.png",
+                url + "sankranti/thumb3.png",
+                url + "sankranti/thumb4.png",
+                url + "sankranti/thumb5.png",
+                url + "sankranti/thumb6.png",
+                url + "sankranti/thumb7.png",
+                url + "sankranti/thumb8.png",
+                url + "sankranti/thumb9.png"
+            );
+        } else if (prefs.stringForKey("eventName") == "Holi Funday"){
+            array = NSArray(objects:
+                url + "holi/thumb1.png",
+                url + "holi/thumb2.png",
+                url + "holi/thumb3.png",
+                url + "holi/thumb4.png",
+                url + "holi/thumb5.png",
+                url + "holi/thumb6.png",
+                url + "holi/thumb7.png",
+                url + "holi/thumb8.png"
+            );
+        } else if (prefs.stringForKey("eventName") == "Vinayaka Chaviti"){
+            array = NSArray(objects:
+                url + "vinayaka/thumb1.png",
+                url + "vinayaka/thumb2.png",
+                url + "vinayaka/thumb3.png",
+                url + "vinayaka/thumb4.png",
+                url + "vinayaka/thumb5.png",
+                url + "vinayaka/thumb6.png",
+                url + "vinayaka/thumb7.png",
+                url + "vinayaka/thumb8.png",
+                url + "vinayaka/thumb9.png",
+                url + "vinayaka/thumb10.png",
+                url + "vinayaka/thumb11.png",
+                url + "vinayaka/thumb12.png",
+                url + "vinayaka/thumb13.png"
+            );
+        } else if (prefs.stringForKey("eventName") == "Blood Donations"){
+            array = NSArray(objects:
+                url + "blood_donation/thumb1.png",
+                url + "blood_donation/thumb2.png",
+                url + "blood_donation/thumb3.png",
+                url + "blood_donation/thumb4.png",
+                url + "blood_donation/thumb5.png"
+            );
+        }
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
