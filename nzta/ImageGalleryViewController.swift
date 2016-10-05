@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ImageGalleryViewController: UITableViewController {
     var eventName: String!
     
     let prefs = NSUserDefaults.standardUserDefaults()
     
+    var array:NSArray!
     
     
     var images = ["event_name_image1", "event_name_image2", "event_name_image3", "event_name_image4", "event_name_image5", "event_name_image6", "event_name_image7", "event_name_image8", "event_name_image9", "event_name_image10", "event_name_image11"]
@@ -22,6 +24,14 @@ class ImageGalleryViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        array = NSArray(objects:
+            "http://i3.mirror.co.uk/incoming/article5871156.ece/ALTERNATES/s615b/iPhone-7-Concept.jpg",
+            "https://i.ytimg.com/vi/Ru0U3gv8cEk/maxresdefault.jpg",
+            "http://www.iphone7.tips/wp-content/uploads/2016/05/iphone-7-apple.jpg",
+            "http://iosjailbreaker.com/wp-content/uploads/2013/06/0f262__Redesign_iOS7_Big.jpg",
+            "http://s1.dmcdn.net/IuWfG/1280x720-gtq.jpg"
+        );
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
@@ -84,7 +94,8 @@ class ImageGalleryViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return images.count
+        //return images.count
+        return array.count
     }
     
     
@@ -93,7 +104,8 @@ class ImageGalleryViewController: UITableViewController {
         
         
         
-        cell.postImageView.image = UIImage(named: thumbs[indexPath.row])
+        //cell.postImageView.image = UIImage(named: thumbs[indexPath.row])
+        cell.postImageView.sd_setImageWithURL(NSURL(string: array.objectAtIndex(indexPath.row) as! String), placeholderImage: UIImage(named: "placeholder"))
         
         return cell
     }
