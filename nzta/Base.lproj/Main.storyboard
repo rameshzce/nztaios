@@ -2136,7 +2136,7 @@ all</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdX-gS-pN6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="event_name_image1" translatesAutoresizingMaskIntoConstraints="NO" id="84k-Wm-wej">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="84k-Wm-wej">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
                                 </subviews>
@@ -2177,12 +2177,12 @@ all</string>
         <image name="camera" width="32" height="32"/>
         <image name="dn_arrow_2" width="212" height="180"/>
         <image name="edit" width="36" height="36"/>
-        <image name="event_name_image1" width="2048" height="1365"/>
         <image name="icon_batukamma" width="54" height="54"/>
         <image name="logo" width="48" height="48"/>
         <image name="logo3" width="100" height="100"/>
         <image name="menu" width="22" height="22"/>
         <image name="nz_bg5" width="414" height="736"/>
+        <image name="placeholder" width="300" height="300"/>
         <image name="play_btn" width="50" height="50"/>
         <image name="vanabojanalu" width="379" height="567"/>
         <image name="video" width="32" height="32"/>
