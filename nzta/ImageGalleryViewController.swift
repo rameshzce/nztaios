@@ -30,38 +30,35 @@ class ImageGalleryViewController: UITableViewController {
         url = "http://sdctbheemili.org/ios/events/"
         
         array = NSArray(objects:
-            url + "ugadi/thumb1.png",
-            url + "ugadi/thumb2.png",
-            url + "ugadi/thumb3.png",
-            url + "ugadi/thumb4.png",
-            url + "ugadi/thumb5.png",
-            url + "ugadi/thumb6.png",
-            url + "ugadi/thumb7.png",
-            url + "ugadi/thumb8.png",
-            url + "ugadi/thumb9.png",
-            url + "ugadi/thumb10.png",
-            url + "ugadi/thumb11.png",
-            url + "ugadi/thumb12.png",
-            url + "ugadi/thumb13.png",
-            url + "ugadi/thumb14.png"
+            url + "images/thumb1.jpg",
+            url + "images/thumb2.jpg",
+            url + "images/thumb3.jpg",
+            url + "images/thumb4.jpg",
+            url + "images/thumb5.jpg",
+            url + "images/thumb6.jpg",
+            url + "images/thumb7.jpg",
+            url + "images/thumb8.jpg",
+            url + "images/thumb9.jpg",
+            url + "images/thumb10.jpg",
+            url + "images/thumb11.jpg"
         );
         
         if (prefs.stringForKey("eventName") == "Ugadi"){
             array = NSArray(objects:
                 url + "ugadi/thumb1.png",
-                            url + "ugadi/thumb2.png",
-                            url + "ugadi/thumb3.png",
-                            url + "ugadi/thumb4.png",
-                            url + "ugadi/thumb5.png",
-                            url + "ugadi/thumb6.png",
-                            url + "ugadi/thumb7.png",
-                            url + "ugadi/thumb8.png",
-                            url + "ugadi/thumb9.png",
-                            url + "ugadi/thumb10.png",
-                            url + "ugadi/thumb11.png",
-                            url + "ugadi/thumb12.png",
-                            url + "ugadi/thumb13.png",
-                            url + "ugadi/thumb14.png"
+                url + "ugadi/thumb2.png",
+                url + "ugadi/thumb3.png",
+                url + "ugadi/thumb4.png",
+                url + "ugadi/thumb5.png",
+                url + "ugadi/thumb6.png",
+                url + "ugadi/thumb7.png",
+                url + "ugadi/thumb8.png",
+                url + "ugadi/thumb9.png",
+                url + "ugadi/thumb10.png",
+                url + "ugadi/thumb11.png",
+                url + "ugadi/thumb12.png",
+                url + "ugadi/thumb13.png",
+                url + "ugadi/thumb14.png"
             );
         } else if (prefs.stringForKey("eventName") == "Sankranthi"){
             array = NSArray(objects:
@@ -194,8 +191,8 @@ class ImageGalleryViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destinationViewController as!
                 ScrollViewController
-                destinationController.galleryImage =
-                    images[indexPath.row]
+                //destinationController.galleryImage = images[indexPath.row]
+                destinationController.galleryImage = "\(indexPath.row + 1)"
             }
         }
     }

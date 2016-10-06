@@ -7,18 +7,41 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ScrollViewController: UIViewController, UIScrollViewDelegate
 {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     
-    var galleryImage = "pug"
+    let prefs = NSUserDefaults.standardUserDefaults()
+    
+    var galleryImage = "1"
+    var url: String!
+    var eventName: String!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        imageView.image = UIImage(named: galleryImage)
+        
+        eventName = "images/"
+        
+        if (prefs.stringForKey("eventName") == "Ugadi"){
+            eventName = "ugadi/"
+        } else if (prefs.stringForKey("eventName") == "Sankranthi"){
+            eventName = "sankranti/"
+        } else if (prefs.stringForKey("eventName") == "Holi Funday"){
+            eventName = "holi/"
+        } else if (prefs.stringForKey("eventName") == "Vinayaka Chaviti"){
+            eventName = "vinayaka/"
+        } else if (prefs.stringForKey("eventName") == "Blood Donations"){
+            eventName = "blood_donation/"
+        }
+        
+        url = "http://sdctbheemili.org/ios/events/" + eventName + "image" + galleryImage + ".jpg"
+        
+        //imageView.image = UIImage(named: galleryImage)
+        imageView.sd_setImageWithURL(NSURL(string: url as String), placeholderImage: UIImage(named: "placeholder"))
         
         self.scrollView.minimumZoomScale = 1.0;
         self.scrollView.maximumZoomScale = 6.0;
