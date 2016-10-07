@@ -11,10 +11,10 @@ import UIKit
 class MemberViewController: UITableViewController{
     let prefs = NSUserDefaults.standardUserDefaults()
     
-    var titles = ["Upcoming Events", "Existing Events", "Go Green/NZ Blood", "Invite a Friend/", "Helping", "All"]
-    var titlesBig = ["2016", "2015", "Others", "Family", "Hands!", "Messages"]
-    var images = ["upcoming_events.png", "existing_events.png", "go_green.png", "invite_friend.png", "hands.png", "all_messaes.png"]
-    var bgColors = ["#ff218e", "#ffd428", "#10d295", "#039cfd", "#b21b0f", "#fc5f22"]
+    var titles = ["Upcoming Events", "Existing Events", "Helping", "Invite a Friend/", "All"]
+    var titlesBig = ["2016", "2015", "Hands!",  "Family", "Messages"]
+    var images = ["upcoming_events.png", "existing_events.png", "hands.png", "invite_friend.png",  "all_messaes.png"]
+    var bgColors = ["#ff218e", "#ffd428", "#b21b0f", "#039cfd", "#fc5f22"]
     
     var screenWidth: CGFloat {
         if UIInterfaceOrientationIsPortrait(screenOrientation) {
@@ -70,7 +70,7 @@ class MemberViewController: UITableViewController{
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 6
+        return 5
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -135,19 +135,17 @@ class MemberViewController: UITableViewController{
                 self.performSegueWithIdentifier("events", sender: self)
                 break;
             case 1:
+                self.prefs.setValue("Existing Events", forKey: "eventType")
                 self.performSegueWithIdentifier("existingEvents", sender: self)
                 break;
             case 2:
-                self.prefs.setValue("Go Green", forKey: "eventType")
-                self.performSegueWithIdentifier("events", sender: self)
+                self.prefs.setValue("Helping Hands", forKey: "eventType")
+                self.performSegueWithIdentifier("helpingHands", sender: self)
                 break
             case 3:
                 self.performSegueWithIdentifier("inviteFriend", sender: self)
                 break
             case 4:
-                self.performSegueWithIdentifier("helpingHands", sender: self)
-                break
-            case 5:
                 self.performSegueWithIdentifier("messages", sender: self)
                 break
             default:

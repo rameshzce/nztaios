@@ -53,8 +53,6 @@
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
             <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
-            <string>Handlee-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1656,15 +1654,15 @@ all</string>
                                             <rect key="frame" x="8" y="9" width="304" height="101"/>
                                             <color key="backgroundColor" red="0.92156862745098034" green="0.71372549019607845" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1O-2D-jt9">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Name" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1O-2D-jt9">
                                             <rect key="frame" x="15" y="85" width="290" height="22"/>
-                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIg-6a-3qj">
                                             <rect key="frame" x="15" y="15" width="290" height="70"/>
-                                            <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -2053,14 +2051,14 @@ all</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Send a message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy8-hA-Mui">
-                                <rect key="frame" x="81" y="164" width="159" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send a message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy8-hA-Mui">
+                                <rect key="frame" x="81" y="120" width="159" height="34"/>
                                 <fontDescription key="fontDescription" name="Handlee-Regular" family="Handlee" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gdd-lE-KX1">
-                                <rect key="frame" x="60" y="218" width="200" height="34"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gdd-lE-KX1">
+                                <rect key="frame" x="60" y="174" width="200" height="34"/>
                                 <color key="backgroundColor" red="0.08235294118" green="0.35294117650000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="NFp-za-LXg"/>
@@ -2073,8 +2071,8 @@ all</string>
                                     <outlet property="delegate" destination="KKt-0Z-maf" id="uHU-E8-zsJ"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUE-S6-Mue">
-                                <rect key="frame" x="60" y="282" width="200" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUE-S6-Mue">
+                                <rect key="frame" x="60" y="238" width="200" height="44"/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="32T-js-xrt"/>
@@ -2086,8 +2084,8 @@ all</string>
                                     <action selector="sendInvite:" destination="KKt-0Z-maf" eventType="touchUpInside" id="I8G-iF-5vj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFr-KG-Nc2">
-                                <rect key="frame" x="0.0" y="356" width="320" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFr-KG-Nc2">
+                                <rect key="frame" x="0.0" y="312" width="320" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="JHF-rG-g5j"/>
                                 </constraints>
@@ -2188,11 +2186,11 @@ all</string>
         <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="liW-Va-Wqk"/>
-        <segue reference="xPk-vA-a2a"/>
         <segue reference="I58-nj-Cl3"/>
-        <segue reference="zv7-5d-ouw"/>
+        <segue reference="XqI-KJ-rjm"/>
         <segue reference="0o9-gl-Z1m"/>
+        <segue reference="xPk-vA-a2a"/>
+        <segue reference="zv7-5d-ouw"/>
         <segue reference="ZWk-WU-XrL"/>
     </inferredMetricsTieBreakers>
 </document>

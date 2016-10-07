@@ -21,9 +21,10 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate {
         }  else {
             //SwiftLoading().showLoading()
             //self.labelMsg.text = "Sending..."
-            let request = NSMutableURLRequest(URL: NSURL(string: "http://tokkalo.com/api/1/invite_friend.php")!)
+            //let request = NSMutableURLRequest(URL: NSURL(string: "http://tokkalo.com/api/1/invite_friend.php")!)
+            let request = NSMutableURLRequest(URL: NSURL(string: "http://sdctbheemili.org/ios/push-notification.php")!)
             request.HTTPMethod = "POST"
-            let postString = "toMobile=\(textMoble.text!)&fromMobile=\(prefs.stringForKey("login")!)"
+            let postString = "msg=\(textMoble.text!)"
             request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
             
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
@@ -40,7 +41,7 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate {
                     
                     let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                     let message = jsonDictionary["message"] as! String
-                    self.prefs.setValue(message, forKey: "inviteMsg")
+                    self.prefs.setValue(message, forKey: "notificationMsg")
                     //self.labelMsg.text = "\(message)"
                     SwiftLoading().hideLoading()
                     //self.showAlert("\(message)")
@@ -51,8 +52,8 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate {
                 }
                 
                 dispatch_async(dispatch_get_main_queue(),{
-                    if (self.prefs.stringForKey("inviteMsg") != nil){
-                        self.showAlert("\(self.prefs.stringForKey("inviteMsg")!)")
+                    if (self.prefs.stringForKey("notificationMsg") != nil){
+                        self.showAlert("\(self.prefs.stringForKey("notificationMsg")!)")
                     }
                 });
             }
