@@ -15,6 +15,7 @@ class MessagesTableViewController: UITableViewController {
     
     struct Messages {
         var messages: [String]!
+        var dates: [String]!
         var date: String!
     }
     
@@ -37,14 +38,14 @@ class MessagesTableViewController: UITableViewController {
     var events:[(name: String, address: String)] = [
         ("25-08-2016, 10:30:15 am", "Rangoli competition & kite festival on 17-1-2016"),
         ("25-08-2016, 10:30:15 am", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
-        ("25-08-2016, 10:30:15 am", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
+        ("25-08-2016, 10:30:15 am", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner."),
         ("25-08-2016, 10:30:15 am", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed. Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
         ("25-08-2016, 10:30:15 am", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner."),
         ("25-08-2016, 10:30:15 am", "Rangoli competition & kite festival on 17-1-2016"),
         ("25-08-2016, 10:30:15 am", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
         ("25-08-2016, 10:30:15 am", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
         ("25-08-2016, 10:30:15 am", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
-        ("25-08-2016, 10:30:15 am", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner.")
+        ("25-08-2016, 10:30:15 am", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner.")
     ]
     
 
@@ -60,10 +61,10 @@ class MessagesTableViewController: UITableViewController {
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
         messagesArray = [
-            Messages(messages: ["msg1", "msg2", "msg3"], date: "Today"),
-            Messages(messages: ["msg1", "msg2", "msg3"], date: "Yesterday"),
-            Messages(messages: ["msg1", "msg2", "msg3"], date: "One week ago"),
-            Messages(messages: ["msg1", "msg2", "msg3"], date: "Few weeks ago")
+            Messages(messages: ["Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed", "angoli competition & kite festival on 17-1-2016"], dates: ["2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am"], date: "Today"),
+            Messages(messages: ["Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed", "angoli competition & kite festival on 17-1-2016"], dates: ["2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am"], date: "Yesterday"),
+            Messages(messages: ["Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner", "Diwali stall opens at 2 Pm at queens street. ", "angoli competition & kite festival on 17-1-2016"], dates: ["2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am"], date: "One week ago"),
+            Messages(messages: ["WWar memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner.", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed", "angoli competition & kite festival on 17-1-2016"], dates: ["2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am"], date: "Few weeks ago")
         ]
         
         self.tableView.sectionHeaderHeight = 50
@@ -100,10 +101,10 @@ class MessagesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MessagesViewCell
         
         // Configure the cell...
-        let event = events[indexPath.row]
+        //let event = events[indexPath.row]
         //cell.nameLabel.text = event.name
-        cell.nameLabel.text = messagesArray[indexPath.section].messages[indexPath.row]
-        cell.addressLabel.text = event.address
+        cell.nameLabel.text = messagesArray[indexPath.section].dates[indexPath.row]
+        cell.addressLabel.text = messagesArray[indexPath.section].messages[indexPath.row]
         cell.mainBg.backgroundColor = hexStringToUIColor("#fce7de")
         
         

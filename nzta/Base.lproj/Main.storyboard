@@ -1619,20 +1619,20 @@ all</string>
                                             <color key="backgroundColor" red="0.92156862745098034" green="0.71372549019607845" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1O-2D-jt9">
-                                            <rect key="frame" x="15" y="85" width="290" height="19"/>
+                                            <rect key="frame" x="15" y="86" width="290" height="19"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.96470588239999999" green="0.2784313725" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIg-6a-3qj">
-                                            <rect key="frame" x="15" y="15" width="290" height="70"/>
+                                            <rect key="frame" x="15" y="15" width="290" height="65"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="lrX-Fa-KLQ" secondAttribute="bottom" constant="-9" id="2Hz-Jc-gBg"/>
-                                        <constraint firstItem="hIg-6a-3qj" firstAttribute="bottom" secondItem="lrX-Fa-KLQ" secondAttribute="bottom" constant="-25" id="7cR-3P-V0G"/>
+                                        <constraint firstItem="hIg-6a-3qj" firstAttribute="bottom" secondItem="lrX-Fa-KLQ" secondAttribute="bottom" constant="-30" id="7cR-3P-V0G"/>
                                         <constraint firstItem="I1O-2D-jt9" firstAttribute="trailing" secondItem="hIg-6a-3qj" secondAttribute="trailing" id="BsP-gk-qM6"/>
                                         <constraint firstItem="lrX-Fa-KLQ" firstAttribute="top" secondItem="csI-Sh-98z" secondAttribute="topMargin" constant="-11" id="Jwz-4l-JEm"/>
                                         <constraint firstItem="lrX-Fa-KLQ" firstAttribute="centerX" secondItem="I1O-2D-jt9" secondAttribute="centerX" id="bF8-5z-g1X"/>
@@ -1640,7 +1640,7 @@ all</string>
                                         <constraint firstItem="I1O-2D-jt9" firstAttribute="leading" secondItem="hIg-6a-3qj" secondAttribute="leading" id="bu0-Uu-YJy"/>
                                         <constraint firstItem="I1O-2D-jt9" firstAttribute="leading" secondItem="csI-Sh-98z" secondAttribute="leadingMargin" constant="7" id="ckf-0d-iFo"/>
                                         <constraint firstItem="lrX-Fa-KLQ" firstAttribute="leading" secondItem="csI-Sh-98z" secondAttribute="leadingMargin" id="oP9-pX-YIg"/>
-                                        <constraint firstItem="hIg-6a-3qj" firstAttribute="bottom" secondItem="I1O-2D-jt9" secondAttribute="top" id="pWW-j4-t1F"/>
+                                        <constraint firstItem="hIg-6a-3qj" firstAttribute="bottom" secondItem="I1O-2D-jt9" secondAttribute="top" constant="-6" id="pWW-j4-t1F"/>
                                         <constraint firstItem="hIg-6a-3qj" firstAttribute="top" secondItem="csI-Sh-98z" secondAttribute="topMargin" constant="-5" id="vHL-jv-vgP"/>
                                     </constraints>
                                     <edgeInsets key="layoutMargins" top="20" left="8" bottom="8" right="8"/>
