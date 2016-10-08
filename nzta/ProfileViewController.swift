@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProfileViewController: UIViewController {
     
@@ -32,7 +33,7 @@ class ProfileViewController: UIViewController {
         self.profileImage.layer.borderWidth = 10.0
         self.profileImage.layer.borderColor = hexStringToUIColor("#C4C4C4").CGColor
         
-        let path = "/var/mobile/Containers/Data/Application/10C6D07A-29F4-43B0-922F-6E6F1EA2F68E/Documents/image.png"
+        /*let path = "/var/mobile/Containers/Data/Application/10C6D07A-29F4-43B0-922F-6E6F1EA2F68E/Documents/image.png"
         
         let image = UIImage(contentsOfFile: path)
         
@@ -42,7 +43,7 @@ class ProfileViewController: UIViewController {
         }
         print("Loading image from path: \(path)")
         
-        self.profileImage.image = image
+        self.profileImage.image = image*/
         
         //Helper.loadImageFromUrl("\(prefs.stringForKey("profileImage")!)", view: profileImage)
         
@@ -52,7 +53,7 @@ class ProfileViewController: UIViewController {
             //Helper.loadImageFromUrl("http://tokkalo.com/api/1/profile_images/logo.png", view: profileImage)
         }
         
-        
+            self.profileImage.sd_setImageWithURL(NSURL(string: prefs.stringForKey("profileImage")! as String), placeholderImage: UIImage(named: "placeholder"))
             //self.profileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: prefs.stringForKey("profileImage")!)!)!)
             
             self.profileName.text = "\(prefs.stringForKey("profileName")!)"
