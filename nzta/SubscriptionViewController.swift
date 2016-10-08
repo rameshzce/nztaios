@@ -31,15 +31,15 @@ class SubscriptionViewController: UIViewController, SSRadioButtonControllerDeleg
         
         Helper.customizeButton(btnSubscribe)
         
-        Helper.customizetextField(emailTextField)
-        Helper.customizetextField(nameTextField)
-        Helper.customizetextField(mobileTextField)
+        Helper.customizetextField3(emailTextField)
+        Helper.customizetextField3(nameTextField)
+        Helper.customizetextField3(mobileTextField)
         
-        emailTextField.attributedPlaceholder = NSAttributedString(string:"Email", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
+        emailTextField.attributedPlaceholder = NSAttributedString(string:"Email", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         
-        nameTextField.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
+        nameTextField.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         
-        mobileTextField.attributedPlaceholder = NSAttributedString(string:"Mob", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
+        mobileTextField.attributedPlaceholder = NSAttributedString(string:"Mob", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
 
         // Do any additional setup after loading the view.
     }
