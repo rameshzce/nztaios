@@ -72,8 +72,8 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate {
         
         textMoble.frame.size.height = 53;
         
-        Helper.customizetextField(textMoble)
-        textMoble.attributedPlaceholder = NSAttributedString(string:"Message", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
+        Helper.customizetextField3(textMoble)
+        textMoble.attributedPlaceholder = NSAttributedString(string:"Message", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         
         
         // Do any additional setup after loading the view.
