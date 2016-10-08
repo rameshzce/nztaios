@@ -67,7 +67,7 @@ class MessagesTableViewController: UITableViewController {
             Messages(messages: ["WWar memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner.", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed", "angoli competition & kite festival on 17-1-2016"], dates: ["2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am"], date: "Few weeks ago")
         ]
         
-        self.tableView.sectionHeaderHeight = 50
+        self.tableView.sectionHeaderHeight = 40
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -117,6 +117,25 @@ class MessagesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         return messagesArray[section].date
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    {
+        let title: UILabel = UILabel()
+        
+        title.text = messagesArray[section].date
+        title.textColor = hexStringToUIColor("#ff0000")
+        //title.backgroundColor = UIColor(red: 225.0/255.0, green: 243.0/255.0, blue: 251.0/255.0, alpha: 1.0)
+        title.backgroundColor = hexStringToUIColor("#ffffff")
+        title.font = UIFont.boldSystemFontOfSize(20)
+        
+        let constraint = NSLayoutConstraint.constraintsWithVisualFormat("H:[label]", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: ["label": title])
+        
+        title.addConstraints(constraint)
+        
+        title.textAlignment = NSTextAlignment.Center
+        
+        return title
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
