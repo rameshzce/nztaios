@@ -13,6 +13,15 @@ class MessagesTableViewController: UITableViewController {
     var mainBgcolor = "#9D1457"
     var subBgColor = "#630131"
     
+    struct Messages {
+        var messages: [String]!
+        var date: String!
+    }
+    
+    var messagesArray = [Messages]()
+    
+    
+    
     var screenHeight: CGFloat {
         if UIInterfaceOrientationIsPortrait(screenOrientation) {
             return UIScreen.mainScreen().bounds.size.height
@@ -50,8 +59,14 @@ class MessagesTableViewController: UITableViewController {
         
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
+        messagesArray = [
+            Messages(messages: ["msg1", "msg2", "msg3"], date: "Today"),
+            Messages(messages: ["msg1", "msg2", "msg3"], date: "Yesterday"),
+            Messages(messages: ["msg1", "msg2", "msg3"], date: "One week ago"),
+            Messages(messages: ["msg1", "msg2", "msg3"], date: "Few weeks ago")
+        ]
         
-
+        self.tableView.sectionHeaderHeight = 50
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -68,12 +83,17 @@ class MessagesTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        //return 1
+        
+        return messagesArray.count
     }
+    
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return events.count
+        //return events.count
+        
+        return messagesArray[section].messages.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -81,7 +101,8 @@ class MessagesTableViewController: UITableViewController {
         
         // Configure the cell...
         let event = events[indexPath.row]
-        cell.nameLabel.text = event.name
+        //cell.nameLabel.text = event.name
+        cell.nameLabel.text = messagesArray[indexPath.section].messages[indexPath.row]
         cell.addressLabel.text = event.address
         cell.mainBg.backgroundColor = hexStringToUIColor("#fce7de")
         
@@ -90,6 +111,11 @@ class MessagesTableViewController: UITableViewController {
         
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        return messagesArray[section].date
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
