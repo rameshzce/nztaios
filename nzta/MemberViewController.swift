@@ -54,6 +54,17 @@ class MemberViewController: UITableViewController{
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        if ((prefs.stringForKey("signUp")) != nil){
+            let alertController = UIAlertController(title: "NZTA",
+                                                    message: "Thank you for registering with NZTA", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style:
+                UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion:
+                nil)
+            self.prefs.setValue(nil, forKey: "signUp")
+        }
+            
     }
     
     override func didReceiveMemoryWarning() {

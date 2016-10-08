@@ -37,9 +37,10 @@ class ExistingEventsViewController: UIViewController, UIPickerViewDelegate, UIPi
         let pickerLabel = UILabel()
         pickerLabel.textColor = UIColor.whiteColor()
         pickerLabel.text = Array[row]
-        // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
-        pickerLabel.font = UIFont(name: "handlee-regular", size: 35) // In this use your custom font
+        pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 35)
+        //pickerLabel.font = UIFont(name: "handlee-regular", size: 35) // In this use your custom font
         pickerLabel.textAlignment = NSTextAlignment.Center
+        //pickerLabel.font = UIFont(name: "handlee-regular", size: 35)
         return pickerLabel
     }
 

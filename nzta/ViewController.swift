@@ -82,6 +82,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
                     if status == "SUCCESS"{
                         let phone = jsonDictionary["phone"] as! String
                         //self.showAlert("\(phone)")
+                        self.prefs.setValue(true, forKey: "signUp")
                         self.prefs.setValue(phone, forKey: "login")
                         self.performSegueWithIdentifier("member", sender: self)
                     }else if status == "FAILURE"{
@@ -140,6 +141,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
                     if status == "SUCCESS"{
                         let phone = jsonDictionary["phone"] as! String
                         //self.showAlert("\(phone)")
+                        self.prefs.setValue(true, forKey: "signUp")
                         self.prefs.setValue(phone, forKey: "login")
                         self.prefs.setValue(self.name.text, forKey: "profileName")
                         self.prefs.setValue(self.mob.text, forKey: "profileMobile")
