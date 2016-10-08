@@ -40,7 +40,7 @@ class Helper{
     }
     
     static func customizetextField3(textField: UITextField!) {
-        textField.backgroundColor = hexStringToUIColor("#3E7CC7")
+        textField.backgroundColor = UIColor(white: 1, alpha: 0.3)
         textField.layer.cornerRadius = 3
         textField.layer.borderWidth = 0
         textField.layer.borderColor = UIColor.whiteColor().CGColor

@@ -928,9 +928,9 @@ and its our family fun</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLS-OR-4kG">
-                                <rect key="frame" x="60" y="304" width="200" height="40"/>
-                                <color key="backgroundColor" red="0.08235294118" green="0.35294117650000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLS-OR-4kG">
+                                <rect key="frame" x="60" y="348" width="200" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="HhF-zn-xu5"/>
                                     <constraint firstAttribute="width" constant="200" id="iWa-v0-8eA"/>
@@ -942,8 +942,8 @@ and its our family fun</string>
                                     <outlet property="delegate" destination="uOV-us-5lA" id="fPK-Gl-FSv"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC9-CS-CQo">
-                                <rect key="frame" x="60" y="386" width="200" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC9-CS-CQo">
+                                <rect key="frame" x="60" y="430" width="200" height="44"/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="1WD-mn-5bR"/>
@@ -955,8 +955,8 @@ and its our family fun</string>
                                     <action selector="sendInvite:" destination="uOV-us-5lA" eventType="touchUpInside" id="QaZ-D7-DUB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTu-mD-lGG">
-                                <rect key="frame" x="0.0" y="420" width="320" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTu-mD-lGG">
+                                <rect key="frame" x="0.0" y="376" width="320" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Li7-bc-7gp"/>
                                 </constraints>
@@ -964,8 +964,8 @@ and its our family fun</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dfs-yh-fVg">
-                                <rect key="frame" x="40" y="170" width="240" height="104"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dfs-yh-fVg">
+                                <rect key="frame" x="40" y="214" width="240" height="104"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="104" id="Iow-La-Ujp"/>
                                 </constraints>
@@ -1377,8 +1377,8 @@ all</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-Xb-n47">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-Xb-n47">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="3yn-vS-Cau" customClass="InterestHeaderView" customModule="nzta" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
