@@ -1029,7 +1029,7 @@ cultural events</string>
                                     <constraint firstAttribute="height" constant="250" id="nnc-dr-gcG"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiD-vX-CqG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiD-vX-CqG">
                                 <rect key="frame" x="35" y="159" width="250" height="250"/>
                                 <fontDescription key="fontDescription" name="ALoveofThunder" family="A Love of Thunder" pointSize="47"/>
                                 <color key="textColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
@@ -1037,7 +1037,7 @@ cultural events</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ee2-83-fhw">
                                 <rect key="frame" x="35" y="159" width="250" height="250"/>
-                                <string key="text">Welcome
+                                <string key="text">welcome
 to
 NZTA</string>
                                 <fontDescription key="fontDescription" name="ALoveofThunder" family="A Love of Thunder" pointSize="44"/>
@@ -1046,7 +1046,7 @@ NZTA</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hU-1b-Feu">
                                 <rect key="frame" x="35" y="159" width="250" height="250"/>
-                                <string key="text">We are
+                                <string key="text">we are
 300+
 families</string>
                                 <fontDescription key="fontDescription" name="ALoveofThunder" family="A Love of Thunder" pointSize="48"/>
@@ -1055,7 +1055,7 @@ families</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxs-xH-6Rt">
                                 <rect key="frame" x="35" y="159" width="250" height="250"/>
-                                <string key="text">We are
+                                <string key="text">we are
 100+
 students</string>
                                 <fontDescription key="fontDescription" name="ALoveofThunder" family="A Love of Thunder" pointSize="45"/>
@@ -1079,8 +1079,8 @@ culturally</string>
                                 <color key="textColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-zX-Wpr">
-                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-zX-Wpr">
+                                <rect key="frame" x="35" y="159" width="250" height="250"/>
                                 <string key="text">come &amp; join
 let's
 celebrate
@@ -1115,12 +1115,15 @@ all</string>
                             <constraint firstItem="46X-uc-qms" firstAttribute="centerY" secondItem="lxs-xH-6Rt" secondAttribute="centerY" id="Lbh-mm-69H"/>
                             <constraint firstItem="EiD-vX-CqG" firstAttribute="height" secondItem="8ng-0q-Ayg" secondAttribute="height" id="O98-9x-dep"/>
                             <constraint firstItem="Ee2-83-fhw" firstAttribute="centerX" secondItem="Tbe-k5-4z5" secondAttribute="centerX" id="POS-hN-ZkI"/>
+                            <constraint firstItem="JMb-zX-Wpr" firstAttribute="centerX" secondItem="iZ9-VT-sxg" secondAttribute="centerX" id="Qm0-gs-B5R"/>
+                            <constraint firstItem="JMb-zX-Wpr" firstAttribute="centerY" secondItem="iZ9-VT-sxg" secondAttribute="centerY" id="Qx1-xF-fa6"/>
                             <constraint firstItem="Ee2-83-fhw" firstAttribute="height" secondItem="EiD-vX-CqG" secondAttribute="height" id="RcD-rV-nZ9"/>
                             <constraint firstItem="EiD-vX-CqG" firstAttribute="centerX" secondItem="Tbe-k5-4z5" secondAttribute="centerX" id="V7z-Kx-7Mh"/>
                             <constraint firstItem="46X-uc-qms" firstAttribute="centerX" secondItem="lxs-xH-6Rt" secondAttribute="centerX" id="VtV-Nm-nOf"/>
                             <constraint firstItem="Ee2-83-fhw" firstAttribute="centerY" secondItem="EiD-vX-CqG" secondAttribute="centerY" id="XLE-4G-FqF"/>
                             <constraint firstItem="EiD-vX-CqG" firstAttribute="centerY" secondItem="Tbe-k5-4z5" secondAttribute="centerY" id="Xi1-8I-j1v"/>
                             <constraint firstItem="8ng-0q-Ayg" firstAttribute="centerY" secondItem="F9n-DC-qmL" secondAttribute="centerY" id="bCm-JS-TWc"/>
+                            <constraint firstItem="JMb-zX-Wpr" firstAttribute="width" secondItem="iZ9-VT-sxg" secondAttribute="width" id="cQh-9N-r9a"/>
                             <constraint firstItem="iZ9-VT-sxg" firstAttribute="width" secondItem="46X-uc-qms" secondAttribute="width" id="dGp-fc-uDT"/>
                             <constraint firstItem="Ee2-83-fhw" firstAttribute="centerX" secondItem="EiD-vX-CqG" secondAttribute="centerX" id="ddp-ey-XQY"/>
                             <constraint firstItem="EiD-vX-CqG" firstAttribute="centerX" secondItem="8ng-0q-Ayg" secondAttribute="centerX" id="gRw-P8-ipq"/>
@@ -1130,6 +1133,7 @@ all</string>
                             <constraint firstItem="EiD-vX-CqG" firstAttribute="centerX" secondItem="8ng-0q-Ayg" secondAttribute="centerX" id="oWG-ep-sTK"/>
                             <constraint firstItem="46X-uc-qms" firstAttribute="height" secondItem="lxs-xH-6Rt" secondAttribute="height" id="ooH-ia-teX"/>
                             <constraint firstItem="lxs-xH-6Rt" firstAttribute="centerY" secondItem="8hU-1b-Feu" secondAttribute="centerY" id="pl5-Rv-Pvv"/>
+                            <constraint firstItem="JMb-zX-Wpr" firstAttribute="height" secondItem="iZ9-VT-sxg" secondAttribute="height" id="xzk-Pu-6lt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AwO-r9-x8W"/>
@@ -2150,11 +2154,11 @@ all</string>
         <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Jg3-9G-4Rm"/>
+        <segue reference="ZWk-WU-XrL"/>
+        <segue reference="XqI-KJ-rjm"/>
         <segue reference="6ew-ZD-cM0"/>
         <segue reference="JGb-kV-gIL"/>
-        <segue reference="amt-NS-TY3"/>
-        <segue reference="6GN-Pv-HPz"/>
-        <segue reference="XqI-KJ-rjm"/>
         <segue reference="ipK-54-FXD"/>
     </inferredMetricsTieBreakers>
 </document>

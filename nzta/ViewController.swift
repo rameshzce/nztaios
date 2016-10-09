@@ -186,7 +186,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         btnFacebook.layer.cornerRadius = 5
         //btnFacebook.layer.borderWidth = 1
         //btnFacebook.layer.borderColor = UIColor.whiteColor().CGColor
-        btnFacebook.titleLabel!.font =  UIFont(name: "handlee-regular", size: 18)
+        btnFacebook.titleLabel!.font =  UIFont.boldSystemFontOfSize(15)
         //btnFacebook.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
         
         btnRegister.backgroundColor = UIColor.magentaColor()
@@ -195,9 +195,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         //btnRegister.layer.borderColor = UIColor.whiteColor().CGColor
         //btnRegister.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
         
-        customizeButton(name)
-        customizeButton(mob)
-        customizeButton(email)
+        Helper.customizetextField3(name)
+        Helper.customizetextField3(mob)
+        Helper.customizetextField3(email)
         
         name.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         
