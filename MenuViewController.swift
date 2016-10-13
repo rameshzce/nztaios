@@ -9,7 +9,9 @@
 import UIKit
 
 class MenuViewController: UITableViewController {
-    var menuItems = ["Home", "Profile", "Subscribe", "Team NZTA", "Sponsors", "Send a message"]
+    //var menuItems = ["Home", "Profile", "Subscribe", "Team NZTA", "Sponsors", "Send a message"]
+    var menuItems = ["Home", "Profile", "Subscribe", "Team NZTA", "Sponsors"]
+    var menuIcons = ["menu_icon_home", "menu_icon_profile", "menu_icon_subscribe", "menu_icon_team", "menu_icon_sponsors"]
     var currentItem = "Home"
     
     override func viewDidLoad() {
@@ -40,6 +42,7 @@ class MenuViewController: UITableViewController {
         // Configure the cell...
         cell.titleLabel.text = menuItems[indexPath.row]
         cell.titleLabel.textColor = UIColor.whiteColor()
+        cell.menuIcon.image = UIImage(named: menuIcons[indexPath.row])
         
         return cell
     }
@@ -69,9 +72,9 @@ class MenuViewController: UITableViewController {
         case 4:
             self.performSegueWithIdentifier("menuSponsors", sender: self)
             break
-        case 5:
+        /*case 5:
             self.performSegueWithIdentifier("menuSendMessage", sender: self)
-            break
+            break*/
         default:
             break
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0My-B7-MZN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0My-B7-MZN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -33,6 +33,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luh-C3-eUg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nz_bg5" translatesAutoresizingMaskIntoConstraints="NO" id="sXV-Jq-rUz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
@@ -113,6 +116,7 @@
                             <constraint firstItem="Ya1-4e-wFZ" firstAttribute="trailing" secondItem="ZG9-ON-CWK" secondAttribute="trailing" id="CBS-f6-UIw"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="leading" secondItem="Ya1-4e-wFZ" secondAttribute="leading" id="Epw-aC-cNW"/>
                             <constraint firstItem="ZG9-ON-CWK" firstAttribute="width" secondItem="Yz6-1a-SXc" secondAttribute="width" id="EyU-EL-gqi"/>
+                            <constraint firstItem="luh-C3-eUg" firstAttribute="height" secondItem="HNV-Qy-cf0" secondAttribute="height" id="ISy-NJ-xCa"/>
                             <constraint firstItem="Yz6-1a-SXc" firstAttribute="top" secondItem="ZG9-ON-CWK" secondAttribute="bottom" constant="10" id="KM0-ty-a4b"/>
                             <constraint firstItem="pL0-9m-ks9" firstAttribute="top" secondItem="6ES-z6-KhE" secondAttribute="bottom" constant="20" id="NQ7-8L-aGs"/>
                             <constraint firstItem="sXV-Jq-rUz" firstAttribute="width" secondItem="HNV-Qy-cf0" secondAttribute="width" id="NQp-3p-nsn"/>
@@ -130,9 +134,12 @@
                             <constraint firstItem="Ya1-4e-wFZ" firstAttribute="width" secondItem="ZG9-ON-CWK" secondAttribute="width" id="d1w-5X-SeQ"/>
                             <constraint firstItem="6ES-z6-KhE" firstAttribute="top" secondItem="m6g-RA-M2W" secondAttribute="bottom" constant="15" id="hO1-GB-Uap"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="height" secondItem="pL0-9m-ks9" secondAttribute="height" id="hdz-31-D7m"/>
+                            <constraint firstItem="luh-C3-eUg" firstAttribute="centerY" secondItem="HNV-Qy-cf0" secondAttribute="centerY" id="iMX-zA-YQO"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="centerX" secondItem="sXV-Jq-rUz" secondAttribute="centerX" id="k23-fG-biU"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="leading" secondItem="sXV-Jq-rUz" secondAttribute="leading" constant="60" id="nYR-mQ-l1D"/>
+                            <constraint firstItem="luh-C3-eUg" firstAttribute="width" secondItem="HNV-Qy-cf0" secondAttribute="width" id="oaC-cL-xzC"/>
                             <constraint firstItem="sXV-Jq-rUz" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="pNs-KM-wvD"/>
+                            <constraint firstItem="luh-C3-eUg" firstAttribute="centerX" secondItem="HNV-Qy-cf0" secondAttribute="centerX" id="ryj-e3-uWY"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="trailing" secondItem="sXV-Jq-rUz" secondAttribute="trailing" constant="-60" id="sAX-63-c2d"/>
                             <constraint firstItem="Ya1-4e-wFZ" firstAttribute="leading" secondItem="ZG9-ON-CWK" secondAttribute="leading" id="ukf-vC-LWO"/>
                             <constraint firstItem="Vjr-Rd-xdY" firstAttribute="trailing" secondItem="Ya1-4e-wFZ" secondAttribute="trailing" id="wb1-B8-krd"/>
@@ -354,7 +361,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SS6-DN-yFA">
                                 <rect key="frame" x="0.0" y="103" width="320" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsM-pX-MWp">
@@ -664,6 +671,7 @@ and its our family fun</string>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.66666666669999997" green="0.0" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="menuIcon" destination="8Em-d6-ROu" id="KSX-OL-41x"/>
                                     <outlet property="titleLabel" destination="fpg-Y3-laH" id="FgM-77-N1y"/>
                                     <segue destination="6qb-Nk-LZe" kind="unwind" unwindAction="unwindToHome:" id="5gi-Oq-WMC"/>
                                 </connections>
@@ -1381,7 +1389,7 @@ all</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-Xb-n47">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-Xb-n47">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="3yn-vS-Cau" customClass="InterestHeaderView" customModule="nzta" customModuleProvider="target">
@@ -2156,9 +2164,9 @@ all</string>
     <inferredMetricsTieBreakers>
         <segue reference="Jg3-9G-4Rm"/>
         <segue reference="ZWk-WU-XrL"/>
+        <segue reference="xPk-vA-a2a"/>
+        <segue reference="0o9-gl-Z1m"/>
         <segue reference="XqI-KJ-rjm"/>
-        <segue reference="6ew-ZD-cM0"/>
-        <segue reference="JGb-kV-gIL"/>
         <segue reference="ipK-54-FXD"/>
     </inferredMetricsTieBreakers>
 </document>
