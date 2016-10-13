@@ -11,7 +11,9 @@ import UIKit
 class InviteFriendViewController: UIViewController, UITextFieldDelegate {
 
     let prefs = NSUserDefaults.standardUserDefaults()
+    let numberToolbar: UIToolbar = UIToolbar()
     
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var btnSendInvite: UIButton!
     @IBOutlet var textMoble: UITextField!
     @IBOutlet var labelMsg: UILabel!
@@ -72,9 +74,29 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
         
         //Helper.customizetextField(textMoble)
         textMoble.attributedPlaceholder = NSAttributedString(string:"Mobile here", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        
+        numberToolbar.barStyle = UIBarStyle.BlackTranslucent
+        numberToolbar.items=[
+            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.cancel)),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.done))
+        ]
+        
+        numberToolbar.sizeToFit()
+        
+        textMoble.inputAccessoryView = numberToolbar
 
         
         // Do any additional setup after loading the view.
+    }
+    
+    func done () {
+        textMoble.resignFirstResponder()
+    }
+    
+    func cancel () {
+        textMoble.text=""
+        textMoble.resignFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,11 +105,11 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        //ScrollView.setContentOffset(CGPointMake(0, 150), animated: true)
+        scrollView.setContentOffset(CGPointMake(0, 100), animated: true)
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        //ScrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

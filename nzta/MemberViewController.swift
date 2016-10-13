@@ -14,7 +14,7 @@ class MemberViewController: UITableViewController{
     var titles = ["Upcoming Events", "Existing Events", "Helping", "Invite a Friend/", "All"]
     var titlesBig = ["2016", "2015", "Hands!",  "Family", "Messages"]
     var images = ["upcoming_events.png", "existing_events.png", "hands.png", "invite_friend.png",  "all_messaes.png"]
-    var bgColors = ["#ff218e", "#ffd428", "#b21b0f", "#039cfd", "#fc5f22"]
+    var bgColors = ["#ff218e", "#ffd428", "#10d295", "#039cfd", "#fc5f22"]
     
     var screenWidth: CGFloat {
         if UIInterfaceOrientationIsPortrait(screenOrientation) {
