@@ -55,6 +55,7 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
                 dispatch_async(dispatch_get_main_queue(),{
                     if (self.prefs.stringForKey("inviteMsg") != nil){
                         self.showAlert("\(self.prefs.stringForKey("inviteMsg")!) Have a good day! ")
+                        self.textMoble.text=""
                     }
                 });
             }
@@ -106,14 +107,19 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(textField: UITextField) {
         scrollView.setContentOffset(CGPointMake(0, 100), animated: true)
+        textMoble.placeholder = nil
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
         scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        textMoble.placeholder = "Mobile here"
+        textMoble.setValue(UIColor.whiteColor(), forKeyPath: "_placeholderLabel.textColor")
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        textMoble.placeholder = "Mobile here"
+        textMoble.setValue(UIColor.whiteColor(), forKeyPath: "_placeholderLabel.textColor")
         return true
     }
     
