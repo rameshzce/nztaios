@@ -359,13 +359,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SS6-DN-yFA">
-                                <rect key="frame" x="0.0" y="103" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="98" width="320" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsM-pX-MWp">
-                                <rect key="frame" x="60" y="454" width="200" height="44"/>
+                                <rect key="frame" x="60" y="459" width="200" height="44"/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="P4D-uN-QWa"/>
@@ -376,7 +376,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gi-7I-Sad" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="60" y="411" width="125" height="33"/>
+                                <rect key="frame" x="60" y="416" width="125" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="kDM-qZ-sTZ"/>
                                 </constraints>
@@ -395,7 +395,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6I5-1h-00Q" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="60" y="378" width="161" height="33"/>
+                                <rect key="frame" x="60" y="383" width="161" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="161" id="Jag-bT-mKh"/>
                                 </constraints>
@@ -414,7 +414,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsp-sK-cNG" customClass="SSRadioButton" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="60" y="345" width="174" height="33"/>
+                                <rect key="frame" x="60" y="350" width="174" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="174" id="iYk-vn-8Wc"/>
                                 </constraints>
@@ -434,7 +434,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJt-g8-dmO" userLabel="Your small donations can make nzta events big  and its our family fun">
-                                <rect key="frame" x="0.0" y="143" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="138" width="320" height="70"/>
                                 <string key="text">Your small donations
 can make nzta events big 
 and its our family fun</string>
@@ -496,7 +496,7 @@ and its our family fun</string>
                             <constraint firstItem="Xxv-0D-VUv" firstAttribute="leading" secondItem="BQf-os-AD4" secondAttribute="leading" constant="60" id="Rkl-G5-A67"/>
                             <constraint firstItem="Xxv-0D-VUv" firstAttribute="trailing" secondItem="sHf-53-hKM" secondAttribute="trailing" id="SzE-rZ-6Wg"/>
                             <constraint firstItem="sHf-53-hKM" firstAttribute="top" secondItem="Xxv-0D-VUv" secondAttribute="bottom" constant="10" id="XCb-iy-i2u"/>
-                            <constraint firstItem="Lsp-sK-cNG" firstAttribute="top" secondItem="sHf-53-hKM" secondAttribute="bottom" id="XhK-58-YJn"/>
+                            <constraint firstItem="Lsp-sK-cNG" firstAttribute="top" secondItem="sHf-53-hKM" secondAttribute="bottom" constant="5" id="XhK-58-YJn"/>
                             <constraint firstItem="6I5-1h-00Q" firstAttribute="leading" secondItem="Lsp-sK-cNG" secondAttribute="leading" id="YdV-jM-kwa"/>
                             <constraint firstItem="Xxv-0D-VUv" firstAttribute="centerX" secondItem="BQf-os-AD4" secondAttribute="centerX" id="bxB-AI-DLh"/>
                             <constraint firstItem="Xxv-0D-VUv" firstAttribute="trailing" secondItem="YVi-Ga-y1J" secondAttribute="trailing" id="chn-lY-LXy"/>
@@ -511,7 +511,7 @@ and its our family fun</string>
                             <constraint firstItem="7Gi-7I-Sad" firstAttribute="top" secondItem="6I5-1h-00Q" secondAttribute="bottom" id="rOp-Gj-2m8"/>
                             <constraint firstItem="Xxv-0D-VUv" firstAttribute="centerY" secondItem="BQf-os-AD4" secondAttribute="centerY" id="tAz-do-1oy"/>
                             <constraint firstItem="SS6-DN-yFA" firstAttribute="trailing" secondItem="BQf-os-AD4" secondAttribute="trailing" id="tEi-Cn-JZN"/>
-                            <constraint firstItem="YVi-Ga-y1J" firstAttribute="top" secondItem="jJt-g8-dmO" secondAttribute="bottom" constant="10" id="xim-P9-LNx"/>
+                            <constraint firstItem="YVi-Ga-y1J" firstAttribute="top" secondItem="jJt-g8-dmO" secondAttribute="bottom" constant="15" id="xim-P9-LNx"/>
                             <constraint firstItem="BQf-os-AD4" firstAttribute="height" secondItem="cDr-Q3-aZf" secondAttribute="height" id="xm3-wD-Dr8"/>
                             <constraint firstItem="jJt-g8-dmO" firstAttribute="leading" secondItem="BQf-os-AD4" secondAttribute="leading" id="y8Z-6S-WIX"/>
                         </constraints>
@@ -939,19 +939,6 @@ and its our family fun</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iU-i6-g71">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dfs-yh-fVg">
-                                        <rect key="frame" x="40" y="180" width="240" height="104"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="104" id="Iow-La-Ujp"/>
-                                            <constraint firstAttribute="width" constant="240" id="LpY-L0-imL"/>
-                                        </constraints>
-                                        <string key="text">Invite friends &amp; family
-and enjoy
-cultural events</string>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC9-CS-CQo">
                                         <rect key="frame" x="60" y="372" width="200" height="44"/>
                                         <color key="backgroundColor" red="0.070588235289999995" green="0.2666666667" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
@@ -991,19 +978,31 @@ cultural events</string>
                                             <outlet property="delegate" destination="uOV-us-5lA" id="fPK-Gl-FSv"/>
                                         </connections>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbg-pM-8PJ">
+                                        <rect key="frame" x="40" y="136" width="240" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="fAo-Ya-GFF"/>
+                                            <constraint firstAttribute="width" constant="240" id="mL1-m9-EcP"/>
+                                        </constraints>
+                                        <string key="text">Invite friends &amp; family
+and enjoy
+cultural events</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="KLS-OR-4kG" secondAttribute="trailing" constant="60" id="1jX-m3-uKt"/>
-                                    <constraint firstItem="KLS-OR-4kG" firstAttribute="centerX" secondItem="Dfs-yh-fVg" secondAttribute="centerX" id="2UQ-xK-O7m"/>
-                                    <constraint firstItem="KLS-OR-4kG" firstAttribute="top" secondItem="Dfs-yh-fVg" secondAttribute="bottom" constant="15" id="6RX-SM-fou"/>
                                     <constraint firstItem="dC9-CS-CQo" firstAttribute="top" secondItem="KLS-OR-4kG" secondAttribute="bottom" constant="33" id="9he-PB-PoE"/>
                                     <constraint firstItem="KLS-OR-4kG" firstAttribute="centerX" secondItem="YTu-mD-lGG" secondAttribute="centerX" id="E5h-zq-xu5"/>
-                                    <constraint firstItem="Dfs-yh-fVg" firstAttribute="top" secondItem="3iU-i6-g71" secondAttribute="top" constant="180" id="HP1-Sh-dA7"/>
+                                    <constraint firstItem="Mbg-pM-8PJ" firstAttribute="centerX" secondItem="3iU-i6-g71" secondAttribute="centerX" id="GuD-zy-bJL"/>
+                                    <constraint firstItem="KLS-OR-4kG" firstAttribute="top" secondItem="Mbg-pM-8PJ" secondAttribute="bottom" constant="53" id="JMM-01-ebT"/>
                                     <constraint firstItem="YTu-mD-lGG" firstAttribute="top" secondItem="dC9-CS-CQo" secondAttribute="bottom" constant="100" id="KTv-v5-dsT"/>
-                                    <constraint firstItem="Dfs-yh-fVg" firstAttribute="centerX" secondItem="3iU-i6-g71" secondAttribute="centerX" id="OKV-b7-TGx"/>
-                                    <constraint firstItem="Dfs-yh-fVg" firstAttribute="centerX" secondItem="3iU-i6-g71" secondAttribute="centerX" id="Se4-IQ-Lkd"/>
                                     <constraint firstAttribute="bottom" secondItem="KLS-OR-4kG" secondAttribute="bottom" constant="113" id="fQx-gj-n49"/>
                                     <constraint firstItem="KLS-OR-4kG" firstAttribute="leading" secondItem="dC9-CS-CQo" secondAttribute="leading" id="hji-Dy-8fc"/>
+                                    <constraint firstItem="KLS-OR-4kG" firstAttribute="centerX" secondItem="Mbg-pM-8PJ" secondAttribute="centerX" id="mZl-63-frJ"/>
+                                    <constraint firstItem="Mbg-pM-8PJ" firstAttribute="top" secondItem="3iU-i6-g71" secondAttribute="top" constant="136" id="slg-mS-Z9t"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
