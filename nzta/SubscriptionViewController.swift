@@ -21,6 +21,8 @@ class SubscriptionViewController: UIViewController, SSRadioButtonControllerDeleg
     @IBOutlet var btnSubscribe: UIButton!
     var radioButtonController: SSRadioButtonsController?
     
+    let numberToolbar: UIToolbar = UIToolbar()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,12 +42,32 @@ class SubscriptionViewController: UIViewController, SSRadioButtonControllerDeleg
         nameTextField.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         
         mobileTextField.attributedPlaceholder = NSAttributedString(string:"Mob", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        
+        numberToolbar.barStyle = UIBarStyle.BlackTranslucent
+        numberToolbar.items=[
+            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.cancel)),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.done))
+        ]
+        
+        numberToolbar.sizeToFit()
+        
+        mobileTextField.inputAccessoryView = numberToolbar
 
         // Do any additional setup after loading the view.
     }
     
     func didSelectButton(aButton: UIButton?) {
         //print(aButton.)
+    }
+    
+    func done () {
+        mobileTextField.resignFirstResponder()
+    }
+    
+    func cancel () {
+        mobileTextField.text=""
+        mobileTextField.resignFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,15 +76,44 @@ class SubscriptionViewController: UIViewController, SSRadioButtonControllerDeleg
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        scrollView.setContentOffset(CGPointMake(0, 10), animated: true)
+        //scrollView.setContentOffset(CGPointMake(0, 10), animated: true)
+        if (textField == nameTextField){
+            scrollView.setContentOffset(CGPointMake(0, 10), animated: true)
+        } else if (textField == emailTextField){
+            scrollView.setContentOffset(CGPointMake(0, 20), animated: true)
+        } else if (textField == mobileTextField){
+            scrollView.setContentOffset(CGPointMake(0, 30), animated: true)
+        }
+        
+        textField.placeholder = nil
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
+        //scrollView.setContentOffset(CGPointMake(0, -50), animated: true)
+        if (textField == nameTextField){
+            nameTextField.placeholder = "Name"
+        }else if (textField == mobileTextField){
+            mobileTextField.placeholder = "Mob"
+        }else if (textField == emailTextField){
+            emailTextField.placeholder = "Email"
+        }
+        
         scrollView.setContentOffset(CGPointMake(0, -50), animated: true)
+        textField.setValue(UIColor.whiteColor(), forKeyPath: "_placeholderLabel.textColor")
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        
+        if (textField == nameTextField){
+            nameTextField.placeholder = "Name"
+        }else if (textField == mobileTextField){
+            mobileTextField.placeholder = "Mob"
+        }else if (textField == emailTextField){
+            emailTextField.placeholder = "Email"
+        }
+        
+        textField.setValue(UIColor.whiteColor(), forKeyPath: "_placeholderLabel.textColor")
         return true
     }
     
