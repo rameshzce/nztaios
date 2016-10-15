@@ -40,6 +40,11 @@ class MenuViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MenuViewCell
         
         // Configure the cell...
+        
+        let menuBgColor = "#ba1768"
+        
+        cell.menuBg.backgroundColor = Helper.hexStringToUIColor(menuBgColor)
+        
         cell.titleLabel.text = menuItems[indexPath.row]
         cell.titleLabel.textColor = UIColor.whiteColor()
         cell.menuIcon.image = UIImage(named: menuIcons[indexPath.row])
@@ -55,6 +60,12 @@ class MenuViewController: UITableViewController {
     }*/
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let rowColor = "#ff218e"
+        
+        let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        selectedCell.contentView.backgroundColor = Helper.hexStringToUIColor(rowColor)
+        
         switch (indexPath.row) {
         //case 0: [self performSegueWithIdentifier:@"Segue0" sender:self];
         case 0:

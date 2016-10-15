@@ -75,7 +75,7 @@ class InterestViewController: UIViewController {
         }
         
         if (prefs.stringForKey("menuType") == "Helping Hands"){
-            self.title = prefs.stringForKey("menuType")
+            //self.title = prefs.stringForKey("menuType")
         }
         
         
@@ -168,7 +168,7 @@ extension InterestViewController : UITableViewDataSource
         cell.interestTitle.text = prefs.stringForKey("eventName")
         
         if (prefs.stringForKey("menuType") == "Helping Hands"){
-            cell.interestTitle.text = prefs.stringForKey("menuType")
+            //cell.interestTitle.text = prefs.stringForKey("menuType")
         }
         
         return cell

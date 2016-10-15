@@ -629,14 +629,10 @@ and its our family fun</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="vLK-8t-Y0J">
-                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
-                        </view>
+                        <color key="sectionIndexBackgroundColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="F7l-vg-CnD" customClass="MenuViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="130" width="320" height="50"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="F7l-vg-CnD" customClass="MenuViewCell" customModule="nzta" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F7l-vg-CnD" id="sbp-fz-E7v">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
@@ -644,37 +640,40 @@ and its our family fun</string>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I62-VS-jVK">
                                             <rect key="frame" x="0.0" y="1" width="320" height="49"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="8Em-d6-ROu">
+                                                    <rect key="frame" x="10" y="10" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="Bej-qS-77Z"/>
+                                                        <constraint firstAttribute="height" constant="30" id="wAf-tl-kqb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpg-Y3-laH">
+                                                    <rect key="frame" x="60" y="12" width="60" height="26"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" red="0.66666666669999997" green="0.0" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpg-Y3-laH">
-                                            <rect key="frame" x="63" y="12" width="60" height="26"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="8Em-d6-ROu">
-                                            <rect key="frame" x="18" y="10" width="30" height="30"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="30" id="Bej-qS-77Z"/>
-                                                <constraint firstAttribute="height" constant="30" id="wAf-tl-kqb"/>
+                                                <constraint firstItem="8Em-d6-ROu" firstAttribute="leading" secondItem="I62-VS-jVK" secondAttribute="leading" constant="10" id="V2A-e2-DJf"/>
+                                                <constraint firstItem="fpg-Y3-laH" firstAttribute="leading" secondItem="8Em-d6-ROu" secondAttribute="trailing" constant="20" id="WF6-EZ-jd4"/>
+                                                <constraint firstItem="8Em-d6-ROu" firstAttribute="centerY" secondItem="I62-VS-jVK" secondAttribute="centerY" id="hZx-SH-mgB"/>
+                                                <constraint firstItem="fpg-Y3-laH" firstAttribute="centerY" secondItem="8Em-d6-ROu" secondAttribute="centerY" id="vPo-sb-0jD"/>
                                             </constraints>
-                                        </imageView>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="8Em-d6-ROu" firstAttribute="leading" secondItem="sbp-fz-E7v" secondAttribute="leadingMargin" constant="10" id="1lv-86-cg6"/>
+                                        <constraint firstAttribute="bottom" secondItem="I62-VS-jVK" secondAttribute="bottom" id="BXR-lR-Hth"/>
                                         <constraint firstItem="I62-VS-jVK" firstAttribute="leading" secondItem="sbp-fz-E7v" secondAttribute="leading" id="Enq-MK-Vk2"/>
-                                        <constraint firstItem="fpg-Y3-laH" firstAttribute="leading" secondItem="8Em-d6-ROu" secondAttribute="trailing" constant="15" id="TCn-tF-k0N"/>
                                         <constraint firstItem="I62-VS-jVK" firstAttribute="width" secondItem="sbp-fz-E7v" secondAttribute="width" id="csm-Y0-CgS"/>
-                                        <constraint firstItem="8Em-d6-ROu" firstAttribute="centerY" secondItem="I62-VS-jVK" secondAttribute="centerY" id="czO-71-SAZ"/>
-                                        <constraint firstAttribute="centerY" secondItem="fpg-Y3-laH" secondAttribute="centerY" id="jtM-aq-CDa"/>
                                         <constraint firstItem="I62-VS-jVK" firstAttribute="height" secondItem="sbp-fz-E7v" secondAttribute="height" constant="-1" id="oxg-fT-Zrp"/>
-                                        <constraint firstItem="8Em-d6-ROu" firstAttribute="centerY" secondItem="fpg-Y3-laH" secondAttribute="centerY" id="r1k-pd-VQt"/>
-                                        <constraint firstItem="fpg-Y3-laH" firstAttribute="centerY" secondItem="I62-VS-jVK" secondAttribute="centerY" id="vxe-Xr-NGf"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.66666666669999997" green="0.0" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="menuBg" destination="I62-VS-jVK" id="0TJ-3n-Tg3"/>
                                     <outlet property="menuIcon" destination="8Em-d6-ROu" id="KSX-OL-41x"/>
                                     <outlet property="titleLabel" destination="fpg-Y3-laH" id="FgM-77-N1y"/>
                                     <segue destination="6qb-Nk-LZe" kind="unwind" unwindAction="unwindToHome:" id="5gi-Oq-WMC"/>
@@ -867,7 +866,7 @@ and its our family fun</string>
                         <color key="sectionIndexBackgroundColor" red="0.96078431372549022" green="0.0" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="eVb-08-IA9" customClass="EventsViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="320" height="90"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eVb-08-IA9" id="OuO-Wb-eba">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
@@ -1409,7 +1408,7 @@ all</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-Xb-n47">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="3yn-vS-Cau" customClass="InterestHeaderView" customModule="nzta" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
@@ -2141,10 +2140,10 @@ all</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdX-gS-pN6">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LdX-gS-pN6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="84k-Wm-wej">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="84k-Wm-wej">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                     </imageView>
                                 </subviews>
@@ -2196,11 +2195,11 @@ all</string>
         <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ipK-54-FXD"/>
-        <segue reference="8dL-bv-19T"/>
-        <segue reference="6GN-Pv-HPz"/>
         <segue reference="ZWk-WU-XrL"/>
-        <segue reference="xPk-vA-a2a"/>
+        <segue reference="I58-nj-Cl3"/>
         <segue reference="0o9-gl-Z1m"/>
+        <segue reference="6ew-ZD-cM0"/>
+        <segue reference="EGt-P8-jKy"/>
+        <segue reference="zv7-5d-ouw"/>
     </inferredMetricsTieBreakers>
 </document>
