@@ -614,7 +614,7 @@ and its our family fun</string>
                         <segue destination="uOV-us-5lA" kind="push" identifier="inviteFriend" id="lSg-GZ-zJZ"/>
                         <segue destination="Nuj-V6-Geo" kind="push" identifier="existingEvents" id="0o9-gl-Z1m"/>
                         <segue destination="zMa-SH-c2C" kind="push" identifier="messages" id="dVn-UW-9EH"/>
-                        <segue destination="FCs-5B-QKC" kind="push" identifier="helpingHands" id="XqI-KJ-rjm"/>
+                        <segue destination="OEV-Eh-ieS" kind="push" identifier="helpingHands" id="8dL-bv-19T"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZj-Wm-ut4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2196,11 +2196,11 @@ all</string>
         <image name="video" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZWk-WU-XrL"/>
-        <segue reference="6GN-Pv-HPz"/>
-        <segue reference="0o9-gl-Z1m"/>
-        <segue reference="xPk-vA-a2a"/>
-        <segue reference="XqI-KJ-rjm"/>
         <segue reference="ipK-54-FXD"/>
+        <segue reference="8dL-bv-19T"/>
+        <segue reference="6GN-Pv-HPz"/>
+        <segue reference="ZWk-WU-XrL"/>
+        <segue reference="xPk-vA-a2a"/>
+        <segue reference="0o9-gl-Z1m"/>
     </inferredMetricsTieBreakers>
 </document>
