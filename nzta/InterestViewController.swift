@@ -74,6 +74,10 @@ class InterestViewController: UIViewController {
             
         }
         
+        if (prefs.stringForKey("menuType") == "Helping Hands"){
+            self.title = prefs.stringForKey("menuType")
+        }
+        
         
         headerView = tableView.tableHeaderView as! InterestHeaderView
         tableView.tableHeaderView = nil
@@ -160,7 +164,13 @@ extension InterestViewController : UITableViewDataSource
         cell.interestText.text = "Namasthe ...\n\n New Zealand Telugu Association specially invites you with family and friends to be part of auspicious\n\n \"VINAYAKA CHATURTHI POOJA\"\n\n for all the best days of our lives, For every miracle of waking up each morning, we want to express how grateful we are to the Lord.\n\n Day:  Monday, 5th of September 2016.\n\n Time: 6.30pm\n\n Venue:  Three kings Fickling Convention enter \n\n 546, Mt Albert Road,\n Three Kings.\n Followed by Bhajans and Maha Prasadam.\n\n Main Sponsor :\n\n Smt&Sri Sunitha-Vijay Kosna and family\n\n Maha Prasadam by :\n Satya South Indian Restaurant\n\n Please join us and get the blessings of \"Lord Ganesh\". We are sure the day will inspire you for creativity and motivate you for auspicious beginnings.\n\n See you all on Monday.\n\n ... Executive Committee New Zealand \n Telugu Association"
         
         //cell.backgroundColor = Helper.hexStringToUIColor("#FFDFF0")
+        
         cell.interestTitle.text = prefs.stringForKey("eventName")
+        
+        if (prefs.stringForKey("menuType") == "Helping Hands"){
+            cell.interestTitle.text = prefs.stringForKey("menuType")
+        }
+        
         return cell
     }
     
