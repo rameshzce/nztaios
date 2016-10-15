@@ -14,6 +14,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
     @IBOutlet weak var mob: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet var msg: UILabel!
+    @IBOutlet var scrollView: UIScrollView!
     
     @IBOutlet var btnRegister: UIButton!
     @IBOutlet var btnFacebook: FBSDKLoginButton!
@@ -316,6 +317,13 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
     
     func textFieldDidBeginEditing(textField: UITextField) {
         //scrollView.setContentOffset(CGPointMake(0, 100), animated: true)
+        
+        if (textField == mob){
+            scrollView.setContentOffset(CGPointMake(0, 50), animated: true)
+        } else if (textField == email){
+            scrollView.setContentOffset(CGPointMake(0, 100), animated: true)
+        }
+        
         textField.placeholder = nil
     }
     
@@ -325,8 +333,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
             name.placeholder = "Name"
         }else if (textField == mob){
             mob.placeholder = "Mob"
+            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
         }else if (textField == email){
             email.placeholder = "Email"
+            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
         }
         
         textField.setValue(UIColor.whiteColor(), forKeyPath: "_placeholderLabel.textColor")
