@@ -8,23 +8,27 @@
 
 import UIKit
 
-class SendMessageViewController: UIViewController, UITextFieldDelegate {
+class SendMessageViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     let prefs = NSUserDefaults.standardUserDefaults()
     
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var messageText: UITextView!
     @IBOutlet var btnSendInvite: UIButton!
-    @IBOutlet var textMoble: UITextField!
+    //@IBOutlet var textMoble: UITextField!
     @IBOutlet var labelMsg: UILabel!
+    
+    let numberToolbar: UIToolbar = UIToolbar()
+    
     @IBAction func sendInvite(sender: UIButton) {
-        if (textMoble.text == "") {
-            showAlert("Please enter mobile")
+        if (messageText.text == "") {
+            showAlert("Please enter a message")
         }  else {
             //SwiftLoading().showLoading()
             //self.labelMsg.text = "Sending..."
-            //let request = NSMutableURLRequest(URL: NSURL(string: "http://tokkalo.com/api/1/invite_friend.php")!)
             let request = NSMutableURLRequest(URL: NSURL(string: "http://sdctbheemili.org/ios/push-notification.php")!)
             request.HTTPMethod = "POST"
-            let postString = "msg=\(textMoble.text!)"
+            let postString = "msg=\(messageText.text!)"
             request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
             
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
@@ -42,8 +46,8 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate {
                     let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                     let message = jsonDictionary["message"] as! String
                     self.prefs.setValue(message, forKey: "notificationMsg")
-                    //self.labelMsg.text = "\(message)"
-                    SwiftLoading().hideLoading()
+                    self.labelMsg.text = ""
+                    //SwiftLoading().hideLoading()
                     //self.showAlert("\(message)")
                     
                     
@@ -53,6 +57,7 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate {
                 
                 dispatch_async(dispatch_get_main_queue(),{
                     if (self.prefs.stringForKey("notificationMsg") != nil){
+                        self.labelMsg.text = ""
                         self.showAlert("\(self.prefs.stringForKey("notificationMsg")!)")
                     }
                 });
@@ -70,18 +75,38 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate {
         //btnSendInvite.layer.cornerRadius = 5
         Helper.customizeButton(btnSendInvite)
         
-        textMoble.frame.size.height = 53;
+        //textMoble.frame.size.height = 53;
         
-        Helper.customizetextField3(textMoble)
-        textMoble.attributedPlaceholder = NSAttributedString(string:"Message", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        //Helper.customizetextField3(textMoble)
+        //messageText.attributedPlaceholder = NSAttributedString(string:"Message", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         
         
         // Do any additional setup after loading the view.
+        
+        numberToolbar.barStyle = UIBarStyle.BlackTranslucent
+        numberToolbar.items=[
+            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.cancel)),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.done))
+        ]
+        
+        numberToolbar.sizeToFit()
+        
+        messageText.inputAccessoryView = numberToolbar
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func done () {
+        messageText.resignFirstResponder()
+    }
+    
+    func cancel () {
+        messageText.text=""
+        messageText.resignFirstResponder()
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -94,6 +119,19 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        return true
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        scrollView.setContentOffset(CGPointMake(0, 50), animated: true)
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+    }
+    
+    func textViewShouldEndEditing(textView: UITextView) -> Bool {
+        textView.resignFirstResponder()
         return true
     }
     
