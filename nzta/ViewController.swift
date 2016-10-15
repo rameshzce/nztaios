@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDelegate
+class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDelegate, UITextFieldDelegate
 {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var mob: UITextField!
@@ -23,6 +23,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
     @IBOutlet weak var signInButton: GIDSignInButton!
     
     let prefs = NSUserDefaults.standardUserDefaults()
+    
+    let numberToolbar: UIToolbar = UIToolbar()
     
     func configureFacebook()
     {
@@ -181,6 +183,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         self.navigationController?.navigationBarHidden = false
         configureFacebook()
         
+        
+        
         //btnFacebook.setBackgroundImage(nil, forState: .Normal)
         //btnFacebook.backgroundColor = UIColor.clearColor()
         btnFacebook.layer.cornerRadius = 5
@@ -205,6 +209,17 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         
         email.attributedPlaceholder = NSAttributedString(string:"Email", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         
+        numberToolbar.barStyle = UIBarStyle.BlackTranslucent
+        numberToolbar.items=[
+            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.cancel)),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.done))
+        ]
+        
+        numberToolbar.sizeToFit()
+        
+        mob.inputAccessoryView = numberToolbar
+        
         //GIDSignIn.sharedInstance().uiDelegate = self
         // Uncomment to automatically sign in the user.
         //GIDSignIn.sharedInstance().signInSilently()
@@ -222,16 +237,25 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
          }
     }
     
+    func done () {
+        mob.resignFirstResponder()
+    }
+    
+    func cancel () {
+        mob.text=""
+        mob.resignFirstResponder()
+    }
+    
     override func viewDidAppear(animated: Bool) {
         if prefs.stringForKey("login") != nil{
             self.performSegueWithIdentifier("member", sender: self)
         }
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    /*func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
+    }*/
     
     
     // Implement these methods only if the GIDSignInUIDelegate is not a subclass of
@@ -288,6 +312,39 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         textField.leftView = paddingView
         
         textField.leftViewMode = UITextFieldViewMode.Always
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        //scrollView.setContentOffset(CGPointMake(0, 100), animated: true)
+        textField.placeholder = nil
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        //scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        if (textField == name){
+            name.placeholder = "Name"
+        }else if (textField == mob){
+            mob.placeholder = "Mob"
+        }else if (textField == email){
+            email.placeholder = "Email"
+        }
+        
+        textField.setValue(UIColor.whiteColor(), forKeyPath: "_placeholderLabel.textColor")
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        if (textField == name){
+            name.placeholder = "Name"
+        }else if (textField == mob){
+            mob.placeholder = "Mob"
+        }else if (textField == email){
+            email.placeholder = "Email"
+        }
+        
+        textField.setValue(UIColor.whiteColor(), forKeyPath: "_placeholderLabel.textColor")
+        return true
     }
     
 }

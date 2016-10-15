@@ -50,6 +50,8 @@ class Helper{
         textField.leftView = paddingView
         
         textField.leftViewMode = UITextFieldViewMode.Always
+        
+        textField.tintColor = UIColor.whiteColor()
     }
     
     static func customizeButton(button: UIButton!) {
