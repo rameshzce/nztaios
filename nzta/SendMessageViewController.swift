@@ -21,7 +21,7 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate, UITextVi
     let numberToolbar: UIToolbar = UIToolbar()
     
     @IBAction func sendInvite(sender: UIButton) {
-        if (messageText.text == "") {
+        if ( (messageText.text == "") || ((messageText.text == "Message here")) ){
             showAlert("Please enter a message")
         }  else {
             //SwiftLoading().showLoading()
@@ -105,7 +105,7 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate, UITextVi
     }
     
     func cancel () {
-        messageText.text=""
+        messageText.text="Message here"
         messageText.resignFirstResponder()
     }
     
@@ -123,11 +123,15 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate, UITextVi
     }
     
     func textViewDidBeginEditing(textView: UITextView) {
+        if (messageText.text == "Message here") {
+            messageText.text = ""
+        }
+        
         scrollView.setContentOffset(CGPointMake(0, 50), animated: true)
     }
     
     func textViewDidEndEditing(textView: UITextView) {
-        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        scrollView.setContentOffset(CGPointMake(0, -50), animated: true)
     }
     
     func textViewShouldEndEditing(textView: UITextView) -> Bool {

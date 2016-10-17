@@ -11,7 +11,8 @@ import UIKit
 class NotificationViewController: UIViewController {
 
     @IBAction func goToHome(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToHome", sender: self)
+        //self.performSegueWithIdentifier("goToHome", sender: self)
+        UIControl().sendAction(#selector(NSURLSessionTask.suspend), to: UIApplication.sharedApplication(), forEvent: nil)
     }
     @IBOutlet var message: UILabel!
     @IBOutlet var btnOk: UIButton!
