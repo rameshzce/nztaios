@@ -57,7 +57,7 @@ class MemberViewController: UITableViewController{
         
         if ((prefs.stringForKey("signUp")) != nil){
             let alertController = UIAlertController(title: "NZTA",
-                                                    message: "Thank you for registering with NZTA", preferredStyle: UIAlertControllerStyle.Alert)
+                message: "Welcome!! Thank you for registering with NZTA, will keep you updated with latest info.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "OK", style:
                 UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alertController, animated: true, completion:

@@ -36,6 +36,20 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate
             eventName = "vinayaka/"
         } else if (prefs.stringForKey("eventName") == "Blood Donations"){
             eventName = "blood_donation/"
+        } else if (prefs.stringForKey("eventName") == "Batukamma"){
+            eventName = "batukamma/"
+        } else if (prefs.stringForKey("eventName") == "Calender Inauguration"){
+            eventName = "calendar/"
+        } else if (prefs.stringForKey("eventName") == "Blood Donations"){
+            eventName = "blood_donation/"
+        } else if (prefs.stringForKey("eventName") == "Blood Donations"){
+            eventName = "blood_donation/"
+        } else if (prefs.stringForKey("eventName") == "Blood Donations"){
+            eventName = "blood_donation/"
+        } else if (prefs.stringForKey("eventName") == "Blood Donations"){
+            eventName = "blood_donation/"
+        } else if (prefs.stringForKey("eventName") == "Blood Donations"){
+            eventName = "blood_donation/"
         }
         
         url = "http://sdctbheemili.org/ios/events/" + eventName + "image" + galleryImage + ".jpg"

@@ -60,6 +60,26 @@ class ImageGalleryViewController: UITableViewController {
                 url + "ugadi/thumb13.png",
                 url + "ugadi/thumb14.png"
             );
+        } else if (prefs.stringForKey("eventName") == "Calender Inauguration"){
+            array = NSArray(objects:
+                url + "calendar/thumb1.png",
+                url + "calendar/thumb2.png",
+                url + "calendar/thumb3.png",
+                url + "calendar/thumb4.png",
+                url + "calendar/thumb5.png",
+                url + "calendar/thumb6.png",
+                url + "calendar/thumb7.png",
+                url + "calendar/thumb8.png",
+                url + "calendar/thumb9.png",
+                url + "calendar/thumb10.png",
+                url + "calendar/thumb11.png",
+                url + "calendar/thumb12.png",
+                url + "calendar/thumb13.png",
+                url + "calendar/thumb14.png",
+                url + "calendar/thumb15.png",
+                url + "calendar/thumb16.png",
+                url + "calendar/thumb17.png"
+            );
         } else if (prefs.stringForKey("eventName") == "Sankranthi"){
             array = NSArray(objects:
                 url + "sankranti/thumb1.png",
@@ -105,7 +125,31 @@ class ImageGalleryViewController: UITableViewController {
                 url + "blood_donation/thumb2.png",
                 url + "blood_donation/thumb3.png",
                 url + "blood_donation/thumb4.png",
-                url + "blood_donation/thumb5.png"
+                url + "blood_donation/thumb5.png",
+                url + "blood_donation/thumb6.png",
+                url + "blood_donation/thumb7.png",
+                url + "blood_donation/thumb8.png",
+                url + "blood_donation/thumb9.png",
+                url + "blood_donation/thumb10.png",
+                url + "blood_donation/thumb11.png",
+                url + "blood_donation/thumb12.png",
+                url + "blood_donation/thumb13.png",
+                url + "blood_donation/thumb14.png",
+                url + "blood_donation/thumb15.png",
+                url + "blood_donation/thumb16.png"
+            );
+        } else if (prefs.stringForKey("eventName") == "Batukamma"){
+            array = NSArray(objects:
+                url + "batukamma/thumb1.png",
+                url + "batukamma/thumb2.png",
+                url + "batukamma/thumb3.png",
+                url + "batukamma/thumb4.png",
+                url + "batukamma/thumb5.png",
+                url + "batukamma/thumb6.png",
+                url + "batukamma/thumb7.png",
+                url + "batukamma/thumb8.png",
+                url + "batukamma/thumb9.png",
+                url + "batukamma/thumb10.png"
             );
         }
         

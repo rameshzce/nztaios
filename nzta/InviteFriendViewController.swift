@@ -54,7 +54,7 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
                 
                 dispatch_async(dispatch_get_main_queue(),{
                     if (self.prefs.stringForKey("inviteMsg") != nil){
-                        self.showAlert("\(self.prefs.stringForKey("inviteMsg")!) Have a good day! ")
+                        self.showAlert("\(self.prefs.stringForKey("inviteMsg")!) ")
                         self.textMoble.text=""
                     }
                 });
