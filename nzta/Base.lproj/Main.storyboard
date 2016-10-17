@@ -951,9 +951,8 @@ and make it family fun!!</string>
                                             <constraint firstAttribute="height" constant="110" id="fAo-Ya-GFF"/>
                                             <constraint firstAttribute="width" constant="285" id="mL1-m9-EcP"/>
                                         </constraints>
-                                        <string key="text">Invite your friends and family
- and enjoy 
-cultural events.</string>
+                                        <string key="text">Invite your friends/family
+ and enjoy cultural events.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -995,8 +994,8 @@ cultural events.</string>
                                             <outlet property="delegate" destination="uOV-us-5lA" id="fPK-Gl-FSv"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(ex: 64 22 000 0000)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXi-44-axd">
-                                        <rect key="frame" x="60" y="343" width="154" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ex: 64 22 000 0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXi-44-axd">
+                                        <rect key="frame" x="60" y="343" width="120" height="16"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1012,7 +1011,9 @@ cultural events.</string>
                                     <constraint firstAttribute="bottom" secondItem="KLS-OR-4kG" secondAttribute="bottom" constant="113" id="fQx-gj-n49"/>
                                     <constraint firstItem="KLS-OR-4kG" firstAttribute="leading" secondItem="dC9-CS-CQo" secondAttribute="leading" id="hji-Dy-8fc"/>
                                     <constraint firstItem="KLS-OR-4kG" firstAttribute="centerX" secondItem="Mbg-pM-8PJ" secondAttribute="centerX" id="mZl-63-frJ"/>
+                                    <constraint firstItem="bXi-44-axd" firstAttribute="top" secondItem="KLS-OR-4kG" secondAttribute="bottom" constant="4" id="r5r-3L-r6x"/>
                                     <constraint firstItem="Mbg-pM-8PJ" firstAttribute="top" secondItem="3iU-i6-g71" secondAttribute="top" constant="136" id="slg-mS-Z9t"/>
+                                    <constraint firstItem="bXi-44-axd" firstAttribute="leading" secondItem="KLS-OR-4kG" secondAttribute="leading" id="sqX-bL-XsC"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
