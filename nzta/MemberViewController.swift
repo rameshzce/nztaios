@@ -151,7 +151,7 @@ class MemberViewController: UITableViewController{
                 break;
             case 2:
                 self.prefs.setValue("Helping Hands", forKey: "menuType")
-                self.prefs.setValue("Sankranthi", forKey: "eventName")
+                self.prefs.setValue("Helping Hands", forKey: "eventName")
                 self.performSegueWithIdentifier("helpingHands", sender: self)
                 break
             case 3:

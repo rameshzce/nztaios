@@ -70,6 +70,8 @@ class InterestViewController: UIViewController {
                 imageName = "img_vanabojanalu"
             } else if (prefs.stringForKey("eventName") == "Xmas"){
                 imageName = "img_xmas"
+            } else if (prefs.stringForKey("eventName") == "Helping Hands"){
+                imageName = "img_helping_hands"
             }
             
         }

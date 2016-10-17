@@ -43,9 +43,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo" translatesAutoresizingMaskIntoConstraints="NO" id="x9g-WM-jLg">
+                                <rect key="frame" x="88" y="358" width="424" height="66"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="x9g-WM-jLg" firstAttribute="top" secondItem="Yjg-gQ-guN" secondAttribute="bottom" constant="8" id="2Mu-qu-KEa"/>
+                            <constraint firstItem="x9g-WM-jLg" firstAttribute="centerX" secondItem="Yjg-gQ-guN" secondAttribute="centerX" id="Ns6-8s-TCD"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="cLg-6b-583" secondAttribute="bottom" constant="45" id="YWL-o9-R8T"/>
                             <constraint firstItem="t4k-et-W6e" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Zj0-vd-Vqm"/>
                             <constraint firstItem="Yjg-gQ-guN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cOI-Ae-Yp0"/>
@@ -62,5 +67,6 @@
     </scenes>
     <resources>
         <image name="logo3" width="100" height="100"/>
+        <image name="splash_logo" width="424" height="66"/>
     </resources>
 </document>
