@@ -802,7 +802,7 @@ and make it family fun!!</string>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
-                                            <color key="NSColor" red="0.086274509799999996" green="0.34901960780000002" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.91764705882352937" green="0.28627450980392155" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="20" headIndent="20" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -812,7 +812,7 @@ and make it family fun!!</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DjP-yN-vgX">
                                 <rect key="frame" x="30" y="294" width="260" height="34"/>
-                                <color key="backgroundColor" red="0.086274509803921567" green="0.34901960784313724" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.91764705882352937" green="0.28627450980392155" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="zCh-b6-HTh"/>
                                 </constraints>
@@ -826,7 +826,7 @@ and make it family fun!!</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1R-jy-zRe">
                                 <rect key="frame" x="30" y="241" width="260" height="34"/>
-                                <color key="backgroundColor" red="0.086274509799999996" green="0.34901960780000002" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.28627450980000002" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="RtD-YX-SLa"/>
                                 </constraints>
@@ -845,7 +845,7 @@ and make it family fun!!</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.10980392156862745" green="0.47843137254901963" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.63529411764705879" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ynh-RH-dun" firstAttribute="centerX" secondItem="pHs-1C-Ork" secondAttribute="centerX" id="2Bz-DN-2aB"/>
                             <constraint firstItem="U1R-jy-zRe" firstAttribute="centerX" secondItem="DjP-yN-vgX" secondAttribute="centerX" id="2Sp-It-IdH"/>
@@ -2208,9 +2208,9 @@ to all members.</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="a6G-TX-FPf"/>
+        <segue reference="xPk-vA-a2a"/>
         <segue reference="0o9-gl-Z1m"/>
-        <segue reference="6ew-ZD-cM0"/>
-        <segue reference="EGt-P8-jKy"/>
+        <segue reference="8dL-bv-19T"/>
         <segue reference="ZWk-WU-XrL"/>
         <segue reference="ipK-54-FXD"/>
     </inferredMetricsTieBreakers>
