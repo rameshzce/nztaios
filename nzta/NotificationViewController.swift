@@ -10,6 +10,9 @@ import UIKit
 
 class NotificationViewController: UIViewController {
 
+    @IBAction func btnClose(sender: AnyObject) {
+        UIControl().sendAction(#selector(NSURLSessionTask.suspend), to: UIApplication.sharedApplication(), forEvent: nil)
+    }
     @IBAction func goToHome(sender: AnyObject) {
         //self.performSegueWithIdentifier("goToHome", sender: self)
         UIControl().sendAction(#selector(NSURLSessionTask.suspend), to: UIApplication.sharedApplication(), forEvent: nil)
@@ -23,7 +26,7 @@ class NotificationViewController: UIViewController {
         message.lineBreakMode = .ByWordWrapping
         message.numberOfLines = 0;
         
-        self.message.text = alertMessage
+        self.message.text = "\n\(alertMessage)\n"
         
         // Do any additional setup after loading the view.
     }
