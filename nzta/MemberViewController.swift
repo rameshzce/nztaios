@@ -64,6 +64,60 @@ class MemberViewController: UITableViewController{
                 nil)
             self.prefs.setValue(nil, forKey: "signUp")
         }
+        
+        let requestURL: NSURL = NSURL(string: "http://sdctbheemili.org/ios/messages.php?type=messages")!
+        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(urlRequest) {
+            (data, response, error) -> Void in
+            
+            let httpResponse = response as! NSHTTPURLResponse
+            let statusCode = httpResponse.statusCode
+            
+            if (statusCode == 200) {
+                print("Everyone is fine, file downloaded successfully.")
+                do{
+                    let json = try NSJSONSerialization.JSONObjectWithData(data!, options:.AllowFragments)
+                    
+                    var getMessages:[String] = []
+                    var getDates: [String] = []
+                    
+                    if let messages = json["messages"] as? [[String: AnyObject]] {
+                        for message in messages {
+                            if let messageText = message["message"] as? String {
+                                
+                                if let messageDate = message["time"] as? String {
+                                    getMessages.append(messageText)
+                                    getDates.append(messageDate)
+                                }
+                                
+                            }
+                            
+                        }
+                        
+                        
+                        
+                        NSUserDefaults.standardUserDefaults().setObject(getMessages, forKey: "getMessages")
+                        
+                        NSUserDefaults.standardUserDefaults().synchronize()
+                        
+                        NSUserDefaults.standardUserDefaults().setObject(getDates, forKey: "getDates")
+                        
+                        NSUserDefaults.standardUserDefaults().synchronize()
+                        
+                    }
+                    
+                    //print("\(getMessages)")
+                }catch {
+                    print("Error with Json: \(error)")
+                }
+                
+                
+                
+            }
+        }
+        
+        task.resume()
             
     }
     

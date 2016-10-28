@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,49 +15,41 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="Yjg-gQ-guN">
-                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo5" translatesAutoresizingMaskIntoConstraints="NO" id="Yjg-gQ-guN">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="3ym-AR-a3W"/>
-                                    <constraint firstAttribute="width" constant="100" id="AE4-gz-D3k"/>
+                                    <constraint firstAttribute="width" constant="200" id="bDa-Rl-v8Q"/>
+                                    <constraint firstAttribute="height" constant="200" id="mV6-D7-fgD"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Zealand Telugu Association" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4k-et-W6e">
-                                <rect key="frame" x="130" y="96" width="341" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="341" id="MIi-dM-BsQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Zealand Telugu Association. © 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-6b-583">
-                                <rect key="frame" x="130" y="528" width="341" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="Lv2-SB-dRR"/>
                                     <constraint firstAttribute="width" constant="341" id="RXS-PG-IZ1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo" translatesAutoresizingMaskIntoConstraints="NO" id="x9g-WM-jLg">
-                                <rect key="frame" x="88" y="358" width="424" height="66"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="x9g-WM-jLg" firstAttribute="top" secondItem="Yjg-gQ-guN" secondAttribute="bottom" constant="8" id="2Mu-qu-KEa"/>
-                            <constraint firstItem="x9g-WM-jLg" firstAttribute="centerX" secondItem="Yjg-gQ-guN" secondAttribute="centerX" id="Ns6-8s-TCD"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="cLg-6b-583" secondAttribute="bottom" constant="45" id="YWL-o9-R8T"/>
                             <constraint firstItem="t4k-et-W6e" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Zj0-vd-Vqm"/>
-                            <constraint firstItem="Yjg-gQ-guN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cOI-Ae-Yp0"/>
+                            <constraint firstItem="Yjg-gQ-guN" firstAttribute="centerX" secondItem="t4k-et-W6e" secondAttribute="centerX" id="age-Cg-qQ8"/>
                             <constraint firstItem="t4k-et-W6e" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="76" id="cPh-Y2-bi3"/>
-                            <constraint firstItem="Yjg-gQ-guN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jFc-9y-ix1"/>
                             <constraint firstItem="cLg-6b-583" firstAttribute="leading" secondItem="t4k-et-W6e" secondAttribute="leading" id="pHa-qQ-Ho7"/>
+                            <constraint firstItem="Yjg-gQ-guN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="urK-3O-1VV"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -66,7 +59,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo3" width="100" height="100"/>
-        <image name="splash_logo" width="424" height="66"/>
+        <image name="logo5" width="434" height="344"/>
     </resources>
 </document>

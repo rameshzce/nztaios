@@ -35,6 +35,12 @@ class MessagesTableViewController: UITableViewController {
         return UIApplication.sharedApplication().statusBarOrientation
     }
     
+    let getMessages = [NSUserDefaults.standardUserDefaults().objectForKey("getMessages")]
+    //let toPrizesArray = prizesDictionary["to_prizes"] as NSArray
+    //var items: [String] = toPrizesArray as [AnyObject] as [String]
+    
+    let getDates = [NSUserDefaults.standardUserDefaults().objectForKey("getDates")]
+    
     var events:[(name: String, address: String)] = [
         ("25-08-2016, 10:30:15 am", "Rangoli competition & kite festival on 17-1-2016"),
         ("25-08-2016, 10:30:15 am", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
@@ -51,6 +57,12 @@ class MessagesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //print("\(getMessages[0])")
+        
+        let rams: [String] = (getMessages[0] as? Array)!
+        
+        print("\(rams)")
         
         self.title = "Messages"
         
@@ -73,6 +85,60 @@ class MessagesTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        /*let requestURL: NSURL = NSURL(string: "http://sdctbheemili.org/ios/messages.php?type=messages")!
+         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
+         let session = NSURLSession.sharedSession()
+         let task = session.dataTaskWithRequest(urlRequest) {
+         (data, response, error) -> Void in
+         
+         let httpResponse = response as! NSHTTPURLResponse
+         let statusCode = httpResponse.statusCode
+         
+         if (statusCode == 200) {
+         //print("Everyone is fine, file downloaded successfully.")
+         do{
+         
+         let json = try NSJSONSerialization.JSONObjectWithData(data!, options:.AllowFragments)
+         
+         var getMessages:[String] = []
+         var getDates: [String] = []
+         
+         if let messages = json["messages"] as? [[String: AnyObject]] {
+         
+         for message in messages {
+         
+         if let messageText = message["message"] as? String {
+         
+         if let messageDate = message["time"] as? String {
+         //print(name1,year1)
+         self.events.append((name: messageText, address: messageDate))
+         getMessages.append(messageText)
+         getDates.append(messageDate)
+         }
+         
+         }
+         
+         }
+         
+         
+         
+         self.prefs.setObject(getMessages, forKey: "getMessages")
+         self.prefs.setObject(getDates, forKey: "getDates")
+         
+         }
+         
+         
+         }catch {
+         print("Error with Json: \(error)")
+         }
+         
+         
+         
+         }
+         }
+         
+         task.resume()*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,17 +150,19 @@ class MessagesTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        //return 1
+        return 1
         
-        return messagesArray.count
+        //return messagesArray.count
     }
     
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        //return events.count
+        return events.count
         
-        return messagesArray[section].messages.count
+        //return messagesArray[section].messages.count
+        
+        //return self.rams.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -103,8 +171,10 @@ class MessagesTableViewController: UITableViewController {
         // Configure the cell...
         //let event = events[indexPath.row]
         //cell.nameLabel.text = event.name
-        cell.nameLabel.text = messagesArray[indexPath.section].dates[indexPath.row]
-        cell.addressLabel.text = messagesArray[indexPath.section].messages[indexPath.row]
+        //cell.nameLabel.text = messagesArray[indexPath.section].dates[indexPath.row]
+        //cell.addressLabel.text = messagesArray[indexPath.section].messages[indexPath.row]
+        cell.nameLabel.text = getMessages[indexPath.row] as? String
+        cell.addressLabel.text = getDates[indexPath.row] as? String
         cell.mainBg.backgroundColor = hexStringToUIColor("#fce7de")
         
         

@@ -16,7 +16,7 @@ func getDocumentsURL() -> NSURL {
 func fileInDocumentsDirectory(filename: String) -> String {
     
     let fileURL = getDocumentsURL().URLByAppendingPathComponent(filename)
-    return fileURL.path!
+    return fileURL!.path!
     
 }
 
@@ -33,7 +33,7 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
         
         let offSet = scrollView.contentOffset
         
-        CGContextTranslateCTM(UIGraphicsGetCurrentContext(), -offSet.x, -offSet.y)
+        CGContextTranslateCTM(UIGraphicsGetCurrentContext()!, -offSet.x, -offSet.y)
         
         scrollView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
         
@@ -43,14 +43,14 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
         UIGraphicsEndImageContext()
         
         
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
         
         // Define the specific path, image name
         let myImageName = "image.png"
         let imagePath = fileInDocumentsDirectory(myImageName)
         
         if image != nil {
-            saveImage(image, path: imagePath)
+            saveImage(image!, path: imagePath)
             print("image saved to \(imagePath)")
         } else { print("some error message") }
         

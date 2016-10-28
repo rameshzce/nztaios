@@ -11,7 +11,7 @@ import UIKit
 @objc protocol MenuTransitionManagerDelegate {
     func dismiss()
 }
-
+/*
 class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
     
     let duration = 0.5
@@ -86,5 +86,5 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
         return self
     }
     
-}
+}*/
 

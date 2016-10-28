@@ -14,7 +14,7 @@ class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDele
     
     var selectedIndex = -1
     
-    let menuTransitionManager = MenuTransitionManager()
+   // let menuTransitionManager = MenuTransitionManager()
     
     var mainViewcolor = "#ff218e"
     var mainBgcolor = "#9D1457"
