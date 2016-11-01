@@ -124,7 +124,7 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
         
         
         imageView.frame = CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height)
-        imageView.image = UIImage(named:"logo")
+        imageView.image = UIImage(named:"placeholder")
         imageView.userInteractionEnabled = true
         
         scrollView.addSubview(imageView)

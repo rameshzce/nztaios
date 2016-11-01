@@ -13,6 +13,9 @@ class MessagesTableViewController: UITableViewController {
     var mainBgcolor = "#9D1457"
     var subBgColor = "#630131"
     
+    var rams: [String] = []
+    var rams2: [String] = []
+    
     struct Messages {
         var messages: [String]!
         var dates: [String]!
@@ -39,7 +42,9 @@ class MessagesTableViewController: UITableViewController {
     //let toPrizesArray = prizesDictionary["to_prizes"] as NSArray
     //var items: [String] = toPrizesArray as [AnyObject] as [String]
     
-    let getDates = [NSUserDefaults.standardUserDefaults().objectForKey("getDates")]
+
+    
+    let getDates = [NSUserDefaults.standardUserDefaults().objectForKey("getDates2")]
     
     var events:[(name: String, address: String)] = [
         ("25-08-2016, 10:30:15 am", "Rangoli competition & kite festival on 17-1-2016"),
@@ -60,9 +65,10 @@ class MessagesTableViewController: UITableViewController {
         
         //print("\(getMessages[0])")
         
-        let rams: [String] = (getMessages[0] as? Array)!
+        rams = (getMessages[0] as? Array)!
+        rams2 = (getDates[0] as? Array)!
         
-        print("\(rams)")
+        //print("\(rams)")
         
         self.title = "Messages"
         
@@ -158,7 +164,7 @@ class MessagesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return events.count
+        return rams.count
         
         //return messagesArray[section].messages.count
         
@@ -173,8 +179,8 @@ class MessagesTableViewController: UITableViewController {
         //cell.nameLabel.text = event.name
         //cell.nameLabel.text = messagesArray[indexPath.section].dates[indexPath.row]
         //cell.addressLabel.text = messagesArray[indexPath.section].messages[indexPath.row]
-        cell.nameLabel.text = getMessages[indexPath.row] as? String
-        cell.addressLabel.text = getDates[indexPath.row] as? String
+        cell.nameLabel.text = rams2[indexPath.row]
+        cell.addressLabel.text = rams[indexPath.row]
         cell.mainBg.backgroundColor = hexStringToUIColor("#fce7de")
         
         

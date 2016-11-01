@@ -103,7 +103,6 @@
 		755097BC1D02DC6E0005AF83 /* ImageGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewCell.swift; sourceTree = "<group>"; };
 		755097BE1D02EB820005AF83 /* DisplayGalleryImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayGalleryImageViewController.swift; sourceTree = "<group>"; };
 		755DD5571D0206AD009B6FE4 /* ImageDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDisplayViewController.swift; sourceTree = "<group>"; };
-		755E529D1CF6997500DBE1C4 /* nzta__-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nzta__-Bridging-Header.h"; sourceTree = "<group>"; };
 		756955831D0BEC3400B17CAB /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		756955851D0BEE7500B17CAB /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		7570CE201D7107FC003359D8 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
@@ -232,7 +231,6 @@
 				751E412C1CF4488F001A8BD5 /* MenuTransitionManager.swift */,
 				751E412E1CF451F2001A8BD5 /* SubscriptionViewController.swift */,
 				751E41301CF4620B001A8BD5 /* ProfileViewController.swift */,
-				755E529D1CF6997500DBE1C4 /* nzta__-Bridging-Header.h */,
 				75D0EBF31CF9819C00563C68 /* PlayVideoViewController.swift */,
 				75CF43391CF99FFA005C6BCA /* InviteFriendViewController.swift */,
 				755097B81D02CC970005AF83 /* SwiftLoading.swift */,
