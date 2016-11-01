@@ -24,6 +24,7 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
     
     let prefs = NSUserDefaults.standardUserDefaults()
     
+    @IBOutlet var savePhoto: UIButton!
     @IBOutlet var imageFromWeb: UIImageView!
     @IBOutlet var scrollView: UIScrollView!
     var imageView = UIImageView()
@@ -96,7 +97,15 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
         
         scrollView.delegate = self
         
-        self.imageFromWeb.image = UIImage(contentsOfFile: prefs.stringForKey("imagePath")!)
+        Helper.customizeButton(savePhoto)
+        
+        if prefs.stringForKey("imagePath") != nil{
+            self.imageFromWeb.image = UIImage(contentsOfFile: prefs.stringForKey("imagePath")!)
+        }else{
+            self.imageFromWeb.image = UIImage(named: "logo")
+        }
+        
+        //self.imageFromWeb.image = UIImage(contentsOfFile: prefs.stringForKey("imagePath")!)
         
         // download image from web
         /*let url = NSURL(string: "http://sdctbheemili.org/ios/images/event_name_image2.jpg")
