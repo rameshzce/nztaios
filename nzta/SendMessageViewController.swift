@@ -46,7 +46,7 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate, UITextVi
                     let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                     let message = jsonDictionary["message"] as! String
                     self.prefs.setValue(message, forKey: "notificationMsg")
-                    self.labelMsg.text = ""
+                    //self.labelMsg.text = ""
                     //SwiftLoading().hideLoading()
                     //self.showAlert("\(message)")
                     
@@ -57,8 +57,9 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate, UITextVi
                 
                 dispatch_async(dispatch_get_main_queue(),{
                     if (self.prefs.stringForKey("notificationMsg") != nil){
-                        self.labelMsg.text = ""
+                        //self.labelMsg.text = ""
                         self.showAlert("\(self.prefs.stringForKey("notificationMsg")!)")
+                        self.messageText.text = "Message here"
                     }
                 });
             }
