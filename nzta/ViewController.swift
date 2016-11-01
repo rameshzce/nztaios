@@ -150,7 +150,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
                         self.prefs.setValue(self.mob.text, forKey: "profileMobile")
                         self.prefs.setValue(self.email.text, forKey: "profileEmail")
                         self.prefs.setValue("http://tokkalo.com/api/1/profile_images/logo.png", forKey: "profileImage")
-                        self.performSegueWithIdentifier("member", sender: self)
+                        //self.performSegueWithIdentifier("member", sender: self)
+                        NSOperationQueue.mainQueue().addOperationWithBlock {
+                            self.performSegueWithIdentifier("member", sender: self)
+                        }
                     }else if status == "FAILURE"{
                         let message = jsonDictionary["message"] as! String
                         self.showAlert("\(message)")
