@@ -1018,7 +1018,6 @@ and make it family fun!!</string>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ng-0q-Ayg">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="ORb-Hh-clx"/>
                                     <constraint firstAttribute="height" constant="250" id="nnc-dr-gcG"/>
@@ -1026,7 +1025,7 @@ and make it family fun!!</string>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiD-vX-CqG">
                                 <fontDescription key="fontDescription" name="ALoveofThunder" family="A Love of Thunder" pointSize="47"/>
-                                <color key="textColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ee2-83-fhw">
@@ -1034,7 +1033,7 @@ and make it family fun!!</string>
 to
 NZTA</string>
                                 <fontDescription key="fontDescription" name="ALoveofThunder" family="A Love of Thunder" pointSize="44"/>
-                                <color key="textColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hU-1b-Feu">
@@ -1042,7 +1041,7 @@ NZTA</string>
 300+
 families</string>
                                 <fontDescription key="fontDescription" name="ALoveofThunder" family="A Love of Thunder" pointSize="48"/>
-                                <color key="textColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxs-xH-6Rt">
@@ -1050,7 +1049,7 @@ families</string>
 100+
 students</string>
                                 <fontDescription key="fontDescription" name="ALoveofThunder" family="A Love of Thunder" pointSize="45"/>
-                                <color key="textColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46X-uc-qms">
@@ -1058,14 +1057,14 @@ students</string>
 events
 a year</string>
                                 <fontDescription key="fontDescription" name="ALoveofThunder" family="A Love of Thunder" pointSize="52"/>
-                                <color key="textColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZ9-VT-sxg">
                                 <string key="text">celebrating
 culturally</string>
                                 <fontDescription key="fontDescription" name="ALoveofThunder" family="A Love of Thunder" pointSize="38"/>
-                                <color key="textColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-zX-Wpr">
@@ -1074,7 +1073,7 @@ let's
 celebrate
 all</string>
                                 <fontDescription key="fontDescription" name="ALoveofThunder" family="A Love of Thunder" pointSize="34"/>
-                                <color key="textColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1302,7 +1301,7 @@ all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SBW-Gj-Btz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qer-bF-bTG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qer-bF-bTG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1881,7 +1880,7 @@ all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0My-B7-MZN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="49P-6M-CW5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="49P-6M-CW5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1899,7 +1898,7 @@ all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vij-5E-90h" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7zM-eF-lI0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7zM-eF-lI0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2132,11 +2131,11 @@ to all members.</string>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="a6G-TX-FPf"/>
-        <segue reference="xPk-vA-a2a"/>
+        <segue reference="Jg3-9G-4Rm"/>
+        <segue reference="ZWk-WU-XrL"/>
         <segue reference="0o9-gl-Z1m"/>
+        <segue reference="xPk-vA-a2a"/>
         <segue reference="EGt-P8-jKy"/>
-        <segue reference="amt-NS-TY3"/>
         <segue reference="ipK-54-FXD"/>
     </inferredMetricsTieBreakers>
 </document>
