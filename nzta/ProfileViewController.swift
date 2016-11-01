@@ -53,7 +53,15 @@ class ProfileViewController: UIViewController {
             //Helper.loadImageFromUrl("http://tokkalo.com/api/1/profile_images/logo.png", view: profileImage)
         }
         
+        if prefs.stringForKey("imagePath") != nil{
+            self.profileImage.image = UIImage(contentsOfFile: prefs.stringForKey("imagePath")!)
+        } else {
             self.profileImage.sd_setImageWithURL(NSURL(string: prefs.stringForKey("profileImage")! as String), placeholderImage: UIImage(named: "placeholder"))
+        }
+        
+        
+        
+        
             //self.profileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: prefs.stringForKey("profileImage")!)!)!)
             
             self.profileName.text = "\(prefs.stringForKey("profileName")!)"

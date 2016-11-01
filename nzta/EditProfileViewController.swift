@@ -51,19 +51,21 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
         
         if image != nil {
             saveImage(image!, path: imagePath)
-            print("image saved to \(imagePath)")
+            //print("image saved to \(imagePath)")
         } else { print("some error message") }
         
-        if let loadedImage = loadImageFromPath(imagePath) {
-            print(" Loaded Image: \(loadedImage)")
+        if loadImageFromPath(imagePath) != nil {
+            //print(" Loaded Image: \(loadedImage)")
+            self.prefs.setValue(imagePath, forKey: "imagePath")
+            self.performSegueWithIdentifier("editProfile", sender: self)
         } else { print("some error message 2") }
         
         
-        let alert = UIAlertController(title: "image saved \(image)", message: "your image has been saved", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "image saved \(image)", message: "your image has been saved\(imagePath)", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         
-        self.presentViewController(alert, animated: true, completion: nil)
+        //self.presentViewController(alert, animated: true, completion: nil)
     }
     
     func saveImage (image: UIImage, path: String ) -> Bool{
@@ -84,7 +86,7 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
             
             print("missing image at: \(path)")
         }
-        print("Loading image from path: \(path)") // this is just for you to see the path in case you want to go to the directory, using Finder.
+        //print("Loading image from path: \(path)") // this is just for you to see the path in case you want to go to the directory, using Finder.
         return image
         
     }
@@ -94,7 +96,7 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
         
         scrollView.delegate = self
         
-        self.imageFromWeb.image = UIImage(contentsOfFile: "/var/mobile/Containers/Data/Application/10C6D07A-29F4-43B0-922F-6E6F1EA2F68E/Documents/image.png")
+        self.imageFromWeb.image = UIImage(contentsOfFile: prefs.stringForKey("imagePath")!)
         
         // download image from web
         /*let url = NSURL(string: "http://sdctbheemili.org/ios/images/event_name_image2.jpg")
