@@ -1146,7 +1146,7 @@ all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TCN-A7-5av" userLabel="Main Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5NW-6W-S50" userLabel="NZTA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5NW-6W-S50" userLabel="NZTA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1238,7 +1238,7 @@ all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ShK-K1-VUs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="88p-U3-10N">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="88p-U3-10N">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1319,7 +1319,7 @@ all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cNj-V9-2rg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="K2R-F9-hmQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K2R-F9-hmQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1386,7 +1386,7 @@ all</string>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-Xb-n47">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="3yn-vS-Cau" customClass="InterestHeaderView" customModule="nzta" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="200"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vanabojanalu" translatesAutoresizingMaskIntoConstraints="NO" id="dkx-zO-Qyv"/>
@@ -1540,7 +1540,7 @@ all</string>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="251" id="0Xr-LU-UWl" customClass="ImageGalleryViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="22" width="375" height="251"/>
+                                <rect key="frame" x="0.0" y="86" width="375" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Xr-LU-UWl" id="MnN-dq-Hkq">
                                     <frame key="frameInset" width="375" height="250"/>
@@ -1921,7 +1921,7 @@ all</string>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="251" id="Eed-7x-RiU" customClass="VideoViewCell" customModule="nzta" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="22" width="375" height="251"/>
+                                <rect key="frame" x="0.0" y="86" width="375" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eed-7x-RiU" id="CYZ-ET-ZBu">
                                     <frame key="frameInset" width="375" height="250"/>
@@ -2131,11 +2131,11 @@ to all members.</string>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Jg3-9G-4Rm"/>
-        <segue reference="ZWk-WU-XrL"/>
+        <segue reference="a6G-TX-FPf"/>
         <segue reference="0o9-gl-Z1m"/>
         <segue reference="xPk-vA-a2a"/>
         <segue reference="EGt-P8-jKy"/>
         <segue reference="ipK-54-FXD"/>
+        <segue reference="ZWk-WU-XrL"/>
     </inferredMetricsTieBreakers>
 </document>
