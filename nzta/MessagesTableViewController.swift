@@ -38,37 +38,13 @@ class MessagesTableViewController: UITableViewController {
         return UIApplication.sharedApplication().statusBarOrientation
     }
     
-    let getMessages = [NSUserDefaults.standardUserDefaults().objectForKey("getMessages")]
-    //let toPrizesArray = prizesDictionary["to_prizes"] as NSArray
-    //var items: [String] = toPrizesArray as [AnyObject] as [String]
-    
-
-    
-    let getDates = [NSUserDefaults.standardUserDefaults().objectForKey("getDates2")]
-    
-    var events:[(name: String, address: String)] = [
-        ("25-08-2016, 10:30:15 am", "Rangoli competition & kite festival on 17-1-2016"),
-        ("25-08-2016, 10:30:15 am", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
-        ("25-08-2016, 10:30:15 am", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner."),
-        ("25-08-2016, 10:30:15 am", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed. Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
-        ("25-08-2016, 10:30:15 am", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner."),
-        ("25-08-2016, 10:30:15 am", "Rangoli competition & kite festival on 17-1-2016"),
-        ("25-08-2016, 10:30:15 am", "Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner "),
-        ("25-08-2016, 10:30:15 am", "War memorial hall, Mount eden on 1-6-2016 Friday 6.00pm, all are welcome and followed by dinner."),
-        ("25-08-2016, 10:30:15 am", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed"),
-        ("25-08-2016, 10:30:15 am", "War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner.")
+    var msgs:[(time: String, messages: [String])] = [
+        ("today", ["message 1", "message 4", "message 4", "message 4", "message 4"]), ("yesterday", ["message 3", "message 4", "message 4", "message 4", "message 4", "message 4", "message 4"]), ("today", ["message 5", "message 6", "message 7", "message 4", "message 4", "message 4", "message 4", "message 4", "message 4", "message 4", "message 4"])
     ]
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //print("\(getMessages[0])")
-        
-        rams = (getMessages[0] as? Array)!
-        rams2 = (getDates[0] as? Array)!
-        
-        //print("\(rams)")
         
         self.title = "Messages"
         
@@ -78,73 +54,9 @@ class MessagesTableViewController: UITableViewController {
         
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
-        messagesArray = [
-            Messages(messages: ["Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed", "Rangoli competition & kite festival on 17-1-2016"], dates: ["2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am"], date: "Today"),
-            Messages(messages: ["Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed", "Rangoli competition & kite festival on 17-1-2016"], dates: ["2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am"], date: "Yesterday"),
-            Messages(messages: ["Event at epsom on 1-3-2016 Saturday at 6.00pm, all are welcome and followed by dinner", "Diwali stall opens at 2 Pm at queens street. ", "Rangoli competition & kite festival on 17-1-2016"], dates: ["2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am"], date: "One week ago"),
-            Messages(messages: ["WWar memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner. War memorial hall, Mount eden, on 01-06-16 friday, 6.00 pm, all are welcome and followed by dinner.", "Diwali stall opens at 2 Pm at queens street. reworks and programs starts at 7 Pm. The next day we have diwali celabrations at avondale. children participating Dances and some programs. please participate and enjoy the celebrations at 7.00 PM. Followed", "Rangoli competition & kite festival on 17-1-2016"], dates: ["2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am", "2016-10-08 10:05:15 am"], date: "Few weeks ago")
-        ]
         
         self.tableView.sectionHeaderHeight = 40
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        /*let requestURL: NSURL = NSURL(string: "http://sdctbheemili.org/ios/messages.php?type=messages")!
-         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
-         let session = NSURLSession.sharedSession()
-         let task = session.dataTaskWithRequest(urlRequest) {
-         (data, response, error) -> Void in
-         
-         let httpResponse = response as! NSHTTPURLResponse
-         let statusCode = httpResponse.statusCode
-         
-         if (statusCode == 200) {
-         //print("Everyone is fine, file downloaded successfully.")
-         do{
-         
-         let json = try NSJSONSerialization.JSONObjectWithData(data!, options:.AllowFragments)
-         
-         var getMessages:[String] = []
-         var getDates: [String] = []
-         
-         if let messages = json["messages"] as? [[String: AnyObject]] {
-         
-         for message in messages {
-         
-         if let messageText = message["message"] as? String {
-         
-         if let messageDate = message["time"] as? String {
-         //print(name1,year1)
-         self.events.append((name: messageText, address: messageDate))
-         getMessages.append(messageText)
-         getDates.append(messageDate)
-         }
-         
-         }
-         
-         }
-         
-         
-         
-         self.prefs.setObject(getMessages, forKey: "getMessages")
-         self.prefs.setObject(getDates, forKey: "getDates")
-         
-         }
-         
-         
-         }catch {
-         print("Error with Json: \(error)")
-         }
-         
-         
-         
-         }
-         }
-         
-         task.resume()*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -156,31 +68,25 @@ class MessagesTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return msgs.count
         
-        //return messagesArray.count
     }
     
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return rams.count
         
-        //return messagesArray[section].messages.count
+        return msgs[section].messages.count
         
-        //return self.rams.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MessagesViewCell
         
         // Configure the cell...
-        //let event = events[indexPath.row]
-        //cell.nameLabel.text = event.name
-        //cell.nameLabel.text = messagesArray[indexPath.section].dates[indexPath.row]
-        //cell.addressLabel.text = messagesArray[indexPath.section].messages[indexPath.row]
-        cell.nameLabel.text = rams2[indexPath.row]
-        cell.addressLabel.text = rams[indexPath.row]
+
+        cell.nameLabel.text = msgs[indexPath.section].messages[indexPath.row]
+        cell.addressLabel.text = msgs[indexPath.section].messages[indexPath.row]
         cell.mainBg.backgroundColor = hexStringToUIColor("#fce7de")
         
         
@@ -192,14 +98,14 @@ class MessagesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        return messagesArray[section].date
+        return msgs[section].time
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
     {
         let title: UILabel = UILabel()
         
-        title.text = messagesArray[section].date
+        title.text = msgs[section].time
         title.textColor = hexStringToUIColor("#ff0000")
         //title.backgroundColor = UIColor(red: 225.0/255.0, green: 243.0/255.0, blue: 251.0/255.0, alpha: 1.0)
         title.backgroundColor = hexStringToUIColor("#ffffff")
@@ -236,49 +142,6 @@ class MessagesTableViewController: UITableViewController {
         )
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
