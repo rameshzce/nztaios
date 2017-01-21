@@ -16,6 +16,7 @@ class MessagesViewCell: UITableViewCell {
     //@IBOutlet weak var videoGalleryBtn: UIButton!
     @IBOutlet weak var nameLabel:UILabel!
     @IBOutlet weak var addressLabel:UILabel!
+    @IBOutlet var name: UILabel!
     //@IBOutlet weak var descriptionLabel:UILabel!
 
     override func awakeFromNib() {

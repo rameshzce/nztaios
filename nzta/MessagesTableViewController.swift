@@ -38,8 +38,23 @@ class MessagesTableViewController: UITableViewController {
         return UIApplication.sharedApplication().statusBarOrientation
     }
     
-    var msgs:[(time: String, messages: [String])] = [
-        ("today", ["message 1", "message 4", "message 4", "message 4", "message 4"]), ("yesterday", ["message 3", "message 4", "message 4", "message 4", "message 4", "message 4", "message 4"]), ("today", ["message 5", "message 6", "message 7", "message 4", "message 4", "message 4", "message 4", "message 4", "message 4", "message 4", "message 4"])
+    var msgs:[(day: String, message: [String], from: [String], time: [String])] = [
+        (
+            "today",
+                ["message 1message message message message message message message message message message message message message message message ", "message 3", "message 4", "message 4", "message 5"],
+                ["rams", "kolamala", "rams", "ko", "ios"],
+                ["10.00 am", "11.15 am", "01.20 pm", "03.34 pm", "05.50 pm"]),
+        (
+            "yesterday",
+                ["message 1", "message 2", "message 3", "message 4", "message 5", "message 6"],
+                ["rams", "kolamala", "rams", "ko", "ios", "ios"],
+                ["10.00 am", "11.15 am", "01.20 pm", "03.34 pm", "05.50 pm", "05.50 pm"]),
+        (
+            "one week ago",
+                ["message 1", "message 2", "message 3"],
+                ["message 5", "message 6", "message 7"],
+                ["10.00 am", "11.15 am", "01.20 pm"]
+        )
     ]
     
 
@@ -76,7 +91,7 @@ class MessagesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return msgs[section].messages.count
+        return msgs[section].message.count
         
     }
 
@@ -85,27 +100,24 @@ class MessagesTableViewController: UITableViewController {
         
         // Configure the cell...
 
-        cell.nameLabel.text = msgs[indexPath.section].messages[indexPath.row]
-        cell.addressLabel.text = msgs[indexPath.section].messages[indexPath.row]
+        cell.nameLabel.text = msgs[indexPath.section].time[indexPath.row]
+        cell.addressLabel.text = msgs[indexPath.section].message[indexPath.row]
+        cell.name.text = msgs[indexPath.section].from[indexPath.row]
         cell.mainBg.backgroundColor = hexStringToUIColor("#fce7de")
-        
-        
-        
-        
         
         return cell
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        return msgs[section].time
+        return msgs[section].day
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
     {
         let title: UILabel = UILabel()
         
-        title.text = msgs[section].time
+        title.text = msgs[section].day
         title.textColor = hexStringToUIColor("#ff0000")
         //title.backgroundColor = UIColor(red: 225.0/255.0, green: 243.0/255.0, blue: 251.0/255.0, alpha: 1.0)
         title.backgroundColor = hexStringToUIColor("#ffffff")
