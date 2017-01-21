@@ -41,7 +41,7 @@ class MessagesTableViewController: UITableViewController {
     var msgs:[(day: String, message: [String], from: [String], time: [String])] = [
         (
             "today",
-                ["message 1message message message message message message message message message message message message message message message ", "message 3", "message 4", "message 4", "message 5"],
+                ["Welcome to New Zealand Telugu Associaion", "message 3", "message 4", "message 4", "message 5"],
                 ["rams", "kolamala", "rams", "ko", "ios"],
                 ["10.00 am", "11.15 am", "01.20 pm", "03.34 pm", "05.50 pm"]),
         (
