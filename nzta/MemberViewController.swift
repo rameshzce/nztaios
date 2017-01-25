@@ -13,7 +13,8 @@ class MemberViewController: UITableViewController{
     
     var titles = ["Upcoming Events", "Existing Events", "Helping", "Invite a Friend/", "All"]
     var titlesBig = ["2016", "2015", "Hands!",  "Family", "Messages"]
-    var images = ["upcoming_events.png", "existing_events.png", "hands.png", "invite_friend.png",  "all_messaes.png"]
+    //var images = ["upcoming_events.png", "existing_events.png", "hands.png", "invite_friend.png",  "all_messaes.png"]
+    var images = ["upcoming_events2.png", "existing_events2.png", "hands2.png", "invite_friend2.png",  "all_messages2.png"]
     var bgColors = ["#ff218e", "#ffd428", "#10d295", "#039cfd", "#fc5f22"]
     
     var messages:[(day: String, time: [String], message: [String], from: [String])] = []
@@ -159,6 +160,19 @@ class MemberViewController: UITableViewController{
                     var getDates: [String] = []
                     var getDates2: [String] = []
                     
+                    struct Message {
+                        var m: [String]
+                        var t: [String]
+                        var f: [String]
+                    }
+                    
+                    var msgs: [String] = []
+                    var times: [String] = []
+                    var from : [String] = ["rams"]
+                    var m = Message(m: msgs, t: times, f: from)
+                    
+                    var allMessages = [String: Message]()
+                    
                     if let messages = json["messages"] as? [[String: AnyObject]] {
                         for message in messages {
                             if let messageText = message["message"] as? String {
@@ -172,6 +186,42 @@ class MemberViewController: UITableViewController{
                                 }
                                 
                             }
+                            
+                            var time2 = message["time2"] as? String
+                            var msg = message["message"] as? String
+                            var time = message["time"] as? String
+                            
+                            if let val = allMessages[time2!] {
+                                msgs = (allMessages[time2!]?.m)!
+                                msgs.append(msg!)
+                                
+                                times = (allMessages[time2!]?.t)!
+                                times.append(time!)
+                                
+                                from = (allMessages[time2!]?.f)!
+                                from.append("rams")
+                                
+                                m = Message(m: msgs, t: times, f: from)
+                                allMessages[time2!] =  m
+                                
+                                /*
+                                 msgs.append(msg!)
+                                 times.append(message["time2"] as! String)
+                                 from.append("rams")*/
+                                
+                            }else{
+                                msgs.append(msg!)
+                                times.append(time!)
+                                from.append("rams")
+                                m = Message(m: msgs, t: times, f: from)
+                                allMessages[time2!] =  m
+                            }
+                            
+                            
+                            msgs = []
+                            times = []
+                            from = []
+
                             
                         }
                         
@@ -189,9 +239,13 @@ class MemberViewController: UITableViewController{
                         
                         NSUserDefaults.standardUserDefaults().synchronize()
                         
+                        NSUserDefaults.standardUserDefaults().setObject(allMessages as? AnyObject, forKey: "allMessages")
+                        
+                        NSUserDefaults.standardUserDefaults().synchronize()
+                        
                     }
                     
-                    //print("\(getMessages)")
+                    //print(allMessages)
                 }catch {
                     print("Error with Json: \(error)")
                 }

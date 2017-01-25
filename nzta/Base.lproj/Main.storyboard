@@ -554,7 +554,7 @@ and make it family fun!!</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2f-7k-lma">
-                                            <rect key="frame" x="187.5" y="49.5" width="71.5" height="36"/>
+                                            <rect key="frame" x="187" y="50" width="72" height="36"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="36" id="Lft-hs-Z7D"/>
                                             </constraints>
@@ -890,13 +890,13 @@ and make it family fun!!</string>
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJG-zJ-OcP">
-                                                    <rect key="frame" x="40" y="33.5" width="295" height="23.5"/>
+                                                    <rect key="frame" x="40" y="33" width="295" height="24"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_batukamma" translatesAutoresizingMaskIntoConstraints="NO" id="FJg-1v-M5G">
-                                                    <rect key="frame" x="295" y="23.5" width="40" height="40"/>
+                                                    <rect key="frame" x="295" y="24" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="7et-aP-oUZ"/>
                                                         <constraint firstAttribute="width" constant="40" id="JPd-5k-hf2"/>
@@ -1126,9 +1126,7 @@ culturally</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-zX-Wpr">
                                 <rect key="frame" x="63" y="209" width="250" height="250"/>
                                 <string key="text">come &amp; join
-let's
-celebrate
-all</string>
+let's celebrate all</string>
                                 <fontDescription key="fontDescription" name="ALoveofThunder" family="A Love of Thunder" pointSize="34"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1516,13 +1514,13 @@ all</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZN-5G-saT">
-                                                    <rect key="frame" x="8" y="43" width="359" height="33"/>
+                                                    <rect key="frame" x="8" y="43" width="359" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRl-B0-IZO">
-                                                    <rect key="frame" x="0.0" y="102" width="375" height="42"/>
+                                                    <rect key="frame" x="0.0" y="101" width="375" height="42"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ked-cE-rUE">
                                                             <rect key="frame" x="82" y="5" width="32" height="32"/>
@@ -1688,23 +1686,23 @@ all</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrX-Fa-KLQ" userLabel="View main bg">
-                                            <rect key="frame" x="8" y="9" width="359" height="101.5"/>
+                                            <rect key="frame" x="8" y="9" width="359" height="102"/>
                                             <color key="backgroundColor" red="0.92156862745098034" green="0.71372549019607845" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Time" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1O-2D-jt9" userLabel="time">
-                                            <rect key="frame" x="15" y="86.5" width="345" height="19"/>
+                                            <rect key="frame" x="15" y="87" width="345" height="19"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nc7-AU-t4O">
-                                            <rect key="frame" x="15" y="15" width="42.5" height="19"/>
+                                            <rect key="frame" x="15" y="15" width="43" height="19"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" red="0.96470588239999999" green="0.2784313725" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIg-6a-3qj" userLabel="message">
-                                            <rect key="frame" x="15" y="35" width="345" height="45.5"/>
+                                            <rect key="frame" x="15" y="35" width="345" height="46"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -2246,11 +2244,11 @@ to all members.</string>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="JGb-kV-gIL"/>
-        <segue reference="EGt-P8-jKy"/>
+        <segue reference="ZWk-WU-XrL"/>
+        <segue reference="Jg3-9G-4Rm"/>
         <segue reference="xPk-vA-a2a"/>
-        <segue reference="6GN-Pv-HPz"/>
-        <segue reference="amt-NS-TY3"/>
+        <segue reference="EGt-P8-jKy"/>
         <segue reference="ipK-54-FXD"/>
+        <segue reference="JGb-kV-gIL"/>
     </inferredMetricsTieBreakers>
 </document>
