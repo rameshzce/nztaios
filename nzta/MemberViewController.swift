@@ -17,7 +17,7 @@ class MemberViewController: UITableViewController{
     var images = ["upcoming_events2.png", "existing_events2.png", "hands2.png", "invite_friend2.png",  "all_messages2.png"]
     var bgColors = ["#ff218e", "#ffd428", "#10d295", "#039cfd", "#fc5f22"]
     
-    var messages:[(day: String, time: [String], message: [String], from: [String])] = []
+    var messages:[(date: String, time: [String], message: [String], from: [String])] = []
     
     var screenWidth: CGFloat {
         if UIInterfaceOrientationIsPortrait(screenOrientation) {
@@ -142,7 +142,8 @@ class MemberViewController: UITableViewController{
         
         super.viewDidAppear(animated)
     
-        let requestURL: NSURL = NSURL(string: "http://sdctbheemili.org/ios/messages.php?type=messages")!
+        //let requestURL: NSURL = NSURL(string: "http://sdctbheemili.org/ios/messages.php?type=messages")!
+        let requestURL: NSURL = NSURL(string: "http://tokkalo.com/api/1/messages.php")!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(urlRequest) {
@@ -150,11 +151,12 @@ class MemberViewController: UITableViewController{
             
             let httpResponse = response as! NSHTTPURLResponse
             let statusCode = httpResponse.statusCode
-            
+            print(httpResponse)
             if (statusCode == 200) {
                 //print("Everyone is fine, file downloaded successfully.")
                 do{
                     let json = try NSJSONSerialization.JSONObjectWithData(data!, options:.AllowFragments)
+                    print(json)
                     
                     var getMessages:[String] = []
                     var getDates: [String] = []
@@ -168,12 +170,13 @@ class MemberViewController: UITableViewController{
                     
                     var msgs: [String] = []
                     var times: [String] = []
-                    var from : [String] = ["rams"]
+                    var from : [String] = []
                     var m = Message(m: msgs, t: times, f: from)
                     
                     var allMessages = [String: Message]()
                     
                     if let messages = json["messages"] as? [[String: AnyObject]] {
+                        print(messages)
                         for message in messages {
                             if let messageText = message["message"] as? String {
                                 
@@ -187,22 +190,24 @@ class MemberViewController: UITableViewController{
                                 
                             }
                             
-                            var time2 = message["time2"] as? String
-                            var msg = message["message"] as? String
-                            var time = message["time"] as? String
+                            let date = message["date"] as? String
+                            let msg = message["message"] as? String
+                            let time = message["time"] as? String
+                            let frm = message["from"] as? String
+                            print(date)
                             
-                            if let val = allMessages[time2!] {
-                                msgs = (allMessages[time2!]?.m)!
+                            if let val = allMessages[date!] {
+                                msgs = (allMessages[date!]?.m)!
                                 msgs.append(msg!)
                                 
-                                times = (allMessages[time2!]?.t)!
+                                times = (allMessages[date!]?.t)!
                                 times.append(time!)
                                 
-                                from = (allMessages[time2!]?.f)!
-                                from.append("rams")
+                                from = (allMessages[date!]?.f)!
+                                from.append(frm!)
                                 
                                 m = Message(m: msgs, t: times, f: from)
-                                allMessages[time2!] =  m
+                                allMessages[date!] =  m
                                 
                                 /*
                                  msgs.append(msg!)
@@ -212,9 +217,9 @@ class MemberViewController: UITableViewController{
                             }else{
                                 msgs.append(msg!)
                                 times.append(time!)
-                                from.append("rams")
+                                from.append(frm!)
                                 m = Message(m: msgs, t: times, f: from)
-                                allMessages[time2!] =  m
+                                allMessages[date!] =  m
                             }
                             
                             
@@ -239,13 +244,13 @@ class MemberViewController: UITableViewController{
                         
                         NSUserDefaults.standardUserDefaults().synchronize()
                         
-                        NSUserDefaults.standardUserDefaults().setObject(allMessages as? AnyObject, forKey: "allMessages")
+
                         
-                        NSUserDefaults.standardUserDefaults().synchronize()
+                        
                         
                     }
                     
-                    //print(allMessages)
+                    print(allMessages)
                 }catch {
                     print("Error with Json: \(error)")
                 }

@@ -9,7 +9,13 @@
 import UIKit
 
 class SponsorsViewController: UITableViewController {
+    var eventName: String!
     
+    let prefs = NSUserDefaults.standardUserDefaults()
+    
+    var array: [String] = []
+    
+    var url: String!
    
     let sponsors = ["9737909_orig.jpg"]
     
@@ -26,6 +32,18 @@ class SponsorsViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        url = "http://nzta.org/ios/Ads_2017/"
+        
+        /*array = NSArray(objects:
+            url + "ADS-1.jpg",
+                        url + "ADS-2.jpg"
+                        
+        );*/
+        
+        for (var i = 1; i < 47; i++ ) {
+            array.append(url + "ADS-" +  String(i) + ".jpg")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +60,7 @@ class SponsorsViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return sponsors.count
+        return array.count
     }
 
     
@@ -50,9 +68,14 @@ class SponsorsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! SponsorsViewCell
 
         // Configure the cell...
-        cell.sponsorLogo.image = UIImage(named: "\(sponsors[indexPath.row])")
+        //cell.sponsorLogo.image = UIImage(named: "\(sponsors[indexPath.row])")
+        cell.sponsorLogo.sd_setImageWithURL(NSURL(string: (array[indexPath.row])), placeholderImage: UIImage(named: "placeholder"))
         //cell.sponsorLogo.image = UIImage(named: "logo3")
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 140.0
     }
     
 

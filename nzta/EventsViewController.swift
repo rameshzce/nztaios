@@ -89,6 +89,8 @@ class EventsViewController: UITableViewController{
         //cell.leftSubBg.backgroundColor = hexStringToUIColor(subBgColor)
         //cell.rightSubBg.backgroundColor = hexStringToUIColor(subBgColor)
         
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        
         return cell
     }
     
@@ -122,6 +124,7 @@ class EventsViewController: UITableViewController{
         
         let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         selectedCell.contentView.backgroundColor = Helper.hexStringToUIColor(rowColor)
+        
         self.prefs.setValue(events[indexPath.row].name, forKey: "eventName")
     }
     
