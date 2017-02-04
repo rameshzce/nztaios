@@ -30,7 +30,9 @@ class MessagesTableViewController: UITableViewController {
     
     var allMessages = [String: Message]()
     
-    let messages = NSUserDefaults.standardUserDefaults().objectForKey("allMessages") as! NSArray
+    let messages = []
+    
+    let json = NSUserDefaults.standardUserDefaults().objectForKey("getJson")!
     
     var messagesArray = [Messages]()
     
@@ -48,30 +50,29 @@ class MessagesTableViewController: UITableViewController {
         return UIApplication.sharedApplication().statusBarOrientation
     }
     
-    var msgs:[(day: String, message: [String], from: [String], time: [String])] = [
-        (
-            "today",
-                ["Welcome to New Zealand Telugu Associaion", "message 3", "message 4", "message 4", "message 5"],
-                ["rams", "kolamala", "rams", "ko", "ios"],
-                ["10.00 am", "11.15 am", "01.20 pm", "03.34 pm", "05.50 pm"]),
-        (
-            "yesterday",
-                ["message 1", "message 2", "message 3", "message 4", "message 5", "message 6"],
-                ["rams", "kolamala", "rams", "ko", "ios", "ios"],
-                ["10.00 am", "11.15 am", "01.20 pm", "03.34 pm", "05.50 pm", "05.50 pm"]),
-        (
-            "one week ago",
-                ["message 1", "message 2", "message 3"],
-                ["message 5", "message 6", "message 7"],
-                ["10.00 am", "11.15 am", "01.20 pm"]
-        )
-    ]
+    var msgs:[(day: String, message: [String], from: [String], time: [String])] = []
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Messages"
+        /*self.msgs = [(
+            "today",
+            ["Welcome to New Zealand Telugu Associaion", "message 3", "message 4", "message 4", "message 5"],
+            ["rams", "kolamala", "rams", "ko", "ios"],
+            ["10.00 am", "11.15 am", "01.20 pm", "03.34 pm", "05.50 pm"]),
+                     (
+                        "yesterday",
+                        ["message 1", "message 2", "message 3", "message 4", "message 5", "message 6"],
+                        ["rams", "kolamala", "rams", "ko", "ios", "ios"],
+                        ["10.00 am", "11.15 am", "01.20 pm", "03.34 pm", "05.50 pm", "05.50 pm"]),
+                     (
+                        "one week ago",
+                        ["message 1", "message 2", "message 3"],
+                        ["message 5", "message 6", "message 7"],
+                        ["10.00 am", "11.15 am", "01.20 pm"]
+            )]*/
         
         tableView.estimatedRowHeight = 100.0
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -82,58 +83,69 @@ class MessagesTableViewController: UITableViewController {
         
         self.tableView.sectionHeaderHeight = 40
         
-        for message in messages {
-
-            
-            
-            var msgs: [String] = []
-            var times: [String] = []
-            var from : [String] = []
-            var m = Message(m: msgs, t: times, f: from)
-            
-            
-            
-            let date = message["date"] as? String
-            let msg = message["message"] as? String
-            let time = message["time"] as? String
-            let frm = message["from"] as? String
-            
-            if let val = allMessages[date!] {
-                msgs = (allMessages[date!]?.m)!
-                msgs.append(msg!)
+        if let messages = json["messages"] as? [[String: AnyObject]] {
+            for message in messages {
+                print(message)
                 
-                times = (allMessages[date!]?.t)!
-                times.append(time!)
+                var mesgs: [String] = []
+                var times: [String] = []
+                var from : [String] = []
                 
-                from = (allMessages[date!]?.f)!
-                from.append(frm!)
                 
-                m = Message(m: msgs, t: times, f: from)
-                allMessages[date!] =  m
                 
+                let date = message["date"] as? String
+                let msg = message["message"] as? String
+                let time = message["time"] as? String
+                let frm = message["from"] as? String
+                
+                self.msgs.append((day: date!, message: [msg!], from: [frm!], time: [time!]) )
+                 
                 /*
-                 msgs.append(msg!)
-                 times.append(message["time2"] as! String)
-                 from.append("rams")*/
                 
-            }else{
-                msgs.append(msg!)
-                times.append(time!)
-                from.append(frm!)
-                m = Message(m: msgs, t: times, f: from)
-                allMessages[date!] =  m
+                if let val = allMessages[date!] {
+                    mesgs = (allMessages[date!]?.m)!
+                    mesgs.append(msg!)
+                    
+                    times = (allMessages[date!]?.t)!
+                    times.append(time!)
+                    
+                    from = (allMessages[date!]?.f)!
+                    from.append(frm!)
+                    
+                    m = Message(m: mesgs, t: times, f: from)
+                    allMessages[date!] =  m
+                    
+                    /*
+                     msgs.append(msg!)
+                     times.append(message["time2"] as! String)
+                     from.append("rams")*/
+                    
+                    
+                }else{
+                    mesgs.append(msg!)
+                    times.append(time!)
+                    from.append(frm!)
+                    m = Message(m: mesgs, t: times, f: from)
+                    allMessages[date!] =  m
+                }
+                
+                
+                mesgs = []
+                times = []
+                from = []
+                */
+                
             }
-            
-            
-            msgs = []
-            times = []
-            from = []
-            
             
         }
         
-        print("didload")
+        
+        
         //print(allMessages)
+        
+        
+        
+        //print(NSUserDefaults.standardUserDefaults().objectForKey("getJson")!)
         
     }
 
@@ -217,120 +229,6 @@ class MessagesTableViewController: UITableViewController {
         )
     }
 
-    override func viewDidAppear(animated: Bool) {
-        
-        super.viewDidAppear(animated)
-        
-        //let requestURL: NSURL = NSURL(string: "http://sdctbheemili.org/ios/messages.php?type=messages")!
-        let requestURL: NSURL = NSURL(string: "http://tokkalo.com/api/1/messages.php")!
-        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithRequest(urlRequest) {
-            (data, response, error) -> Void in
-            
-            let httpResponse = response as! NSHTTPURLResponse
-            let statusCode = httpResponse.statusCode
-            
-            if (statusCode == 200) {
-                //print("Everyone is fine, file downloaded successfully.")
-                do{
-                    let json = try NSJSONSerialization.JSONObjectWithData(data!, options:.AllowFragments)
-                    print(data)
-                    var getMessages:[String] = []
-                    var getDates: [String] = []
-                    var getDates2: [String] = []
-                    
-                    struct Message {
-                        var m: [String]
-                        var t: [String]
-                        var f: [String]
-                    }
-                    
-                    var msgs: [String] = []
-                    var times: [String] = []
-                    var from : [String] = []
-                    var m = Message(m: msgs, t: times, f: from)
-                    
-                    var allMessages = [String: Message]()
-                    
-                    if let messages = json["messages"] as? [[String: AnyObject]] {
-                        for message in messages {
-                            if let messageText = message["message"] as? String {
-                                
-                                if let messageDate = message["time"] as? String {
-                                    if let messageDate2 = message["time2"] as? String {
-                                        getMessages.append(messageText)
-                                        getDates.append(messageDate)
-                                        getDates2.append(messageDate2)
-                                    }
-                                }
-                                
-                            }
-                            
-                            let date = message["date"] as? String
-                            let msg = message["message"] as? String
-                            let time = message["time"] as? String
-                            let frm = message["from"] as? String
-                            
-                            if let val = allMessages[date!] {
-                                msgs = (allMessages[date!]?.m)!
-                                msgs.append(msg!)
-                                
-                                times = (allMessages[date!]?.t)!
-                                times.append(time!)
-                                
-                                from = (allMessages[date!]?.f)!
-                                from.append(frm!)
-                                
-                                m = Message(m: msgs, t: times, f: from)
-                                allMessages[date!] =  m
-                                
-                                /*
-                                 msgs.append(msg!)
-                                 times.append(message["time2"] as! String)
-                                 from.append("rams")*/
-                                
-                            }else{
-                                msgs.append(msg!)
-                                times.append(time!)
-                                from.append(frm!)
-                                m = Message(m: msgs, t: times, f: from)
-                                allMessages[date!] =  m
-                            }
-                            
-                            
-                            msgs = []
-                            times = []
-                            from = []
-                            
-                            
-                        }
-                        
-                        
-                        
-                        
-                        
-                        NSUserDefaults.standardUserDefaults().setObject(messages, forKey: "allMessages1")
-                        
-                        NSUserDefaults.standardUserDefaults().synchronize()
-                        
-                        
-                        
-                    }
-                    
-                    //print(json)
-                }catch {
-                    print("Error with Json: \(error)")
-                }
-                
-                
-                
-            }
-        }
-        
-        task.resume()
-        print("did appear")
-        
-    }
+    
 
 }

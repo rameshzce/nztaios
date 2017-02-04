@@ -143,7 +143,8 @@ class MemberViewController: UITableViewController{
         super.viewDidAppear(animated)
     
         //let requestURL: NSURL = NSURL(string: "http://sdctbheemili.org/ios/messages.php?type=messages")!
-        let requestURL: NSURL = NSURL(string: "http://tokkalo.com/api/1/messages.php")!
+        let time = Int64(NSDate().timeIntervalSince1970 * 1000)
+        let requestURL: NSURL = NSURL(string: "http://tokkalo.com/api/1/messages.php?time=" + String(time))!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(urlRequest) {
@@ -151,13 +152,11 @@ class MemberViewController: UITableViewController{
             
             let httpResponse = response as! NSHTTPURLResponse
             let statusCode = httpResponse.statusCode
-            print(httpResponse)
             if (statusCode == 200) {
                 //print("Everyone is fine, file downloaded successfully.")
                 do{
                     let json = try NSJSONSerialization.JSONObjectWithData(data!, options:.AllowFragments)
-                    print(json)
-                    
+                    //print(json)
                     var getMessages:[String] = []
                     var getDates: [String] = []
                     var getDates2: [String] = []
@@ -176,7 +175,6 @@ class MemberViewController: UITableViewController{
                     var allMessages = [String: Message]()
                     
                     if let messages = json["messages"] as? [[String: AnyObject]] {
-                        print(messages)
                         for message in messages {
                             if let messageText = message["message"] as? String {
                                 
@@ -194,7 +192,6 @@ class MemberViewController: UITableViewController{
                             let msg = message["message"] as? String
                             let time = message["time"] as? String
                             let frm = message["from"] as? String
-                            print(date)
                             
                             if let val = allMessages[date!] {
                                 msgs = (allMessages[date!]?.m)!
@@ -245,12 +242,14 @@ class MemberViewController: UITableViewController{
                         NSUserDefaults.standardUserDefaults().synchronize()
                         
 
+                        NSUserDefaults.standardUserDefaults().setObject(json, forKey: "getJson")
                         
+                        NSUserDefaults.standardUserDefaults().synchronize()
                         
                         
                     }
                     
-                    print(allMessages)
+                    //print(NSUserDefaults.standardUserDefaults().objectForKey("getJson")!)
                 }catch {
                     print("Error with Json: \(error)")
                 }
