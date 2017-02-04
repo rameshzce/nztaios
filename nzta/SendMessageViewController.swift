@@ -28,7 +28,7 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate, UITextVi
             //self.labelMsg.text = "Sending..."
             let request = NSMutableURLRequest(URL: NSURL(string: "http://sdctbheemili.org/ios/push-notification.php")!)
             request.HTTPMethod = "POST"
-            let postString = "msg=\(messageText.text!)"
+            let postString = "msg=\(messageText.text!)&profile_name=\(prefs.stringForKey("profileName")!)"
             request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
             
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
