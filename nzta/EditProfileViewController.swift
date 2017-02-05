@@ -24,8 +24,8 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
     
     let prefs = NSUserDefaults.standardUserDefaults()
     
+    @IBOutlet var textLabel: UILabel!
     @IBOutlet var savePhoto: UIButton!
-    @IBOutlet var imageFromWeb: UIImageView!
     @IBOutlet var scrollView: UIScrollView!
     var imageView = UIImageView()
     
@@ -98,44 +98,16 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
         scrollView.delegate = self
         
         Helper.customizeButton(savePhoto)
+
+        imageView.frame = CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height)
         
         if prefs.stringForKey("imagePath") != nil{
-            self.imageFromWeb.image = UIImage(contentsOfFile: prefs.stringForKey("imagePath")!)
+            imageView.image = UIImage(contentsOfFile: prefs.stringForKey("imagePath")!)
         }else{
-            self.imageFromWeb.image = UIImage(named: "logo")
+            //imageView.image = UIImage(named:"placeholder")
+            imageView.sd_setImageWithURL(NSURL(string: prefs.stringForKey("profileImage")! as String), placeholderImage: UIImage(named: "placeholder"))
         }
-        
-        //self.imageFromWeb.image = UIImage(contentsOfFile: prefs.stringForKey("imagePath")!)
-        
-        // download image from web
-        /*let url = NSURL(string: "http://sdctbheemili.org/ios/images/event_name_image2.jpg")
-        
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {
-            (data, response, error) -> Void in
-            
-            if error != nil {
-                print("error=\(error)")
-                return
-            } else {
-                
-                dispatch_async(dispatch_get_main_queue(),{ () -> Void in
-                    if let image = UIImage(data: data!){
-                        self.imageFromWeb.image = image
-                    }
-                });
-                
-            }
-            
-            
-        }
-        
-        task.resume()*/
-        
- 
-        
-        
-        imageView.frame = CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height)
-        imageView.image = UIImage(named:"placeholder")
+        //imageView.image = UIImage(named:"logo")
         imageView.userInteractionEnabled = true
         
         scrollView.addSubview(imageView)
@@ -176,6 +148,8 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
          scrollView.zoomScale = minScale
          
          centerScrollViewContents()
+        
+        
         
         picker.dismissViewControllerAnimated(true, completion: nil)
     }

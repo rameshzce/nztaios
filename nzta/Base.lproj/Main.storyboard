@@ -235,7 +235,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c5K-yG-fs3" id="7zF-oA-fYi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -550,7 +550,7 @@ and make it family fun!!</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qvf-up-huO" id="TzM-5D-eaI">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2f-7k-lma">
@@ -883,7 +883,7 @@ and make it family fun!!</string>
                                 <rect key="frame" x="0.0" y="22" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eVb-08-IA9" id="OuO-Wb-eba">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-2h-pzG">
@@ -1201,7 +1201,7 @@ let's celebrate all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TCN-A7-5av" userLabel="Main Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5NW-6W-S50" userLabel="NZTA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5NW-6W-S50" userLabel="NZTA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1226,8 +1226,8 @@ let's celebrate all</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on the square" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GZ-8V-Ruf">
-                                <rect key="frame" x="98" y="114" width="180" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on the image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GZ-8V-Ruf">
+                                <rect key="frame" x="98" y="163.5" width="180" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="lHI-1d-De0"/>
                                     <constraint firstAttribute="height" constant="40" id="yDm-KP-4fT"/>
@@ -1237,14 +1237,14 @@ let's celebrate all</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IdT-uT-I8A">
-                                <rect key="frame" x="88" y="154" width="200" height="200"/>
+                                <rect key="frame" x="88" y="223.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Kqq-Lm-Nvg"/>
                                     <constraint firstAttribute="height" constant="200" id="ZEn-fl-KyL"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5j-Lg-aIB">
-                                <rect key="frame" x="68" y="358" width="240" height="40"/>
+                                <rect key="frame" x="68" y="448.5" width="240" height="40"/>
                                 <color key="backgroundColor" red="0.08235294118" green="0.35294117650000001" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="UKO-y5-2BE"/>
@@ -1257,34 +1257,24 @@ let's celebrate all</string>
                                     <action selector="cropAndUpload:" destination="Hg7-Eq-u79" eventType="touchUpInside" id="xxg-Um-vgk"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tsn-6C-hOs">
-                                <rect key="frame" x="88" y="402" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="EE0-Uc-eDR"/>
-                                    <constraint firstAttribute="width" constant="200" id="Ymj-jV-YGa"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0GZ-8V-Ruf" firstAttribute="centerX" secondItem="IdT-uT-I8A" secondAttribute="centerX" id="0WL-gw-RIP"/>
-                            <constraint firstItem="0GZ-8V-Ruf" firstAttribute="centerX" secondItem="Tsn-6C-hOs" secondAttribute="centerX" id="9aR-5r-U3V"/>
+                            <constraint firstItem="F5j-Lg-aIB" firstAttribute="top" secondItem="IdT-uT-I8A" secondAttribute="bottom" constant="25" id="8gq-eN-608"/>
                             <constraint firstItem="IdT-uT-I8A" firstAttribute="centerX" secondItem="0GZ-8V-Ruf" secondAttribute="centerX" id="UMX-Uo-d73"/>
                             <constraint firstItem="F5j-Lg-aIB" firstAttribute="centerX" secondItem="IdT-uT-I8A" secondAttribute="centerX" id="aJy-xQ-6hv"/>
                             <constraint firstItem="0GZ-8V-Ruf" firstAttribute="centerX" secondItem="Z0q-kN-Wsf" secondAttribute="centerX" id="cF8-Q4-zFZ"/>
-                            <constraint firstItem="0GZ-8V-Ruf" firstAttribute="centerY" secondItem="Z0q-kN-Wsf" secondAttribute="centerY" constant="-200" id="dIj-Uk-o6X"/>
-                            <constraint firstItem="Tsn-6C-hOs" firstAttribute="centerX" secondItem="F5j-Lg-aIB" secondAttribute="centerX" id="dSD-TJ-dNE"/>
-                            <constraint firstItem="F5j-Lg-aIB" firstAttribute="top" secondItem="IdT-uT-I8A" secondAttribute="bottom" constant="4" id="l5Z-Oj-Gdm"/>
-                            <constraint firstItem="Tsn-6C-hOs" firstAttribute="top" secondItem="F5j-Lg-aIB" secondAttribute="bottom" constant="4" id="mqR-8d-dBu"/>
-                            <constraint firstItem="IdT-uT-I8A" firstAttribute="top" secondItem="0GZ-8V-Ruf" secondAttribute="bottom" id="vor-K1-saA"/>
+                            <constraint firstItem="0GZ-8V-Ruf" firstAttribute="centerY" secondItem="Z0q-kN-Wsf" secondAttribute="centerY" constant="-150" id="dIj-Uk-o6X"/>
+                            <constraint firstItem="IdT-uT-I8A" firstAttribute="top" secondItem="0GZ-8V-Ruf" secondAttribute="bottom" constant="20" id="vor-K1-saA"/>
                             <constraint firstItem="0GZ-8V-Ruf" firstAttribute="centerX" secondItem="F5j-Lg-aIB" secondAttribute="centerX" id="xgy-z9-kxG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile" id="GRe-Mj-L9F"/>
                     <connections>
-                        <outlet property="imageFromWeb" destination="Tsn-6C-hOs" id="Syf-zE-OEm"/>
                         <outlet property="savePhoto" destination="F5j-Lg-aIB" id="HaC-xc-fOB"/>
                         <outlet property="scrollView" destination="IdT-uT-I8A" id="ILd-8O-NQu"/>
+                        <outlet property="textLabel" destination="0GZ-8V-Ruf" id="ixT-Y9-hKn"/>
                         <segue destination="Lg2-yt-GHd" kind="push" identifier="editProfile" id="ipK-54-FXD"/>
                     </connections>
                 </viewController>
@@ -1297,7 +1287,7 @@ let's celebrate all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ShK-K1-VUs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="88p-U3-10N">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="88p-U3-10N">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1324,7 +1314,7 @@ let's celebrate all</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bga-Q2-jrO" id="qhV-bz-6Yg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="oiV-8V-DuX">
@@ -1362,7 +1352,7 @@ let's celebrate all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SBW-Gj-Btz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qer-bF-bTG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qer-bF-bTG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1380,7 +1370,7 @@ let's celebrate all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cNj-V9-2rg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K2R-F9-hmQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="K2R-F9-hmQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1511,7 +1501,7 @@ let's celebrate all</string>
                                         <rect key="frame" x="0.0" y="222" width="375" height="146"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6GD-Lg-UWt" id="kSU-6r-Ol1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZN-5G-saT">
@@ -1618,7 +1608,7 @@ let's celebrate all</string>
                                 <rect key="frame" x="0.0" y="22" width="375" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Xr-LU-UWl" id="MnN-dq-Hkq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ec-yM-ZKJ">
@@ -1683,7 +1673,7 @@ let's celebrate all</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bt4-HY-OkW" id="csI-Sh-98z">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrX-Fa-KLQ" userLabel="View main bg">
@@ -1985,7 +1975,7 @@ let's celebrate all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0My-B7-MZN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="49P-6M-CW5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="49P-6M-CW5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2003,7 +1993,7 @@ let's celebrate all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vij-5E-90h" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7zM-eF-lI0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7zM-eF-lI0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2029,7 +2019,7 @@ let's celebrate all</string>
                                 <rect key="frame" x="0.0" y="22" width="375" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eed-7x-RiU" id="CYZ-ET-ZBu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4a-fq-GSN">
