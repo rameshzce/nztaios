@@ -68,7 +68,7 @@ class EventsViewController: UITableViewController{
         //cell.videoGalleryBtn.tag = indexPath.row
         //cell.videoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction2), forControlEvents: .TouchUpInside)
         
-        /*if (prefs.stringForKey("eventType") == "Upcoming Events"){
+        if (prefs.stringForKey("eventType") == "Upcoming Events"){
             self.titleBg = "#ba1768"
             //self.textBg = "#FFDFF0"
         } else if (prefs.stringForKey("eventType") == "Existing Events"){
@@ -80,16 +80,23 @@ class EventsViewController: UITableViewController{
         } else if (prefs.stringForKey("eventType") == "NZ Blood"){
             self.titleBg = "#C30000"
             //self.textBg = "#840000"
-        }*/
+        }
         
         //cell.selectionStyle = .None
         
-        //cell.titleBg.backgroundColor = Helper.hexStringToUIColor(titleBg)
-        //cell.textBg.backgroundColor = hexStringToUIColor(textBg)
-        //cell.leftSubBg.backgroundColor = hexStringToUIColor(subBgColor)
-        //cell.rightSubBg.backgroundColor = hexStringToUIColor(subBgColor)
+        cell.titleBg.backgroundColor = Helper.hexStringToUIColor(titleBg)
         
-        //cell.selectionStyle = UITableViewCellSelectionStyle.None
+        var rowColor = ""
+        
+        if (prefs.stringForKey("eventType") == "Upcoming Events"){
+            rowColor = "#ff218e"
+        } else if (prefs.stringForKey("eventType") == "Existing Events"){
+            rowColor = "#ffd428"
+        }
+        
+        let colorView = UIView()
+        colorView.backgroundColor = Helper.hexStringToUIColor(rowColor)
+        cell.selectedBackgroundView = colorView
         
         
         return cell
@@ -118,14 +125,15 @@ class EventsViewController: UITableViewController{
         var rowColor = ""
         
         if (prefs.stringForKey("eventType") == "Upcoming Events"){
-            //rowColor = "#ff218e"
-            rowColor = "#ff00ff"
+            rowColor = "#ff218e"
         } else if (prefs.stringForKey("eventType") == "Existing Events"){
-            //rowColor = "#ffd428"
-            rowColor = "#ff00ff"
+            rowColor = "#ffd428"
         }
         
         let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        let colorView = UIView()
+        colorView.backgroundColor = Helper.hexStringToUIColor(rowColor)
+        selectedCell.selectedBackgroundView = colorView
         selectedCell.contentView.backgroundColor = Helper.hexStringToUIColor(rowColor)
         
         self.prefs.setValue(events[indexPath.row].name, forKey: "eventName")
