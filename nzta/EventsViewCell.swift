@@ -22,6 +22,19 @@ class EventsViewCell: UITableViewCell {
     //class var expandedHeight: CGFloat { get { return 380 } }
     @IBOutlet var imgr: UIImageView!
     //class var defaultHeight: CGFloat  { get { return 44  } }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+
 
     /*func checkHeight() {
         imgr.hidden = (frame.size.height < EventsViewCell.expandedHeight)

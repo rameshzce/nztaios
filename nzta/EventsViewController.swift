@@ -68,7 +68,7 @@ class EventsViewController: UITableViewController{
         //cell.videoGalleryBtn.tag = indexPath.row
         //cell.videoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction2), forControlEvents: .TouchUpInside)
         
-        if (prefs.stringForKey("eventType") == "Upcoming Events"){
+        /*if (prefs.stringForKey("eventType") == "Upcoming Events"){
             self.titleBg = "#ba1768"
             //self.textBg = "#FFDFF0"
         } else if (prefs.stringForKey("eventType") == "Existing Events"){
@@ -80,11 +80,11 @@ class EventsViewController: UITableViewController{
         } else if (prefs.stringForKey("eventType") == "NZ Blood"){
             self.titleBg = "#C30000"
             //self.textBg = "#840000"
-        }
+        }*/
         
         //cell.selectionStyle = .None
         
-        cell.titleBg.backgroundColor = Helper.hexStringToUIColor(titleBg)
+        //cell.titleBg.backgroundColor = Helper.hexStringToUIColor(titleBg)
         //cell.textBg.backgroundColor = hexStringToUIColor(textBg)
         //cell.leftSubBg.backgroundColor = hexStringToUIColor(subBgColor)
         //cell.rightSubBg.backgroundColor = hexStringToUIColor(subBgColor)
@@ -118,9 +118,11 @@ class EventsViewController: UITableViewController{
         var rowColor = ""
         
         if (prefs.stringForKey("eventType") == "Upcoming Events"){
-            rowColor = "#ff218e"
+            //rowColor = "#ff218e"
+            rowColor = "#ff00ff"
         } else if (prefs.stringForKey("eventType") == "Existing Events"){
-            rowColor = "#ffd428"
+            //rowColor = "#ffd428"
+            rowColor = "#ff00ff"
         }
         
         let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!

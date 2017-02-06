@@ -235,7 +235,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c5K-yG-fs3" id="7zF-oA-fYi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -550,7 +550,7 @@ and make it family fun!!</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qvf-up-huO" id="TzM-5D-eaI">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="99"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2f-7k-lma">
@@ -873,17 +873,17 @@ and make it family fun!!</string>
         <scene sceneID="lzG-nn-QBH">
             <objects>
                 <tableViewController id="3lA-b0-SRs" userLabel="Events View Controller" customClass="EventsViewController" customModule="nzta" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="XY9-sJ-AHD">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="XY9-sJ-AHD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.96078431372549022" green="0.0" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="eVb-08-IA9" customClass="EventsViewCell" customModule="nzta" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="eVb-08-IA9" customClass="EventsViewCell" customModule="nzta" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="22" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eVb-08-IA9" id="OuO-Wb-eba">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-2h-pzG">
@@ -892,7 +892,6 @@ and make it family fun!!</string>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJG-zJ-OcP">
                                                     <rect key="frame" x="40" y="33" width="295" height="24"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_batukamma" translatesAutoresizingMaskIntoConstraints="NO" id="FJg-1v-M5G">
@@ -903,7 +902,7 @@ and make it family fun!!</string>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.66274509803921566" green="0.0" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="DJG-zJ-OcP" firstAttribute="centerX" secondItem="cM9-2h-pzG" secondAttribute="centerX" id="DVo-3e-UQx"/>
                                                 <constraint firstItem="DJG-zJ-OcP" firstAttribute="leading" secondItem="cM9-2h-pzG" secondAttribute="leading" constant="40" id="Xg5-3Y-5QU"/>
@@ -914,7 +913,7 @@ and make it family fun!!</string>
                                             </constraints>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="cM9-2h-pzG" firstAttribute="width" secondItem="OuO-Wb-eba" secondAttribute="width" id="ANU-Hi-FU2"/>
                                         <constraint firstItem="cM9-2h-pzG" firstAttribute="top" secondItem="OuO-Wb-eba" secondAttribute="topMargin" constant="-8" id="GnL-Zu-5m4"/>
@@ -1201,7 +1200,7 @@ let's celebrate all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TCN-A7-5av" userLabel="Main Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5NW-6W-S50" userLabel="NZTA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5NW-6W-S50" userLabel="NZTA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1314,7 +1313,7 @@ let's celebrate all</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bga-Q2-jrO" id="qhV-bz-6Yg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="oiV-8V-DuX">
@@ -1352,7 +1351,7 @@ let's celebrate all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SBW-Gj-Btz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qer-bF-bTG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qer-bF-bTG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1370,7 +1369,7 @@ let's celebrate all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cNj-V9-2rg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="K2R-F9-hmQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K2R-F9-hmQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1438,7 +1437,7 @@ let's celebrate all</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-Xb-n47">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="3yn-vS-Cau" customClass="InterestHeaderView" customModule="nzta" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
@@ -1501,7 +1500,7 @@ let's celebrate all</string>
                                         <rect key="frame" x="0.0" y="222" width="375" height="146"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6GD-Lg-UWt" id="kSU-6r-Ol1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZN-5G-saT">
@@ -1608,7 +1607,7 @@ let's celebrate all</string>
                                 <rect key="frame" x="0.0" y="22" width="375" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Xr-LU-UWl" id="MnN-dq-Hkq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ec-yM-ZKJ">
@@ -1673,7 +1672,7 @@ let's celebrate all</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bt4-HY-OkW" id="csI-Sh-98z">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrX-Fa-KLQ" userLabel="View main bg">
@@ -1975,7 +1974,7 @@ let's celebrate all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0My-B7-MZN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="49P-6M-CW5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="49P-6M-CW5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1993,7 +1992,7 @@ let's celebrate all</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vij-5E-90h" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7zM-eF-lI0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7zM-eF-lI0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2019,7 +2018,7 @@ let's celebrate all</string>
                                 <rect key="frame" x="0.0" y="22" width="375" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eed-7x-RiU" id="CYZ-ET-ZBu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4a-fq-GSN">
@@ -2176,10 +2175,10 @@ to all members.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdX-gS-pN6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="84k-Wm-wej">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -2235,11 +2234,11 @@ to all members.</string>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZWk-WU-XrL"/>
-        <segue reference="Jg3-9G-4Rm"/>
+        <segue reference="I58-nj-Cl3"/>
         <segue reference="xPk-vA-a2a"/>
         <segue reference="EGt-P8-jKy"/>
-        <segue reference="ipK-54-FXD"/>
+        <segue reference="zv7-5d-ouw"/>
+        <segue reference="ZWk-WU-XrL"/>
         <segue reference="JGb-kV-gIL"/>
     </inferredMetricsTieBreakers>
 </document>
