@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MenuViewController: UITableViewController {
     var menuItems = ["Home", "Profile", "Subscribe", "Team NZTA", "Sponsors", "Send a message", "Chat"]
@@ -14,8 +15,12 @@ class MenuViewController: UITableViewController {
     var menuIcons = ["menu_icon_home", "menu_icon_profile", "menu_icon_subscribe", "menu_icon_team", "menu_icon_sponsors", "menu_icon_send_message", "menu_icon_send_message"]
     var currentItem = "Home"
     
+    private var channels: [Channel] = [] // 3
+    private lazy var channelRef: FIRDatabaseReference = FIRDatabase.database().reference().child("channels")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.channels.append(Channel(id: "-KdKIhaFqUy_ObAAfqMY", name: "nzta"))
         
     }
     
@@ -87,13 +92,27 @@ class MenuViewController: UITableViewController {
             self.performSegue(withIdentifier: "menuSendMessage", sender: self)
             break
         case 6:
-            self.performSegue(withIdentifier: "menuChat", sender: self)
+            let channel = channels[0]
+            self.performSegue(withIdentifier: "menuChat1", sender: channel)
             break
         default:
             break
         }
         
      
+    }
+    
+    // MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let channel = sender as? Channel {
+            let chatVc = segue.destination as! ChatViewController
+            
+            chatVc.senderDisplayName = "rams"
+            chatVc.channel = channel
+            chatVc.channelRef = channelRef.child(channel.id)
+        }
     }
     
 }

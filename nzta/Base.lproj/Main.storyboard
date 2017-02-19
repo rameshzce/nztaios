@@ -696,6 +696,7 @@ and make it family fun!!</string>
                         <segue destination="JO9-DT-THX" kind="push" identifier="menuNZTeam" id="4GF-PD-IbF"/>
                         <segue destination="KKt-0Z-maf" kind="push" identifier="menuSendMessage" id="L2O-NT-gF2"/>
                         <segue destination="TYF-TI-QbT" kind="push" identifier="menuChat" id="6Sy-uA-CLq"/>
+                        <segue destination="CeH-iI-6qu" kind="push" identifier="menuChat1" id="bb8-29-RlO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cu-DX-CiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1609,7 +1610,7 @@ let's celebrate all</string>
                                 <rect key="frame" x="0.0" y="22" width="375" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Xr-LU-UWl" id="MnN-dq-Hkq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ec-yM-ZKJ">
@@ -1674,7 +1675,7 @@ let's celebrate all</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bt4-HY-OkW" id="csI-Sh-98z">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrX-Fa-KLQ" userLabel="View main bg">
@@ -2020,7 +2021,7 @@ let's celebrate all</string>
                                 <rect key="frame" x="0.0" y="22" width="375" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eed-7x-RiU" id="CYZ-ET-ZBu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4a-fq-GSN">
@@ -2304,7 +2305,7 @@ to all members.</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HMc-Uq-icx" id="CPO-Bt-Rer">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create a New Channel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPT-6Q-Ro5">
@@ -2345,7 +2346,7 @@ to all members.</string>
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y34-c9-CDs" id="Pb6-2N-FNe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gbf-ba-7Fd">
@@ -2390,7 +2391,7 @@ to all members.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGB-4h-Bei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-110" y="389"/>
+            <point key="canvasLocation" x="-637" y="402"/>
         </scene>
     </scenes>
     <resources>
@@ -2414,11 +2415,12 @@ to all members.</string>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xPk-vA-a2a"/>
         <segue reference="I58-nj-Cl3"/>
-        <segue reference="zv7-5d-ouw"/>
+        <segue reference="xPk-vA-a2a"/>
         <segue reference="EGt-P8-jKy"/>
-        <segue reference="ZWk-WU-XrL"/>
+        <segue reference="bb8-29-RlO"/>
+        <segue reference="zv7-5d-ouw"/>
         <segue reference="JGb-kV-gIL"/>
+        <segue reference="ZWk-WU-XrL"/>
     </inferredMetricsTieBreakers>
 </document>
