@@ -9,7 +9,7 @@
 import UIKit
 
 class MemberViewController: UITableViewController{
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     
     var titles = ["Upcoming Events", "Existing Events", "Helping", "Invite a Friend/", "All"]
     var titlesBig = ["2016", "2015", "Hands!",  "Family", "Messages"]
@@ -21,27 +21,27 @@ class MemberViewController: UITableViewController{
     
     var screenWidth: CGFloat {
         if UIInterfaceOrientationIsPortrait(screenOrientation) {
-            return UIScreen.mainScreen().bounds.size.width
+            return UIScreen.main.bounds.size.width
         } else {
-            return UIScreen.mainScreen().bounds.size.height
+            return UIScreen.main.bounds.size.height
         }
     }
     
     var screenHeight: CGFloat {
         if UIInterfaceOrientationIsPortrait(screenOrientation) {
-            return UIScreen.mainScreen().bounds.size.height
+            return UIScreen.main.bounds.size.height
         } else {
-            return UIScreen.mainScreen().bounds.size.width
+            return UIScreen.main.bounds.size.width
         }
     }
     
     
     var screenOrientation: UIInterfaceOrientation {
-        return UIApplication.sharedApplication().statusBarOrientation
+        return UIApplication.shared.statusBarOrientation
     }
     
     func dismiss() {
-        dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -58,12 +58,12 @@ class MemberViewController: UITableViewController{
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        if ((prefs.stringForKey("signUp")) != nil){
+        if ((prefs.string(forKey: "signUp")) != nil){
             let alertController = UIAlertController(title: "NZTA",
-                message: "Welcome!! Thank you for registering with NZTA, will keep you updated with latest info.", preferredStyle: UIAlertControllerStyle.Alert)
+                message: "Welcome!! Thank you for registering with NZTA, will keep you updated with latest info.", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "OK", style:
-                UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alertController, animated: true, completion:
+                UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion:
                 nil)
             self.prefs.setValue(nil, forKey: "signUp")
         }
@@ -138,24 +138,25 @@ class MemberViewController: UITableViewController{
     }
     
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
     
         //let requestURL: NSURL = NSURL(string: "http://sdctbheemili.org/ios/messages.php?type=messages")!
-        let time = Int64(NSDate().timeIntervalSince1970 * 1000)
-        let requestURL: NSURL = NSURL(string: "http://tokkalo.com/api/1/messages.php?time=" + String(time))!
-        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithRequest(urlRequest) {
+        let time = Int64(Date().timeIntervalSince1970 * 1000)
+        let requestURL: URL = URL(string: "http://tokkalo.com/api/1/messages.php?time=" + String(time))!
+        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(url: requestURL)
+        //let session = URLSession.shared
+        
+        let task = URLSession.shared.dataTask(with: urlRequest as URLRequest) {
             (data, response, error) -> Void in
             
-            let httpResponse = response as! NSHTTPURLResponse
+            let httpResponse = response as! HTTPURLResponse
             let statusCode = httpResponse.statusCode
             if (statusCode == 200) {
                 //print("Everyone is fine, file downloaded successfully.")
                 do{
-                    let json = try NSJSONSerialization.JSONObjectWithData(data!, options:.AllowFragments)
+                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String:AnyObject]
                     //print(json)
                     var getMessages:[String] = []
                     var getDates: [String] = []
@@ -229,22 +230,22 @@ class MemberViewController: UITableViewController{
                         
                         
                         
-                        NSUserDefaults.standardUserDefaults().setObject(getMessages, forKey: "getMessages")
+                        UserDefaults.standard.set(getMessages, forKey: "getMessages")
                         
-                        NSUserDefaults.standardUserDefaults().synchronize()
+                        UserDefaults.standard.synchronize()
                         
-                        NSUserDefaults.standardUserDefaults().setObject(getDates, forKey: "getDates")
+                        UserDefaults.standard.set(getDates, forKey: "getDates")
                         
-                        NSUserDefaults.standardUserDefaults().synchronize()
+                        UserDefaults.standard.synchronize()
                         
-                        NSUserDefaults.standardUserDefaults().setObject(getDates2, forKey: "getDates2")
+                        UserDefaults.standard.set(getDates2, forKey: "getDates2")
                         
-                        NSUserDefaults.standardUserDefaults().synchronize()
+                        UserDefaults.standard.synchronize()
                         
 
-                        NSUserDefaults.standardUserDefaults().setObject(json, forKey: "getJson")
+                        UserDefaults.standard.set(json, forKey: "getJson")
                         
-                        NSUserDefaults.standardUserDefaults().synchronize()
+                        UserDefaults.standard.synchronize()
                         
                         
                     }
@@ -266,17 +267,17 @@ class MemberViewController: UITableViewController{
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 5
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         /*let border = CALayer()
          let width = CGFloat(2.0)
          border.borderColor = UIColor.darkGrayColor().CGColor
@@ -287,34 +288,34 @@ class MemberViewController: UITableViewController{
          tableView.layer.masksToBounds = true*/
         
         let cellIdentifier = "Cell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MemberViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MemberViewCell
         // Configure the cell...
         cell.backgroundColor = hexStringToUIColor(bgColors[indexPath.row])
         cell.titleLabel?.text = titles[indexPath.row]
         cell.titleBigLabel?.text = titlesBig[indexPath.row]
         cell.iconImageView?.image = UIImage(named: images[indexPath.row])
         
-        cell.selectionStyle = .None
+        cell.selectionStyle = .none
         
-        cell.layoutMargins = UIEdgeInsetsZero
-        cell.separatorInset = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsets.zero
+        cell.separatorInset = UIEdgeInsets.zero
         
         return cell
     }
     
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+    func hexStringToUIColor (_ hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
-            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+            cString = cString.substring(from: cString.characters.index(cString.startIndex, offsetBy: 1))
         }
         
         if ((cString.characters.count) != 6) {
-            return UIColor.grayColor()
+            return UIColor.gray
         }
         
         var rgbValue:UInt32 = 0
-        NSScanner(string: cString).scanHexInt(&rgbValue)
+        Scanner(string: cString).scanHexInt32(&rgbValue)
         
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
@@ -324,33 +325,33 @@ class MemberViewController: UITableViewController{
         )
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let height = (screenHeight / 4) - 15
         //return 400.0;//Choose your custom row height
         return height
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch (indexPath.row) {
             //case 0: [self performSegueWithIdentifier:@"Segue0" sender:self];
             case 0:
                 self.prefs.setValue("Upcoming Events", forKey: "eventType")
-                self.performSegueWithIdentifier("events", sender: self)
+                self.performSegue(withIdentifier: "events", sender: self)
                 break;
             case 1:
                 self.prefs.setValue("Existing Events", forKey: "eventType")
-                self.performSegueWithIdentifier("existingEvents", sender: self)
+                self.performSegue(withIdentifier: "existingEvents", sender: self)
                 break;
             case 2:
                 self.prefs.setValue("Helping Hands", forKey: "menuType")
                 self.prefs.setValue("Helping Hands", forKey: "eventName")
-                self.performSegueWithIdentifier("helpingHands", sender: self)
+                self.performSegue(withIdentifier: "helpingHands", sender: self)
                 break
             case 3:
-                self.performSegueWithIdentifier("inviteFriend", sender: self)
+                self.performSegue(withIdentifier: "inviteFriend", sender: self)
                 break
             case 4:
-                self.performSegueWithIdentifier("messages", sender: self)
+                self.performSegue(withIdentifier: "messages", sender: self)
                 break
             default:
                 break

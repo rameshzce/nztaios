@@ -10,12 +10,12 @@ import UIKit
 
 class NotificationViewController: UIViewController {
 
-    @IBAction func btnClose(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToHome", sender: self)
+    @IBAction func btnClose(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "goToHome", sender: self)
         //UIControl().sendAction(#selector(NSURLSessionTask.suspend), to: UIApplication.sharedApplication(), forEvent: nil)
     }
-    @IBAction func goToHome(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToHome", sender: self)
+    @IBAction func goToHome(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "goToHome", sender: self)
         //UIControl().sendAction(#selector(NSURLSessionTask.suspend), to: UIApplication.sharedApplication(), forEvent: nil)
     }
     @IBOutlet var message: UILabel!
@@ -24,7 +24,7 @@ class NotificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Helper.customizeButton(btnOk)
-        message.lineBreakMode = .ByWordWrapping
+        message.lineBreakMode = .byWordWrapping
         message.numberOfLines = 0;
         
         self.message.text = "\n\(alertMessage)\n"

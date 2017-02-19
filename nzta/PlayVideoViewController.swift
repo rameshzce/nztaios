@@ -21,57 +21,57 @@ class PlayVideoViewController: UIViewController {
     
     var seekSlider = UISlider()
     var playerRateBeforeSeek: Float = 0.0
-    var loadingIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
-    let playbackLikelyToKeepUpContext = UnsafeMutablePointer<(Void)>()
+    var loadingIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    let playbackLikelyToKeepUpContext: UnsafeMutableRawPointer? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.blackColor()
+        view.backgroundColor = UIColor.black
         
         // An AVPlayerLayer is a CALayer instance to which the AVPlayer can
         // direct its visual output. Without it, the user will see nothing.
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
-        view.layer.insertSublayer(avPlayerLayer, atIndex: 0)
+        view.layer.insertSublayer(avPlayerLayer, at: 0)
         
         view.addSubview(invisibleButton)
-        invisibleButton.addTarget(self, action: #selector(PlayVideoViewController.invisibleButtonTapped), forControlEvents: UIControlEvents.TouchUpInside)
+        invisibleButton.addTarget(self, action: #selector(PlayVideoViewController.invisibleButtonTapped), for: UIControlEvents.touchUpInside)
         
-        let url = NSURL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8");
-        let playerItem = AVPlayerItem(URL: url!)
-        avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
+        let url = URL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8");
+        let playerItem = AVPlayerItem(url: url!)
+        avPlayer.replaceCurrentItem(with: playerItem)
         
         let timeInterval: CMTime = CMTimeMakeWithSeconds(1.0, 10)
-        timeObserver = avPlayer.addPeriodicTimeObserverForInterval(timeInterval, queue: dispatch_get_main_queue()) {
+        timeObserver = avPlayer.addPeriodicTimeObserver(forInterval: timeInterval, queue: DispatchQueue.main) {
             (elapsedTime: CMTime) -> Void in
             NSLog("elapsedTime now %f", CMTimeGetSeconds(elapsedTime));
-        }
+        } as AnyObject!
         
-        timeObserver = avPlayer.addPeriodicTimeObserverForInterval(timeInterval,
-                                                                   queue: dispatch_get_main_queue()) { (elapsedTime: CMTime) -> Void in
+        timeObserver = avPlayer.addPeriodicTimeObserver(forInterval: timeInterval,
+                                                                   queue: DispatchQueue.main) { (elapsedTime: CMTime) -> Void in
                                                                     
                                                                     // NSLog("elapsedTime now %f", CMTimeGetSeconds(elapsedTime));
                                                                     self.observeTime(elapsedTime)
-        }
+        } as AnyObject!
         
-        timeRemainingLabel.textColor = UIColor.whiteColor()
+        timeRemainingLabel.textColor = UIColor.white
         view.addSubview(timeRemainingLabel)
         
         view.addSubview(seekSlider)
         seekSlider.addTarget(self, action: #selector(PlayVideoViewController.sliderBeganTracking),
-                             forControlEvents: UIControlEvents.TouchDown)
+                             for: UIControlEvents.touchDown)
         seekSlider.addTarget(self, action: #selector(PlayVideoViewController.sliderEndedTracking),
-                             forControlEvents: [UIControlEvents.TouchUpInside, UIControlEvents.TouchUpOutside])
+                             for: [UIControlEvents.touchUpInside, UIControlEvents.touchUpOutside])
         seekSlider.addTarget(self, action: #selector(PlayVideoViewController.sliderValueChanged),
-                             forControlEvents: UIControlEvents.ValueChanged)
+                             for: UIControlEvents.valueChanged)
         
         seekSlider.addTarget(self, action: #selector(PlayVideoViewController.sliderValueChanged),
-                             forControlEvents: UIControlEvents.ValueChanged)
+                             for: UIControlEvents.valueChanged)
         
         loadingIndicatorView.hidesWhenStopped = true
         view.addSubview(loadingIndicatorView)
         avPlayer.addObserver(self, forKeyPath: "currentItem.playbackLikelyToKeepUp",
-                             options: NSKeyValueObservingOptions.New, context: playbackLikelyToKeepUpContext)
+                             options: NSKeyValueObservingOptions.new, context: playbackLikelyToKeepUpContext)
 
         // Do any additional setup after loading the view.
         
@@ -87,9 +87,9 @@ class PlayVideoViewController: UIViewController {
         player.play()*/
     }
     
-     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if (context == playbackLikelyToKeepUpContext) {
-            if (avPlayer.currentItem!.playbackLikelyToKeepUp) {
+            if (avPlayer.currentItem!.isPlaybackLikelyToKeepUp) {
                 loadingIndicatorView.stopAnimating()
             } else {
                 loadingIndicatorView.startAnimating()
@@ -97,15 +97,15 @@ class PlayVideoViewController: UIViewController {
         }
     }
     
-    private func observeTime(elapsedTime: CMTime) {
-        let duration = CMTimeGetSeconds(avPlayer.currentItem!.duration);
-        if (isfinite(duration)) {
+    fileprivate func observeTime(_ elapsedTime: CMTime) {
+        //let duration = CMTimeGetSeconds(avPlayer.currentItem!.duration);
+        /*if (isFinite(duration)) {
             let elapsedTime = CMTimeGetSeconds(elapsedTime)
             updateTimeLabel(elapsedTime, duration: duration)
-        }
+        }*/
     }
     
-    private func updateTimeLabel(elapsedTime: Float64, duration: Float64) {
+    fileprivate func updateTimeLabel(_ elapsedTime: Float64, duration: Float64) {
         let timeRemaining: Float64 = CMTimeGetSeconds(avPlayer.currentItem!.duration) - elapsedTime
         timeRemainingLabel.text = String(format: "%02d:%02d", ((lround(timeRemaining) / 60) % 60), lround(timeRemaining) % 60)
     }
@@ -115,7 +115,7 @@ class PlayVideoViewController: UIViewController {
         avPlayer.removeObserver(self, forKeyPath: "currentItem.playbackLikelyToKeepUp")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadingIndicatorView.startAnimating()
         avPlayer.play() // Start the playback
@@ -136,10 +136,10 @@ class PlayVideoViewController: UIViewController {
         timeRemainingLabel.frame = CGRect(x: 5, y: controlsY, width: 60, height: controlsHeight)
         seekSlider.frame = CGRect(x: timeRemainingLabel.frame.origin.x + timeRemainingLabel.bounds.size.width,
                                   y: controlsY, width: view.bounds.size.width - timeRemainingLabel.bounds.size.width - 5, height: controlsHeight)
-        loadingIndicatorView.center = CGPoint(x: CGRectGetMidX(view.bounds), y: CGRectGetMidY(view.bounds))
+        loadingIndicatorView.center = CGPoint(x: view.bounds.midX, y: view.bounds.midY)
     }
     
-    func invisibleButtonTapped(sender: UIButton!) {
+    func invisibleButtonTapped(_ sender: UIButton!) {
         let playerIsPlaying:Bool = avPlayer.rate > 0
         if (playerIsPlaying) {
             avPlayer.pause();
@@ -149,8 +149,8 @@ class PlayVideoViewController: UIViewController {
     }
     
     // Force the view into landscape mode (which is how most video media is consumed.)
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return [.Landscape]
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return [.landscape]
     }
 
     override func didReceiveMemoryWarning() {
@@ -158,24 +158,24 @@ class PlayVideoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func sliderBeganTracking(slider: UISlider!) {
+    func sliderBeganTracking(_ slider: UISlider!) {
         playerRateBeforeSeek = avPlayer.rate
         avPlayer.pause()
     }
     
-    func sliderEndedTracking(slider: UISlider!) {
+    func sliderEndedTracking(_ slider: UISlider!) {
         let videoDuration = CMTimeGetSeconds(avPlayer.currentItem!.duration)
         let elapsedTime: Float64 = videoDuration * Float64(seekSlider.value)
         updateTimeLabel(elapsedTime, duration: videoDuration)
         
-        avPlayer.seekToTime(CMTimeMakeWithSeconds(elapsedTime, 10)) { (completed: Bool) -> Void in
+        avPlayer.seek(to: CMTimeMakeWithSeconds(elapsedTime, 10), completionHandler: { (completed: Bool) -> Void in
             if (self.playerRateBeforeSeek > 0) {
                 self.avPlayer.play()
             }
-        }
+        }) 
     }
     
-    func sliderValueChanged(slider: UISlider!) {
+    func sliderValueChanged(_ slider: UISlider!) {
         let videoDuration = CMTimeGetSeconds(avPlayer.currentItem!.duration)
         let elapsedTime: Float64 = videoDuration * Float64(seekSlider.value)
         updateTimeLabel(elapsedTime, duration: videoDuration)

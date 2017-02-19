@@ -41,7 +41,7 @@ class WalkthroughContentViewController: UIViewController {
         contentImageView.image = UIImage(named: imageFile)
         
         if(lastImage == "yes"){
-            imgDnArrow.hidden = true
+            imgDnArrow.isHidden = true
         }
         
 

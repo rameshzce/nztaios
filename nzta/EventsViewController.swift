@@ -9,8 +9,8 @@
 import UIKit
 
 class EventsViewController: UITableViewController{
-    let prefs = NSUserDefaults.standardUserDefaults()
-    var selectedIndexPath : NSIndexPath?
+    let prefs = UserDefaults.standard
+    var selectedIndexPath : IndexPath?
     
     var titleBg = "#ff218e"
     var textBg = "#9D1457"
@@ -18,14 +18,14 @@ class EventsViewController: UITableViewController{
     
     var screenHeight: CGFloat {
         if UIInterfaceOrientationIsPortrait(screenOrientation) {
-            return UIScreen.mainScreen().bounds.size.height
+            return UIScreen.main.bounds.size.height
         } else {
-            return UIScreen.mainScreen().bounds.size.width
+            return UIScreen.main.bounds.size.width
         }
     }
     
     var screenOrientation: UIInterfaceOrientation {
-        return UIApplication.sharedApplication().statusBarOrientation
+        return UIApplication.shared.statusBarOrientation
     }
     
     var events:[(name: String, address: String)] = [
@@ -46,16 +46,16 @@ class EventsViewController: UITableViewController{
     var bgs = ["sankranti", "ugadi", "batukamma", "events_blood-donations", "events_holy", "events_ugadi", "events_independence-day.jpg", "events_vinayaka-chaviti", "events_batukamma", "events_diwali", "diwali", "events_xmas"]
     var icons = ["icon_calander_inagaration", "icon_sankranthi", "icon_independeneceday", "icon_blooddonations", "icon_holi", "icon_ugadi", "icon_independeneceday", "icon_vinayakachaviti", "icon_batukamma", "icon_diwali", "icon_vanabojanalu", "icon_xmas"]
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EventsViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EventsViewCell
         
         let event = events[indexPath.row]
         cell.titleLabel.text = event.name
@@ -68,16 +68,16 @@ class EventsViewController: UITableViewController{
         //cell.videoGalleryBtn.tag = indexPath.row
         //cell.videoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction2), forControlEvents: .TouchUpInside)
         
-        if (prefs.stringForKey("eventType") == "Upcoming Events"){
+        if (prefs.string(forKey: "eventType") == "Upcoming Events"){
             self.titleBg = "#ba1768"
             //self.textBg = "#FFDFF0"
-        } else if (prefs.stringForKey("eventType") == "Existing Events"){
+        } else if (prefs.string(forKey: "eventType") == "Existing Events"){
             self.titleBg = "#D9B219"
             //self.textBg = "#FFF9DF"
-        } else if (prefs.stringForKey("eventType") == "Go Green"){
+        } else if (prefs.string(forKey: "eventType") == "Go Green"){
             self.titleBg = "#41AA4B"
             //self.textBg = "#076A4B"
-        } else if (prefs.stringForKey("eventType") == "NZ Blood"){
+        } else if (prefs.string(forKey: "eventType") == "NZ Blood"){
             self.titleBg = "#C30000"
             //self.textBg = "#840000"
         }
@@ -88,9 +88,9 @@ class EventsViewController: UITableViewController{
         
         var rowColor = ""
         
-        if (prefs.stringForKey("eventType") == "Upcoming Events"){
+        if (prefs.string(forKey: "eventType") == "Upcoming Events"){
             rowColor = "#ff218e"
-        } else if (prefs.stringForKey("eventType") == "Existing Events"){
+        } else if (prefs.string(forKey: "eventType") == "Existing Events"){
             rowColor = "#ffd428"
         }
         
@@ -102,7 +102,7 @@ class EventsViewController: UITableViewController{
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         /*let previousIndexPath = selectedIndexPath
         if indexPath == selectedIndexPath {
             selectedIndexPath = nil
@@ -124,13 +124,13 @@ class EventsViewController: UITableViewController{
         
         var rowColor = ""
         
-        if (prefs.stringForKey("eventType") == "Upcoming Events"){
+        if (prefs.string(forKey: "eventType") == "Upcoming Events"){
             rowColor = "#ff218e"
-        } else if (prefs.stringForKey("eventType") == "Existing Events"){
+        } else if (prefs.string(forKey: "eventType") == "Existing Events"){
             rowColor = "#ffd428"
         }
         
-        let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        let selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
         let colorView = UIView()
         colorView.backgroundColor = Helper.hexStringToUIColor(rowColor)
         selectedCell.selectedBackgroundView = colorView
@@ -141,22 +141,22 @@ class EventsViewController: UITableViewController{
     
     
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         //(cell as! EventsViewCell).watchFrameChanges()
     }
     
-    override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         //(cell as! EventsViewCell).ignoreFrameChanges()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         /*for cell in tableView.visibleCells as! [EventsViewCell] {
             //cell.ignoreFrameChanges()
         }*/
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         /*if indexPath == selectedIndexPath {
             return EventsViewCell.expandedHeight
         } else {
@@ -169,7 +169,7 @@ class EventsViewController: UITableViewController{
         return 90
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed

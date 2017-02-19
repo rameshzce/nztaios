@@ -8,35 +8,35 @@
 
 import UIKit
 
-func getDocumentsURL() -> NSURL {
-    let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+func getDocumentsURL() -> URL {
+    let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     return documentsURL
 }
 
-func fileInDocumentsDirectory(filename: String) -> String {
+func fileInDocumentsDirectory(_ filename: String) -> String {
     
-    let fileURL = getDocumentsURL().URLByAppendingPathComponent(filename)
-    return fileURL!.path!
+    let fileURL = getDocumentsURL().appendingPathComponent(filename)
+    return fileURL.path
     
 }
 
 class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     
     @IBOutlet var textLabel: UILabel!
     @IBOutlet var savePhoto: UIButton!
     @IBOutlet var scrollView: UIScrollView!
     var imageView = UIImageView()
     
-    @IBAction func cropAndUpload(sender: AnyObject) {
-        UIGraphicsBeginImageContextWithOptions(scrollView.bounds.size, true, UIScreen.mainScreen().scale)
+    @IBAction func cropAndUpload(_ sender: AnyObject) {
+        UIGraphicsBeginImageContextWithOptions(scrollView.bounds.size, true, UIScreen.main.scale)
         
         let offSet = scrollView.contentOffset
         
-        CGContextTranslateCTM(UIGraphicsGetCurrentContext()!, -offSet.x, -offSet.y)
+        UIGraphicsGetCurrentContext()!.translateBy(x: -offSet.x, y: -offSet.y)
         
-        scrollView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        scrollView.layer.render(in: UIGraphicsGetCurrentContext()!)
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         //print(image)
@@ -58,28 +58,28 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
         if loadImageFromPath(imagePath) != nil {
             //print(" Loaded Image: \(loadedImage)")
             self.prefs.setValue(imagePath, forKey: "imagePath")
-            self.performSegueWithIdentifier("editProfile", sender: self)
+            self.performSegue(withIdentifier: "editProfile", sender: self)
         } else { print("some error message 2") }
         
         
-        let alert = UIAlertController(title: "image saved \(image)", message: "your image has been saved\(imagePath)", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "image saved \(image)", message: "your image has been saved\(imagePath)", preferredStyle: UIAlertControllerStyle.alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         
         //self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    func saveImage (image: UIImage, path: String ) -> Bool{
+    func saveImage (_ image: UIImage, path: String ) -> Bool{
         
         let pngImageData = UIImagePNGRepresentation(image)
         //let jpgImageData = UIImageJPEGRepresentation(image, 1.0)   // if you want to save as JPEG
-        let result = pngImageData!.writeToFile(path, atomically: true)
+        let result = (try? pngImageData!.write(to: URL(fileURLWithPath: path), options: [.atomic])) != nil
         
         return result
         
     }
     
-    func loadImageFromPath(path: String) -> UIImage? {
+    func loadImageFromPath(_ path: String) -> UIImage? {
         
         let image = UIImage(contentsOfFile: path)
         
@@ -99,16 +99,16 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
         
         Helper.customizeButton(savePhoto)
 
-        imageView.frame = CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height)
+        imageView.frame = CGRect(x: 0, y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height)
         
-        if prefs.stringForKey("imagePath") != nil{
-            imageView.image = UIImage(contentsOfFile: prefs.stringForKey("imagePath")!)
+        if prefs.string(forKey: "imagePath") != nil{
+            imageView.image = UIImage(contentsOfFile: prefs.string(forKey: "imagePath")!)
         }else{
             //imageView.image = UIImage(named:"placeholder")
-            imageView.sd_setImageWithURL(NSURL(string: prefs.stringForKey("profileImage")! as String), placeholderImage: UIImage(named: "placeholder"))
+            imageView.sd_setImage(with: URL(string: prefs.string(forKey: "profileImage")! as String), placeholderImage: UIImage(named: "placeholder"))
         }
         //imageView.image = UIImage(named:"logo")
-        imageView.userInteractionEnabled = true
+        imageView.isUserInteractionEnabled = true
         
         scrollView.addSubview(imageView)
         
@@ -118,22 +118,22 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
         
     }
     
-    func loadImage(recognizer:UITapGestureRecognizer) {
+    func loadImage(_ recognizer:UITapGestureRecognizer) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
         
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+        self.present(imagePicker, animated: true, completion: nil)
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
          
          imageView.image = image
-         imageView.contentMode = UIViewContentMode.Center
+         imageView.contentMode = UIViewContentMode.center
          
-         imageView.frame = CGRectMake(0, 0, (image.size.width), (image.size.height))
+         imageView.frame = CGRect(x: 0, y: 0, width: (image.size.width), height: (image.size.height))
          
          scrollView.contentSize = image.size
          
@@ -151,7 +151,7 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
         
         
         
-        picker.dismissViewControllerAnimated(true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
     }
     
     func centerScrollViewContents (){
@@ -173,11 +173,11 @@ class EditProfileViewController: UIViewController, UIScrollViewDelegate, UIImage
         imageView.frame = contentsFrame
     }
     
-    func scrollViewDidZoom(scrollView: UIScrollView) {
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
         centerScrollViewContents()
     }
     
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
     }
     

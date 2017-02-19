@@ -23,7 +23,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
     
     @IBOutlet weak var signInButton: GIDSignInButton!
     
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     
     let numberToolbar: UIToolbar = UIToolbar()
     
@@ -34,18 +34,18 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
     }
     
     
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!)
     {
         if result.isCancelled {
             return
         }
         
-        FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large), email"]).startWithCompletionHandler { (connection, result, error) -> Void in
+        FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, picture.type(large), email"]).start { (connection, result, error) -> Void in
             
-            let strFirstName: String = (result.objectForKey("first_name") as? String)!
-            let strLastName: String = (result.objectForKey("last_name") as? String)!
-            let strEmail: String = (result.objectForKey("email") as? String)!
-            let strPictureURL: String = (result.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
+            let strFirstName: String = ((result as AnyObject).object(forKey: "first_name") as? String)!
+            let strLastName: String = ((result as AnyObject).object(forKey: "last_name") as? String)!
+            let strEmail: String = ((result as AnyObject).object(forKey: "email") as? String)!
+            let strPictureURL: String = ((((result as AnyObject).object(forKey: "picture") as AnyObject).object(forKey: "data") as AnyObject).object(forKey: "url") as? String)!
             
             let profileName = "\(strFirstName) \(strLastName)"
             
@@ -61,12 +61,12 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
             
             //register and login
             SwiftLoading().showLoading()
-            let request = NSMutableURLRequest(URL: NSURL(string: "http://tokkalo.com/api/1/submit_user.php")!)
-            request.HTTPMethod = "POST"
-            let postString = "fname=\(strFirstName)&mobile=\(strEmail)&organization=\(strEmail)&login_type=2&device_id=\(self.prefs.stringForKey("tokenString")!)"
-            request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            let request = NSMutableURLRequest(url: URL(string: "http://tokkalo.com/api/1/submit_user.php")!)
+            request.httpMethod = "POST"
+            let postString = "fname=\(strFirstName)&mobile=\(strEmail)&organization=\(strEmail)&login_type=2&device_id=\(self.prefs.string(forKey: "tokenString")!)"
+            request.httpBody = postString.data(using: String.Encoding.utf8)
             
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            let task = URLSession.shared.dataTask(with: request as URLRequest)  {
                 
                 data, response, error in
                 
@@ -78,7 +78,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
                 
                 do {
                     SwiftLoading().hideLoading()
-                    let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                    let jsonDictionary = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
                     let status = jsonDictionary["status"] as! String
                     //self.showAlert("\(status)")
                     
@@ -87,7 +87,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
                         //self.showAlert("\(phone)")
                         self.prefs.setValue(true, forKey: "signUp")
                         self.prefs.setValue(phone, forKey: "login")
-                        self.performSegueWithIdentifier("member", sender: self)
+                        self.performSegue(withIdentifier: "member", sender: self)
                     }else if status == "FAILURE"{
                         let message = jsonDictionary["message"] as! String
                         self.showAlert("\(message)")
@@ -101,7 +101,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         }
     }
     
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!)
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!)
     {
         let loginManager: FBSDKLoginManager = FBSDKLoginManager()
         loginManager.logOut()
@@ -110,7 +110,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         lblName.text = ""
     }
     
-    @IBAction func registerUser(sender: UIButton) {
+    @IBAction func registerUser(_ sender: UIButton) {
         //performSegueWithIdentifier("member", sender: self)
         if (name.text == "") {
             showAlert("Please enter name")
@@ -120,12 +120,12 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
             showAlert("Please enter email")
         } else {
             SwiftLoading().showLoading()
-            let request = NSMutableURLRequest(URL: NSURL(string: "http://tokkalo.com/api/1/submit_user.php")!)
-            request.HTTPMethod = "POST"
-            let postString = "fname=\(name.text!)&mobile=\(mob.text!)&organization=\(email.text!)&login_type=1&device_id=\(prefs.stringForKey("tokenString")!)"
-            request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            let request = NSMutableURLRequest(url: URL(string: "http://tokkalo.com/api/1/submit_user.php")!)
+            request.httpMethod = "POST"
+            let postString = "fname=\(name.text!)&mobile=\(mob.text!)&organization=\(email.text!)&login_type=1&device_id=\(prefs.string(forKey: "tokenString")!)"
+            request.httpBody = postString.data(using: String.Encoding.utf8)
             
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            let task = URLSession.shared.dataTask(with: request as URLRequest)  {
                 
                 data, response, error in
                 
@@ -137,7 +137,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
                 
                 do {
                     SwiftLoading().hideLoading()
-                    let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                    let jsonDictionary = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
                     let status = jsonDictionary["status"] as! String
                     //self.showAlert("\(status)")
                     
@@ -151,8 +151,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
                         self.prefs.setValue(self.email.text, forKey: "profileEmail")
                         self.prefs.setValue("http://tokkalo.com/api/1/profile_images/logo.png", forKey: "profileImage")
                         //self.performSegueWithIdentifier("member", sender: self)
-                        NSOperationQueue.mainQueue().addOperationWithBlock {
-                            self.performSegueWithIdentifier("member", sender: self)
+                        OperationQueue.main.addOperation {
+                            self.performSegue(withIdentifier: "member", sender: self)
                         }
                     }else if status == "FAILURE"{
                         let message = jsonDictionary["message"] as! String
@@ -167,24 +167,24 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         }
     }
     
-    @IBAction func btnSignoutTapped(sender: AnyObject)
+    @IBAction func btnSignoutTapped(_ sender: AnyObject)
     {
         GIDSignIn.sharedInstance().signOut()
     }
     
-    func showAlert(msg: String){
+    func showAlert(_ msg: String){
         let alertController = UIAlertController(title: "NZTA",
-                                                message: msg, preferredStyle: UIAlertControllerStyle.Alert)
+                                                message: msg, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "OK", style:
-            UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alertController, animated: true, completion:
+            UIAlertActionStyle.default, handler: nil))
+        self.present(alertController, animated: true, completion:
             nil)
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = false
         configureFacebook()
         
         
@@ -194,10 +194,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         btnFacebook.layer.cornerRadius = 5
         //btnFacebook.layer.borderWidth = 1
         //btnFacebook.layer.borderColor = UIColor.whiteColor().CGColor
-        btnFacebook.titleLabel!.font =  UIFont.boldSystemFontOfSize(15)
+        btnFacebook.titleLabel!.font =  UIFont.boldSystemFont(ofSize: 15)
         //btnFacebook.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
         
-        btnRegister.backgroundColor = UIColor.magentaColor()
+        btnRegister.backgroundColor = UIColor.magenta
         btnRegister.layer.cornerRadius = 5
         //btnRegister.layer.borderWidth = 1
         //btnRegister.layer.borderColor = UIColor.whiteColor().CGColor
@@ -207,17 +207,17 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         Helper.customizetextField3(mob)
         Helper.customizetextField3(email)
         
-        name.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        name.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.white])
         
-        mob.attributedPlaceholder = NSAttributedString(string:"Mob", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        mob.attributedPlaceholder = NSAttributedString(string:"Mob", attributes:[NSForegroundColorAttributeName: UIColor.white])
         
-        email.attributedPlaceholder = NSAttributedString(string:"Email", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        email.attributedPlaceholder = NSAttributedString(string:"Email", attributes:[NSForegroundColorAttributeName: UIColor.white])
         
-        numberToolbar.barStyle = UIBarStyle.BlackTranslucent
+        numberToolbar.barStyle = UIBarStyle.blackTranslucent
         numberToolbar.items=[
-            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.cancel)),
-            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: self, action: nil),
-            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.done))
+            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(InviteFriendViewController.cancel)),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(InviteFriendViewController.done))
         ]
         
         numberToolbar.sizeToFit()
@@ -233,7 +233,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
 
          
          //if let login = prefs.stringForKey("login"){
-         if prefs.stringForKey("login") != nil{
+         if prefs.string(forKey: "login") != nil{
          //self.showAlert("You have already logged in as: \(login)")
             //self.performSegueWithIdentifier("member", sender: self)
          }else{
@@ -250,9 +250,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         mob.resignFirstResponder()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        if prefs.stringForKey("login") != nil{
-            self.performSegueWithIdentifier("member", sender: self)
+    override func viewDidAppear(_ animated: Bool) {
+        if prefs.string(forKey: "login") != nil{
+            self.performSegue(withIdentifier: "member", sender: self)
         }
     }
     
@@ -267,23 +267,23 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
     
     // Stop the UIActivityIndicatorView animation that was started when the user
     // pressed the Sign In button
-    func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
+    func sign(inWillDispatch signIn: GIDSignIn!, error: NSError!) {
         //myActivityIndicator.stopAnimating()
     }
     
     // Present a view that prompts the user to sign in with Google
-    func signIn(signIn: GIDSignIn!,
-                presentViewController viewController: UIViewController!) {
-        self.presentViewController(viewController, animated: true, completion: nil)
+    func sign(_ signIn: GIDSignIn!,
+                present viewController: UIViewController!) {
+        self.present(viewController, animated: true, completion: nil)
     }
     
     // Dismiss the "Sign in with Google" view
-    func signIn(signIn: GIDSignIn!,
-                dismissViewController viewController: UIViewController!) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    func sign(_ signIn: GIDSignIn!,
+                dismiss viewController: UIViewController!) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func didTapSignOut(sender: AnyObject) {
+    @IBAction func didTapSignOut(_ sender: AnyObject) {
         GIDSignIn.sharedInstance().signOut()
     }
     
@@ -291,61 +291,61 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         self.navigationController?.navigationBarHidden = true
     }*/
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated);
         super.viewWillDisappear(animated)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
-        let value = UIInterfaceOrientation.Portrait.rawValue
-        UIDevice.currentDevice().setValue(value, forKey: "orientation")
+        let value = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
     }
     
-    func customizeButton(textField: UITextField!) {
-        textField.backgroundColor = UIColor.clearColor()
+    func customizeButton(_ textField: UITextField!) {
+        textField.backgroundColor = UIColor.clear
         textField.layer.cornerRadius = 5
         textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor.whiteColor().CGColor
+        textField.layer.borderColor = UIColor.white.cgColor
         //textField.attributedPlaceholder = NSAttributedString(string:"placeholder text", attributes:[NSForegroundColorAttributeName: UIColor.yellowColor()])
         
-        let paddingView = UIView(frame: CGRectMake(0, 0, 10, textField.frame.height))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
         
         textField.leftView = paddingView
         
-        textField.leftViewMode = UITextFieldViewMode.Always
+        textField.leftViewMode = UITextFieldViewMode.always
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         //scrollView.setContentOffset(CGPointMake(0, 100), animated: true)
         
         if (textField == mob){
-            scrollView.setContentOffset(CGPointMake(0, 50), animated: true)
+            scrollView.setContentOffset(CGPoint(x: 0, y: 50), animated: true)
         } else if (textField == email){
-            scrollView.setContentOffset(CGPointMake(0, 100), animated: true)
+            scrollView.setContentOffset(CGPoint(x: 0, y: 100), animated: true)
         }
         
         textField.placeholder = nil
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         //scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
         if (textField == name){
             name.placeholder = "Name"
         }else if (textField == mob){
             mob.placeholder = "Mob"
-            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+            scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         }else if (textField == email){
             email.placeholder = "Email"
-            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+            scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         }
         
-        textField.setValue(UIColor.whiteColor(), forKeyPath: "_placeholderLabel.textColor")
+        textField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
         if (textField == name){
@@ -356,7 +356,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
             email.placeholder = "Email"
         }
         
-        textField.setValue(UIColor.whiteColor(), forKeyPath: "_placeholderLabel.textColor")
+        textField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
         return true
     }
     

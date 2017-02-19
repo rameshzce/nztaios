@@ -13,48 +13,48 @@ class Helper{
     static var image = "img_event_"
     static var thumb = "thumb_img_event_"
     
-    static func customizetextField(textField: UITextField!) {
-        textField.backgroundColor = UIColor.clearColor()
+    static func customizetextField(_ textField: UITextField!) {
+        textField.backgroundColor = UIColor.clear
         textField.layer.cornerRadius = 5
         textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor.whiteColor().CGColor
+        textField.layer.borderColor = UIColor.white.cgColor
         
-        let paddingView = UIView(frame: CGRectMake(0, 0, 10, textField.frame.height))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
         
         textField.leftView = paddingView
         
-        textField.leftViewMode = UITextFieldViewMode.Always
+        textField.leftViewMode = UITextFieldViewMode.always
     }
     
-    static func customizetextField2(textField: UITextField!) {
-        textField.backgroundColor = UIColor.clearColor()
+    static func customizetextField2(_ textField: UITextField!) {
+        textField.backgroundColor = UIColor.clear
         textField.layer.cornerRadius = 5
         textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor.whiteColor().CGColor
+        textField.layer.borderColor = UIColor.white.cgColor
         
-        let paddingView = UIView(frame: CGRectMake(0, 0, 10, textField.frame.height))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
         
         textField.leftView = paddingView
         
-        textField.leftViewMode = UITextFieldViewMode.Always
+        textField.leftViewMode = UITextFieldViewMode.always
     }
     
-    static func customizetextField3(textField: UITextField!) {
+    static func customizetextField3(_ textField: UITextField!) {
         textField.backgroundColor = UIColor(white: 1, alpha: 0.3)
         textField.layer.cornerRadius = 3
         textField.layer.borderWidth = 0
-        textField.layer.borderColor = UIColor.whiteColor().CGColor
+        textField.layer.borderColor = UIColor.white.cgColor
         
-        let paddingView = UIView(frame: CGRectMake(0, 0, 10, textField.frame.height))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
         
         textField.leftView = paddingView
         
-        textField.leftViewMode = UITextFieldViewMode.Always
+        textField.leftViewMode = UITextFieldViewMode.always
         
-        textField.tintColor = UIColor.whiteColor()
+        textField.tintColor = UIColor.white
     }
     
-    static func customizeButton(button: UIButton!) {
+    static func customizeButton(_ button: UIButton!) {
         //button.setBackgroundImage(nil, forState: .Normal)
         //button.backgroundColor = UIColor.clearColor()
         button.layer.cornerRadius = 5
@@ -64,19 +64,19 @@ class Helper{
         //button.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
     }
     
-    static func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+    static func hexStringToUIColor (_ hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
-            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+            cString = cString.substring(from: cString.characters.index(cString.startIndex, offsetBy: 1))
         }
         
         if ((cString.characters.count) != 6) {
-            return UIColor.grayColor()
+            return UIColor.gray
         }
         
         var rgbValue:UInt32 = 0
-        NSScanner(string: cString).scanHexInt(&rgbValue)
+        Scanner(string: cString).scanHexInt32(&rgbValue)
         
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
@@ -86,23 +86,23 @@ class Helper{
         )
     }
     
-    static func loadImageFromUrl(url: String, view: UIImageView){
+    static func loadImageFromUrl(_ url: String, view: UIImageView){
         
         // Create Url from string
-        let url = NSURL(string: url)!
+        let url = URL(string: url)!
         
         // Download task:
         // - sharedSession = global NSURLCache, NSHTTPCookieStorage and NSURLCredentialStorage objects.
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (responseData, responseUrl, error) -> Void in
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { (responseData, responseUrl, error) -> Void in
             // if responseData is not null...
             if let data = responseData{
                 
                 // execute in UI thread
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                DispatchQueue.main.async(execute: { () -> Void in
                     view.image = UIImage(data: data)
                 })
             }
-        }
+        }) 
         
         // Run task
         task.resume()

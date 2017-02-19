@@ -26,18 +26,18 @@ class MenuViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         return menuItems.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MenuViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MenuViewCell
         
         // Configure the cell...
         
@@ -59,32 +59,32 @@ class MenuViewController: UITableViewController {
         }
     }*/
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let rowColor = "#ff218e"
         
-        let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        let selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
         selectedCell.contentView.backgroundColor = Helper.hexStringToUIColor(rowColor)
         
         switch (indexPath.row) {
         //case 0: [self performSegueWithIdentifier:@"Segue0" sender:self];
         case 0:
-            self.performSegueWithIdentifier("menuNzta", sender: self)
+            self.performSegue(withIdentifier: "menuNzta", sender: self)
             break;
         case 1:
-            self.performSegueWithIdentifier("menuProfile", sender: self)
+            self.performSegue(withIdentifier: "menuProfile", sender: self)
             break;
         case 2:
-            self.performSegueWithIdentifier("menuSubscription", sender: self)
+            self.performSegue(withIdentifier: "menuSubscription", sender: self)
             break
         case 3:
-            self.performSegueWithIdentifier("menuNZTeam", sender: self)
+            self.performSegue(withIdentifier: "menuNZTeam", sender: self)
             break
         case 4:
-            self.performSegueWithIdentifier("menuSponsors", sender: self)
+            self.performSegue(withIdentifier: "menuSponsors", sender: self)
             break
         case 5:
-            self.performSegueWithIdentifier("menuSendMessage", sender: self)
+            self.performSegue(withIdentifier: "menuSendMessage", sender: self)
             break
         default:
             break

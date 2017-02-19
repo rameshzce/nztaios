@@ -37,17 +37,17 @@ class SubscriptionViewController: UIViewController, SSRadioButtonControllerDeleg
         Helper.customizetextField3(nameTextField)
         Helper.customizetextField3(mobileTextField)
         
-        emailTextField.attributedPlaceholder = NSAttributedString(string:"Email", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        emailTextField.attributedPlaceholder = NSAttributedString(string:"Email", attributes:[NSForegroundColorAttributeName: UIColor.white])
         
-        nameTextField.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        nameTextField.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.white])
         
-        mobileTextField.attributedPlaceholder = NSAttributedString(string:"Mob", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        mobileTextField.attributedPlaceholder = NSAttributedString(string:"Mob", attributes:[NSForegroundColorAttributeName: UIColor.white])
         
-        numberToolbar.barStyle = UIBarStyle.BlackTranslucent
+        numberToolbar.barStyle = UIBarStyle.blackTranslucent
         numberToolbar.items=[
-            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.cancel)),
-            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: self, action: nil),
-            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.done))
+            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(InviteFriendViewController.cancel)),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(InviteFriendViewController.done))
         ]
         
         numberToolbar.sizeToFit()
@@ -57,7 +57,7 @@ class SubscriptionViewController: UIViewController, SSRadioButtonControllerDeleg
         // Do any additional setup after loading the view.
     }
     
-    func didSelectButton(aButton: UIButton?) {
+    func didSelectButton(_ aButton: UIButton?) {
         //print(aButton.)
     }
     
@@ -75,20 +75,20 @@ class SubscriptionViewController: UIViewController, SSRadioButtonControllerDeleg
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         //scrollView.setContentOffset(CGPointMake(0, 10), animated: true)
         if (textField == nameTextField){
-            scrollView.setContentOffset(CGPointMake(0, 10), animated: true)
+            scrollView.setContentOffset(CGPoint(x: 0, y: 10), animated: true)
         } else if (textField == emailTextField){
-            scrollView.setContentOffset(CGPointMake(0, 20), animated: true)
+            scrollView.setContentOffset(CGPoint(x: 0, y: 20), animated: true)
         } else if (textField == mobileTextField){
-            scrollView.setContentOffset(CGPointMake(0, 30), animated: true)
+            scrollView.setContentOffset(CGPoint(x: 0, y: 30), animated: true)
         }
         
         textField.placeholder = nil
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         //scrollView.setContentOffset(CGPointMake(0, -50), animated: true)
         if (textField == nameTextField){
             nameTextField.placeholder = "Name"
@@ -98,11 +98,11 @@ class SubscriptionViewController: UIViewController, SSRadioButtonControllerDeleg
             emailTextField.placeholder = "Email"
         }
         
-        scrollView.setContentOffset(CGPointMake(0, -50), animated: true)
-        textField.setValue(UIColor.whiteColor(), forKeyPath: "_placeholderLabel.textColor")
+        scrollView.setContentOffset(CGPoint(x: 0, y: -50), animated: true)
+        textField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
         if (textField == nameTextField){
@@ -113,7 +113,7 @@ class SubscriptionViewController: UIViewController, SSRadioButtonControllerDeleg
             emailTextField.placeholder = "Email"
         }
         
-        textField.setValue(UIColor.whiteColor(), forKeyPath: "_placeholderLabel.textColor")
+        textField.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
         return true
     }
     

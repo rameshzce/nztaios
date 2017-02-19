@@ -11,7 +11,7 @@ import UIKit
 class SponsorsViewController: UITableViewController {
     var eventName: String!
     
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     
     var array: [String] = []
     
@@ -25,7 +25,7 @@ class SponsorsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -41,7 +41,7 @@ class SponsorsViewController: UITableViewController {
                         
         );*/
         
-        for (var i = 1; i < 47; i++ ) {
+        for i in 1 ..< 47  {
             array.append(url + "ADS-" +  String(i) + ".jpg")
         }
     }
@@ -53,28 +53,28 @@ class SponsorsViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return array.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! SponsorsViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SponsorsViewCell
 
         // Configure the cell...
         //cell.sponsorLogo.image = UIImage(named: "\(sponsors[indexPath.row])")
-        cell.sponsorLogo.sd_setImageWithURL(NSURL(string: (array[indexPath.row])), placeholderImage: UIImage(named: "placeholder"))
+        cell.sponsorLogo.sd_setImage(with: URL(string: (array[indexPath.row])), placeholderImage: UIImage(named: "placeholder"))
         //cell.sponsorLogo.image = UIImage(named: "logo3")
         return cell
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140.0
     }
     

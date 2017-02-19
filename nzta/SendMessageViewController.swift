@@ -10,7 +10,7 @@ import UIKit
 
 class SendMessageViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var messageText: UITextView!
@@ -20,18 +20,18 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate, UITextVi
     
     let numberToolbar: UIToolbar = UIToolbar()
     
-    @IBAction func sendInvite(sender: UIButton) {
+    @IBAction func sendInvite(_ sender: UIButton) {
         if ( (messageText.text == "") || ((messageText.text == "Message here")) ){
             showAlert("Please enter a message")
         }  else {
             //SwiftLoading().showLoading()
             //self.labelMsg.text = "Sending..."
-            let request = NSMutableURLRequest(URL: NSURL(string: "http://sdctbheemili.org/ios/push-notification.php")!)
-            request.HTTPMethod = "POST"
-            let postString = "msg=\(messageText.text!)&profile_name=\(prefs.stringForKey("profileName")!)"
-            request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            let request = NSMutableURLRequest(url: URL(string: "http://sdctbheemili.org/ios/push-notification.php")!)
+            request.httpMethod = "POST"
+            let postString = "msg=\(messageText.text!)&profile_name=\(prefs.string(forKey: "profileName")!)"
+            request.httpBody = postString.data(using: String.Encoding.utf8)
             
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            let task = URLSession.shared.dataTask(with: request as URLRequest)  {
                 
                 data, response, error in
                 
@@ -43,7 +43,7 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate, UITextVi
                 
                 do {
                     
-                    let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                    let jsonDictionary = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
                     let message = jsonDictionary["message"] as! String
                     self.prefs.setValue(message, forKey: "notificationMsg")
                     //self.labelMsg.text = ""
@@ -55,10 +55,10 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate, UITextVi
                     // Handle Error
                 }
                 
-                dispatch_async(dispatch_get_main_queue(),{
-                    if (self.prefs.stringForKey("notificationMsg") != nil){
+                DispatchQueue.main.async(execute: {
+                    if (self.prefs.string(forKey: "notificationMsg") != nil){
                         //self.labelMsg.text = ""
-                        self.showAlert("\(self.prefs.stringForKey("notificationMsg")!)")
+                        self.showAlert("\(self.prefs.string(forKey: "notificationMsg")!)")
                         self.messageText.text = "Message here"
                     }
                 });
@@ -84,11 +84,11 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate, UITextVi
         
         // Do any additional setup after loading the view.
         
-        numberToolbar.barStyle = UIBarStyle.BlackTranslucent
+        numberToolbar.barStyle = UIBarStyle.blackTranslucent
         numberToolbar.items=[
-            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.cancel)),
-            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: self, action: nil),
-            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.done))
+            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(InviteFriendViewController.cancel)),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(InviteFriendViewController.done))
         ]
         
         numberToolbar.sizeToFit()
@@ -110,43 +110,43 @@ class SendMessageViewController: UIViewController, UITextFieldDelegate, UITextVi
         messageText.resignFirstResponder()
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         //ScrollView.setContentOffset(CGPointMake(0, 150), animated: true)
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         //ScrollView.setContentOffset(CGPointMake(0, 0), animated: true)
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
-    func textViewDidBeginEditing(textView: UITextView) {
+    func textViewDidBeginEditing(_ textView: UITextView) {
         if (messageText.text == "Message here") {
             messageText.text = ""
         }
         
-        scrollView.setContentOffset(CGPointMake(0, 50), animated: true)
+        scrollView.setContentOffset(CGPoint(x: 0, y: 50), animated: true)
     }
     
-    func textViewDidEndEditing(textView: UITextView) {
-        scrollView.setContentOffset(CGPointMake(0, -50), animated: true)
+    func textViewDidEndEditing(_ textView: UITextView) {
+        scrollView.setContentOffset(CGPoint(x: 0, y: -50), animated: true)
     }
     
-    func textViewShouldEndEditing(textView: UITextView) -> Bool {
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         textView.resignFirstResponder()
         return true
     }
     
     
-    func showAlert(msg: String){
+    func showAlert(_ msg: String){
         let alertController = UIAlertController(title: "NZTA",
-                                                message: msg, preferredStyle: UIAlertControllerStyle.Alert)
+                                                message: msg, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "OK", style:
-            UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alertController, animated: true, completion:
+            UIAlertActionStyle.default, handler: nil))
+        self.present(alertController, animated: true, completion:
             nil)
     }
     

@@ -30,9 +30,9 @@ class MessagesTableViewController: UITableViewController {
     
     var allMessages = [String: Message]()
     
-    let messages = []
+    let messages = [] as NSArray
     
-    let json = NSUserDefaults.standardUserDefaults().objectForKey("getJson")!
+    let json = UserDefaults.standard.object(forKey: "getJson")! as! [String:AnyObject]
     
     var messagesArray = [Messages]()
     
@@ -40,14 +40,14 @@ class MessagesTableViewController: UITableViewController {
     
     var screenHeight: CGFloat {
         if UIInterfaceOrientationIsPortrait(screenOrientation) {
-            return UIScreen.mainScreen().bounds.size.height
+            return UIScreen.main.bounds.size.height
         } else {
-            return UIScreen.mainScreen().bounds.size.width
+            return UIScreen.main.bounds.size.width
         }
     }
     
     var screenOrientation: UIInterfaceOrientation {
-        return UIApplication.sharedApplication().statusBarOrientation
+        return UIApplication.shared.statusBarOrientation
     }
     
     var msgs:[(day: String, message: [String], from: [String], time: [String])] = []
@@ -85,10 +85,11 @@ class MessagesTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         //tableView.backgroundColor = hexStringToUIColor(mainViewcolor)
         
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         
         
         self.tableView.sectionHeaderHeight = 40
+        
         
         if let messages = json["messages"] as? [[String: AnyObject]] {
             for message in messages {
@@ -100,7 +101,7 @@ class MessagesTableViewController: UITableViewController {
                 
                 if self.dates.contains(date!) {
                     
-                    let index = self.dates.indexOf(date!)
+                    let index = self.dates.index(of: date!)
                     
                     msgs[index!].message.append(msg!)
                     msgs[index!].from.append(frm!)
@@ -133,22 +134,22 @@ class MessagesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return msgs.count
         
     }
     
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
         return msgs[section].message.count
         
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MessagesViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MessagesViewCell
         
         // Configure the cell...
 
@@ -160,12 +161,12 @@ class MessagesTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         return msgs[section].day
     }
     
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
     {
         let title: UILabel = UILabel()
         
@@ -173,30 +174,30 @@ class MessagesTableViewController: UITableViewController {
         title.textColor = hexStringToUIColor("#ff0000")
         //title.backgroundColor = UIColor(red: 225.0/255.0, green: 243.0/255.0, blue: 251.0/255.0, alpha: 1.0)
         title.backgroundColor = hexStringToUIColor("#ffffff")
-        title.font = UIFont.boldSystemFontOfSize(20)
+        title.font = UIFont.boldSystemFont(ofSize: 20)
         
-        let constraint = NSLayoutConstraint.constraintsWithVisualFormat("H:[label]", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: ["label": title])
+        let constraint = NSLayoutConstraint.constraints(withVisualFormat: "H:[label]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: ["label": title])
         
         title.addConstraints(constraint)
         
-        title.textAlignment = NSTextAlignment.Center
+        title.textAlignment = NSTextAlignment.center
         
         return title
     }
     
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+    func hexStringToUIColor (_ hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
-            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+            cString = cString.substring(from: cString.characters.index(cString.startIndex, offsetBy: 1))
         }
         
         if ((cString.characters.count) != 6) {
-            return UIColor.grayColor()
+            return UIColor.gray
         }
         
         var rgbValue:UInt32 = 0
-        NSScanner(string: cString).scanHexInt(&rgbValue)
+        Scanner(string: cString).scanHexInt32(&rgbValue)
         
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,

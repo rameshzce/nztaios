@@ -14,7 +14,7 @@ class PhotoGalleryViewController: UICollectionViewController {
     
     var eventName: String!
     
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     
     var galleryImages = ["angry_birds_cake", "creme_brelee", "egg_benedict",
                         "full_breakfast", "green_tea", "ham_and_cheese_panini", "ham_and_egg_sandwich",
@@ -32,8 +32,8 @@ class PhotoGalleryViewController: UICollectionViewController {
         //self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
-        if prefs.stringForKey("photoGallery") != nil{
-            self.title = prefs.stringForKey("photoGallery")
+        if prefs.string(forKey: "photoGallery") != nil{
+            self.title = prefs.string(forKey: "photoGallery")
             /*let alertController = UIAlertController(title: "NZTA",
                                                     message: prefs.stringForKey("photoGallery"), preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "OK", style:
@@ -60,19 +60,19 @@ class PhotoGalleryViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return galleryImages.count
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! PhotoGalleryViewCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoGalleryViewCell
     
         // Configure the cell
         cell.galleryImageView.image = UIImage(named: galleryImages[indexPath.row])

@@ -12,7 +12,7 @@ import SDWebImage
 class ImageGalleryViewController: UITableViewController {
     var eventName: String!
     
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     
     var array:NSArray!
     
@@ -43,7 +43,7 @@ class ImageGalleryViewController: UITableViewController {
             url + "images/thumb11.jpg"
         );
         
-        if (prefs.stringForKey("eventName") == "Ugadi"){
+        if (prefs.string(forKey: "eventName") == "Ugadi"){
             array = NSArray(objects:
                 url + "ugadi/thumb1.png",
                 url + "ugadi/thumb2.png",
@@ -60,7 +60,7 @@ class ImageGalleryViewController: UITableViewController {
                 url + "ugadi/thumb13.png",
                 url + "ugadi/thumb14.png"
             );
-        } else if (prefs.stringForKey("eventName") == "Calender Inauguration"){
+        } else if (prefs.string(forKey: "eventName") == "Calender Inauguration"){
             array = NSArray(objects:
                 url + "calendar/thumb1.png",
                 url + "calendar/thumb2.png",
@@ -80,7 +80,7 @@ class ImageGalleryViewController: UITableViewController {
                 url + "calendar/thumb16.png",
                 url + "calendar/thumb17.png"
             );
-        } else if (prefs.stringForKey("eventName") == "Sankranthi"){
+        } else if (prefs.string(forKey: "eventName") == "Sankranthi"){
             array = NSArray(objects:
                 url + "sankranti/thumb1.png",
                 url + "sankranti/thumb2.png",
@@ -92,7 +92,7 @@ class ImageGalleryViewController: UITableViewController {
                 url + "sankranti/thumb8.png",
                 url + "sankranti/thumb9.png"
             );
-        } else if (prefs.stringForKey("eventName") == "Holi Funday"){
+        } else if (prefs.string(forKey: "eventName") == "Holi Funday"){
             array = NSArray(objects:
                 url + "holi/thumb1.png",
                 url + "holi/thumb2.png",
@@ -103,7 +103,7 @@ class ImageGalleryViewController: UITableViewController {
                 url + "holi/thumb7.png",
                 url + "holi/thumb8.png"
             );
-        } else if (prefs.stringForKey("eventName") == "Vinayaka Chaviti"){
+        } else if (prefs.string(forKey: "eventName") == "Vinayaka Chaviti"){
             array = NSArray(objects:
                 url + "vinayaka/thumb1.png",
                 url + "vinayaka/thumb2.png",
@@ -119,7 +119,7 @@ class ImageGalleryViewController: UITableViewController {
                 url + "vinayaka/thumb12.png",
                 url + "vinayaka/thumb13.png"
             );
-        } else if (prefs.stringForKey("eventName") == "Blood Donations"){
+        } else if (prefs.string(forKey: "eventName") == "Blood Donations"){
             array = NSArray(objects:
                 url + "blood_donation/thumb1.png",
                 url + "blood_donation/thumb2.png",
@@ -138,7 +138,7 @@ class ImageGalleryViewController: UITableViewController {
                 url + "blood_donation/thumb15.png",
                 url + "blood_donation/thumb16.png"
             );
-        } else if (prefs.stringForKey("eventName") == "Batukamma"){
+        } else if (prefs.string(forKey: "eventName") == "Batukamma"){
             array = NSArray(objects:
                 url + "batukamma/thumb1.png",
                 url + "batukamma/thumb2.png",
@@ -153,47 +153,47 @@ class ImageGalleryViewController: UITableViewController {
             );
         }
         
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         
-        if prefs.stringForKey("photoGallery") != nil{
-            self.title = prefs.stringForKey("photoGallery")
+        if prefs.string(forKey: "photoGallery") != nil{
+            self.title = prefs.string(forKey: "photoGallery")
         }
-        self.title = prefs.stringForKey("eventName")
+        self.title = prefs.string(forKey: "eventName")
         
-        if (prefs.stringForKey("eventName") == "Calender Inauguration"){
+        if (prefs.string(forKey: "eventName") == "Calender Inauguration"){
             images = ["event_name_image1", "event_name_image2", "event_name_image3", "event_name_image4", "event_name_image5", "event_name_image6", "event_name_image7", "event_name_image8", "event_name_image9", "event_name_image10", "event_name_image11"]
             thumbs = ["thumb_event_name_image1", "thumb_event_name_image2", "thumb_event_name_image3", "thumb_event_name_image4", "thumb_event_name_image5", "thumb_event_name_image6", "thumb_event_name_image7", "thumb_event_name_image8", "thumb_event_name_image9", "thumb_event_name_image10", "thumb_event_name_image11"]
-        } else if (prefs.stringForKey("eventName") == "Sankranthi"){
+        } else if (prefs.string(forKey: "eventName") == "Sankranthi"){
             images = ["img_event_sankranti1", "img_event_sankranti2", "img_event_sankranti3", "img_event_sankranti4", "img_event_sankranti5", "img_event_sankranti6", "img_event_sankranti7", "img_event_sankranti8", "img_event_sankranti9"]
             thumbs = ["thumb_img_event_sankranti1", "thumb_img_event_sankranti2", "thumb_img_event_sankranti3", "thumb_img_event_sankranti4", "thumb_img_event_sankranti5", "thumb_img_event_sankranti6", "thumb_img_event_sankranti7", "thumb_img_event_sankranti8", "thumb_img_event_sankranti9"]
-        } else if (prefs.stringForKey("eventName") == "Republic Day"){
+        } else if (prefs.string(forKey: "eventName") == "Republic Day"){
             images = ["event_name_image1", "event_name_image2", "event_name_image3", "event_name_image4", "event_name_image5", "event_name_image6", "event_name_image7", "event_name_image8", "event_name_image9", "event_name_image10", "event_name_image11"]
             thumbs = ["thumb_event_name_image1", "thumb_event_name_image2", "thumb_event_name_image3", "thumb_event_name_image4", "thumb_event_name_image5", "thumb_event_name_image6", "thumb_event_name_image7", "thumb_event_name_image8", "thumb_event_name_image9", "thumb_event_name_image10", "thumb_event_name_image11"]
-        } else if (prefs.stringForKey("eventName") == "Blood Donations"){
+        } else if (prefs.string(forKey: "eventName") == "Blood Donations"){
             images = ["img_event_blood_donation1", "img_event_blood_donation2", "img_event_blood_donation3", "img_event_blood_donation4", "img_event_blood_donation5"]
             thumbs = ["thumb_img_event_blood_donation1", "thumb_img_event_blood_donation2", "thumb_img_event_blood_donation3", "thumb_img_event_blood_donation4", "thumb_img_event_blood_donation5"]
-        } else if (prefs.stringForKey("eventName") == "Holi Funday"){
+        } else if (prefs.string(forKey: "eventName") == "Holi Funday"){
             images = ["img_event_holi1", "img_event_holi2", "img_event_holi3", "img_event_holi4", "img_event_holi5", "img_event_holi6", "img_event_holi7", "img_event_holi8"]
             thumbs = ["thumb_img_event_holi1", "thumb_img_event_holi2", "thumb_img_event_holi3", "thumb_img_event_holi4", "thumb_img_event_holi5", "thumb_img_event_holi6", "thumb_img_event_holi7", "thumb_img_event_holi8"]
-        } else if (prefs.stringForKey("eventName") == "Ugadi"){
+        } else if (prefs.string(forKey: "eventName") == "Ugadi"){
             images = ["img_event_ugadi1", "img_event_ugadi2", "img_event_ugadi3", "img_event_ugadi4", "img_event_ugadi5", "img_event_ugadi6", "img_event_ugadi7", "img_event_ugadi8", "img_event_ugadi9", "img_event_ugadi10", "img_event_ugadi11", "img_event_ugadi12", "img_event_ugadi13", "img_event_ugadi14"]
             thumbs = ["thumb_img_event_ugadi1", "thumb_img_event_ugadi2", "thumb_img_event_ugadi3", "thumb_img_event_ugadi4", "thumb_img_event_ugadi5", "thumb_img_event_ugadi6", "thumb_img_event_ugadi7", "thumb_img_event_ugadi8", "thumb_img_event_ugadi9", "thumb_img_event_ugadi10", "thumb_img_event_ugadi11", "thumb_img_event_ugadi12", "thumb_img_event_ugadi13", "thumb_img_event_ugadi14"]
-        } else if (prefs.stringForKey("eventName") == "Independence Day"){
+        } else if (prefs.string(forKey: "eventName") == "Independence Day"){
             images = ["event_name_image1", "event_name_image2", "event_name_image3", "event_name_image4", "event_name_image5", "event_name_image6", "event_name_image7", "event_name_image8", "event_name_image9", "event_name_image10", "event_name_image11"]
             thumbs = ["thumb_event_name_image1", "thumb_event_name_image2", "thumb_event_name_image3", "thumb_event_name_image4", "thumb_event_name_image5", "thumb_event_name_image6", "thumb_event_name_image7", "thumb_event_name_image8", "thumb_event_name_image9", "thumb_event_name_image10", "thumb_event_name_image11"]
-        } else if (prefs.stringForKey("eventName") == "Vinayaka Chaviti"){
+        } else if (prefs.string(forKey: "eventName") == "Vinayaka Chaviti"){
             images = ["img_event_vinayaka1", "img_event_vinayaka2", "img_event_vinayaka3", "img_event_vinayaka4", "img_event_vinayaka5", "img_event_vinayaka6", "img_event_vinayaka7", "img_event_vinayaka8", "img_event_vinayaka9", "img_event_vinayaka10", "img_event_vinayaka11", "img_event_vinayaka12", "img_event_vinayaka13"]
             thumbs = ["thumb_img_event_vinayaka1", "thumb_img_event_vinayaka2", "thumb_img_event_vinayaka3", "thumb_img_event_vinayaka4", "thumb_img_event_vinayaka5", "thumb_img_event_vinayaka6", "thumb_img_event_vinayaka7", "thumb_img_event_vinayaka8", "thumb_img_event_vinayaka9", "thumb_img_event_vinayaka10", "thumb_img_event_vinayaka11", "thumb_img_event_vinayaka12", "thumb_img_event_vinayaka13"]
-        } else if (prefs.stringForKey("eventName") == "Batukamma"){
+        } else if (prefs.string(forKey: "eventName") == "Batukamma"){
             images = ["event_name_image1", "event_name_image2", "event_name_image3", "event_name_image4", "event_name_image5", "event_name_image6", "event_name_image7", "event_name_image8", "event_name_image9", "event_name_image10", "event_name_image11"]
             thumbs = ["thumb_event_name_image1", "thumb_event_name_image2", "thumb_event_name_image3", "thumb_event_name_image4", "thumb_event_name_image5", "thumb_event_name_image6", "thumb_event_name_image7", "thumb_event_name_image8", "thumb_event_name_image9", "thumb_event_name_image10", "thumb_event_name_image11"]
-        } else if (prefs.stringForKey("eventName") == "Dasara & Diwali"){
+        } else if (prefs.string(forKey: "eventName") == "Dasara & Diwali"){
             images = ["event_name_image1", "event_name_image2", "event_name_image3", "event_name_image4", "event_name_image5", "event_name_image6", "event_name_image7", "event_name_image8", "event_name_image9", "event_name_image10", "event_name_image11"]
             thumbs = ["thumb_event_name_image1", "thumb_event_name_image2", "thumb_event_name_image3", "thumb_event_name_image4", "thumb_event_name_image5", "thumb_event_name_image6", "thumb_event_name_image7", "thumb_event_name_image8", "thumb_event_name_image9", "thumb_event_name_image10", "thumb_event_name_image11"]
-        } else if (prefs.stringForKey("eventName") == "Vanabojanalu"){
+        } else if (prefs.string(forKey: "eventName") == "Vanabojanalu"){
             images = ["event_name_image1", "event_name_image2", "event_name_image3", "event_name_image4", "event_name_image5", "event_name_image6", "event_name_image7", "event_name_image8", "event_name_image9", "event_name_image10", "event_name_image11"]
             thumbs = ["thumb_event_name_image1", "thumb_event_name_image2", "thumb_event_name_image3", "thumb_event_name_image4", "thumb_event_name_image5", "thumb_event_name_image6", "thumb_event_name_image7", "thumb_event_name_image8", "thumb_event_name_image9", "thumb_event_name_image10", "thumb_event_name_image11"]
-        } else if (prefs.stringForKey("eventName") == "Xmas"){
+        } else if (prefs.string(forKey: "eventName") == "Xmas"){
             images = ["event_name_image1", "event_name_image2", "event_name_image3", "event_name_image4", "event_name_image5", "event_name_image6", "event_name_image7", "event_name_image8", "event_name_image9", "event_name_image10", "event_name_image11"]
             thumbs = ["thumb_event_name_image1", "thumb_event_name_image2", "thumb_event_name_image3", "thumb_event_name_image4", "thumb_event_name_image5", "thumb_event_name_image6", "thumb_event_name_image7", "thumb_event_name_image8", "thumb_event_name_image9", "thumb_event_name_image10", "thumb_event_name_image11"]
         }
@@ -207,33 +207,33 @@ class ImageGalleryViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         //return images.count
         return array.count
     }
     
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ImageGalleryViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ImageGalleryViewCell
         
         
         
         //cell.postImageView.image = UIImage(named: thumbs[indexPath.row])
-        cell.postImageView.sd_setImageWithURL(NSURL(string: array.objectAtIndex(indexPath.row) as! String), placeholderImage: UIImage(named: "placeholder"))
+        cell.postImageView.sd_setImage(with: URL(string: array.object(at: indexPath.row) as! String), placeholderImage: UIImage(named: "placeholder"))
         
         return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "displayGalleryImage" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let destinationController = segue.destinationViewController as!
+                let destinationController = segue.destination as!
                 ScrollViewController
                 //destinationController.galleryImage = images[indexPath.row]
                 destinationController.galleryImage = "\(indexPath.row + 1)"

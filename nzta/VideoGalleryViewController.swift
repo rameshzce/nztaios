@@ -15,9 +15,9 @@ class VideoGalleryViewController: UIViewController, UICollectionViewDelegate, UI
         @IBOutlet weak var backgroundImageView:UIImageView!
         @IBOutlet var collectionView:UICollectionView!
         
-        let prefs = NSUserDefaults.standardUserDefaults()
+        let prefs = UserDefaults.standard
         
-        private var trips = [Trip(city: "event name", featuredImage: UIImage(named: "event_name_image1")),
+        fileprivate var trips = [Trip(city: "event name", featuredImage: UIImage(named: "event_name_image1")),
                              Trip(city: "event name", featuredImage: UIImage(named: "event_name_image2")),
                              Trip(city: "event name", featuredImage: UIImage(named: "event_name_image3")),
                              Trip(city: "event name", featuredImage: UIImage(named: "event_name_image4")),
@@ -31,18 +31,18 @@ class VideoGalleryViewController: UIViewController, UICollectionViewDelegate, UI
         ]
         
         // url for playing video
-        var videoUrl: NSURL!
+        var videoUrl: URL!
         
         
-        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             
             if segue.identifier == "seguePlayVideo1" {
                 
                 // get destination view controller
-                let destVc = segue.destinationViewController as! AVPlayerViewController
+                let destVc = segue.destination as! AVPlayerViewController
                 
                 // set player
-                destVc.player = AVPlayer(URL: self.videoUrl)
+                destVc.player = AVPlayer(url: self.videoUrl)
             }
             
         }
@@ -52,21 +52,21 @@ class VideoGalleryViewController: UIViewController, UICollectionViewDelegate, UI
             
             // Apply blurring effect
             backgroundImageView.image = UIImage(named: "cloud")
-            let blurEffect = UIBlurEffect(style: .Dark)
+            let blurEffect = UIBlurEffect(style: .dark)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
             blurEffectView.frame = view.bounds
             backgroundImageView.addSubview(blurEffectView)
             
-            collectionView.backgroundColor = UIColor.clearColor()
+            collectionView.backgroundColor = UIColor.clear
             
             // Change the height for 3.5-inch screen
-            if UIScreen.mainScreen().bounds.size.height == 480.0 {
+            if UIScreen.main.bounds.size.height == 480.0 {
                 let flowLayout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-                flowLayout.itemSize = CGSizeMake(250.0, 300.0)
+                flowLayout.itemSize = CGSize(width: 250.0, height: 300.0)
             }
             
-            if prefs.stringForKey("videoGallery") != nil{
-                self.title = prefs.stringForKey("videoGallery")
+            if prefs.string(forKey: "videoGallery") != nil{
+                self.title = prefs.string(forKey: "videoGallery")
                 /*let alertController = UIAlertController(title: "NZTA",
                  message: prefs.stringForKey("videoGallery"), preferredStyle: UIAlertControllerStyle.Alert)
                  alertController.addAction(UIAlertAction(title: "OK", style:
@@ -74,7 +74,7 @@ class VideoGalleryViewController: UIViewController, UICollectionViewDelegate, UI
                  self.presentViewController(alertController, animated: true, completion:
                  nil)*/
             }
-            self.title = prefs.stringForKey("eventName")
+            self.title = prefs.string(forKey: "eventName")
         }
         
         override func didReceiveMemoryWarning() {
@@ -83,22 +83,22 @@ class VideoGalleryViewController: UIViewController, UICollectionViewDelegate, UI
         }
         
         
-        override func preferredStatusBarStyle() -> UIStatusBarStyle {
-            return UIStatusBarStyle.LightContent
+        override var preferredStatusBarStyle : UIStatusBarStyle {
+            return UIStatusBarStyle.lightContent
         }
         
         // MARK: - UICollectionView Delegate Methods
-        func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        func numberOfSections(in collectionView: UICollectionView) -> Int {
             return 1
         }
         
-        func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             return trips.count
         }
         
-        func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! VideoGalleryViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! VideoGalleryViewCell
             
             // Configure the cell
             cell.cityLabel.text = trips[indexPath.row].city
@@ -110,13 +110,13 @@ class VideoGalleryViewController: UIViewController, UICollectionViewDelegate, UI
             return cell
         }
         
-        func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             
             
-            self.videoUrl = NSURL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8")
+            self.videoUrl = URL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8")
             
             // perform segue
-            self.performSegueWithIdentifier("seguePlayVideo1", sender: self)
+            self.performSegue(withIdentifier: "seguePlayVideo1", sender: self)
         }
         
     

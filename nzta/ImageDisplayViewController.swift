@@ -23,8 +23,8 @@ class ImageDisplayViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func btnBackClicked(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+    @IBAction func btnBackClicked(_ sender: AnyObject) {
+        self.navigationController?.popViewController(animated: true)
     }
 
 }

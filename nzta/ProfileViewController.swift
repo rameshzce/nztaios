@@ -11,9 +11,9 @@ import SDWebImage
 
 class ProfileViewController: UIViewController {
     
-    @IBAction func doEdit(sender: AnyObject) {
+    @IBAction func doEdit(_ sender: AnyObject) {
     }
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     
     @IBOutlet var profileName: UILabel!
     @IBOutlet var profileEmail: UILabel!
@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController {
         self.profileImage.clipsToBounds = true
         
         self.profileImage.layer.borderWidth = 10.0
-        self.profileImage.layer.borderColor = hexStringToUIColor("#C4C4C4").CGColor
+        self.profileImage.layer.borderColor = hexStringToUIColor("#C4C4C4").cgColor
         
         /*let path = "/var/mobile/Containers/Data/Application/10C6D07A-29F4-43B0-922F-6E6F1EA2F68E/Documents/image.png"
         
@@ -47,16 +47,16 @@ class ProfileViewController: UIViewController {
         
         //Helper.loadImageFromUrl("\(prefs.stringForKey("profileImage")!)", view: profileImage)
         
-        if prefs.stringForKey("profileImage") != nil{
+        if prefs.string(forKey: "profileImage") != nil{
             //Helper.loadImageFromUrl("http://tokkalo.com/api/1/profile_images/\(self.prefs.stringForKey("profileImage")!)", view: profileImage)
         } else {
             //Helper.loadImageFromUrl("http://tokkalo.com/api/1/profile_images/logo.png", view: profileImage)
         }
         
-        if prefs.stringForKey("imagePath") != nil{
-            self.profileImage.image = UIImage(contentsOfFile: prefs.stringForKey("imagePath")!)
+        if prefs.string(forKey: "imagePath") != nil{
+            self.profileImage.image = UIImage(contentsOfFile: prefs.string(forKey: "imagePath")!)
         } else {
-            self.profileImage.sd_setImageWithURL(NSURL(string: prefs.stringForKey("profileImage")! as String), placeholderImage: UIImage(named: "placeholder"))
+            self.profileImage.sd_setImage(with: URL(string: prefs.string(forKey: "profileImage")! as String), placeholderImage: UIImage(named: "placeholder"))
         }
         
         
@@ -64,9 +64,9 @@ class ProfileViewController: UIViewController {
         
             //self.profileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: prefs.stringForKey("profileImage")!)!)!)
             
-            self.profileName.text = "\(prefs.stringForKey("profileName")!)"
-            self.profileMobile.text = "Mob: \(prefs.stringForKey("profileMobile")!)"
-            self.profileEmail.text = "\(prefs.stringForKey("profileEmail")!)"
+            self.profileName.text = "\(prefs.string(forKey: "profileName")!)"
+            self.profileMobile.text = "Mob: \(prefs.string(forKey: "profileMobile")!)"
+            self.profileEmail.text = "\(prefs.string(forKey: "profileEmail")!)"
  
         
         
@@ -80,19 +80,19 @@ class ProfileViewController: UIViewController {
     }
     
 
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+    func hexStringToUIColor (_ hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
-            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+            cString = cString.substring(from: cString.characters.index(cString.startIndex, offsetBy: 1))
         }
         
         if ((cString.characters.count) != 6) {
-            return UIColor.grayColor()
+            return UIColor.gray
         }
         
         var rgbValue:UInt32 = 0
-        NSScanner(string: cString).scanHexInt(&rgbValue)
+        Scanner(string: cString).scanHexInt32(&rgbValue)
         
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,

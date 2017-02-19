@@ -10,25 +10,25 @@ import UIKit
 
 class InviteFriendViewController: UIViewController, UITextFieldDelegate {
 
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     let numberToolbar: UIToolbar = UIToolbar()
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var btnSendInvite: UIButton!
     @IBOutlet var textMoble: UITextField!
     @IBOutlet var labelMsg: UILabel!
-    @IBAction func sendInvite(sender: UIButton) {
+    @IBAction func sendInvite(_ sender: UIButton) {
         if (textMoble.text == "") {
             showAlert("Please enter mobile")
         }  else {
             //SwiftLoading().showLoading()
             //self.labelMsg.text = "Sending..."
-            let request = NSMutableURLRequest(URL: NSURL(string: "http://tokkalo.com/api/1/invite_friend.php")!)
-            request.HTTPMethod = "POST"
-            let postString = "toMobile=\(textMoble.text!)&fromMobile=\(prefs.stringForKey("login")!)"
-            request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            let request = NSMutableURLRequest(url: URL(string: "http://tokkalo.com/api/1/invite_friend.php")!)
+            request.httpMethod = "POST"
+            let postString = "toMobile=\(textMoble.text!)&fromMobile=\(prefs.string(forKey: "login")!)"
+            request.httpBody = postString.data(using: String.Encoding.utf8)
             
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            let task = URLSession.shared.dataTask(with: request as URLRequest)  {
                 
                 data, response, error in
                 
@@ -40,7 +40,7 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
                 
                 do {
                     
-                    let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                    let jsonDictionary = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
                     let message = jsonDictionary["message"] as! String
                     self.prefs.setValue(message, forKey: "inviteMsg")
                     //self.labelMsg.text = "\(message)"
@@ -52,9 +52,9 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
                     // Handle Error
                 }
                 
-                dispatch_async(dispatch_get_main_queue(),{
-                    if (self.prefs.stringForKey("inviteMsg") != nil){
-                        self.showAlert("\(self.prefs.stringForKey("inviteMsg")!) ")
+                DispatchQueue.main.async(execute: {
+                    if (self.prefs.string(forKey: "inviteMsg") != nil){
+                        self.showAlert("\(self.prefs.string(forKey: "inviteMsg")!) ")
                         self.textMoble.text=""
                     }
                 });
@@ -74,13 +74,13 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
         Helper.customizetextField3(textMoble)
         
         //Helper.customizetextField(textMoble)
-        textMoble.attributedPlaceholder = NSAttributedString(string:"Mobile here", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        textMoble.attributedPlaceholder = NSAttributedString(string:"Mobile here", attributes:[NSForegroundColorAttributeName: UIColor.white])
         
-        numberToolbar.barStyle = UIBarStyle.BlackTranslucent
+        numberToolbar.barStyle = UIBarStyle.blackTranslucent
         numberToolbar.items=[
-            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.cancel)),
-            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: self, action: nil),
-            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InviteFriendViewController.done))
+            UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(InviteFriendViewController.cancel)),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(InviteFriendViewController.done))
         ]
         
         numberToolbar.sizeToFit()
@@ -105,31 +105,31 @@ class InviteFriendViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
-        scrollView.setContentOffset(CGPointMake(0, 100), animated: true)
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        scrollView.setContentOffset(CGPoint(x: 0, y: 100), animated: true)
         textMoble.placeholder = nil
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
-        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         textMoble.placeholder = "Mobile here"
-        textMoble.setValue(UIColor.whiteColor(), forKeyPath: "_placeholderLabel.textColor")
+        textMoble.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         textMoble.placeholder = "Mobile here"
-        textMoble.setValue(UIColor.whiteColor(), forKeyPath: "_placeholderLabel.textColor")
+        textMoble.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
         return true
     }
     
     
-    func showAlert(msg: String){
+    func showAlert(_ msg: String){
         let alertController = UIAlertController(title: "NZTA",
-                                                message: msg, preferredStyle: UIAlertControllerStyle.Alert)
+                                                message: msg, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "OK", style:
-            UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alertController, animated: true, completion:
+            UIAlertActionStyle.default, handler: nil))
+        self.present(alertController, animated: true, completion:
             nil)
     }
 

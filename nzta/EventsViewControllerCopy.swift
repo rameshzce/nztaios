@@ -10,7 +10,7 @@ import UIKit
 
 class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDelegate {
     
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     
     var selectedIndex = -1
     
@@ -22,14 +22,14 @@ class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDele
     
     var screenHeight: CGFloat {
         if UIInterfaceOrientationIsPortrait(screenOrientation) {
-            return UIScreen.mainScreen().bounds.size.height
+            return UIScreen.main.bounds.size.height
         } else {
-            return UIScreen.mainScreen().bounds.size.width
+            return UIScreen.main.bounds.size.width
         }
     }
     
     var screenOrientation: UIInterfaceOrientation {
-        return UIApplication.sharedApplication().statusBarOrientation
+        return UIApplication.shared.statusBarOrientation
     }
     
     var events:[(name: String, address: String)] = [
@@ -52,15 +52,15 @@ class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDele
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.backgroundColor = hexStringToUIColor(mainViewcolor)
         
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         
-        if prefs.stringForKey("eventType") != nil{
-            self.title = prefs.stringForKey("eventType")
-            if (prefs.stringForKey("eventType") == "Upcoming Events"){
+        if prefs.string(forKey: "eventType") != nil{
+            self.title = prefs.string(forKey: "eventType")
+            if (prefs.string(forKey: "eventType") == "Upcoming Events"){
                 tableView.backgroundColor = hexStringToUIColor("#ff218e")
-            } else if (prefs.stringForKey("eventType") == "Existing Events"){
+            } else if (prefs.string(forKey: "eventType") == "Existing Events"){
                 tableView.backgroundColor = hexStringToUIColor("#FFD428")
-            } else if (prefs.stringForKey("eventType") == "Go Green"){
+            } else if (prefs.string(forKey: "eventType") == "Go Green"){
                 tableView.backgroundColor = hexStringToUIColor("#10D295")
                 
                 self.events = [
@@ -68,7 +68,7 @@ class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDele
                 ("Plantation @ Western springs 2016", "Everything you need for better lving. NZTA planting for go green")
                 
                 ]
-            } else if (prefs.stringForKey("eventType") == "NZ Blood"){
+            } else if (prefs.string(forKey: "eventType") == "NZ Blood"){
                 tableView.backgroundColor = hexStringToUIColor("#FF0000")
             }
             
@@ -81,23 +81,23 @@ class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDele
     }
     
     func dismiss() {
-        dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return events.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EventsViewCellCopy
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EventsViewCellCopy
         
         // Configure the cell...
         let event = events[indexPath.row]
@@ -110,16 +110,16 @@ class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDele
         //cell.videoGalleryBtn.tag = indexPath.row
         //cell.videoGalleryBtn.addTarget(self, action: #selector(EventsViewController.logAction2), forControlEvents: .TouchUpInside)
         
-        if (prefs.stringForKey("eventType") == "Upcoming Events"){
+        if (prefs.string(forKey: "eventType") == "Upcoming Events"){
             self.mainBgcolor = "#9D1457"
             self.subBgColor = "#630131"
-        } else if (prefs.stringForKey("eventType") == "Existing Events"){
+        } else if (prefs.string(forKey: "eventType") == "Existing Events"){
             self.mainBgcolor = "#B66D01"
             self.subBgColor = "#744C00"
-        } else if (prefs.stringForKey("eventType") == "Go Green"){
+        } else if (prefs.string(forKey: "eventType") == "Go Green"){
             self.mainBgcolor = "#41AA4B"
             self.subBgColor = "#076A4B"
-        } else if (prefs.stringForKey("eventType") == "NZ Blood"){
+        } else if (prefs.string(forKey: "eventType") == "NZ Blood"){
             self.mainBgcolor = "#C30000"
             self.subBgColor = "#840000"
         }
@@ -133,8 +133,8 @@ class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDele
         return cell
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        cell.backgroundColor = UIColor.clearColor()
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
         //cell.backgroundColor = hexStringToUIColor("#ff0000")
         
         // Define the initial state (Before the animation)
@@ -152,7 +152,7 @@ class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDele
             CATransform3DIdentity })*/
     }
     
-    @IBAction func logAction(sender: UIButton) {
+    @IBAction func logAction(_ sender: UIButton) {
         let event = self.events[sender.tag]
         
         let eventName = "\(event.name)"
@@ -171,7 +171,7 @@ class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDele
         //self.presentViewController(activityViewController, animated: true, completion: nil)
     }
     
-    @IBAction func logAction2(sender: UIButton) {
+    @IBAction func logAction2(_ sender: UIButton) {
         let event = self.events[sender.tag]
         
         let eventName = "\(event.name)"
@@ -210,7 +210,7 @@ class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDele
         }
     }*/
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if(selectedIndex == indexPath.row) {
             return UITableViewAutomaticDimension;
         } else {
@@ -220,30 +220,30 @@ class EventsViewControllerCopy: UITableViewController, MenuTransitionManagerDele
         }
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(selectedIndex == indexPath.row) {
             selectedIndex = -1
         } else {
             selectedIndex = indexPath.row
         }
         tableView.beginUpdates()
-        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic )
+        tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.automatic )
         tableView.endUpdates()
     }
     
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+    func hexStringToUIColor (_ hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
-            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+            cString = cString.substring(from: cString.characters.index(cString.startIndex, offsetBy: 1))
         }
         
         if ((cString.characters.count) != 6) {
-            return UIColor.grayColor()
+            return UIColor.gray
         }
         
         var rgbValue:UInt32 = 0
-        NSScanner(string: cString).scanHexInt(&rgbValue)
+        Scanner(string: cString).scanHexInt32(&rgbValue)
         
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,

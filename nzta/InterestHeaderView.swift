@@ -17,7 +17,7 @@ class InterestHeaderView: UIView
         }
     }
     
-    private func updateUI()
+    fileprivate func updateUI()
     {
         backgroundImageView?.image! = interest.featuredImage
         //interestTitleLabel?.text! = interest.title

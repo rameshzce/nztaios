@@ -12,7 +12,7 @@ class ExistingEventsViewController: UIViewController, UIPickerViewDelegate, UIPi
 
     @IBOutlet var datePicker: UIPickerView!
     
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     
     @IBOutlet var btnSelectYear: UIButton!
     var selectedYear: String = ""
@@ -26,20 +26,20 @@ class ExistingEventsViewController: UIViewController, UIPickerViewDelegate, UIPi
         datePicker.delegate = self
         datePicker.dataSource = self
         
-        datePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
+        datePicker.setValue(UIColor.white, forKey: "textColor")
         //datePicker.setValue("18", forKey: "textSize")
 
         // Do any additional setup after loading the view.
     }
     
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView
     {
         let pickerLabel = UILabel()
-        pickerLabel.textColor = UIColor.whiteColor()
+        pickerLabel.textColor = UIColor.white
         pickerLabel.text = Array[row]
         pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 35)
         //pickerLabel.font = UIFont(name: "handlee-regular", size: 35) // In this use your custom font
-        pickerLabel.textAlignment = NSTextAlignment.Center
+        pickerLabel.textAlignment = NSTextAlignment.center
         //pickerLabel.font = UIFont(name: "handlee-regular", size: 35)
         return pickerLabel
     }
@@ -49,33 +49,33 @@ class ExistingEventsViewController: UIViewController, UIPickerViewDelegate, UIPi
         // Dispose of any resources that can be recreated.
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return Array[row]
     }
     
-    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat
     {
         return 40;
     }
     
     
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return Array.count
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //return row?
         selectedYear = Array[row]
     }
     
-    @IBAction func selectYear(sender: UIButton) {
+    @IBAction func selectYear(_ sender: UIButton) {
         self.prefs.setValue("Existing Events", forKey: "eventType")
-        self.performSegueWithIdentifier("existingEvents", sender: self)
+        self.performSegue(withIdentifier: "existingEvents", sender: self)
     }
 
     /*

@@ -28,7 +28,7 @@ class TeamViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
         
         //carouselView.vertical = true
         
-        carouselView.type = .Rotary
+        carouselView.type = .rotary
         
         carouselView .reloadData()
         // Do any additional setup after loading the view.
@@ -39,7 +39,7 @@ class TeamViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
+    func numberOfItems(in carousel: iCarousel) -> Int {
         return images.count
     }
     
@@ -72,33 +72,33 @@ class TeamViewController: UIViewController, iCarouselDelegate, iCarouselDataSour
         return value
     }*/
     
-    func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView
     {
         var itemView: UIImageView
         if (view == nil)
         {
             itemView = UIImageView(frame:CGRect(x:0, y:0, width:250, height:250))
             //itemView.contentMode = .ScaleAspectFit
-            itemView.contentMode = .ScaleAspectFill
+            itemView.contentMode = .scaleAspectFill
         }
         else
         {
             itemView = view as! UIImageView;
         }
-        itemView.image = UIImage(named: "\(images.objectAtIndex(index))")
+        itemView.image = UIImage(named: "\(images.object(at: index))")
         return itemView
     }
     
-    func carousel(carousel: iCarousel, didSelectItemAtIndex index: Int) {
+    func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
         selectedIndex = index
-        self .performSegueWithIdentifier("imageDisplaySegue", sender: nil)
+        self .performSegue(withIdentifier: "imageDisplaySegue", sender: nil)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "imageDisplaySegue")
         {
-            let viewController : ImageDisplayViewController = segue.destinationViewController as! ImageDisplayViewController
-            viewController.selectedImage = UIImage(named: "\(images.objectAtIndex(selectedIndex))")
+            let viewController : ImageDisplayViewController = segue.destination as! ImageDisplayViewController
+            viewController.selectedImage = UIImage(named: "\(images.object(at: selectedIndex))")
         }
     }
     

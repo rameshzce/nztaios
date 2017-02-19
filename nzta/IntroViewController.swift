@@ -9,7 +9,7 @@
 import UIKit
 
 class IntroViewController: UIViewController {
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     
     @IBOutlet var lblText1: UILabel!
     @IBOutlet var lblText2: UILabel!
@@ -49,14 +49,14 @@ class IntroViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
         
-        if prefs.stringForKey("login") != nil{
-            self.performSegueWithIdentifier("introToMember", sender: self)
+        if prefs.string(forKey: "login") != nil{
+            self.performSegue(withIdentifier: "introToMember", sender: self)
         }else{
-        self.navigationController?.navigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = true
         /*UIView.animateWithDuration(2, delay: 1, options: [.Repeat,.Autoreverse], animations: { () -> Void in
             self.lblText1.frame = CGRect(x: self.lblText1.center.x, y: self.lblText1.center.y, width: 200, height: 200)
         }) { (_) -> Void in
@@ -89,84 +89,84 @@ class IntroViewController: UIViewController {
         self.lblText6.layer.transform = rotationTransform
         self.lblText7.layer.transform = rotationTransform*/
         
-        UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+        UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
             
             self.circleView.frame = CGRect(x: self.circleView.frame.origin.x, y: self.circleView.frame.origin.y, width: 250, height: 250)
         }) { (_) -> Void in
             //print("Completion1")
-            UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+            UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                 self.lblText1.alpha = 1.0
             }) { (_) -> Void in
                 //print("Completion1")
-                UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                     self.lblText1.layer.transform = CATransform3DIdentity
                 }) { (_) -> Void in
                     //print("Completion")
                     
-                    UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                    UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                         self.lblText1.alpha = 0
                         self.lblText2.alpha = 1.0
                     }) { (_) -> Void in
                         //print("Completion")
-                        UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                        UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                             self.lblText2.layer.transform = CATransform3DIdentity
                         }) { (_) -> Void in
                             //print("Completion")
-                            UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                            UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                                 self.lblText2.alpha = 0
                                 self.lblText3.alpha = 1.0
                             }) { (_) -> Void in
                                 //print("Completion")
-                                UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                                     self.lblText3.layer.transform = CATransform3DIdentity
                                 }) { (_) -> Void in
                                     //print("Completion")
-                                    UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                    UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                                         self.lblText3.alpha = 0
                                         self.lblText4.alpha = 1.0
                                     }) { (_) -> Void in
                                         //print("Completion")
-                                        UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                        UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                                             self.lblText4.layer.transform = CATransform3DIdentity
                                         }) { (_) -> Void in
                                             //print("Completion")
-                                            UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                            UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                                                 self.lblText4.alpha = 0
                                                 self.lblText5.alpha = 1.0
                                             }) { (_) -> Void in
                                                 //print("Completion")
-                                                UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                                UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                                                     self.lblText5.layer.transform = CATransform3DIdentity
                                                 }) { (_) -> Void in
                                                     //print("Completion")
-                                                    UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                                    UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                                                         self.lblText5.alpha = 0
                                                         self.lblText6.alpha = 1.0
                                                     }) { (_) -> Void in
                                                         //print("Completion")
-                                                        UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                                        UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                                                             self.lblText6.layer.transform = CATransform3DIdentity
                                                         }) { (_) -> Void in
                                                             //print("Completion")
-                                                            UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                                            UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                                                                 self.lblText6.alpha = 0
                                                                 self.lblText7.alpha = 1.0
                                                             }) { (_) -> Void in
                                                                 //print("Completion")
-                                                                UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                                                UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                                                                     self.lblText7.layer.transform = CATransform3DIdentity
                                                                 }) { (_) -> Void in
                                                                     //print("Completion")
-                                                                    UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                                                    UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                                                                         self.lblText7.alpha = 0
                                                                     }) { (_) -> Void in
                                                                         //print("Completion")
-                                                                        UIView.animateWithDuration(2, delay: 1, options: [], animations: { () -> Void in
+                                                                        UIView.animate(withDuration: 2, delay: 1, options: [], animations: { () -> Void in
                                                                             self.circleView.frame = CGRect(x: self.circleView.frame.origin.x, y: self.circleView.frame.origin.y, width: 0, height: 0)
                                                                         }) { (_) -> Void in
                                                                             //print("Completion")
-                                                                            self.navigationController?.navigationBarHidden = false
-                                                                            self.performSegueWithIdentifier("introToMain", sender: self)
+                                                                            self.navigationController?.isNavigationBarHidden = false
+                                                                            self.performSegue(withIdentifier: "introToMain", sender: self)
                                                                         }
                                                                     }
                                                                 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class InterestViewController: UIViewController {
-    let prefs = NSUserDefaults.standardUserDefaults()
+    let prefs = UserDefaults.standard
     
     
     var events:[(name: String, address: String)] = [
@@ -32,51 +32,51 @@ class InterestViewController: UIViewController {
     
     // MARK: - Private
     @IBOutlet weak var tableView: UITableView!
-    private let tableHeaderHeight: CGFloat = 350.0
-    private let tableHeaderCutAway: CGFloat = 50.0
+    fileprivate let tableHeaderHeight: CGFloat = 350.0
+    fileprivate let tableHeaderCutAway: CGFloat = 50.0
     
-    private var headerView: InterestHeaderView!
-    private var headerMaskLayer: CAShapeLayer!
+    fileprivate var headerView: InterestHeaderView!
+    fileprivate var headerMaskLayer: CAShapeLayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         var imageName = "img_calender_inauguration"
         
         
-        if prefs.stringForKey("eventName") != nil{
-            self.title = prefs.stringForKey("eventName")
+        if prefs.string(forKey: "eventName") != nil{
+            self.title = prefs.string(forKey: "eventName")
             
-            if (prefs.stringForKey("eventName") == "Calender Inauguration"){
+            if (prefs.string(forKey: "eventName") == "Calender Inauguration"){
                 imageName = "img_calender_inauguration"
-            } else if (prefs.stringForKey("eventName") == "Sankranthi"){
+            } else if (prefs.string(forKey: "eventName") == "Sankranthi"){
                 imageName = "img_sankranti"
-            } else if (prefs.stringForKey("eventName") == "Republic Day"){
+            } else if (prefs.string(forKey: "eventName") == "Republic Day"){
                 imageName = "img_republic_day"
-            } else if (prefs.stringForKey("eventName") == "Blood Donations"){
+            } else if (prefs.string(forKey: "eventName") == "Blood Donations"){
                 imageName = "img_blood_donations"
-            } else if (prefs.stringForKey("eventName") == "Holi Funday"){
+            } else if (prefs.string(forKey: "eventName") == "Holi Funday"){
                 imageName = "img_holi"
-            } else if (prefs.stringForKey("eventName") == "Ugadi"){
+            } else if (prefs.string(forKey: "eventName") == "Ugadi"){
                 imageName = "img_ugadi"
-            } else if (prefs.stringForKey("eventName") == "Independence Day"){
+            } else if (prefs.string(forKey: "eventName") == "Independence Day"){
                 imageName = "img_independenceday"
-            } else if (prefs.stringForKey("eventName") == "Vinayaka Chaviti"){
+            } else if (prefs.string(forKey: "eventName") == "Vinayaka Chaviti"){
                 imageName = "img_vinayakachaturdi"
-            } else if (prefs.stringForKey("eventName") == "Batukamma"){
+            } else if (prefs.string(forKey: "eventName") == "Batukamma"){
                 imageName = "img_batukamma"
-            } else if (prefs.stringForKey("eventName") == "Dasara & Diwali"){
+            } else if (prefs.string(forKey: "eventName") == "Dasara & Diwali"){
                 imageName = "img_dasara_diwali"
-            } else if (prefs.stringForKey("eventName") == "Vanabojanalu"){
+            } else if (prefs.string(forKey: "eventName") == "Vanabojanalu"){
                 imageName = "img_vanabojanalu"
-            } else if (prefs.stringForKey("eventName") == "Xmas"){
+            } else if (prefs.string(forKey: "eventName") == "Xmas"){
                 imageName = "img_xmas"
-            } else if (prefs.stringForKey("eventName") == "Helping Hands"){
+            } else if (prefs.string(forKey: "eventName") == "Helping Hands"){
                 imageName = "img_helping_hands"
             }
             
         }
         
-        if (prefs.stringForKey("menuType") == "Helping Hands"){
+        if (prefs.string(forKey: "menuType") == "Helping Hands"){
             //self.title = prefs.stringForKey("menuType")
         }
         
@@ -89,7 +89,7 @@ class InterestViewController: UIViewController {
         tableView.contentOffset = CGPoint(x: 0, y: -tableHeaderHeight)
         
         headerMaskLayer = CAShapeLayer()
-        headerMaskLayer.fillColor = UIColor.blackColor().CGColor
+        headerMaskLayer.fillColor = UIColor.black.cgColor
         headerView.layer.mask = headerMaskLayer
         
         tableView.estimatedRowHeight = 300.0
@@ -124,11 +124,11 @@ class InterestViewController: UIViewController {
         
         // cut away
         let path = UIBezierPath()
-        path.moveToPoint(CGPoint(x: 0, y: 0))
-        path.addLineToPoint(CGPoint(x: headerRect.width, y: 0))
-        path.addLineToPoint(CGPoint(x: headerRect.width, y: headerRect.height))
-        path.addLineToPoint(CGPoint(x: 0, y: headerRect.height - tableHeaderCutAway))
-        headerMaskLayer?.path = path.CGPath
+        path.move(to: CGPoint(x: 0, y: 0))
+        path.addLine(to: CGPoint(x: headerRect.width, y: 0))
+        path.addLine(to: CGPoint(x: headerRect.width, y: headerRect.height))
+        path.addLine(to: CGPoint(x: 0, y: headerRect.height - tableHeaderCutAway))
+        headerMaskLayer?.path = path.cgPath
         
     }
     
@@ -141,47 +141,47 @@ extension InterestViewController : UITableViewDataSource
     
     
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         return 1
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! InterestViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! InterestViewCell
         
         cell.photoGalleryBtn.tag = indexPath.row
-        cell.photoGalleryBtn.addTarget(self, action: #selector(InterestViewController.logAction), forControlEvents: .TouchUpInside)
+        cell.photoGalleryBtn.addTarget(self, action: #selector(InterestViewController.logAction), for: .touchUpInside)
         
         cell.videoGalleryBtn.tag = indexPath.row
-        cell.videoGalleryBtn.addTarget(self, action: #selector(InterestViewController.logAction2), forControlEvents: .TouchUpInside)
+        cell.videoGalleryBtn.addTarget(self, action: #selector(InterestViewController.logAction2), for: .touchUpInside)
         
-        cell.selectionStyle = .None
+        cell.selectionStyle = .none
         
         cell.interestText.text = "Namasthe ...\n\n New Zealand Telugu Association specially invites you with family and friends to be part of auspicious\n\n \"VINAYAKA CHATURTHI POOJA\"\n\n for all the best days of our lives, For every miracle of waking up each morning, we want to express how grateful we are to the Lord.\n\n Day:  Monday, 5th of September 2016.\n\n Time: 6.30pm\n\n Venue:  Three kings Fickling Convention enter \n\n 546, Mt Albert Road,\n Three Kings.\n Followed by Bhajans and Maha Prasadam.\n\n Main Sponsor :\n\n Smt&Sri Sunitha-Vijay Kosna and family\n\n Maha Prasadam by :\n Satya South Indian Restaurant\n\n Please join us and get the blessings of \"Lord Ganesh\". We are sure the day will inspire you for creativity and motivate you for auspicious beginnings.\n\n See you all on Monday.\n\n ... Executive Committee New Zealand \n Telugu Association"
         
         //cell.backgroundColor = Helper.hexStringToUIColor("#FFDFF0")
         
-        cell.interestTitle.text = prefs.stringForKey("eventName")
+        cell.interestTitle.text = prefs.string(forKey: "eventName")
         
-        if (prefs.stringForKey("menuType") == "Helping Hands"){
+        if (prefs.string(forKey: "menuType") == "Helping Hands"){
             //cell.interestTitle.text = prefs.stringForKey("menuType")
         }
         
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
             return UITableViewAutomaticDimension;
         
     }
     
-    @IBAction func logAction(sender: UIButton) {
+    @IBAction func logAction(_ sender: UIButton) {
         let event = self.events[sender.tag]
         
         let eventName = "\(event.name)"
@@ -201,7 +201,7 @@ extension InterestViewController : UITableViewDataSource
         //self.presentViewController(activityViewController, animated: true, completion: nil)
     }
     
-    @IBAction func logAction2(sender: UIButton) {
+    @IBAction func logAction2(_ sender: UIButton) {
         let event = self.events[sender.tag]
         
         let eventName = "\(event.name)"
@@ -224,7 +224,7 @@ extension InterestViewController : UITableViewDataSource
 
 extension InterestViewController : UIScrollViewDelegate
 {
-    func scrollViewDidScroll(scrollView: UIScrollView)
+    func scrollViewDidScroll(_ scrollView: UIScrollView)
     {
         updateHeaderView()
         
