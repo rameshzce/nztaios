@@ -37,6 +37,7 @@
 		756955841D0BEC3400B17CAB /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756955831D0BEC3400B17CAB /* SSRadioButtonsController.swift */; };
 		756955861D0BEE7500B17CAB /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756955851D0BEE7500B17CAB /* SSRadioButton.swift */; };
 		756C5DD51E595D2600D9B7D3 /* RadialLayer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 756C5DD41E595D2600D9B7D3 /* RadialLayer-Info.plist */; };
+		756C5DD71E5960CE00D9B7D3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C5DD61E5960CE00D9B7D3 /* ChatViewController.swift */; };
 		7570CE211D7107FC003359D8 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7570CE201D7107FC003359D8 /* MessagesTableViewController.swift */; };
 		7570CE231D710840003359D8 /* MessagesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7570CE221D710840003359D8 /* MessagesViewCell.swift */; };
 		757BA9E41D87C4F500B74370 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BA9E31D87C4F500B74370 /* InterestViewController.swift */; };
@@ -107,6 +108,7 @@
 		756955831D0BEC3400B17CAB /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		756955851D0BEE7500B17CAB /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		756C5DD41E595D2600D9B7D3 /* RadialLayer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RadialLayer-Info.plist"; sourceTree = "<group>"; };
+		756C5DD61E5960CE00D9B7D3 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		7570CE201D7107FC003359D8 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		7570CE221D710840003359D8 /* MessagesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewCell.swift; sourceTree = "<group>"; };
 		757BA9E31D87C4F500B74370 /* InterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			children = (
 				75C4CDB21DC40FD8002A0B96 /* nzta.entitlements */,
 				757BA9E31D87C4F500B74370 /* InterestViewController.swift */,
+				756C5DD61E5960CE00D9B7D3 /* ChatViewController.swift */,
 				757BA9E51D87C53E00B74370 /* InterestHeaderView.swift */,
 				757BA9E71D87C5F400B74370 /* Interest.swift */,
 				75B622F51CF053C700493F98 /* Resources */,
@@ -447,6 +450,7 @@
 				751E412B1CF422A5001A8BD5 /* MenuViewCell.swift in Sources */,
 				7591A1241D130E96001A615F /* Helper.swift in Sources */,
 				755097BF1D02EB820005AF83 /* DisplayGalleryImageViewController.swift in Sources */,
+				756C5DD71E5960CE00D9B7D3 /* ChatViewController.swift in Sources */,
 				75061D121D21FF6100DFD577 /* SendMessageViewController.swift in Sources */,
 				753671961D96516900AA710B /* ScrollViewContoller.swift in Sources */,
 				75B622FF1CF0773100493F98 /* EventsViewCell.swift in Sources */,

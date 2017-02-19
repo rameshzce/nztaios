@@ -9,9 +9,9 @@
 import UIKit
 
 class MenuViewController: UITableViewController {
-    var menuItems = ["Home", "Profile", "Subscribe", "Team NZTA", "Sponsors", "Send a message"]
+    var menuItems = ["Home", "Profile", "Subscribe", "Team NZTA", "Sponsors", "Send a message", "Chat"]
     //var menuItems = ["Home", "Profile", "Subscribe", "Team NZTA", "Sponsors"]
-    var menuIcons = ["menu_icon_home", "menu_icon_profile", "menu_icon_subscribe", "menu_icon_team", "menu_icon_sponsors", "menu_icon_send_message"]
+    var menuIcons = ["menu_icon_home", "menu_icon_profile", "menu_icon_subscribe", "menu_icon_team", "menu_icon_sponsors", "menu_icon_send_message", "menu_icon_send_message"]
     var currentItem = "Home"
     
     override func viewDidLoad() {
@@ -85,6 +85,9 @@ class MenuViewController: UITableViewController {
             break
         case 5:
             self.performSegue(withIdentifier: "menuSendMessage", sender: self)
+            break
+        case 6:
+            self.performSegue(withIdentifier: "menuChat", sender: self)
             break
         default:
             break
