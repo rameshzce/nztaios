@@ -20,6 +20,8 @@
 	<string>1.21</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Used to scan barcodes</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
