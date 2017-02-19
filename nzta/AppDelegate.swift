@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 
 @UIApplicationMain
@@ -23,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Override point for customization after application launch.
         application.registerForRemoteNotifications()
         application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
+        
+        FIRApp.configure()
         
         GIDSignIn.sharedInstance().clientID = "65039566976-ncemvcdc35q8942q2ocrgc77m16uo9hn.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self

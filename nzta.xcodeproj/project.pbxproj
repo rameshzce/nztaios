@@ -37,7 +37,12 @@
 		756955841D0BEC3400B17CAB /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756955831D0BEC3400B17CAB /* SSRadioButtonsController.swift */; };
 		756955861D0BEE7500B17CAB /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756955851D0BEE7500B17CAB /* SSRadioButton.swift */; };
 		756C5DD51E595D2600D9B7D3 /* RadialLayer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 756C5DD41E595D2600D9B7D3 /* RadialLayer-Info.plist */; };
-		756C5DD71E5960CE00D9B7D3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C5DD61E5960CE00D9B7D3 /* ChatViewController.swift */; };
+		756C5DD91E59708400D9B7D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C5DD81E59708400D9B7D3 /* LoginViewController.swift */; };
+		756C5DDD1E59734800D9B7D3 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C5DDC1E59734800D9B7D3 /* Channel.swift */; };
+		756C5DDF1E59735100D9B7D3 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C5DDE1E59735100D9B7D3 /* ChannelListViewController.swift */; };
+		756C5DE11E59735C00D9B7D3 /* CreateChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C5DE01E59735C00D9B7D3 /* CreateChannelCell.swift */; };
+		756C5DE31E59739400D9B7D3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C5DE21E59739400D9B7D3 /* ChatViewController.swift */; };
+		756C5DE51E59764700D9B7D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 756C5DE41E59764700D9B7D3 /* GoogleService-Info.plist */; };
 		7570CE211D7107FC003359D8 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7570CE201D7107FC003359D8 /* MessagesTableViewController.swift */; };
 		7570CE231D710840003359D8 /* MessagesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7570CE221D710840003359D8 /* MessagesViewCell.swift */; };
 		757BA9E41D87C4F500B74370 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BA9E31D87C4F500B74370 /* InterestViewController.swift */; };
@@ -108,7 +113,12 @@
 		756955831D0BEC3400B17CAB /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		756955851D0BEE7500B17CAB /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		756C5DD41E595D2600D9B7D3 /* RadialLayer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RadialLayer-Info.plist"; sourceTree = "<group>"; };
-		756C5DD61E5960CE00D9B7D3 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		756C5DD81E59708400D9B7D3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		756C5DDC1E59734800D9B7D3 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		756C5DDE1E59735100D9B7D3 /* ChannelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
+		756C5DE01E59735C00D9B7D3 /* CreateChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChannelCell.swift; sourceTree = "<group>"; };
+		756C5DE21E59739400D9B7D3 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		756C5DE41E59764700D9B7D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7570CE201D7107FC003359D8 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		7570CE221D710840003359D8 /* MessagesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewCell.swift; sourceTree = "<group>"; };
 		757BA9E31D87C4F500B74370 /* InterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
@@ -205,13 +215,17 @@
 			children = (
 				75C4CDB21DC40FD8002A0B96 /* nzta.entitlements */,
 				757BA9E31D87C4F500B74370 /* InterestViewController.swift */,
-				756C5DD61E5960CE00D9B7D3 /* ChatViewController.swift */,
+				756C5DDC1E59734800D9B7D3 /* Channel.swift */,
 				757BA9E51D87C53E00B74370 /* InterestHeaderView.swift */,
+				756C5DE21E59739400D9B7D3 /* ChatViewController.swift */,
+				756C5DD81E59708400D9B7D3 /* LoginViewController.swift */,
 				757BA9E71D87C5F400B74370 /* Interest.swift */,
 				75B622F51CF053C700493F98 /* Resources */,
 				75B622E31CF04ABD00493F98 /* AppDelegate.swift */,
+				756C5DDE1E59735100D9B7D3 /* ChannelListViewController.swift */,
 				751E41281CF42224001A8BD5 /* MenuViewController.swift */,
 				75B622E51CF04ABD00493F98 /* ViewController.swift */,
+				756C5DE01E59735C00D9B7D3 /* CreateChannelCell.swift */,
 				75B622E71CF04ABD00493F98 /* Main.storyboard */,
 				75FEE8891D01CD5300814F82 /* iCarousel.h */,
 				75FEE88A1D01CD5300814F82 /* iCarousel.m */,
@@ -219,6 +233,7 @@
 				75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */,
 				75B622EC1CF04ABE00493F98 /* LaunchScreen.storyboard */,
 				75B622EF1CF04ABE00493F98 /* Info.plist */,
+				756C5DE41E59764700D9B7D3 /* GoogleService-Info.plist */,
 				756C5DD41E595D2600D9B7D3 /* RadialLayer-Info.plist */,
 				750DC4B31D1252F400C30D03 /* Assets.xcassets */,
 				75B622F81CF05DE000493F98 /* MemberViewController.swift */,
@@ -374,6 +389,7 @@
 				75446F521CF747A300C78F29 /* GoogleSignIn.bundle in Resources */,
 				75B622E91CF04ABD00493F98 /* Main.storyboard in Resources */,
 				750DC4B41D1252F400C30D03 /* Assets.xcassets in Resources */,
+				756C5DE51E59764700D9B7D3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +466,7 @@
 				751E412B1CF422A5001A8BD5 /* MenuViewCell.swift in Sources */,
 				7591A1241D130E96001A615F /* Helper.swift in Sources */,
 				755097BF1D02EB820005AF83 /* DisplayGalleryImageViewController.swift in Sources */,
-				756C5DD71E5960CE00D9B7D3 /* ChatViewController.swift in Sources */,
+				756C5DE11E59735C00D9B7D3 /* CreateChannelCell.swift in Sources */,
 				75061D121D21FF6100DFD577 /* SendMessageViewController.swift in Sources */,
 				753671961D96516900AA710B /* ScrollViewContoller.swift in Sources */,
 				75B622FF1CF0773100493F98 /* EventsViewCell.swift in Sources */,
@@ -462,6 +478,7 @@
 				751E412F1CF451F2001A8BD5 /* SubscriptionViewController.swift in Sources */,
 				75B622FB1CF0630100493F98 /* MemberViewCell.swift in Sources */,
 				75FEE88B1D01CD5300814F82 /* iCarousel.m in Sources */,
+				756C5DD91E59708400D9B7D3 /* LoginViewController.swift in Sources */,
 				75FEE88D1D01CDB100814F82 /* TeamViewController.swift in Sources */,
 				757BA9E41D87C4F500B74370 /* InterestViewController.swift in Sources */,
 				75A790921D1ECB1400EE0616 /* VideoViewController.swift in Sources */,
@@ -472,6 +489,7 @@
 				755097B91D02CC970005AF83 /* SwiftLoading.swift in Sources */,
 				75CF433A1CF99FFA005C6BCA /* InviteFriendViewController.swift in Sources */,
 				751E41311CF4620B001A8BD5 /* ProfileViewController.swift in Sources */,
+				756C5DDF1E59735100D9B7D3 /* ChannelListViewController.swift in Sources */,
 				75B622E41CF04ABD00493F98 /* AppDelegate.swift in Sources */,
 				75C79B501D150158005BBC49 /* WalkthroughPageViewController.swift in Sources */,
 				7570CE211D7107FC003359D8 /* MessagesTableViewController.swift in Sources */,
@@ -481,6 +499,8 @@
 				752EB26C1D0BAEDC00799DFE /* Common.swift in Sources */,
 				75D3874A1D0B23AC00314052 /* SponsorsViewCell.swift in Sources */,
 				75BBAD591D7255AE007F6A1B /* EventsViewControllerCopy.swift in Sources */,
+				756C5DDD1E59734800D9B7D3 /* Channel.swift in Sources */,
+				756C5DE31E59739400D9B7D3 /* ChatViewController.swift in Sources */,
 				756955861D0BEE7500B17CAB /* SSRadioButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

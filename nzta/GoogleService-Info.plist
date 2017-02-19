@@ -2,27 +2,39 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>496141176878-80an01nd0h2jp5dbqt7a6nj4i9osevvj.apps.googleusercontent.com</string>
+	<string>1032420204193-3unavmv7kktgtpfke98a7cueblfps9pb.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.496141176878-80an01nd0h2jp5dbqt7a6nj4i9osevvj</string>
+	<string>com.googleusercontent.apps.1032420204193-3unavmv7kktgtpfke98a7cueblfps9pb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD-JUdTw1mcFOGaw0gcy7lpdehmcptvG7w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1032420204193</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.tokkalo.nzta</string>
 	<key>PROJECT_ID</key>
-	<string>nzta-ios</string>
+	<string>nz-chat</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nz-chat.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
 	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<false/>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:496141176878:ios:f0faabdf02343a75</string>
+	<string>1:1032420204193:ios:f0faabdf02343a75</string>
+	<key>DATABASE_URL</key>
+	<string>https://nz-chat.firebaseio.com</string>
 </dict>
 </plist>
