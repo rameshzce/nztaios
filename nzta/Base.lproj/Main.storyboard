@@ -157,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021" y="328"/>
+            <point key="canvasLocation" x="1607.5" y="327.5"/>
         </scene>
         <!--Existing Events View Controller-->
         <scene sceneID="WZg-T5-H5M">
@@ -535,7 +535,7 @@ and make it family fun!!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VB7-1c-Uxl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1043" y="970"/>
+            <point key="canvasLocation" x="1629.5" y="969.5"/>
         </scene>
         <!--NZTA-->
         <scene sceneID="UlM-N0-aKa">
@@ -620,7 +620,7 @@ and make it family fun!!</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZj-Wm-ut4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1927" y="298"/>
+            <point key="canvasLocation" x="2513.5" y="297.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="UKf-w1-pPH">
@@ -701,7 +701,7 @@ and make it family fun!!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cu-DX-CiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6qb-Nk-LZe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1474" y="970"/>
+            <point key="canvasLocation" x="2060.5" y="969.5"/>
         </scene>
         <!--Team View Controller-->
         <scene sceneID="mbI-wE-rvH">
@@ -728,7 +728,7 @@ and make it family fun!!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyy-GT-Za8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1835" y="963"/>
+            <point key="canvasLocation" x="2421.5" y="962.5"/>
         </scene>
         <!--Image Display View Controller-->
         <scene sceneID="unX-AN-6Vc">
@@ -778,7 +778,7 @@ and make it family fun!!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spy-dH-5UE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2238" y="963"/>
+            <point key="canvasLocation" x="2824.5" y="962.5"/>
         </scene>
         <!--Notification View Controller-->
         <scene sceneID="tcn-M6-gpW">
@@ -940,7 +940,7 @@ and make it family fun!!</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHU-sg-3VS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2299" y="298"/>
+            <point key="canvasLocation" x="2885.5" y="297.5"/>
         </scene>
         <!--Invite Friend View Controller-->
         <scene sceneID="vlw-J0-Nat">
@@ -1048,7 +1048,7 @@ and make it family fun!!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVP-Vj-1eR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3814" y="293"/>
+            <point key="canvasLocation" x="4400.5" y="292.5"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="by9-xe-0V6">
@@ -1364,7 +1364,7 @@ let's celebrate all</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0m-u3-6hg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1395" y="298"/>
+            <point key="canvasLocation" x="1981.5" y="297.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kYb-Z0-oEn">
@@ -1744,7 +1744,7 @@ let's celebrate all</string>
                 </avPlayerViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MjC-rg-vZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3408" y="298"/>
+            <point key="canvasLocation" x="3994.5" y="297.5"/>
         </scene>
         <!--Personalize View Controller-->
         <scene sceneID="Scy-4C-GzM">
@@ -2091,7 +2091,7 @@ let's celebrate all</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktv-cK-6Ha">
-                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                                <rect key="frame" x="-4" y="-44" width="383" height="711"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy8-hA-Mui">
                                         <rect key="frame" x="47" y="100" width="290" height="54"/>
@@ -2162,7 +2162,7 @@ to all members.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbM-z2-ufv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3814" y="293"/>
+            <point key="canvasLocation" x="4400.5" y="292.5"/>
         </scene>
         <!--Scroll View Controller-->
         <scene sceneID="cmL-a0-5Fj">
@@ -2226,8 +2226,8 @@ to all members.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Really Instant Chat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="wSN-B0-l7H">
-                                <rect key="frame" x="0.5" y="106" width="600" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Really Instant Chat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="wSN-B0-l7H">
+                                <rect key="frame" x="0.0" y="106" width="375" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="KhW-0P-4jb"/>
                                     <constraint firstAttribute="width" constant="351" id="wz6-5y-tBX"/>
@@ -2241,8 +2241,8 @@ to all members.</string>
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSi-Cb-KhD">
-                                <rect key="frame" x="191" y="502" width="219" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSi-Cb-KhD">
+                                <rect key="frame" x="78" y="569" width="219" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="219" id="A92-3L-WYh"/>
@@ -2261,8 +2261,8 @@ to all members.</string>
                                     <action selector="loginDidTouch:" destination="TYF-TI-QbT" eventType="touchUpInside" id="O4v-7F-yOx"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yI7-J1-6sF">
-                                <rect key="frame" x="191" y="436" width="219" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yI7-J1-6sF">
+                                <rect key="frame" x="78" y="503" width="219" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
@@ -2284,7 +2284,7 @@ to all members.</string>
                     <connections>
                         <outlet property="bottomLayoutGuideConstraint" destination="cLi-4i-Ft6" id="3DW-wW-P6H"/>
                         <outlet property="nameField" destination="yI7-J1-6sF" id="Xac-eI-15u"/>
-                        <segue destination="zmN-go-hP3" kind="push" identifier="LoginToChat" id="W7X-rN-wnZ"/>
+                        <segue destination="zmN-go-hP3" kind="push" identifier="LoginToChat" id="NQz-Pc-bne"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xj-jE-xzo" sceneMemberID="firstResponder"/>
@@ -2307,13 +2307,13 @@ to all members.</string>
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create a New Channel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPT-6Q-Ro5">
-                                            <rect key="frame" x="16" y="7" width="522" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create a New Channel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPT-6Q-Ro5">
+                                            <rect key="frame" x="16" y="7" width="297" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFN-WJ-9BN">
-                                            <rect key="frame" x="546" y="7" width="46" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFN-WJ-9BN">
+                                            <rect key="frame" x="321" y="7" width="46" height="30"/>
                                             <state key="normal" title="Create"/>
                                             <connections>
                                                 <action selector="createChannel:" destination="zmN-go-hP3" eventType="touchUpInside" id="Bhj-jk-Lai"/>
@@ -2365,10 +2365,13 @@ to all members.</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="bpa-9b-G2C"/>
+                    <connections>
+                        <segue destination="CeH-iI-6qu" kind="push" identifier="ShowChannel" id="jjD-w6-4bf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UoY-wy-k8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="389"/>
+            <point key="canvasLocation" x="1295.5" y="388.5"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="72S-Vq-rNo">
@@ -2387,7 +2390,7 @@ to all members.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGB-4h-Bei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2640" y="389"/>
+            <point key="canvasLocation" x="-110" y="389"/>
         </scene>
     </scenes>
     <resources>

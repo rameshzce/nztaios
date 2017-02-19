@@ -46,6 +46,15 @@ class LoginViewController: UIViewController {
   func keyboardWillHideNotification(_ notification: Notification) {
     bottomLayoutGuideConstraint.constant = 48
   }
+    
+    // MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        let navVc = segue.destination as! ChannelListViewController // 1
+       // let channelVc = navVc.viewControllers.first as! ChannelListViewController // 2
+        
+        navVc.senderDisplayName = nameField?.text // 3
+    }
   
 }
 
