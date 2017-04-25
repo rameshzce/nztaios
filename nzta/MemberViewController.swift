@@ -12,7 +12,7 @@ class MemberViewController: UITableViewController{
     let prefs = UserDefaults.standard
     
     var titles = ["Upcoming Events", "Existing Events", "Helping", "Invite a Friend/", "All"]
-    var titlesBig = ["2016", "2015", "Hands!",  "Family", "Messages"]
+    var titlesBig = ["2017", "2016", "Hands!",  "Family", "Messages"]
     //var images = ["upcoming_events.png", "existing_events.png", "hands.png", "invite_friend.png",  "all_messaes.png"]
     var images = ["upcoming_events2.png", "existing_events2.png", "hands2.png", "invite_friend2.png",  "all_messages2.png"]
     var bgColors = ["#ff218e", "#ffd428", "#10d295", "#039cfd", "#fc5f22"]

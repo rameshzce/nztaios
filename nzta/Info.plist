@@ -17,11 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.21</string>
+	<string>1.24</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Used to scan barcodes</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -77,6 +75,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Used to scan barcodes</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME) photo use</string>
 	<key>UIAppFonts</key>

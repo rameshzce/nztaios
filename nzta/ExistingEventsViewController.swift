@@ -17,7 +17,7 @@ class ExistingEventsViewController: UIViewController, UIPickerViewDelegate, UIPi
     @IBOutlet var btnSelectYear: UIButton!
     var selectedYear: String = ""
     
-    var Array = ["2015", "2014", "2013", "2012"]
+    var Array = ["2016", "2015", "2014", "2013"]
     override func viewDidLoad() {
         super.viewDidLoad()
         

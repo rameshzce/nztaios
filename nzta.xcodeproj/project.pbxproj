@@ -51,6 +51,7 @@
 		757BA9EA1D87D3B800B74370 /* InterestViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BA9E91D87D3B800B74370 /* InterestViewCell.swift */; };
 		7588F00D1D1455490011031A /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7588F00C1D1455490011031A /* EditProfileViewController.swift */; };
 		7591A1241D130E96001A615F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7591A1231D130E96001A615F /* Helper.swift */; };
+		759F57FF1E5BB0B1005817FC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CECA101E5A6E3900C1F0D7 /* AdSupport.framework */; };
 		75A3F5401CF12CDE0033E70A /* PhotoGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3F53F1CF12CDE0033E70A /* PhotoGalleryViewCell.swift */; };
 		75A3F5421CF12D270033E70A /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3F5411CF12D270033E70A /* PhotoGalleryViewController.swift */; };
 		75A790921D1ECB1400EE0616 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A790911D1ECB1400EE0616 /* VideoViewController.swift */; };
@@ -148,6 +149,7 @@
 		75C4CDB21DC40FD8002A0B96 /* nzta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nzta.entitlements; sourceTree = "<group>"; };
 		75C79B4D1D14FF09005BBC49 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		75C79B4F1D150158005BBC49 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		75CECA101E5A6E3900C1F0D7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		75CF43391CF99FFA005C6BCA /* InviteFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendViewController.swift; sourceTree = "<group>"; };
 		75D0BDE51CF17AB8009E030F /* VideoGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGalleryViewController.swift; sourceTree = "<group>"; };
 		75D0EBE71CF97EEA00563C68 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -169,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759F57FF1E5BB0B1005817FC /* AdSupport.framework in Frameworks */,
 				750EA0541CFBD57200AF7A6E /* AVFoundation.framework in Frameworks */,
 				75D0EBEA1CF97F0800563C68 /* MediaPlayer.framework in Frameworks */,
 				75D0EBE81CF97EEA00563C68 /* AVKit.framework in Frameworks */,
@@ -300,6 +303,7 @@
 		DB161817BD7CA58465924D53 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				75CECA101E5A6E3900C1F0D7 /* AdSupport.framework */,
 				750EA0531CFBD57200AF7A6E /* AVFoundation.framework */,
 				75D0EBE91CF97F0800563C68 /* MediaPlayer.framework */,
 				75D0EBE71CF97EEA00563C68 /* AVKit.framework */,

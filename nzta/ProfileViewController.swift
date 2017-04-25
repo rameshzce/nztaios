@@ -24,7 +24,14 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         
+        
+        let play = UIBarButtonItem(title: "< Menu", style: .plain, target: self, action: #selector(self.gotoMenu))
+        
+        
+        self.navigationItem.setLeftBarButtonItems([play], animated: true)
+
         //btnGallery.layer.cornerRadius = 5
         Helper.customizeButton(btnGallery)
         self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
@@ -78,6 +85,11 @@ class ProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func gotoMenu(){
+        self.performSegue(withIdentifier: "gotoMenu", sender: nil)
+    }
+    
     
 
     func hexStringToUIColor (_ hex:String) -> UIColor {
